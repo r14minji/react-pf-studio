@@ -1,24 +1,28 @@
+import { NavLink } from "react-router-dom";
+
+
 function Header(){
+  const active = {textDecoration: "line-through"};
   return(
     <header id="header">
       <div className="inner">
-        <h1><a href="#">STUDIOALICE</a></h1>
+        <h1><NavLink exact to='/'>STUDIOALICE</NavLink></h1>
         <p>THE CHRONICLES OF A CREATIVE STUDIO</p>
 
         <div id="gnb">
           <ul>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">BOARD</a></li>
-            <li><a href="#">GALLERY</a></li>
-            <li><a href="#">YOUTUBE</a></li>
-            <li><a href="#">LOCATION</a></li>
+            <li><NavLink activeStyle={active} exact to='/about'>ABOUT</NavLink></li>
+            <li><NavLink activeStyle={active} exact to='/board'>BOARD</NavLink></li>
+            <li><NavLink activeStyle={active} exact to='/gallery'>GALLERY</NavLink></li>
+            <li><NavLink activeStyle={active} exact to='/youtube'>YOUTUBE</NavLink></li>
+            <li><NavLink activeStyle={active} exact to='/location'>LOCATION</NavLink></li>
           </ul>
         </div>
 
         <div className="util">
           <ul>
-            <li><a href="#">Sign up</a> </li>
-            <li><a href="#">Login</a></li>
+            <li><NavLink activeStyle={active} exact to='/signin'>Sign In</NavLink></li>
+            <li><NavLink activeStyle={active} exact to='/join'>Join</NavLink></li>
           </ul>
         </div>
       </div>
