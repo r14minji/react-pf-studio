@@ -30,6 +30,13 @@ function Footer(){
             <li>Contact us</li>
             <li>Privacy Policy</li>
           </ul>
+
+          <ul className="sns">
+            <li>a</li>
+            <li>a</li>
+            <li>a</li>
+            <li>a</li>
+          </ul>
   
           {/* <ul className="sns">
             <li><FontAwesomeIcon icon={faInstagram} /></li>

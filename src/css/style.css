@@ -295,6 +295,32 @@ a {
   #footer .inner .wrap .sns {
     flex: auto;
     padding: 0px 10px; } }
+.content {
+  width: 100%; }
+  .content .inner {
+    width: 1180px;
+    position: relative;
+    margin: 0 auto;
+    min-height: 800px; }
+    .content .inner h1 {
+      padding: 40px 0;
+      text-align: center;
+      font: 700 160px/1 'Oswald';
+      letter-spacing: 2px;
+      text-transform: uppercase; }
+
+/* tablet */
+@media screen and (max-width: 1179px) {
+  .content .inner {
+    width: 100%; }
+    .content .inner h1 {
+      padding: 30px 0;
+      font-size: 90px !important; } }
+/* mobile*/
+@media screen and (max-width: 539px) {
+  .content .inner h1 {
+    padding: 20px 0;
+    font-size: 14vw; } }
 .gallery .inner .title_wrap {
   width: 80%;
   margin: 0 auto;
