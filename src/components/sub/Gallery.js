@@ -176,8 +176,8 @@ function Gallery(){
     })
     
     setTimeout(()=>{
-      list.current.classList.add("on");    
       setLoading(false);
+      list.current.classList.add("on");    
       setTimeout(()=>{
         setEnableClick(true);
       },1000);
