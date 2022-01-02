@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-pf-studio/static/css/main.2da97e65.css",
+    "main.js": "/react-pf-studio/static/js/main.1f403152.js",
+    "index.html": "/react-pf-studio/index.html",
+    "main.2da97e65.css.map": "/react-pf-studio/static/css/main.2da97e65.css.map",
+    "main.1f403152.js.map": "/react-pf-studio/static/js/main.1f403152.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2da97e65.css",
+    "static/js/main.1f403152.js"
+  ]
+}
