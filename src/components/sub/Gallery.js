@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
-import Masonry from "react-masonry-component";
+//import Masonry from "react-masonry-component";
 
 const path = process.env.PUBLIC_URL;
 const body = document.querySelector("body");
@@ -13,7 +13,7 @@ function Gallery(){
   const count = 10;
   const url = `${baseURL}method=${method1}&api_key=${key}&per_page=${count}&format=json&nojsoncallback=1`;  
 
-  let [items, setItem] = useState([]);
+  let [items, setItems] = useState([]);
   let [loading, setLoading] = useState(true);
   let [enableClick, setEnableClick] = useState(true); 
   let [interest, setInterest] = useState(true);
@@ -71,10 +71,11 @@ function Gallery(){
             </ul>
         </div>
       </div>
-
-      { isPop ? <Pop /> : ""}
     </section>
   )
 }
 
 export default Gallery;
+
+
+
