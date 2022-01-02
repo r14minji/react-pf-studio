@@ -69,3 +69,71 @@
     }
   }
 }
+
+/* tablet */
+@media screen and (max-width: $tablet){
+  #header{
+  
+    .inner{
+      width: 100%;
+  
+      h1{
+        padding: 30px 0 10px;
+        font-size: 40px;
+        letter-spacing: 4px;
+      }
+
+      p{
+        font-size: 18px;
+        letter-spacing: 3px;
+        padding-bottom: 50px;
+      }
+  
+      #gnb{
+        padding: 15px 80px 10px;
+  
+        ul{
+          li{
+            font: 400 14px/ 1 'Oswald';
+          }
+        }
+      }
+  
+      .util{
+        position: absolute; top: 120px; right: 3vw;
+        ul{
+          li{
+            font-size: 14px;
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* moblie */
+@media screen and (max-width: $mobile){
+  #header{
+    .inner{
+      h1{
+        padding: 30px 0 10px;
+        font-size: 26px;
+      }
+
+      p{
+        font-size: 14px;
+        letter-spacing: 2px;
+        padding-bottom: 40px;
+      }
+  
+      #gnb{
+        padding: 15px 10px 10px;
+      }
+  
+      .util{
+        position: absolute; top: 95px; right: 3vw;
+      }
+    }
+  }
+}
