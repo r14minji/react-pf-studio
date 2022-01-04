@@ -25,6 +25,7 @@ function Youtube(){
       <div className="inner">
         <h1>&#8547;. Youtube</h1>
 
+        {/* youtube vid list */}
         <div className="list">
             {
               data.map((item, index)=>{

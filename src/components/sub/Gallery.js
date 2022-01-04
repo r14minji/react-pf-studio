@@ -33,6 +33,7 @@ function Gallery(){
   return(
     <section className="content gallery">
       <div className="inner">
+        {/* title */}
         <div className="title_wrap">
           <p>Should I take a photo?</p>
           <h1 onClick={()=>{
@@ -48,6 +49,7 @@ function Gallery(){
           }}>&#8546;. GALLERY</h1>
         </div>
 
+        {/* Search - input, button */}
         <article className="searchBox">
           <input type="text"  id="search" placeholder="검색어 입력" ref={input} onKeyPress={e=>{
             if(e.key !== "Enter") return;
@@ -87,8 +89,10 @@ function Gallery(){
           }} >Search</button>
         </article>
 
+        {/* loading */}
         {(loading) ? <img src={path+"/img/loading.gif"}  alt="로딩중입니다." className="loading"/> : ""}
 
+        {/* flicker list - img, figcaption */}
         <div className="list" ref={list}>
             <Masonry
               className={"wrap"}
@@ -144,7 +148,6 @@ function Gallery(){
     }else{
       console.error("api요청 타입을 interest, search중에서 지정하세요.");
     }
-
 
     await axios
     .get(url)
