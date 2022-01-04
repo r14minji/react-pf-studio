@@ -338,7 +338,8 @@ fieldset {
 @media screen and (max-width: 539px) {
   .content .inner h1 {
     padding: 20px 0;
-    font-size: 14vw; } }
+    font-size: 14vw;
+    margin-bottom: 20px; } }
 .visual {
   padding: 40px 0px; }
   .visual .inner img {
@@ -636,84 +637,151 @@ fieldset {
 @media screen and (max-width: 479px) {
   .gallery .item {
     width: 100% !important; } }
-.youtube .inner .list {
-  width: 100%; }
-  .youtube .inner .list article {
+.youtube .inner {
+  /* youtube vid list*/
+  /* popup */ }
+  .youtube .inner .list {
+    width: 100%; }
+    .youtube .inner .list article {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 80px; }
+      .youtube .inner .list article:nth-of-type(2n) {
+        flex-direction: row-reverse; }
+      .youtube .inner .list article .pic {
+        width: 35%;
+        height: 250px;
+        background: url(/src/img/Film2.jpg) no-repeat center/cover; }
+        .youtube .inner .list article .pic img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          padding: 35px 0px;
+          opacity: 0.6;
+          transition: 0.5s; }
+      .youtube .inner .list article .txt {
+        width: 61%;
+        height: 250px;
+        position: relative;
+        border-top: 4px solid #2F4858;
+        border-bottom: 4px solid #2F4858;
+        opacity: 0.8; }
+        .youtube .inner .list article .txt h2 {
+          font: 600 36px/1 'Oswald';
+          padding: 40px 20px 20px;
+          color: #005B4B; }
+        .youtube .inner .list article .txt p {
+          font: 400 16px/1 'Oswald';
+          padding: 0 20px 60px;
+          min-height: 108px;
+          overflow: hidden; }
+        .youtube .inner .list article .txt span {
+          display: block;
+          font: 400 14px/1 'Oswald';
+          padding: 0 20px;
+          text-align: right; }
+        .youtube .inner .list article .txt .btnWatch {
+          position: absolute;
+          bottom: 15px;
+          left: 10px;
+          padding: 5px 10px;
+          cursor: pointer;
+          transition: 0.5s;
+          border: 1px solid #000; }
+          .youtube .inner .list article .txt .btnWatch:hover {
+            border: 1px solid #2F4858;
+            background: #2F4858;
+            color: #e6e2dd; }
+      .youtube .inner .list article:hover .pic img {
+        opacity: 1; }
+      .youtube .inner .list article:hover .txt {
+        opacity: 1; }
+  .youtube .inner .pop {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 80px; }
-    .youtube .inner .list article:nth-of-type(2n) {
-      flex-direction: row-reverse; }
-    .youtube .inner .list article .pic {
-      width: 35%;
-      height: 250px;
-      background: url(/src/img/Film2.jpg) no-repeat center/cover; }
-      .youtube .inner .list article .pic img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        padding: 35px 0px;
-        opacity: 0.6;
-        transition: 0.5s; }
-    .youtube .inner .list article .txt {
-      width: 61%;
-      height: 250px;
-      position: relative;
-      border-top: 4px solid #2F4858;
-      border-bottom: 4px solid #2F4858;
-      opacity: 0.8; }
-      .youtube .inner .list article .txt h2 {
-        font: 600 36px/1 'Oswald';
-        padding: 40px 20px 20px;
-        color: #005B4B; }
-      .youtube .inner .list article .txt p {
-        font: 400 16px/1 'Oswald';
-        padding: 0 20px 60px;
-        min-height: 108px;
-        overflow: hidden; }
-      .youtube .inner .list article .txt span {
-        display: block;
-        font: 400 14px/1 'Oswald';
-        padding: 0 20px;
-        text-align: right; }
-      .youtube .inner .list article .txt .btnWatch {
-        position: absolute;
-        bottom: 15px;
-        left: 10px;
-        padding: 5px 10px;
-        cursor: pointer;
-        transition: 0.5s;
-        border: 1px solid #000; }
-        .youtube .inner .list article .txt .btnWatch:hover {
-          border: 1px solid #2F4858;
-          background: #2F4858;
-          color: #e6e2dd; }
-    .youtube .inner .list article:hover .pic img {
-      opacity: 1; }
-    .youtube .inner .list article:hover .txt {
-      opacity: 1; }
-.youtube .inner .pop {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  background: rgba(0, 0, 0, 0.9);
-  padding: 5vw; }
-  .youtube .inner .pop iframe {
-    border: none;
-    width: 100%;
-    height: 100%; }
-  .youtube .inner .pop span {
-    position: absolute;
-    top: 3vw;
-    right: 5vw;
-    font: bold 14px/1 'arial';
-    color: #fff;
-    cursor: pointer; }
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 5vw; }
+    .youtube .inner .pop iframe {
+      border: none;
+      width: 100%;
+      height: 100%; }
+    .youtube .inner .pop span {
+      position: absolute;
+      top: 3vw;
+      right: 5vw;
+      font: bold 14px/1 'arial';
+      color: #fff;
+      cursor: pointer; }
 
+/* tablet*/
+@media screen and (max-width: 1179px) {
+  .youtube .inner {
+    /* youtube vid list*/ }
+    .youtube .inner .list article {
+      width: 100%;
+      padding: 0 20px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 60px; }
+      .youtube .inner .list article:nth-of-type(2n) {
+        flex-direction: column;
+        align-items: flex-end; }
+      .youtube .inner .list article .pic {
+        width: 35%;
+        min-width: 320px;
+        height: 240px;
+        margin-bottom: 20px; }
+      .youtube .inner .list article .txt {
+        width: 70%;
+        min-width: 480px;
+        height: 220px; }
+        .youtube .inner .list article .txt h2 {
+          font-size: 30px;
+          padding: 30px 20px 20px; }
+        .youtube .inner .list article .txt p {
+          font: 400 16px/1 'Oswald';
+          padding: 0 20px 0px;
+          margin-bottom: 16px;
+          min-height: 87px;
+          overflow: hidden; }
+        .youtube .inner .list article .txt .btnWatch {
+          bottom: 15px;
+          left: 20px; } }
+/* mobile */
+@media screen and (max-width: 539px) {
+  .youtube .inner {
+    /* youtube vid list*/ }
+    .youtube .inner .list article {
+      width: 100%;
+      padding: 0px 0px;
+      margin-bottom: 40px; }
+      .youtube .inner .list article .pic {
+        width: 100%;
+        min-width: auto;
+        height: 210px;
+        margin-bottom: 20px; }
+      .youtube .inner .list article .txt {
+        width: 100%;
+        min-width: auto;
+        height: 240px; }
+        .youtube .inner .list article .txt h2 {
+          font-size: 22px;
+          padding: 20px 10px 20px; }
+        .youtube .inner .list article .txt p {
+          font-size: 14px;
+          padding: 0px 10px;
+          margin-bottom: 55px;
+          min-height: 87px;
+          overflow: hidden; }
+        .youtube .inner .list article .txt .btnWatch {
+          bottom: 15px;
+          left: 10px; } }
 html {
   background-color: #e6e2dd;
   color: #303030; }
