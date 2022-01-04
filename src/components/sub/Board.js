@@ -1,3 +1,4 @@
+
 function Board(){
   return(
     <section className="content board">
@@ -5,6 +6,7 @@ function Board(){
       <h1>&#8545;. BOARD</h1>
       </div>
     </section>
+    
   )
 }
 

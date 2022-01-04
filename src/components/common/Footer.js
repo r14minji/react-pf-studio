@@ -1,5 +1,5 @@
-// import {  faFacebookF, faInstagram, faTwitter, faYoutube  } from '@fortawesome/free-brands-svg-icons';
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {  faFacebookF, faInstagram, faTwitter, faYoutube  } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Footer(){
   return(
@@ -30,20 +30,13 @@ function Footer(){
             <li>Contact us</li>
             <li>Privacy Policy</li>
           </ul>
-
-          <ul className="sns">
-            <li>a</li>
-            <li>a</li>
-            <li>a</li>
-            <li>a</li>
-          </ul>
   
-          {/* <ul className="sns">
+          <ul className="sns">
             <li><FontAwesomeIcon icon={faInstagram} /></li>
             <li><FontAwesomeIcon icon={faFacebookF} /></li>
             <li><FontAwesomeIcon icon={faTwitter}/></li>
             <li><FontAwesomeIcon icon={faYoutube}/></li>
-          </ul> */}
+          </ul>
         </div>
 
         <p>&copy; 2022 Creative StudioAlice Films</p>
