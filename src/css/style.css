@@ -11,7 +11,8 @@ ol, ul {
   list-style: none; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #303030; }
 
 .hidden {
   position: absolute;
@@ -343,6 +344,132 @@ fieldset {
     width: 100%;
     object-fit: cover; }
 
+.board {
+  margin-bottom: 20px;
+  /*posts-table*/
+  /*pagination*/ }
+  .board table {
+    width: 100%;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+    margin-bottom: 50px; }
+    .board table tr th {
+      padding: 15px;
+      background: rgba(255, 237, 203, 0.5);
+      color: #303030; }
+      .board table tr th:nth-of-type(1) {
+        width: 5%; }
+      .board table tr th:nth-of-type(3) {
+        width: 15%; }
+      .board table tr th:nth-of-type(4) {
+        width: 15%; }
+      .board table tr th:nth-of-type(5) {
+        width: 5%; }
+    .board table tr td {
+      padding: 13px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+      color: #333; }
+      .board table tr td:nth-of-type(2) {
+        text-align: left; }
+        .board table tr td:nth-of-type(2) a {
+          color: #333;
+          letter-spacing: 1px;
+          line-height: 1.4; }
+    .board table tr:hover td {
+      background: rgba(201, 195, 183, 0.801); }
+  .board .paignation {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px; }
+    .board .paignation::after {
+      content: '';
+      display: block;
+      clear: both; }
+    .board .paignation .prev {
+      float: left;
+      display: block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 20px; }
+    .board .paignation .next {
+      float: right;
+      display: block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 20px; }
+    .board .paignation .prev:hover, .board .paignation .next:hover {
+      color: #FFEDCB;
+      background: #303030; }
+    .board .paignation .numbers {
+      display: inline-block;
+      text-align: center;
+      font-size: 0; }
+      .board .paignation .numbers a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin: 0px 5px;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        transition: 0.3s; }
+        .board .paignation .numbers a:hover {
+          border-radius: 50%;
+          color: #FFEDCB;
+          background: #303030; }
+
+/* tablet */
+@media screen and (max-width: 1179px) {
+  .board {
+    /*posts-table*/
+    /*pagination*/ }
+    .board table tr th:nth-of-type(1) {
+      width: 10%; }
+    .board table tr th:nth-of-type(3) {
+      width: 20%; }
+    .board table tr th:nth-of-type(4) {
+      width: 0%;
+      display: none; }
+    .board table tr th:nth-of-type(5) {
+      width: 0%;
+      display: none; }
+    .board table tr td:nth-of-type(4) {
+      width: 0%;
+      display: none; }
+    .board table tr td:nth-of-type(5) {
+      width: 0%;
+      display: none; }
+    .board .paignation .numbers a:nth-of-type(6) {
+      display: none; }
+    .board .paignation .numbers a:nth-of-type(7) {
+      display: none; }
+    .board .paignation .numbers a:nth-of-type(8) {
+      display: none; }
+    .board .paignation .numbers a:nth-of-type(9) {
+      display: none; }
+    .board .paignation .numbers a:nth-of-type(10) {
+      display: none; } }
+/* mobile */
+@media screen and (max-width: 539px) {
+  .board {
+    /*posts-table*/
+    /*pagination*/ }
+    .board table tr th:nth-of-type(1) {
+      width: 0%;
+      display: none; }
+    .board table tr th:nth-of-type(3) {
+      width: 27%; }
+    .board table tr td:nth-of-type(1) {
+      width: 0%;
+      display: none; }
+    .board .paignation .numbers {
+      display: none; } }
 .gallery .inner .title_wrap {
   width: 80%;
   margin: 0 auto;

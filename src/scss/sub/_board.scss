@@ -1,0 +1,159 @@
+.board{
+  margin-bottom: 20px;
+  
+  /*posts-table*/
+  table{
+    width: 100%;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+    margin-bottom: 50px;
+
+    tr{
+      th{
+        padding: 15px;
+        background:  rgba(255, 237, 203, 0.5); //#C0C1B8;
+        color: $txt;
+
+        &:nth-of-type(1){ width: 5%;}
+        &:nth-of-type(3){ width: 15%;}
+        &:nth-of-type(4){ width: 15%;}
+        &:nth-of-type(5){ width: 5%;}
+      }
+
+      td{
+        padding:13px; 
+        border-bottom:1px solid #ddd; 
+        text-align:center; 
+        color:#333; 
+
+        &:nth-of-type(2){
+          text-align: left;
+          a{
+            color:#333; 
+            letter-spacing: 1px;
+            line-height:1.4; 
+          }
+        }
+      }
+
+      &:hover{
+        td{
+          background: rgba(201, 195, 183, 0.801);
+        }
+      }
+    }
+  }
+
+  /*pagination*/
+  .paignation{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+
+    &::after{
+      content: ''; display: block; clear: both;
+    }
+
+    .prev{
+      float:left; 
+      display:block; 
+      width:30px; height:30px; line-height:30px; 
+      text-align:center; 
+      font-size:20px;
+    }
+
+    .next{
+      float:right; 
+      display:block; 
+      width:30px; height:30px;  line-height:30px; 
+      text-align:center; 
+      font-size:20px; 
+    }
+
+    .prev:hover, .next:hover{
+      color: #FFEDCB;
+      background: $txt;
+    }
+
+    .numbers{
+      display: inline-block;
+      text-align: center;
+      font-size: 0;
+      
+      a{
+        display: inline-block; 
+        width: 30px; height:30px;
+        border-radius: 50%;
+        margin: 0px 5px;
+        font-size: 16px; line-height: 30px;
+        text-align: center;
+        transition: 0.3s;
+
+        &:hover{
+          border-radius: 50%;
+          color:#FFEDCB; 
+          background: $txt;
+        }
+      }
+    }
+  }
+}
+
+/* tablet */
+@media screen and (max-width: $tablet){
+  .board{
+    /*posts-table*/
+    table{  
+      tr{
+        th{
+          &:nth-of-type(1){ width: 10%;}
+          &:nth-of-type(3){ width: 20%;}
+          &:nth-of-type(4){ width: 0%; display: none;}
+          &:nth-of-type(5){  width: 0%; display: none;}
+        }
+
+        td{
+          &:nth-of-type(4){width: 0%; display: none;}
+          &:nth-of-type(5){  width: 0%; display: none;}
+        }
+      }
+    }
+  
+    /*pagination*/
+    .paignation{
+      .numbers{
+        a{
+          @for $i from 6 through 10{
+            &:nth-of-type(#{$i}){display: none;}
+          }
+        }
+      }
+    }
+  }
+}
+
+/* mobile */
+@media screen and (max-width: $mobile){
+  .board{
+    /*posts-table*/
+    table{  
+      tr{
+        th{
+          &:nth-of-type(1){ width: 0%; display: none;}
+          &:nth-of-type(3){ width: 27%;}
+        }
+
+        td{
+          &:nth-of-type(1){ width: 0%; display: none;}
+        }
+      }
+    }
+  
+    /*pagination*/
+    .paignation{
+      .numbers{
+        display: none;
+      }
+    }
+  }
+}
