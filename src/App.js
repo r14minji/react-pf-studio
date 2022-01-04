@@ -27,13 +27,13 @@ function App() {
         <Visual/>
       </Route>
 
-      <Route exact path="/about" component={About}></Route>
-      <Route exact path="/board" component={Board}></Route>
-      <Route exact path="/gallery" component={Gallery}></Route>
-      <Route exact path="/youtube" component={Youtube}></Route>
-      <Route exact path="/location" component={Location}></Route>
-      <Route exact path="/signin" component={Signin}></Route>
-      <Route exact path="/join" component={Join}></Route>
+      <Route  path="/about" component={About}></Route>
+      <Route  path="/board" component={Board}></Route>
+      <Route  path="/gallery" component={Gallery}></Route>
+      <Route  path="/youtube" component={Youtube}></Route>
+      <Route  path="/location" component={Location}></Route>
+      <Route  path="/signin" component={Signin}></Route>
+      <Route  path="/join" component={Join}></Route>
       <Footer />
     </div>
   );

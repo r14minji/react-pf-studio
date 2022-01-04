@@ -26,7 +26,6 @@ function Gallery(){
       type: "interest",
       count: 30
     });
-    list.current.classList.add("on");
   },[])
 
   return(
@@ -126,30 +125,6 @@ function Gallery(){
     </section>
   )
 
-  function Pop(){
-    const imgSrc= `https://live.staticflickr.com/${items[index].server}/${items[index].id}_${items[index].secret}_b.jpg`;
-
-    useEffect(()=>{
-      //console.log("팝생성")
-      body.style.overflow = "hidden";
-
-      return ()=>{
-        //console.log("팝제거");
-        body.style.overflow = "auto";
-      }
-    },[])
-
-    return(
-      <aside className="pop">
-        <img src={imgSrc} />
-        <p>{}</p>
-        <span onClick={()=>{
-          setIsPop(false);
-        }}>Close</span>
-      </aside>
-    )
-  }
-
   async function getFlickr(opt){
     let url = "";
 
@@ -175,6 +150,7 @@ function Gallery(){
       setItems(json.data.photos.photo);
     })
     
+
     setTimeout(()=>{
       setLoading(false);
       list.current.classList.add("on");    
@@ -182,6 +158,30 @@ function Gallery(){
         setEnableClick(true);
       },1000);
     },1000);
+  }
+
+  function Pop(){
+    const imgSrc= `https://live.staticflickr.com/${items[index].server}/${items[index].id}_${items[index].secret}_b.jpg`;
+
+    useEffect(()=>{
+      //console.log("팝생성")
+      body.style.overflow = "hidden";
+
+      return ()=>{
+        //console.log("팝제거");
+        body.style.overflow = "auto";
+      }
+    },[])
+
+    return(
+      <aside className="pop">
+        <img src={imgSrc} />
+        <p>{}</p>
+        <span onClick={()=>{
+          setIsPop(false);
+        }}>Close</span>
+      </aside>
+    )
   }
 }
 
