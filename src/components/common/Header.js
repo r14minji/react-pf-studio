@@ -11,18 +11,18 @@ function Header(){
 
         <div id="gnb">
           <ul>
-            <li><NavLink activeStyle={active} exact to='/about'>ABOUT</NavLink></li>
-            <li><NavLink activeStyle={active} exact to='/board'>BOARD</NavLink></li>
-            <li><NavLink activeStyle={active} exact to='/gallery'>GALLERY</NavLink></li>
-            <li><NavLink activeStyle={active} exact to='/youtube'>YOUTUBE</NavLink></li>
-            <li><NavLink activeStyle={active} exact to='/location'>LOCATION</NavLink></li>
+            <li><NavLink activeStyle={active}  to='/about'>ABOUT</NavLink></li>
+            <li><NavLink activeStyle={active}  to='/board'>BOARD</NavLink></li>
+            <li><NavLink activeStyle={active}  to='/gallery'>GALLERY</NavLink></li>
+            <li><NavLink activeStyle={active}  to='/youtube'>YOUTUBE</NavLink></li>
+            <li><NavLink activeStyle={active}  to='/location'>LOCATION</NavLink></li>
           </ul>
         </div>
 
         <div className="util">
           <ul>
-            <li><NavLink activeStyle={active} exact to='/signin'>Sign In</NavLink></li>
-            <li><NavLink activeStyle={active} exact to='/join'>Join</NavLink></li>
+            <li><NavLink activeStyle={active}  to='/signin'>Sign In</NavLink></li>
+            <li><NavLink activeStyle={active}  to='/join'>Join</NavLink></li>
           </ul>
         </div>
       </div>
