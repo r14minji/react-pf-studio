@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import Masonry from "react-masonry-component";
+import { faWindowClose } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const path = process.env.PUBLIC_URL;
 const body = document.querySelector("body");
@@ -179,7 +181,7 @@ function Gallery(){
         <p>{}</p>
         <span onClick={()=>{
           setIsPop(false);
-        }}>Close</span>
+        }}><FontAwesomeIcon icon={faWindowClose} /></span>
       </aside>
     )
   }
