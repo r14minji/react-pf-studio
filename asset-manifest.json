@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/react-pf-studio/static/css/main.2da97e65.css",
-    "main.js": "/react-pf-studio/static/js/main.1486f4b4.js",
+    "main.css": "/react-pf-studio/static/css/main.05b211fd.css",
+    "main.js": "/react-pf-studio/static/js/main.c85bb234.js",
+    "static/media/paper-texture-narrow.png": "/react-pf-studio/static/media/paper-texture-narrow.a439dbb3416c097db327.png",
+    "static/media/Film2.jpg": "/react-pf-studio/static/media/Film2.b0a3cb803b23f56d4c96.jpg",
     "index.html": "/react-pf-studio/index.html",
-    "main.2da97e65.css.map": "/react-pf-studio/static/css/main.2da97e65.css.map",
-    "main.1486f4b4.js.map": "/react-pf-studio/static/js/main.1486f4b4.js.map"
+    "main.05b211fd.css.map": "/react-pf-studio/static/css/main.05b211fd.css.map",
+    "main.c85bb234.js.map": "/react-pf-studio/static/js/main.c85bb234.js.map"
   },
   "entrypoints": [
-    "static/css/main.2da97e65.css",
-    "static/js/main.1486f4b4.js"
+    "static/css/main.05b211fd.css",
+    "static/js/main.c85bb234.js"
   ]
 }
