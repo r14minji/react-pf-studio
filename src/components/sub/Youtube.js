@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 function Youtube(){
-  const key = "AIzaSyB3Xi97H8RT0bj6sAR6FQRG1TB8ts5Br7k";
+  const key = "AIzaSyCpNKtPx5E3mMI60UE3hwHpAnBKEKiueuc";
   const playListId = "PL5jd_nA7BbYubv925xZLUtapVQjGoV8Ly";
   const num = 7;
   const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playListId}&maxResult=${num}`;
