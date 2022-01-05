@@ -1,3 +1,4 @@
+/*title - web만 적용*/
 .contact{
   width: 100%;
   .inner{
@@ -59,6 +60,76 @@
       }
       >strong{
         font: 700 32px/1 'Oswald'; color: $pink;
+      }
+    }
+  }
+}
+
+/* loaction - article, map, button */
+.location{
+  .inner{
+    width: 1180px; 
+    position: relative;
+    margin: 0 auto;
+
+    h1{
+      font: 600 38px/1 'Oswald';
+      margin-bottom: 20px;
+    }
+
+    .wrap{
+      width: 100%;
+      padding-bottom: 50px;
+      margin-bottom: 20px;
+      border-bottom: 4px solid #000;
+
+      article{
+        float: left; width: 380px; margin-right: 20px;
+        &:nth-of-type(3){margin-right: 0;}
+
+        span{
+          display: block;
+          font: 400 14px/1 'Oswald'; text-align: center;
+          padding: 10px 0px;
+          border-top: 1px solid #000;
+          border-bottom: 1px solid #000;
+        }
+
+        p{
+          font: 600 24px/1 'Oswald'; text-align: center;
+          padding: 15px 0px;
+        }
+        >ul{
+          padding: 0 20px;
+          display: flex; flex-direction: column; justify-content: flex-start;
+          li{
+            font: 400 16px/1.2 'Oswald';
+          }
+        }
+      }
+
+
+
+    }
+
+    #map{
+      width: 100%;
+      height: 500px;
+      border: 1px solid #000; //임시 
+      margin-bottom: 20px;
+    }
+
+    .btn_branch{
+      //포지셔으로 지도 위로 올림
+      position: relative; top: -500px; left: 0px;
+      border: 1px solid #000;
+
+      li{
+        //너비
+
+        button{
+          border: none;
+        }
       }
     }
   }
