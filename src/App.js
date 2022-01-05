@@ -13,7 +13,7 @@ import About from './components/sub/About.js';
 import Board from './components/sub/Board.js';
 import Gallery from './components/sub/Gallery.js';
 import Youtube from './components/sub/Youtube.js';
-import Location from './components/sub/Location.js';
+import Contact from './components/sub/Contact.js';
 import Signin from './components/sub/Signin.js';
 import Join from './components/sub/Join.js';
 
@@ -31,7 +31,7 @@ function App() {
       <Route  path="/board" component={Board}></Route>
       <Route  path="/gallery" component={Gallery}></Route>
       <Route  path="/youtube" component={Youtube}></Route>
-      <Route  path="/location" component={Location}></Route>
+      <Route  path="/location" component={Contact}></Route>
       <Route  path="/signin" component={Signin}></Route>
       <Route  path="/join" component={Join}></Route>
       <Footer />

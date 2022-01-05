@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { faAngleDoubleRight, faAngleDoubleLeft, faRssSquare, faEnvelopeSquare, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDoubleRight, faAngleDoubleLeft, faRssSquare, faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import {faFacebookSquare, faTwitterSquare, faInstagram} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
