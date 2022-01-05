@@ -1,15 +1,16 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { faAngleDoubleRight, faAngleDoubleLeft, faRssSquare } from "@fortawesome/free-solid-svg-icons";
-import { faThumbsUp, faNewspaper } from "@fortawesome/free-regular-svg-icons";
-import {faFacebookSquare, faTwitterSquare} from "@fortawesome/free-brands-svg-icons";
+import { faAngleDoubleRight, faAngleDoubleLeft, faRssSquare, faEnvelopeSquare, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
+import {faFacebookSquare, faTwitterSquare, faInstagram} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const path = process.env.PUBLIC_URL;
-const url = `${path}/dbs/board.json`
+const url= `${path}/dbs/notice.json`;
 
 function Board(){
   let [posts, setPosts] = useState([]);
+  let [news, setNews] = useState([]);
   let len = posts.length;
 
   useEffect(()=>{
@@ -17,9 +18,11 @@ function Board(){
     .get(url)
     .then(json =>{
       //console.log(json.data.data);
+      //console.log(json.data.news);
       setPosts(json.data.data);
+      setNews(json.data.news);
     })
-  })
+  },[])
 
   return(
     <>
@@ -33,83 +36,77 @@ function Board(){
     {/* magazine - img, content, connect */}
     <section className="magazine">
       <div className="inner">
-        <img src="" alt="" />
-        <div className="txt">
-          <h2>ABOUT VII THE MAGAZINE</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nulla quas nemo eius provident qui autem velit ut voluptas maiores explicabo, ducimus alias recusandae harum obcaecati facilis quod aut! Perspiciatis.</p>
-          <span>herald.cotland</span>
-        </div>
-        <div className="stayConnect">
-          <h3>STAY CONNECTED</h3>
-          <ul>
-            <li>
-              <span>Fan SA on facebook</span>
-              <FontAwesomeIcon icon={faFacebookSquare} />
+        <h1>MAGAZINE</h1>
+        <div className="wrap">
+          <div className="pic">
+            <img src={path+"/img/Little Women.png"} alt="Little Women movie poster" />
+          </div>
+          <div className="txt">
+            <h2>ABOUT S&A THE MAGAZINE</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus, mollitia facere temporibus, non repellendus aspernatur amet cum et quidem quis sit quisquam, voluptate eius quibusdam vel laborum ullam! Magni tempore facere corrupti dolore laudantium nemo cupiditate alias quas, mollitia natus laborum esse temporibus voluptates inventore ipsa enim numquam dolorum nobis obcaecati nisi? <br/> Reiciendis perferendis nulla fugit doloribus numquam assumenda quisquam? Sed, error nobis animi provident dolorum praesentium adipisci explicabo saepe odio obcaecati dolor ipsa harum eligendi atque, aspernatur, incidunt molestiae a architecto nemo rerum fuga ab. Cupiditate vero ad illum corrupti, tempore cum quia voluptate quod sapiente esse? Ad, aspernatur.</p>
+            <span>herald.cotland</span>
+          </div>
+          <div className="stayConnect">
+            <h3>STAY CONNECTED</h3>
+            <ul>
+              <li>
+                <span>Fan S&A on facebook</span>
+                <strong><FontAwesomeIcon icon={faFacebookSquare} /></strong>
+                </li>
+              <li>
+                <span>Follow S&A on Twitter</span>
+                <strong><FontAwesomeIcon icon={faTwitterSquare} /></strong>
               </li>
-            <li>
-              <span>Follow SA on Twitter</span>
-              <FontAwesomeIcon icon={faTwitterSquare} />
-            </li>
-            <li>
-              <span>Subscribe SA to RSSS fee-ds</span>
-              <FontAwesomeIcon icon={faRssSquare} />
-            </li>
-            <li>
-              <span>Sign up for newsletter</span>
-              <FontAwesomeIcon icon={faNewspaper} />
-            </li>
-          </ul>
+              <li>
+                <span>Like S&A on instagram</span>
+                <strong><FontAwesomeIcon icon={faInstagram} /></strong>
+              </li>
+              <li>
+                <span>Subscribe S&A to RSS fee-ds</span>
+                <strong><FontAwesomeIcon icon={faRssSquare} /></strong>
+              </li>
+              <li>
+                <span>Sign up for newsletter</span>
+                <strong><FontAwesomeIcon icon={faEnvelopeSquare} /></strong>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     {/* latest news */}
     <section className="latestNews">
-      <article>
-        <div className="pic">
-          <img src="" alt="" />
+      <div className="inner">
+        <h1>LATEST NEWS</h1>
+        <div className="wrap">
+
+          {
+            news.map((data, index)=>{
+              return(
+              <article key={index}>
+                <div className="content">
+                  <strong>{data.date}</strong>
+                  <h2>{data.title}</h2>
+                  <p>{data.contents}</p>
+                  <span>Read More</span>
+                </div>
+                <div className="pic">
+                  <img src={path + data.url} />
+                </div>
+              </article>
+              )
+            })
+          }
         </div>
-        <div className="content">
-          <h2>The Republicans</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet id placeat eius omnis vero nisi reiciendis molestias quaerat explicabo impedit.</p>
-          <span>Read More</span>
-        </div>
-      </article>
-      <article>
-        <div className="pic">
-          <img src="" alt="" />
-        </div>
-        <div className="content">
-          <h2>Gray Knight</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet id placeat eius omnis vero nisi reiciendis molestias quaerat explicabo impedit.</p>
-          <span>Read More</span>
-        </div>
-      </article>
-      <article>
-        <div className="pic">
-          <img src="" alt="" />
-        </div>
-        <div className="content">
-          <h2>Browse World Map</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet id placeat eius omnis vero nisi reiciendis molestias quaerat explicabo impedit.</p>
-          <span>Read More</span>
-        </div>
-      </article>
-      <article>
-        <div className="pic">
-          <img src="" alt="" />
-        </div>
-        <div className="content">
-          <h2>Afghanistan Prison</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet id placeat eius omnis vero nisi reiciendis molestias quaerat explicabo impedit.</p>
-          <span>Read More</span>
-        </div>
-      </article>
+      </div>
     </section>
 
     {/* notice - table, pagination */}
     <section className="notice">
       <div className="inner">
+        <h1>NOTICE</h1>
+
         {/* table */}
         <table>
           <caption className="hidden">notice, news</caption>

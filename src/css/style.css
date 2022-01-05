@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=IM+Fell+English+SC&display=swap");
 /*색상*/
 /*반응형*/
 * {
@@ -347,48 +347,201 @@ fieldset {
     object-fit: cover; }
 
 .board {
-  margin-bottom: 20px;
-  /*posts-table*/
+  margin-bottom: 20px; }
+  .board .inner {
+    min-height: 0px; }
+
+/*magazine - img, content, connect */
+.magazine .inner {
+  width: 1180px;
+  position: relative;
+  margin: 0 auto; }
+  .magazine .inner h1 {
+    font: 600 36px/1 'Oswald';
+    padding: 10px 0px;
+    border-bottom: 4px solid #303030;
+    margin-bottom: 30px; }
+  .magazine .inner .wrap {
+    width: 100%;
+    height: 360px;
+    margin-bottom: 30px; }
+    .magazine .inner .wrap .pic {
+      float: left;
+      width: 20%;
+      padding: 10px; }
+      .magazine .inner .wrap .pic img {
+        width: 100%;
+        object-fit: cover; }
+    .magazine .inner .wrap .txt {
+      float: left;
+      width: 50%;
+      padding: 10px; }
+      .magazine .inner .wrap .txt h2 {
+        font: 700 36px/1 'Oswald';
+        letter-spacing: 1px;
+        margin-bottom: 20px; }
+      .magazine .inner .wrap .txt p {
+        font: 400 16px/1.2 'Oswald';
+        padding-bottom: 77px; }
+      .magazine .inner .wrap .txt span {
+        font: 600 18px/1 'Oswald';
+        color: #555; }
+    .magazine .inner .wrap .stayConnect {
+      float: left;
+      width: 30%;
+      height: 100%;
+      padding: 10px;
+      border-left: 3px solid #303030; }
+      .magazine .inner .wrap .stayConnect h3 {
+        font: 700 30px/1 'Oswald';
+        letter-spacing: 1px;
+        margin-bottom: 20px; }
+      .magazine .inner .wrap .stayConnect ul {
+        width: 100%; }
+        .magazine .inner .wrap .stayConnect ul::after {
+          content: "";
+          display: block;
+          clear: both; }
+        .magazine .inner .wrap .stayConnect ul li {
+          float: left;
+          width: 100%;
+          font: 400 18px/1 "Oswald";
+          padding: 10px 0px 30px;
+          border-top: 1px solid #999;
+          cursor: pointer; }
+          .magazine .inner .wrap .stayConnect ul li span {
+            display: inline-block;
+            width: 80%; }
+          .magazine .inner .wrap .stayConnect ul li strong {
+            display: inline-block;
+            width: 20%;
+            font-size: 18px;
+            text-align: right; }
+          .magazine .inner .wrap .stayConnect ul li:hover {
+            color: #FFEDCB; }
+
+/*latest news -article */
+.latestNews .inner {
+  width: 1180px;
+  position: relative;
+  margin: 0 auto; }
+  .latestNews .inner h1 {
+    font: 600 36px/1 'Oswald';
+    padding: 10px 0px;
+    border-bottom: 4px solid #000;
+    margin-bottom: 30px; }
+  .latestNews .inner .wrap {
+    width: 100%;
+    margin-bottom: 30px; }
+    .latestNews .inner .wrap article {
+      width: 280px;
+      margin-right: 20px;
+      float: left;
+      transition: 0.5s; }
+      .latestNews .inner .wrap article:nth-of-type(4) {
+        margin-right: 0px; }
+      .latestNews .inner .wrap article .content {
+        width: 100%;
+        padding-bottom: 30px;
+        position: relative; }
+        .latestNews .inner .wrap article .content strong {
+          font: 600 12px/1 'Oswald'; }
+          .latestNews .inner .wrap article .content strong::after {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #555;
+            position: absolute;
+            top: 10px;
+            right: 0px; }
+        .latestNews .inner .wrap article .content h2 {
+          font: 600 28px/1 'Oswald';
+          margin-bottom: 10px; }
+        .latestNews .inner .wrap article .content p {
+          font: 400 16px/1.2 'Oswald';
+          color: #555;
+          margin-bottom: 10px; }
+        .latestNews .inner .wrap article .content span {
+          font: 400 16px/1 'IM Fell English SC';
+          color: #555;
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          padding: 5px 5px 3px;
+          cursor: pointer;
+          transition: 0.3s; }
+          .latestNews .inner .wrap article .content span:hover {
+            background: #FFEDCB; }
+      .latestNews .inner .wrap article .pic {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px; }
+        .latestNews .inner .wrap article .pic img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      .latestNews .inner .wrap article:hover .content strong::after {
+        background: #FFEDCB; }
+      .latestNews .inner .wrap article:hover .content p, .latestNews .inner .wrap article:hover .content span {
+        color: #303030; }
+      .latestNews .inner .wrap article:hover .content span {
+        border-bottom: 4px solid #FFEDCB; }
+
+/*notice - table, pagination */
+.notice .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+  /*table*/
   /*pagination*/ }
-  .board table {
+  .notice .inner h1 {
+    font: 600 36px/1 'Oswald';
+    padding: 10px 0px;
+    border-bottom: 4px solid #000;
+    margin-bottom: 30px; }
+  .notice .inner table {
     width: 100%;
     border-top: 2px solid #333;
     border-bottom: 2px solid #333;
-    margin-bottom: 50px; }
-    .board table tr th {
+    margin-bottom: 50px;
+    font-family: 'Oswald'; }
+    .notice .inner table tr th {
       padding: 15px;
       background: rgba(255, 237, 203, 0.5);
       color: #303030; }
-      .board table tr th:nth-of-type(1) {
+      .notice .inner table tr th:nth-of-type(1) {
         width: 5%; }
-      .board table tr th:nth-of-type(3) {
+      .notice .inner table tr th:nth-of-type(3) {
         width: 15%; }
-      .board table tr th:nth-of-type(4) {
+      .notice .inner table tr th:nth-of-type(4) {
         width: 15%; }
-      .board table tr th:nth-of-type(5) {
+      .notice .inner table tr th:nth-of-type(5) {
         width: 5%; }
-    .board table tr td {
+    .notice .inner table tr td {
       padding: 13px;
       border-bottom: 1px solid #ddd;
       text-align: center;
       color: #333; }
-      .board table tr td:nth-of-type(2) {
+      .notice .inner table tr td:nth-of-type(2) {
         text-align: left; }
-        .board table tr td:nth-of-type(2) a {
+        .notice .inner table tr td:nth-of-type(2) a {
           color: #333;
           letter-spacing: 1px;
           line-height: 1.4; }
-    .board table tr:hover td {
+    .notice .inner table tr:hover td {
       background: rgba(201, 195, 183, 0.801); }
-  .board .paignation {
+  .notice .inner .paignation {
     width: 100%;
     text-align: center;
-    margin-bottom: 40px; }
-    .board .paignation::after {
+    margin-bottom: 40px;
+    font-family: 'Oswald'; }
+    .notice .inner .paignation::after {
       content: '';
       display: block;
       clear: both; }
-    .board .paignation .prev {
+    .notice .inner .paignation .prev {
       float: left;
       display: block;
       width: 30px;
@@ -396,7 +549,7 @@ fieldset {
       line-height: 30px;
       text-align: center;
       font-size: 20px; }
-    .board .paignation .next {
+    .notice .inner .paignation .next {
       float: right;
       display: block;
       width: 30px;
@@ -404,14 +557,15 @@ fieldset {
       line-height: 30px;
       text-align: center;
       font-size: 20px; }
-    .board .paignation .prev:hover, .board .paignation .next:hover {
+    .notice .inner .paignation .prev:hover, .notice .inner .paignation .next:hover {
       color: #FFEDCB;
-      background: #303030; }
-    .board .paignation .numbers {
+      background: #303030;
+      border-radius: 50%; }
+    .notice .inner .paignation .numbers {
       display: inline-block;
       text-align: center;
       font-size: 0; }
-      .board .paignation .numbers a {
+      .notice .inner .paignation .numbers a {
         display: inline-block;
         width: 30px;
         height: 30px;
@@ -421,56 +575,59 @@ fieldset {
         line-height: 30px;
         text-align: center;
         transition: 0.3s; }
-        .board .paignation .numbers a:hover {
+        .notice .inner .paignation .numbers a:hover {
           border-radius: 50%;
           color: #FFEDCB;
           background: #303030; }
 
 /* tablet */
 @media screen and (max-width: 1179px) {
-  .board {
-    /*posts-table*/
+  /*notice - table, pagination */
+  .notice .inner {
+    width: 100%;
+    /*table*/
     /*pagination*/ }
-    .board table tr th:nth-of-type(1) {
+    .notice .inner table tr th:nth-of-type(1) {
       width: 10%; }
-    .board table tr th:nth-of-type(3) {
+    .notice .inner table tr th:nth-of-type(3) {
       width: 20%; }
-    .board table tr th:nth-of-type(4) {
+    .notice .inner table tr th:nth-of-type(4) {
       width: 0%;
       display: none; }
-    .board table tr th:nth-of-type(5) {
+    .notice .inner table tr th:nth-of-type(5) {
       width: 0%;
       display: none; }
-    .board table tr td:nth-of-type(4) {
+    .notice .inner table tr td:nth-of-type(4) {
       width: 0%;
       display: none; }
-    .board table tr td:nth-of-type(5) {
+    .notice .inner table tr td:nth-of-type(5) {
       width: 0%;
       display: none; }
-    .board .paignation .numbers a:nth-of-type(6) {
+    .notice .inner .paignation .numbers a:nth-of-type(6) {
       display: none; }
-    .board .paignation .numbers a:nth-of-type(7) {
+    .notice .inner .paignation .numbers a:nth-of-type(7) {
       display: none; }
-    .board .paignation .numbers a:nth-of-type(8) {
+    .notice .inner .paignation .numbers a:nth-of-type(8) {
       display: none; }
-    .board .paignation .numbers a:nth-of-type(9) {
+    .notice .inner .paignation .numbers a:nth-of-type(9) {
       display: none; }
-    .board .paignation .numbers a:nth-of-type(10) {
+    .notice .inner .paignation .numbers a:nth-of-type(10) {
       display: none; } }
 /* mobile */
 @media screen and (max-width: 539px) {
-  .board {
-    /*posts-table*/
+  /*notice - table, pagination */
+  .notice .inner {
+    /*table*/
     /*pagination*/ }
-    .board table tr th:nth-of-type(1) {
+    .notice .inner table tr th:nth-of-type(1) {
       width: 0%;
       display: none; }
-    .board table tr th:nth-of-type(3) {
+    .notice .inner table tr th:nth-of-type(3) {
       width: 27%; }
-    .board table tr td:nth-of-type(1) {
+    .notice .inner table tr td:nth-of-type(1) {
       width: 0%;
       display: none; }
-    .board .paignation .numbers {
+    .notice .inner .paignation .numbers {
       display: none; } }
 .gallery .inner {
   /* title */
