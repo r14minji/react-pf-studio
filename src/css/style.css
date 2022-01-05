@@ -505,9 +505,9 @@ fieldset {
     width: 100%;
     border-top: 2px solid #333;
     border-bottom: 2px solid #333;
-    margin-bottom: 50px;
-    font-family: 'Oswald'; }
+    margin-bottom: 50px; }
     .notice .inner table tr th {
+      font: 600 20px/1 'Oswald';
       padding: 15px;
       background: rgba(255, 237, 203, 0.5);
       color: #303030; }
@@ -520,6 +520,7 @@ fieldset {
       .notice .inner table tr th:nth-of-type(5) {
         width: 5%; }
     .notice .inner table tr td {
+      font: 400 16px/1 'Oswald';
       padding: 13px;
       border-bottom: 1px solid #ddd;
       text-align: center;
@@ -587,6 +588,9 @@ fieldset {
     width: 100%;
     /*table*/
     /*pagination*/ }
+    .notice .inner h1 {
+      font-size: 36px;
+      padding: 10px 20px; }
     .notice .inner table tr th:nth-of-type(1) {
       width: 10%; }
     .notice .inner table tr th:nth-of-type(3) {
@@ -619,14 +623,21 @@ fieldset {
   .notice .inner {
     /*table*/
     /*pagination*/ }
-    .notice .inner table tr th:nth-of-type(1) {
-      width: 0%;
-      display: none; }
-    .notice .inner table tr th:nth-of-type(3) {
-      width: 27%; }
-    .notice .inner table tr td:nth-of-type(1) {
-      width: 0%;
-      display: none; }
+    .notice .inner h1 {
+      font-size: 28px;
+      padding: 10px 20px; }
+    .notice .inner table tr th {
+      font-size: 18px; }
+      .notice .inner table tr th:nth-of-type(1) {
+        width: 0%;
+        display: none; }
+      .notice .inner table tr th:nth-of-type(3) {
+        width: 27%; }
+    .notice .inner table tr td {
+      font-size: 14px; }
+      .notice .inner table tr td:nth-of-type(1) {
+        width: 0%;
+        display: none; }
     .notice .inner .paignation .numbers {
       display: none; } }
 .gallery .inner {
