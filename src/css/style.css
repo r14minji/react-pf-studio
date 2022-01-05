@@ -382,7 +382,8 @@ fieldset {
         margin-bottom: 20px; }
       .magazine .inner .wrap .txt p {
         font: 400 16px/1.2 'Oswald';
-        padding-bottom: 77px; }
+        padding-bottom: 77px;
+        overflow: hidden; }
       .magazine .inner .wrap .txt span {
         font: 600 18px/1 'Oswald';
         color: #555; }
@@ -583,6 +584,39 @@ fieldset {
 
 /* tablet */
 @media screen and (max-width: 1179px) {
+  /*magazine - img, content, connect */
+  .magazine .inner {
+    width: 100%; }
+    .magazine .inner h1 {
+      font-size: 36px;
+      padding: 10px 20px; }
+    .magazine .inner .wrap {
+      width: 100%;
+      height: auto;
+      margin-bottom: 30px; }
+      .magazine .inner .wrap .pic {
+        display: none; }
+      .magazine .inner .wrap .txt {
+        float: left;
+        width: 50%;
+        border-right: 3px solid #303030; }
+        .magazine .inner .wrap .txt h2 {
+          font-size: 36px; }
+        .magazine .inner .wrap .txt p {
+          font-size: 16px;
+          padding-bottom: 0px;
+          height: 292px;
+          overflow: hidden;
+          margin-bottom: 20px; }
+        .magazine .inner .wrap .txt span {
+          font-size: 18px; }
+      .magazine .inner .wrap .stayConnect {
+        float: right;
+        width: 50%;
+        border-left: none; }
+        .magazine .inner .wrap .stayConnect h3 {
+          font-size: 30px; }
+
   /*notice - table, pagination */
   .notice .inner {
     width: 100%;
@@ -619,6 +653,30 @@ fieldset {
       display: none; } }
 /* mobile */
 @media screen and (max-width: 539px) {
+  /*magazine - img, content, connect */
+  .magazine .inner h1 {
+    font-size: 28px; }
+  .magazine .inner .wrap .txt {
+    float: none;
+    width: 100%;
+    border-right: none;
+    margin-bottom: 30px; }
+    .magazine .inner .wrap .txt h2 {
+      font-size: 22px; }
+    .magazine .inner .wrap .txt p {
+      font-size: 14px;
+      height: auto;
+      margin-bottom: 20px; }
+    .magazine .inner .wrap .txt span {
+      font-size: 16px; }
+  .magazine .inner .wrap .stayConnect {
+    float: none;
+    width: 100%; }
+    .magazine .inner .wrap .stayConnect h3 {
+      font-size: 22px; }
+    .magazine .inner .wrap .stayConnect ul li {
+      font-size: 16px; }
+
   /*notice - table, pagination */
   .notice .inner {
     /*table*/

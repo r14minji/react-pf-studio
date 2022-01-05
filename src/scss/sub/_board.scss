@@ -40,7 +40,7 @@
         }
         p{
           font: 400 16px/1.2 'Oswald';
-          padding-bottom: 77px;
+          padding-bottom: 77px; overflow: hidden;
         }
         span{
           font: 600 18px/1 'Oswald';
@@ -280,6 +280,53 @@
 /* tablet */
 @media screen and (max-width: $tablet){
 
+  /*magazine - img, content, connect */
+  .magazine{
+    .inner{
+      width: 100%;
+
+      h1{
+        font-size: 36px;
+        padding: 10px 20px;
+      }
+
+      .wrap{
+        width: 100%; height: auto;
+        margin-bottom: 30px; 
+
+        .pic{  display: none; }
+
+        .txt{
+          float: left; width: 50%; 
+          border-right: 3px solid #303030;
+          h2{
+            font-size: 36px;
+          }
+          p{
+            font-size: 16px;
+            padding-bottom: 0px;
+            height: 292px;
+            overflow: hidden;
+            margin-bottom: 20px;
+          }
+          span{
+            font-size: 18px;
+          }
+        }
+
+        .stayConnect{
+          float: right; width: 50%; 
+          border-left: none;
+
+          h3{
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+
+
   /*notice - table, pagination */
   .notice{
     .inner{
@@ -323,7 +370,46 @@
 
 /* mobile */
 @media screen and (max-width: $mobile){
+
+    /*magazine - img, content, connect */
+    .magazine{
+      .inner{  
+        h1{
+          font-size: 28px;
+        }
   
+        .wrap{  
+          .txt{
+            float: none; width: 100%; 
+            border-right: none;
+            margin-bottom: 30px;
+            h2{
+              font-size: 22px;
+            }
+            p{
+              font-size: 14px;
+              height: auto;
+              margin-bottom: 20px;
+            }
+            span{
+              font-size: 16px;
+            }
+          }
+  
+          .stayConnect{
+            float: none; width: 100%; 
+  
+            h3{
+              font-size: 22px;
+            }
+            ul li {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+
   /*notice - table, pagination */
   .notice{
     .inner{
