@@ -5,7 +5,6 @@
     width: 1180px;
     position:relative;
     margin: 0 auto;
-
     margin-bottom: 50px;
     border-bottom: 4px solid #000;
 
@@ -67,21 +66,22 @@
 
 /* loaction - article, map, button */
 .location{
+  border: 1px solid #000; height: auto;
   .inner{
     width: 1180px; 
     position: relative;
     margin: 0 auto;
 
     h1{
-      font: 600 38px/1 'Oswald';
-      margin-bottom: 20px;
+      font: 600 22px/1 'Oswald';
+      margin-bottom: 10px;
     }
-
+    /*article - info headquater, brnach */
     .wrap{
       width: 100%;
       padding-bottom: 50px;
       margin-bottom: 20px;
-      border-bottom: 4px solid #000;
+      border-bottom: 4px solid #000; 
 
       article{
         float: left; width: 380px; margin-right: 20px;
@@ -104,31 +104,162 @@
           display: flex; flex-direction: column; justify-content: flex-start;
           li{
             font: 400 16px/1.2 'Oswald';
+            padding: 2px 0;
           }
         }
       }
-
-
-
     }
 
-    #map{
+    /* kakao-map */
+    .wrap_map{
       width: 100%;
-      height: 500px;
-      border: 1px solid #000; //임시 
-      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 4px solid #000;
+
+      #map{
+        width: 100%;
+        height: 500px;
+        border: 1px solid #000; //임시 
+      }
     }
 
+    /* button */
     .btn_branch{
       //포지셔으로 지도 위로 올림
       position: relative; top: -500px; left: 0px;
-      border: 1px solid #000;
 
       li{
-        //너비
+        width: 300px;
+        padding: 20px 50px;
+        text-align: center;
+        border: 1px solid #000;
 
         button{
+          font: 600 18px/1 'Oswald';
           border: none;
+
+        }
+      }
+    }
+  }
+}
+
+/* recruit, support ,get in touch */
+.message{
+  .inner{
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+
+    .wrap{
+      width: 100%;
+      margin-bottom: 20px;
+      &::after{ content: ''; display: block; clear: both; }
+
+      article{
+        h1{
+          font: 600 14px/1 'Oswald';
+          border-bottom: 1px solid #000;
+          margin-bottom: 10px;
+          float: left; width: 100%;
+        }
+        .pic{
+          width: 380px; height: 210px;
+          float: left;
+
+          img{
+            width: 100%; height: 100%; 
+            object-fit: cover;
+          }
+        }
+        .txt{
+          width: 380px; height: 210px;
+          float: left;
+        }
+
+        &:nth-of-type(1){
+          width: 790px;
+          height: 260px;
+          padding: 20px 10px 20px 0px;
+          float: left;
+          border: 1px solid red;
+
+          .pic{
+            margin-right: 10px;
+          }
+
+          .txt{
+            h2{
+              width: 100%;
+              font: 700 36px/1.2 'Oswald';
+              margin-bottom: 10px;
+            }
+            >ul {
+              width: 100%;
+              >li{
+                list-style-type: square;
+                list-style-position: inside;
+                font: 400 16px/1 'Oswald';
+                padding: 3px 0;
+              }
+            }
+          }
+        }
+
+        &:nth-of-type(2){
+          width:790px;
+          height: 360px;
+          padding: 20px 10px 40px 0px;
+          float: left; position: relative;
+          border: 1px solid blue;
+
+          .pic{
+            margin-right: 10px;
+            h2{
+              width: 100%;
+              font: 700 36px/1.2 'Oswald';
+              margin-bottom: 10px;
+            }
+          }
+          >.txt{
+            font: 400 16px/1.2 'Oswald';
+            
+            p{
+              margin-bottom: 30px;
+            }
+          }
+
+          #familySite{
+            width:100%;
+            height: 30px;
+            border: 2px solid $lightbrown ;
+            background: transparent;
+          }
+        }
+
+        &:nth-of-type(3){
+          width:390px;
+          height: 620px;
+          padding: 20px 0px 40px 10px;
+          float: left;
+          border: 1px solid green;
+
+          .txt{
+            h2{
+              width: 100%;
+              font: 700 36px/1.2 'Oswald';
+              margin-bottom: 10px;
+            }
+            >ul {
+              width: 100%;
+              >li{
+                list-style-type: square;
+                list-style-position: inside;
+                font: 400 16px/1 'Oswald';
+                padding: 3px 0;
+              }
+            }
+          }
         }
       }
     }

@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+const body = document.querySelector("body");
+
 function Youtube(){
   const key = "AIzaSyCpNKtPx5E3mMI60UE3hwHpAnBKEKiueuc";
   const playListId = "PL5jd_nA7BbYubv925xZLUtapVQjGoV8Ly";
@@ -19,6 +21,7 @@ function Youtube(){
       setData(json.data.items);
     })
   },[])
+
 
   return(
     <section className="content youtube">
@@ -61,6 +64,16 @@ function Youtube(){
   )
 
   function Pop(){
+    useEffect(()=>{
+      //console.log("유튜브팝생성")
+      body.style.overflow = "hidden";
+
+      return ()=>{
+        //console.log("유뷰브팝제거");
+        body.style.overflow = "auto";
+      }
+    },[])
+
     return(
       <aside className="pop">
         <iframe src={"https://www.youtube.com/embed/" +  data[index].snippet.resourceId.videoId }  width='100%' height='100%'></iframe>

@@ -169,11 +169,11 @@ function Gallery(){
     const imgSrc= `https://live.staticflickr.com/${items[index].server}/${items[index].id}_${items[index].secret}_b.jpg`;
 
     useEffect(()=>{
-      //console.log("팝생성")
+      //console.log("갤러리팝생성")
       body.style.overflow = "hidden";
 
       return ()=>{
-        //console.log("팝제거");
+        //console.log("갤러리팝제거");
         body.style.overflow = "auto";
       }
     },[])

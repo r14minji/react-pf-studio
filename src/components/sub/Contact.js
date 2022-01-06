@@ -1,6 +1,16 @@
 //이슈: article의 정보를 json파일로 받아오고 싶은데, useEffect에서 카카오api와 json파일 각각 axios하면 되는건지?? 
+import { useEffect, useState } from "react";
+
+const html = document.querySelector("html");
 
 function Contact(){
+  useEffect(()=>{
+    html.style.backgroundColor = "#FFFFEB";
+
+    return ()=>{
+      html.style.backgroundColor = "#e6e2dd"
+    }
+  },[])
 
   return(
     <>
@@ -26,7 +36,7 @@ function Contact(){
     <section className="location">
       <div className="inner">
         <h1>loaction</h1>
-        {/* article - info office */}
+        {/* article - info headquater, brnach */}
         <div className="wrap">
           <article>
             <span>Headquarters</span>
@@ -60,13 +70,73 @@ function Contact(){
           </article>
         </div>
         {/* kakao-map */}
-        <div id="map"></div>
+        <div className="wrap_map">
+          <div id="map"></div>
+        </div>
         {/* button */}
         <ul className="btn_branch">
-          <li class="on" data-index="0"><button>Gangnam Headquarters</button></li>
+          <li className="on" data-index="0"><button>Gangnam Headquarters</button></li>
           <li data-index="1"><button >JeJu Branch Office</button></li>
           <li data-index="2"><button>Busan Branch Office</button></li>
         </ul>
+      </div>
+    </section>
+
+    {/* recruit, support ,get in touch */}
+    <section className="message">
+      <div className="inner">
+        <div className="wrap">
+          <article>
+            <h1>Recruit</h1>
+            <div className="pic">
+              <img src="" alt="" />
+            </div>
+            <div className="txt">
+              <h2>Build an employer brand</h2>
+              <ul>
+                <li>Find new people to work in a company, join an organization, do a job.</li>
+                <li>Position: Producer </li>
+                <li>Responsibilities: Lorem, ipsum dolor.</li>
+                <li>Qualification: Amet consectetur adipisicing.</li>
+                <li>Email : info-recruit@studioalice.co.kr</li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <h1>Support</h1>
+            <div className="pic">
+              <h2>Donate to the World Studio Foundation </h2>
+              <img src="" alt="" />
+            </div>
+            <div className="txt">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nihil excepturi eos aspernatur modi quam maxime cumque enim tempore perferendis, tenetur, adipisci reiciendis perspiciatis ipsa minima fuga quisquam porro itaque reprehenderit, corporis nam? Iure incidunt nihil, est quisquam, culpa consequuntur animi veniam impedit quaerat reprehenderit excepturi. <br /><br />Modi necessitatibus placeat ratione corrupti expedita eos magni dolores. Itaque sapiente, eligendi vero explicabo aspernatur eos corrupti eum incidunt soluta dicta ducimus architecto. Rerum.</p>
+              
+              <select name="familySite" id="familySite">
+                <option value="">Family Site</option>
+                <option value="https://www.pinterest.co.kr/">pinterest</option>
+                <option value="https://fontawesome.com/">fontawesome</option>
+                <option value="https://fonts.google.com/">google fonts</option>
+              </select>
+            </div>
+          </article>
+          <article>
+            <h1>Get In Touch</h1>
+            <div className="pic">
+              <img src="" alt="" />
+            </div>
+            <div className="txt">
+              <h2>we promise you’ll always receive a warm welcome from the team.</h2>
+              <ul>
+                <li>Find new people to work in a company, join an organization, do a job.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias temporibus nihil ad nulla quo, minima, quia deserunt sunt nam architecto ut qui amet, odio laudantium eligendi consequuntur exercitationem harum enim!</li>
+                <li>Position: Producer </li>
+                <li>Responsibilities: Lorem, ipsum dolor.</li>
+                <li>Qualification: Amet consectetur adipisicing.</li>
+                <li>Email : info-recruit@studioalice.co.kr</li>
+              </ul>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
     </>
