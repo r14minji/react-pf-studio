@@ -19,7 +19,7 @@ function About(){
         <h1>&#8544;. ABOUT</h1>
         {/* ul - btnMenu */}
         <ul className="btnMenu">
-          <li class="on">
+          <li className="on">
             <p>What makes a great Films?</p>
             <span>It's all about the experience. People love films that are fun and simple to feel. We make those films</span>
             <strong>View</strong>
@@ -53,16 +53,21 @@ function About(){
     <section className="team">
       <div className="inner">
         <h1>TEAM</h1>
-        <article>
-          <h1>Stephanie Crespin</h1>
-          <p>CEO, CO-FOUNDER</p>
-          <span>Email: corpda27@studioalice.co.kr</span>
-          <ul>
-            <li><FontAwesomeIcon icon={faInstagram} /></li>
-            <li><FontAwesomeIcon icon={faFacebookF} /></li>
-            <li><FontAwesomeIcon icon={faTwitter}/></li>
-          </ul>
-        </article>
+        <div className="wrap">
+          <article>
+            <div className="pic">
+              <img src="" alt="" />
+            </div>
+            <h2>Stephanie Crespin</h2>
+            <p>CEO, CO-FOUNDER</p>
+            <span>Email: corpda27@studioalice.co.kr</span>
+            <ul>
+              <li><FontAwesomeIcon icon={faInstagram} /></li>
+              <li><FontAwesomeIcon icon={faFacebookF} /></li>
+              <li><FontAwesomeIcon icon={faTwitter}/></li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
     </>
