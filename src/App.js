@@ -31,7 +31,7 @@ function App() {
       <Route  path="/board" component={Board}></Route>
       <Route  path="/gallery" component={Gallery}></Route>
       <Route  path="/youtube" component={Youtube}></Route>
-      <Route  path="/location" component={Contact}></Route>
+      <Route  path="/contact" component={Contact}></Route>
       <Route  path="/signin" component={Signin}></Route>
       <Route  path="/join" component={Join}></Route>
       <Footer />

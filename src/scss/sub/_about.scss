@@ -1,0 +1,91 @@
+/* title, btnMenu, story-txt,vid  */
+.about{
+  .inner{
+    width: 1180px;
+    position: relative;
+    margin: 0 auto;
+
+    h1{
+      font: 600 38px/1 'Oswald';
+      padding: 20px 0;
+      color: #ECECEC;
+    }
+    /* ul - btnMenu */
+    .btnMenu{
+      width: 100%;
+      display: flex; justify-content: space-between; align-items: center; 
+      padding-bottom: 30px;
+      border-bottom: 3px solid #000;
+      li{
+        width: 31.33%; margin-right: 2%; cursor: pointer;
+        &:nth-of-type(3){margin-right: 2%;}
+
+        p{
+          font: 400 28px/1 'Oswald';
+          padding: 20px 0px;
+          border-bottom: 1px solid $txt;
+          color: $txt;
+        }
+        span{
+          display: block;
+          font: 400 16px/1 'Oswald';
+          padding: 10px 0px;
+        }
+        strong{
+          display: block;
+          font: 400 16px/1 'IM Fell English SC';
+          text-align: right;
+        }
+        &.on{
+          p{color: #ECECEC; border-bottom: 1px solid #ECECEC;}
+          span, strong {color: #ECECEC;}
+        }
+      }
+    }
+    /* story - txt, vid */
+    .story{
+      width: 100%;
+      padding: 40px 0px 0px;
+      display: flex; justify-content: space-between; 
+      
+      .txt{
+        width: 30%; 
+        h2{
+          font: 700 80px/1 'Oswald'; 
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+          position: relative;
+          &::after{
+            content: ""; display: block;
+            width: 100%; height: 8px; background: $txt;
+            position: absolute; bottom: 0px; left: 0px;
+          }
+        }
+        p{
+          font: 400 16px/1.2 'Oswald'; 
+          color: $pink; 
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+          position: relative;
+          &::after{
+            content: ""; display: block;
+            width: 100%; height: 2px; background: #555;
+            position: absolute; bottom: 0px; left: 0px;
+          }
+        }
+        span{
+          display: block;
+          font: 400 16px/1.2 'Oswald';
+          color: $txt;
+          margin-bottom: 20px;
+        }
+      }
+
+      .vid{
+        width: 70%;
+        margin: 0px 0px 20px 40px;
+        background: rgba(0,0,0,0.2);
+      }
+    }
+  }
+}
