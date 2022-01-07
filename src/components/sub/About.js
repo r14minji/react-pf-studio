@@ -1,16 +1,28 @@
-import { useEffect } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 import {  faFacebookF, faInstagram, faTwitter  } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const html = document.querySelector("html");
+const path = process.env.PUBLIC_URL;
+const url = `${path}/dbs/about.json`;
 
 function About(){
+  let [members, setMembers] = useState([]);
   useEffect(()=>{
+    axios
+    .get(url)
+    .then(json=>{
+      //console.log(json.data.member);
+      setMembers(json.data.member);
+    })
     html.style.backgroundColor = "#E9B5B5";
     return()=>{
       html.style.backgroundColor = "#e6e2dd";
     }
-  })
+  },[])
+
   return(
     <>
     {/* title, btnMenu, story-txt,vid  */}
@@ -54,19 +66,26 @@ function About(){
       <div className="inner">
         <h1>TEAM</h1>
         <div className="wrap">
-          <article>
-            <div className="pic">
-              <img src="" alt="" />
-            </div>
-            <h2>Stephanie Crespin</h2>
-            <p>CEO, CO-FOUNDER</p>
-            <span>Email: corpda27@studioalice.co.kr</span>
-            <ul>
-              <li><FontAwesomeIcon icon={faInstagram} /></li>
-              <li><FontAwesomeIcon icon={faFacebookF} /></li>
-              <li><FontAwesomeIcon icon={faTwitter}/></li>
-            </ul>
-          </article>
+          {
+            members.map((member, index)=>{
+              return(
+                <article key={index}>
+                  <div className="pic">
+                    <img src={path + member.url} alt="" />
+                  </div>
+                  <h2>{member.name}</h2>
+                  <p>{member.position}</p>
+                  <span>Email: {member.email}</span>
+                  <ul>
+                    <li><FontAwesomeIcon icon={faInstagram} /></li>
+                    <li><FontAwesomeIcon icon={faFacebookF} /></li>
+                    <li><FontAwesomeIcon icon={faTwitter}/></li>
+                  </ul>
+                </article>
+              )
+            })
+          }
+
         </div>
       </div>
     </section>

@@ -124,6 +124,7 @@
 
     /* button */
     .btn_branch{
+      display: none;
       //포지셔으로 지도 위로 올림
       position: absolute; top: 330px; left: 0px;
       li{
