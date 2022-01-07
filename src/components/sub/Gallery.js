@@ -4,8 +4,10 @@ import Masonry from "react-masonry-component";
 import { faWindowClose } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const path = process.env.PUBLIC_URL;
+const html = document.querySelector("html");
 const body = document.querySelector("body");
+const path = process.env.PUBLIC_URL;
+
 
 const masonryOptions ={
   fitWidth: false,
@@ -28,6 +30,11 @@ function Gallery(){
       type: "interest",
       count: 30
     });
+
+    // html.style.backgroundColor = "#303030";
+    // return()=>{
+    //   html.style.backgroundColor = "#e6e2dd";
+    // }
   },[])
 
   return(
