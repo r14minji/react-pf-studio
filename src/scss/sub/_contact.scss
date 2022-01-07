@@ -250,6 +250,7 @@
   }
 }
 
+/* tablet */
 @media screen and (max-width: $tablet){
   /*title - web만 적용*/
   .contact{
@@ -289,16 +290,6 @@
         article{
           float: left; width: 30%; margin-right: 3%;
           &:nth-of-type(3){margin-right: 0;}
-
-          span{
-            font-size: 14px;
-            padding: 10px 0px;
-          }
-
-          p{
-            font-size: 24px;
-            padding: 15px 0px;
-          }
 
           >ul{
             padding: 0px 0px;
@@ -397,3 +388,63 @@
   }
 }
 
+/* mobile */
+@media screen and (max-width: $mobile){
+  /*title - web만 적용*/
+  .contact{
+    .inner{
+      margin-bottom:20px;
+    }
+  }
+
+  /* loaction - article, map, button */
+  .location{
+    .inner{
+      /*article - info headquater, brnach */
+      .wrap{
+        article{
+          width: 100%; margin-right: 0%;
+
+          >ul{
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      /* kakao-map */
+      .wrap_map{
+        // 맵이랑 버튼은 복사해서 수정하기
+        #map{
+          width: 100%;
+          height: 500px;
+          border: 1px solid #000; //임시 
+        }
+      }
+
+      /* button */
+      .btn_branch{
+        display: none;
+      }
+    }
+  }
+
+  /* recruit, support ,get in touch */
+  .message{
+    .inner{
+      .wrap{
+        article{
+          .pic{  width: 100%;  }
+          .txt{
+            width: 100%;
+            float: left; padding: 0px;
+          }
+
+          /* support - float:right*/
+          &:nth-of-type(2){
+            .pic{ margin-bottom: 10px; }
+          }
+        }
+      }
+    }
+  }
+}
