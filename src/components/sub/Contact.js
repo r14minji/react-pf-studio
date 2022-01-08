@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 
 import { faEnvelopeSquare, faFilm, faStreetView  } from "@fortawesome/free-solid-svg-icons";
 import { faFileVideo } from "@fortawesome/free-regular-svg-icons";
-import {faFacebookSquare, faTwitterSquare, faInstagram} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const html = document.querySelector("html");
 const path = process.env.PUBLIC_URL;
 
