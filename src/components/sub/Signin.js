@@ -4,31 +4,35 @@ function Signin(){
     {/* title, signin */}
     <section className="content Signin">
       <div className="inner">
-      <h1>&#8550;. Signin</h1>
+
+
 
       <article className="access">
-        <h2>Sign in or create an account</h2>
-        <p>Welcome to the official website of the STUDIOALICE. By signing in, you can access to the various services provided by STUDIOALICE</p>
+        <h1> Signin</h1>
+        <p>welcome to the official website of the alicestudio. by signing in, you can access to the various services provided by alicestudio</p>
 
         <div className="wrap">
-          <input type="text" name="" id="" />
-          <input type="text" name="" id="" />
-          <input type="checkbox" name="" id="" />
-          <label htmlFor="">
-            Keep me signed in. 
-            <span>Details</span>
-          </label>
-          
-          <p className="id">Forget your username?</p> 
-          <p className="pw">Forget your password?</p>
+          <label htmlFor="userid">your username</label>
+          <input type="text" name="" id="userid" placeholder="Enter your ID" />
+          <label htmlFor="pw">your password</label>
+          <input type="text" name="" id="pw" placeholder="Enter your password" />
+
+          <input type="checkbox" name="" id="loggedin" />
+          <label htmlFor="loggedin">
+          keep me signed in. <span>details</span> </label>
 
           <button>Sign in</button>
+
+          <div className="joinyet">
+            <p>not a member yet?</p>
+            <button>join us</button>
+          </div>
         </div>
       </article>
 
       </div>
     </section>
-
+{/* 
     <section className="membership">
       <div className="inner">
         <h1>Premium Membership</h1>
@@ -87,7 +91,7 @@ function Signin(){
       </div>
     </div>
     </section>
-
+ */}
     </>
   )
 }
