@@ -40,17 +40,16 @@ function Youtube(){
 
                 return(
                   <article key={index}>
-                    <div className="pic">
+                    <div className="pic" onClick={()=>{
+                      setIsPop(true);
+                      setIndex(index);
+                    }}>
                       <img src ={item.snippet.thumbnails.medium.url} />
                     </div>
                     <div className="txt">
                         <h2>{(tit_len > 30) ? tit = tit.substr(0, 30)+"..." : tit}</h2>
                         <p>{(desc_len > 120) ? desc = desc.substr(0, 250)+"..." : desc}</p>
                         <span>{date.split("T")[0]}</span>
-                        <div className="btnWatch" onClick={()=>{
-                          setIsPop(true);
-                          setIndex(index);
-                        }}>Watch Video</div>
                       </div>
                   </article>
                 )
