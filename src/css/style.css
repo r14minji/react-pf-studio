@@ -1369,8 +1369,14 @@ fieldset {
           width: 100%;
           font: 700 36px/1.2 'Oswald';
           margin-bottom: 10px; }
-        .message .inner .wrap article:nth-of-type(1) .txt .formVal {
-          height: 200px; }
+        .message .inner .wrap article:nth-of-type(1) .txt ul {
+          width: 100%;
+          margin: 0px 20px; }
+          .message .inner .wrap article:nth-of-type(1) .txt ul li {
+            font: 400 16px/1.2 'Oswald';
+            list-style-type: square;
+            list-style-position: outside;
+            padding: 5px 20px 5px 0px; }
       .message .inner .wrap article:nth-of-type(2) {
         width: 790px;
         height: 360px;
@@ -1388,11 +1394,6 @@ fieldset {
           font: 400 16px/1.2 'Oswald'; }
           .message .inner .wrap article:nth-of-type(2) > .txt p {
             margin-bottom: 30px; }
-        .message .inner .wrap article:nth-of-type(2) #familySite {
-          width: 100%;
-          height: 30px;
-          border: 2px solid #c9c3b7;
-          background: transparent; }
       .message .inner .wrap article:nth-of-type(3) {
         width: 790px;
         height: 260px;
@@ -1403,7 +1404,12 @@ fieldset {
         .message .inner .wrap article:nth-of-type(3) .txt h2 {
           width: 100%;
           font: 700 36px/1.2 'Oswald';
-          margin-bottom: 10px; }
+          margin-bottom: 30px; }
+        .message .inner .wrap article:nth-of-type(3) #familySite {
+          width: 100%;
+          height: 30px;
+          border: 2px solid #c9c3b7;
+          background: transparent; }
 
 /* tablet */
 @media screen and (max-width: 1179px) {

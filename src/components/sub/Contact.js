@@ -1,6 +1,10 @@
 //이슈: article의 정보를 json파일로 받아오고 싶은데, useEffect에서 카카오api와 json파일 각각 axios하면 되는건지?? 
 import { useEffect, useState } from "react";
 
+import { faEnvelopeSquare, faFilm, faStreetView  } from "@fortawesome/free-solid-svg-icons";
+import { faFileVideo } from "@fortawesome/free-regular-svg-icons";
+import {faFacebookSquare, faTwitterSquare, faInstagram} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const html = document.querySelector("html");
 const path = process.env.PUBLIC_URL;
 
@@ -96,10 +100,10 @@ function Contact(){
               <h2>Build an employer brand</h2>
               <ul>
                 <li>Find new people to work in a company, join an organization, do a job.</li>
-                <li>Position: Producer </li>
-                <li>Responsibilities: Lorem, ipsum dolor.</li>
-                <li>Qualification: Amet consectetur adipisicing.</li>
-                <li>Email : info-recruit@studioalice.co.kr</li>
+                <li><FontAwesomeIcon icon={faStreetView} /> Position<br/> Producer </li>
+                <li><FontAwesomeIcon icon={faFilm} /> Responsibilities<br/> person who supervises recorded performance for exhibition or dissemination to the public</li>
+                <li><FontAwesomeIcon icon={faFileVideo} /> Qualification<br/> select scripts, hire and approve of actors and directors, create budgets, secure financing, arrange rehearsals, and settle contracts with other personnel. </li>
+                <li> <FontAwesomeIcon icon={faEnvelopeSquare} /> Email<br/> info-recruit@studioalice.co.kr</li>
               </ul>
             </div>
           </article>
@@ -110,14 +114,9 @@ function Contact(){
               <img src={path+"/img/contact2.jpg"} />
             </div>
             <div className="txt">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nihil excepturi eos aspernatur modi quam maxime cumque enim tempore perferendis, tenetur, adipisci reiciendis perspiciatis ipsa minima fuga quisquam porro itaque reprehenderit, corporis nam? Iure incidunt nihil, est quisquam, culpa consequuntur animi veniam impedit quaerat reprehenderit excepturi. <br /><br />Modi necessitatibus placeat ratione corrupti expedita eos magni dolores. Itaque sapiente, eligendi vero explicabo aspernatur eos corrupti eum incidunt soluta dicta ducimus architecto. Rerum.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nihil excepturi eos aspernatur modi quam maxime cumque enim tempore perferendis, tenetur, adipisci reiciendis perspiciatis ipsa minima fuga quisquam porro itaque reprehenderit, corporis nam? Iure incidunt nihil, est quisquam, culpa consequuntur animi veniam impedit quaerat reprehenderit excepturi. <br /><br />Modi necessitatibus placeat ratione corrupti expedita eos magni dolores. Itaque sapiente, eligendi vero explicabo aspernatur eos corrupti eum incidunt soluta dicta ducimus architecto. Rerum. <br /><br /> Iure incidunt nihil, est quisquam, culpa consequuntur animi veniam impedit minima fuga quisquam porro.</p>
               
-              <select name="familySite" id="familySite">
-                <option value="">Family Site</option>
-                <option value="https://www.pinterest.co.kr/">pinterest</option>
-                <option value="https://fontawesome.com/">fontawesome</option>
-                <option value="https://fonts.google.com/">google fonts</option>
-              </select>
+
             </div>
           </article>
           <article>
@@ -127,7 +126,13 @@ function Contact(){
             </div>
             <div className="txt">
               <h2>we promise you’ll always receive a warm welcome from the team.</h2>
-              <div className="formVal">formvalidation email연동</div>
+
+              <select name="familySite" id="familySite">
+                <option value="">Family Site</option>
+                <option value="https://www.pinterest.co.kr/">pinterest</option>
+                <option value="https://fontawesome.com/">fontawesome</option>
+                <option value="https://fonts.google.com/">google fonts</option>
+              </select>
             </div>
           </article>
         </div>
