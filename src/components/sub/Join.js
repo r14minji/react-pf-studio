@@ -2,7 +2,9 @@ function Join(){
   return(
     <section className="content join">
       <div className="inner">
-      <h1>&#8549;. Sign Up</h1>
+      <h1>join</h1>
+
+      <div className="wrap"></div>
       </div>
     </section>
   )

@@ -1633,6 +1633,14 @@ fieldset {
         color: #C1554E;
         cursor: pointer; }
 
+.join .inner h1 {
+  font: 50px/1 'IM Fell English SC'; }
+.join .inner .wrap {
+  margin: 0 auto;
+  width: 800px;
+  min-height: 500px;
+  border: 1px solid #000; }
+
 html {
   background-color: #e6e2dd;
   color: #303030; }
