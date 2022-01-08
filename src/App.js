@@ -3,6 +3,7 @@ import './css/style.css';
 
 //import common component
 import Header from './components/common/Header.js';
+import Header_sub from './components/common/Header_sub.js';
 import Footer from './components/common/Footer.js';
 
 //import main component
@@ -26,6 +27,7 @@ function App() {
       <Route exact path="/">
         <Visual/>
       </Route>
+
 
       <Route  path="/about" component={About}></Route>
       <Route  path="/board" component={Board}></Route>
