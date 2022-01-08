@@ -122,17 +122,26 @@ function About(){
             members.map((member, index)=>{
               return(
                 <article key={index}>
-                  <div className="pic">
-                    <img src={path + member.url} alt="" />
+                  <div className="member">
+                    <div className="poster">
+                      <img src={path + member.url} />
+                    </div>
+                    <div className="info">
+                      <div className="pic">
+                        <img src={path + member.url_pic} />
+                      </div>
+                      <div className="profile">
+                        <h2>{member.name}</h2>
+                        <p>{member.position}</p>
+                        <span>Email: {member.email}</span>
+                        <ul>
+                          <li><FontAwesomeIcon icon={faInstagram} /></li>
+                          <li><FontAwesomeIcon icon={faFacebookF} /></li>
+                          <li><FontAwesomeIcon icon={faTwitter}/></li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-                  <h2>{member.name}</h2>
-                  <p>{member.position}</p>
-                  <span>Email: {member.email}</span>
-                  <ul>
-                    <li><FontAwesomeIcon icon={faInstagram} /></li>
-                    <li><FontAwesomeIcon icon={faFacebookF} /></li>
-                    <li><FontAwesomeIcon icon={faTwitter}/></li>
-                  </ul>
                 </article>
               )
             })

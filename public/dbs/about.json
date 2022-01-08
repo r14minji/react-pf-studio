@@ -4,37 +4,44 @@
       "name" : "Stephanie Crespin",
       "position" : "CEO / Co-Founder",
       "email" : "corpda27@studioalice.co.kr",
-      "url" : "/img/team1.jpg"
+      "url" : "/img/team1.jpg",
+      "url_pic": "/img/team001.jpg"
     },
     {
       "name" : "Philippe Benedetti",
       "position" : "CTO, Co-Founder",
       "email" : "corpda27@studioalice.co.kr",
-      "url" : "/img/team2.jpg"
+      "url" : "/img/team2.jpg",
+      "url_pic": "/img/team002.jpg"
+      
     },
     {
       "name" : "Felix Winekler",
       "position" : "CCO, Co-Founder",
       "email" : "corpda27@studioalice.co.kr",
-      "url" : "/img/team3.jpg"
+      "url" : "/img/team3.jpg",
+      "url_pic": "/img/team003.jpg"
     },
     {
       "name" : "Cedric Chrbit",
       "position" : "Strategic Leader / Partner",
       "email" : "corpda27@studioalice.co.kr",
-      "url" : "/img/team4.jpg"
+      "url" : "/img/team4.jpg",
+      "url_pic": "/img/team004.jpg"
     },
     {
       "name" : "Jack Ostrowski",
       "position" : "Senior Editor / Creative Director",
       "email" : "corpda27@studioalice.co.kr",
-      "url" : "/img/team5.jpg"
+      "url" : "/img/team5.jpg",
+      "url_pic": "/img/team005.jpg"
     },
     {
       "name" : "Vanessa Aheung",
       "position" : "Technical & Post-Production Coordinator",
       "email" : "corpda27@studioalice.co.kr",
-      "url" : "/img/team6.jpg"
+      "url" : "/img/team6.jpg",
+      "url_pic": "/img/team006.jpg"
     }
   ],
   "story":[

@@ -681,30 +681,37 @@ fieldset {
       width: 30%;
       padding: 20px 20px;
       margin-bottom: 40px; }
-      .team .inner .wrap article .pic {
+      .team .inner .wrap article .member .poster {
         width: 100%;
         height: 400px;
         background: rgba(0, 0, 0, 0.1);
         margin-bottom: 20px; }
-        .team .inner .wrap article .pic img {
+        .team .inner .wrap article .member .poster img {
           width: 100%;
           height: 100%;
           object-fit: cover; }
-      .team .inner .wrap article h2 {
+      .team .inner .wrap article .member .info .pic {
+        width: 100%;
+        height: 200px; }
+        .team .inner .wrap article .member .info .pic img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      .team .inner .wrap article .member .info .profile h2 {
         font: 400 38px/1 'Oswald';
         margin-bottom: 10px; }
-      .team .inner .wrap article p {
+      .team .inner .wrap article .member .info .profile p {
         font: 400 14px/1 'Oswald';
         margin-bottom: 10px; }
-      .team .inner .wrap article span {
+      .team .inner .wrap article .member .info .profile span {
         display: block;
         font: 400 16px/1 'Oswald';
         margin-bottom: 10px; }
-      .team .inner .wrap article ul {
+      .team .inner .wrap article .member .info .profile ul {
         width: 100%;
         display: flex;
         justify-content: flex-start; }
-        .team .inner .wrap article ul li {
+        .team .inner .wrap article .member .info .profile ul li {
           font-size: 14px;
           cursor: pointer;
           margin-right: 20px; }
