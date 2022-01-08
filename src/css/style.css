@@ -1007,7 +1007,13 @@ fieldset {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap; }
+    flex-wrap: nowrap;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: 1s; }
+    .gallery .inner .searchBox.on {
+      opacity: 1;
+      transform: translateY(0px); }
     .gallery .inner .searchBox input[type=text] {
       width: 500px;
       height: 30px;
@@ -1028,7 +1034,6 @@ fieldset {
     position: absolute;
     top: 300px;
     left: 50%;
-    width: 50%;
     transform: translateX(-50%); }
   .gallery .inner .list {
     opacity: 0;

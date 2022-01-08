@@ -4,6 +4,8 @@ import Masonry from "react-masonry-component";
 import { faWindowClose } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+
+
 const html = document.querySelector("html");
 const body = document.querySelector("body");
 const path = process.env.PUBLIC_URL;
@@ -24,6 +26,7 @@ function Gallery(){
   let [interest, setInterest] = useState(true);
   let list = useRef(null);
   let input = useRef(null);
+  let search = useRef(null);
 
   useEffect(()=>{
     getFlickr({
@@ -48,6 +51,7 @@ function Gallery(){
               setEnableClick(false);
               setLoading(true);
               list.current.classList.remove("on");
+              search.current.classList.remove("on");
               getFlickr({
                 type: "interest",
                 count: 30
@@ -57,13 +61,14 @@ function Gallery(){
         </div>
 
         {/* Search - input, button */}
-        <article className="searchBox">
+        <article className="searchBox" ref={search}>
           <input type="text"  id="search" placeholder="검색어 입력" ref={input} onKeyPress={e=>{
             if(e.key !== "Enter") return;
             if(enableClick){
               setEnableClick(false);
               setInterest(false);
-              list.current.classList.remove("on");         
+              list.current.classList.remove("on");
+              search.current.classList.remove("on");         
               setLoading(true);
 
               const tags = input.current.value;
@@ -84,6 +89,7 @@ function Gallery(){
               setEnableClick(false);
               setInterest(false);
               list.current.classList.remove("on");
+              search.current.classList.remove("on");
               setLoading(true);
 
               input.current.value = "";
@@ -97,8 +103,8 @@ function Gallery(){
         </article>
 
         {/* loading */}
-        {(loading) ? <img src={path+"/img/loading.gif"}  alt="로딩중입니다." className="loading"/> : ""}
-
+        {(loading) ? <img src={path + "/img/loading.png"} className="loading" /> : ""}
+        
         {/* flicker list - img, figcaption */}
         <div className="list" ref={list}>
             <Masonry
@@ -166,6 +172,7 @@ function Gallery(){
     setTimeout(()=>{
       setLoading(false);
       list.current.classList.add("on");    
+      search.current.classList.add("on");    
       setTimeout(()=>{
         setEnableClick(true);
       },1000);
