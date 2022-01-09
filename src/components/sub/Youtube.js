@@ -1,7 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+import { faStar  } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const body = document.querySelector("body");
+const path = process.env.PUBLIC_URL;
 
 function Youtube(){
   const key = "AIzaSyCpNKtPx5E3mMI60UE3hwHpAnBKEKiueuc";
@@ -48,17 +52,43 @@ function Youtube(){
                     </div>
                     <div className="txt">
                       <div className="mainTick container">
-                        <div className="icon"></div>
-                        <div className="tickName">tickName</div>
-                        <div className="descYoutb">descYoutb</div>
-                        <div className="titleYoutb">titleYoutb</div>
-                        <div className="star">star</div>
-                        <div className="date">date</div>
-                        <div className="seat">seat</div>
-                        <div className="time">time</div>
-                        <div className="price">price</div>
-                        <div className="sign">sign</div>
-                        <div className="tickNum">tickNum</div>
+                        <div className="icon">
+                          <img src={path + "/img/movieIcon2.png"} />
+                        </div>
+                        <div className="tickName">
+                          <p>alice Film Festival</p>
+                        </div>
+                        <div className="descYoutb">
+                          <p>{(desc_len > 120) ? desc = desc.substr(0, 120)+"..." : desc}</p>
+                        </div>
+                        <div className="titleYoutb">
+                          <h2>{(tit_len > 40) ? tit = tit.substr(0,40)+"..." : tit}</h2>
+                        </div>
+                        <div className="star">
+                          <span><FontAwesomeIcon icon={faStar}/></span>
+                          <span><FontAwesomeIcon icon={faStar}/></span>
+                          <span><FontAwesomeIcon icon={faStar}/></span>
+                        </div>
+                        <div className="date">
+                          <p>Date</p>
+                          <span>{date.split("T")[0]}</span>
+                        </div>
+                        <div className="seat">
+                          <p>Seat</p>
+                          <span>A-0{index+1}</span>
+                        </div>
+                        <div className="time">
+                          <p>Time</p>
+                          <span>03:16 PM</span>
+                        </div>
+                        <div className="price">
+                          <span>Price</span>
+                          <strong>$14.99</strong>
+                          <p>ADMIT ONE</p>
+                        </div>
+                        <div className="tickNum">
+                          <p>Ticket No. ABC-20728-405-00{index}</p>
+                        </div>
                       </div>
                       {/* sideTick */}
                       <div className="sideTick">
@@ -66,9 +96,9 @@ function Youtube(){
 
                         </div>
                       </div>
-                        {/* <h2>{(tit_len > 30) ? tit = tit.substr(0, 30)+"..." : tit}</h2>
-                        <p>{(desc_len > 120) ? desc = desc.substr(0, 250)+"..." : desc}</p>
-                        <span>{date.split("T")[0]}</span> */}
+                        {/* 
+                        
+                         */}
                       </div>
                   </article>
                 )

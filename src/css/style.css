@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=IM+Fell+English+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Oswald:wght@400;600;700&family=IM+Fell+English+SC&display=swap");
 /*색상*/
 /*반응형*/
 * {
@@ -1357,56 +1357,119 @@ fieldset {
         width: 60%;
         height: 250px;
         position: relative;
+        background: #F9EDC5;
         opacity: 0.8;
           /*
-          h2{
-            font: 600 36px/1 'Oswald';
-            padding: 40px 20px 20px;
-            color: #005B4B;
-          }
-          p{
-            font: 400 16px/1 'Oswald';
-            padding: 0 20px 60px;
-            min-height: 108px; overflow: hidden;
-          }
-          span{
-            display:block;
-            font: 400 14px/1 'Oswald';
-            padding: 0 20px;
-            text-align: right;
-          }
+
+          
+
 */ }
         .youtube .inner .list article .txt .mainTick {
           display: grid;
+          grid-template-rows: 2fr 4fr 2fr 2fr 4fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr  2.5fr;
           width: calc(100% - 250px);
           height: 250px;
-          grid-template-areas: 'icon tickName tickName tickName ' 'icon descYoutb descYoutb descYoutb' 'titleYoutb titleYoutb titleYoutb titleYoutb' 'star star star price' 'date seat time sign' 'tickNum tickNum tickNum tickNum'; }
+          padding: 10px 5px 10px 10px;
+          border-right: 1px dotted #34445C;
+          grid-template-areas: 'icon tickName tickName tickName ' 'icon descYoutb descYoutb descYoutb' 'titleYoutb titleYoutb titleYoutb titleYoutb' 'star star star price' 'date seat time price' 'tickNum tickNum tickNum tickNum'; }
           .youtube .inner .list article .txt .mainTick > div {
-            background: skyblue;
-            border: 1px solid #000;
-            align-self: 20px; }
+            border: 1px solid #34445C;
+            padding: 5px; }
           .youtube .inner .list article .txt .mainTick .icon {
             grid-area: icon; }
+            .youtube .inner .list article .txt .mainTick .icon img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover; }
           .youtube .inner .list article .txt .mainTick .tickName {
             grid-area: tickName; }
+            .youtube .inner .list article .txt .mainTick .tickName p {
+              text-transform: uppercase;
+              font: 18px "Abril Fatface";
+              letter-spacing: 1px;
+              text-align: center; }
           .youtube .inner .list article .txt .mainTick .descYoutb {
             grid-area: descYoutb; }
+            .youtube .inner .list article .txt .mainTick .descYoutb p {
+              font: 400 14px/1.1 'Oswald';
+              overflow: hidden;
+              text-align: center; }
           .youtube .inner .list article .txt .mainTick .titleYoutb {
             grid-area: titleYoutb; }
+            .youtube .inner .list article .txt .mainTick .titleYoutb h2 {
+              font: 20px/1 'Abril Fatface';
+              text-align: center;
+              color: #7C2617; }
           .youtube .inner .list article .txt .mainTick .star {
-            grid-area: star; }
+            grid-area: star;
+            background: #34445C;
+            text-align: center; }
+            .youtube .inner .list article .txt .mainTick .star span {
+              display: inline-block;
+              margin-right: 20px;
+              color: #F9EDC5; }
+              .youtube .inner .list article .txt .mainTick .star span:nth-of-type(3) {
+                margin-right: 0; }
           .youtube .inner .list article .txt .mainTick .date {
             grid-area: date; }
+            .youtube .inner .list article .txt .mainTick .date p {
+              font: 400 14px/1 'Oswald';
+              margin-bottom: 5px;
+              text-transform: uppercase;
+              color: #555; }
+            .youtube .inner .list article .txt .mainTick .date span {
+              display: block;
+              font: 700 14px/1 'Oswald';
+              text-align: center;
+              color: #34445C; }
           .youtube .inner .list article .txt .mainTick .seat {
             grid-area: seat; }
+            .youtube .inner .list article .txt .mainTick .seat p {
+              font: 400 14px/1 'Oswald';
+              margin-bottom: 5px;
+              text-transform: uppercase;
+              color: #555; }
+            .youtube .inner .list article .txt .mainTick .seat span {
+              display: block;
+              font: 700 14px/1 'Oswald';
+              text-align: center;
+              color: #34445C; }
           .youtube .inner .list article .txt .mainTick .time {
             grid-area: time; }
+            .youtube .inner .list article .txt .mainTick .time p {
+              font: 400 14px/1 'Oswald';
+              margin-bottom: 5px;
+              text-transform: uppercase;
+              color: #555; }
+            .youtube .inner .list article .txt .mainTick .time span {
+              display: block;
+              font: 700 14px/1 'Oswald';
+              text-align: center;
+              color: #34445C; }
           .youtube .inner .list article .txt .mainTick .price {
-            grid-area: price; }
-          .youtube .inner .list article .txt .mainTick .sign {
-            grid-area: sign; }
+            grid-area: price;
+            display: flex;
+            flex-wrap: wrap; }
+            .youtube .inner .list article .txt .mainTick .price span {
+              font: 400 14px/1 'Oswald';
+              text-transform: uppercase;
+              color: #555;
+              margin-right: 20px; }
+            .youtube .inner .list article .txt .mainTick .price strong {
+              font: 36px/1 'Abril Fatface';
+              color: #7C2617;
+              margin-bottom: 10px; }
+            .youtube .inner .list article .txt .mainTick .price p {
+              width: 100%;
+              font: 22px/1 'arial';
+              text-align: center; }
           .youtube .inner .list article .txt .mainTick .tickNum {
             grid-area: tickNum; }
+            .youtube .inner .list article .txt .mainTick .tickNum p {
+              font: 10px/1 'arial';
+              color: #555;
+              text-align: center; }
       .youtube .inner .list article:hover .pic img {
         opacity: 1; }
       .youtube .inner .list article:hover .txt {
