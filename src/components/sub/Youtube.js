@@ -44,13 +44,17 @@ function Youtube(){
 
                 return(
                   <article key={index}>
+                    {/* pic - youtube image */}
                     <div className="pic" onClick={()=>{
                       setIsPop(true);
                       setIndex(index);
                     }}>
                       <img src ={item.snippet.thumbnails.medium.url} />
                     </div>
+
+                    {/* ticket box - main ticket, side ticket */}
                     <div className="txt">
+                      {/* mainTick - youtube api data */}
                       <div className="mainTick container">
                         <div className="icon">
                           <img src={path + "/img/movieIcon2.png"} />
@@ -90,16 +94,34 @@ function Youtube(){
                           <p>Ticket No. ABC-20728-405-00{index}</p>
                         </div>
                       </div>
+
                       {/* sideTick */}
                       <div className="sideTick">
-                        <div className="wrap">
-
+                        <div className="wrap container">
+                          <div className="admit">
+                            <p>ADMIT ONE</p>
+                          </div>
+                          <div className="greatest">
+                            <p>The greatest Days of our lives</p>
+                          </div>
+                          <div className="date">
+                            <p>Date</p>
+                            <span>{date.split("T")[0]}</span>
+                          </div>
+                          <div className="seat">
+                            <p>Seat</p>
+                            <span>A-0{index+1}</span>
+                          </div>
+                          <div className="time">
+                            <p>Time</p>
+                            <span>03:16 PM</span>
+                          </div>
+                          <div className="tickNum">
+                            <p>Ticket No. ABC-20728-405-00{index}</p>
+                          </div>
                         </div>
                       </div>
-                        {/* 
-                        
-                         */}
-                      </div>
+                    </div>
                   </article>
                 )
               })
