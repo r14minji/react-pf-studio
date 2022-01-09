@@ -47,9 +47,28 @@ function Youtube(){
                       <img src ={item.snippet.thumbnails.medium.url} />
                     </div>
                     <div className="txt">
-                        <h2>{(tit_len > 30) ? tit = tit.substr(0, 30)+"..." : tit}</h2>
+                      <div className="mainTick container">
+                        <div className="icon"></div>
+                        <div className="tickName">tickName</div>
+                        <div className="descYoutb">descYoutb</div>
+                        <div className="titleYoutb">titleYoutb</div>
+                        <div className="star">star</div>
+                        <div className="date">date</div>
+                        <div className="seat">seat</div>
+                        <div className="time">time</div>
+                        <div className="price">price</div>
+                        <div className="sign">sign</div>
+                        <div className="tickNum">tickNum</div>
+                      </div>
+                      {/* sideTick */}
+                      <div className="sideTick">
+                        <div className="wrap">
+
+                        </div>
+                      </div>
+                        {/* <h2>{(tit_len > 30) ? tit = tit.substr(0, 30)+"..." : tit}</h2>
                         <p>{(desc_len > 120) ? desc = desc.substr(0, 250)+"..." : desc}</p>
-                        <span>{date.split("T")[0]}</span>
+                        <span>{date.split("T")[0]}</span> */}
                       </div>
                   </article>
                 )

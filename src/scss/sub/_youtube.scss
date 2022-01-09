@@ -7,7 +7,7 @@
 
       article{
         width: 100%;
-        display: flex; justify-content: space-between; align-items: center;
+        display: flex; justify-content: space-around; align-items: center;
         margin-bottom: 80px;
 
         &:nth-of-type(2n) {flex-direction: row-reverse;}
@@ -24,14 +24,67 @@
             opacity: 0.6; transition: 0.5s;
           }
         }
+
         .txt{
-          width: 61%;
+          width: 60%;
           height: 250px;
           position: relative;
-          border-top: 4px solid #2F4858;
-          border-bottom: 4px solid #2F4858;
           opacity: 0.8;
 
+
+          .mainTick{
+            display: grid;
+            width: calc(100% - 250px);
+            height: 250px;
+            grid-template-areas: 'icon tickName tickName tickName '
+                                          'icon descYoutb descYoutb descYoutb'
+                                          'titleYoutb titleYoutb titleYoutb titleYoutb'
+                                          'star star star price'
+                                          'date seat time sign'
+                                          'tickNum tickNum tickNum tickNum';
+            
+            >div{
+              background: skyblue;
+              border: 1px solid #000;
+              align-self: 20px;
+            }
+
+            .icon{
+              grid-area: icon;
+            }
+            .tickName{
+              grid-area: tickName;
+            }
+            .descYoutb{
+              grid-area: descYoutb;
+            }
+            .titleYoutb{
+              grid-area: titleYoutb;
+            }
+            .star{
+              grid-area: star;
+            }
+            .date{
+              grid-area: date;
+            }
+            .seat{
+              grid-area: seat;
+            }
+            .time{
+              grid-area: time;
+            }
+            .price{
+              grid-area: price;
+            }
+            .sign{
+              grid-area: sign;
+            }
+            .tickNum{
+              grid-area: tickNum;
+            }
+          }
+
+          /*
           h2{
             font: 600 36px/1 'Oswald';
             padding: 40px 20px 20px;
@@ -48,18 +101,7 @@
             padding: 0 20px;
             text-align: right;
           }
-          .btnWatch{
-            position: absolute; bottom: 15px; left: 10px;
-            padding: 5px 10px;
-            cursor: pointer; transition: 0.5s;
-            border: 1px solid #000;
-
-            &:hover{
-              border: 1px solid #2F4858;
-              background: #2F4858;
-              color: $backgroundColor;
-            }
-          }
+*/
         }
 
         &:hover{

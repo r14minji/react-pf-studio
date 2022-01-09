@@ -1336,7 +1336,7 @@ fieldset {
     .youtube .inner .list article {
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
       margin-bottom: 80px; }
       .youtube .inner .list article:nth-of-type(2n) {
@@ -1354,38 +1354,59 @@ fieldset {
           opacity: 0.6;
           transition: 0.5s; }
       .youtube .inner .list article .txt {
-        width: 61%;
+        width: 60%;
         height: 250px;
         position: relative;
-        border-top: 4px solid #2F4858;
-        border-bottom: 4px solid #2F4858;
-        opacity: 0.8; }
-        .youtube .inner .list article .txt h2 {
-          font: 600 36px/1 'Oswald';
-          padding: 40px 20px 20px;
-          color: #005B4B; }
-        .youtube .inner .list article .txt p {
-          font: 400 16px/1 'Oswald';
-          padding: 0 20px 60px;
-          min-height: 108px;
-          overflow: hidden; }
-        .youtube .inner .list article .txt span {
-          display: block;
-          font: 400 14px/1 'Oswald';
-          padding: 0 20px;
-          text-align: right; }
-        .youtube .inner .list article .txt .btnWatch {
-          position: absolute;
-          bottom: 15px;
-          left: 10px;
-          padding: 5px 10px;
-          cursor: pointer;
-          transition: 0.5s;
-          border: 1px solid #000; }
-          .youtube .inner .list article .txt .btnWatch:hover {
-            border: 1px solid #2F4858;
-            background: #2F4858;
-            color: #e6e2dd; }
+        opacity: 0.8;
+          /*
+          h2{
+            font: 600 36px/1 'Oswald';
+            padding: 40px 20px 20px;
+            color: #005B4B;
+          }
+          p{
+            font: 400 16px/1 'Oswald';
+            padding: 0 20px 60px;
+            min-height: 108px; overflow: hidden;
+          }
+          span{
+            display:block;
+            font: 400 14px/1 'Oswald';
+            padding: 0 20px;
+            text-align: right;
+          }
+*/ }
+        .youtube .inner .list article .txt .mainTick {
+          display: grid;
+          width: calc(100% - 250px);
+          height: 250px;
+          grid-template-areas: 'icon tickName tickName tickName ' 'icon descYoutb descYoutb descYoutb' 'titleYoutb titleYoutb titleYoutb titleYoutb' 'star star star price' 'date seat time sign' 'tickNum tickNum tickNum tickNum'; }
+          .youtube .inner .list article .txt .mainTick > div {
+            background: skyblue;
+            border: 1px solid #000;
+            align-self: 20px; }
+          .youtube .inner .list article .txt .mainTick .icon {
+            grid-area: icon; }
+          .youtube .inner .list article .txt .mainTick .tickName {
+            grid-area: tickName; }
+          .youtube .inner .list article .txt .mainTick .descYoutb {
+            grid-area: descYoutb; }
+          .youtube .inner .list article .txt .mainTick .titleYoutb {
+            grid-area: titleYoutb; }
+          .youtube .inner .list article .txt .mainTick .star {
+            grid-area: star; }
+          .youtube .inner .list article .txt .mainTick .date {
+            grid-area: date; }
+          .youtube .inner .list article .txt .mainTick .seat {
+            grid-area: seat; }
+          .youtube .inner .list article .txt .mainTick .time {
+            grid-area: time; }
+          .youtube .inner .list article .txt .mainTick .price {
+            grid-area: price; }
+          .youtube .inner .list article .txt .mainTick .sign {
+            grid-area: sign; }
+          .youtube .inner .list article .txt .mainTick .tickNum {
+            grid-area: tickNum; }
       .youtube .inner .list article:hover .pic img {
         opacity: 1; }
       .youtube .inner .list article:hover .txt {
