@@ -73,7 +73,7 @@
                 p{
                   font: 400 14px/1.1 'Oswald';
                   overflow: hidden;
-                  text-align: center;
+                  text-align: center; overflow: hidden;
                 }
               }
               &.titleYoutb{
@@ -298,36 +298,48 @@
       /* youtube vid list*/
       .list{
         article{
-          width: 100%; padding: 0 20px;
+          width: 100%; padding: 0 40px;
           flex-wrap: wrap; flex-direction: column; align-items: flex-start;
           margin-bottom: 60px;
   
           &:nth-of-type(2n) {flex-direction: column; align-items: flex-end;}
   
           .pic{
-            width: 35%; min-width: 320px;
-            height: 240px;
+            width: 415px; 
+            height: 250px;
             margin-bottom: 20px;
           }
-          .txt{
-            width: 70%;  min-width: 480px;
-            height: 220px;
-  
-            h2{
-              font-size: 30px;
-              padding: 30px 20px 20px;
-            }
-            p{
-              font: 400 16px/1 'Oswald';
-              padding: 0 20px 0px;
-              margin-bottom: 16px;
-              min-height: 87px; overflow: hidden;
-            }
-            .btnWatch{
-              bottom: 15px; left: 20px;
-            }
+
+          .txt{  
+            width: 710px;  height: 250px; 
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .youtube .inner .list article{
+    align-items: center;
+    &:nth-of-type(2n) {flex-direction: column; align-items: center;}
+  
+    .txt{
+      width: 100%;
+
+
+      .mainTick{
+        width: 100%;
+        padding: 10px 20px;
+        border-right: none;
+        >div{
+          &.date, &.seat, &.time{
+            span{ font-size: 12px}
+          }
+        }
+      }
+      .sideTick{
+        display: none;
       }
     }
   }
@@ -340,30 +352,35 @@
       /* youtube vid list*/
       .list{
         article{
-          width: 100%; padding: 0px 0px;
+          width: 100%; padding: 0px 10px;
           margin-bottom: 40px;
-  
+
           .pic{
-            width: 100%; min-width: auto;
-            height: 210px;
-            margin-bottom: 20px;
+            max-width: 415px; width: 100%;
           }
+
           .txt{
-            width: 100%;  min-width: auto;
-            height: 240px;
-  
-            h2{
-              font-size: 22px;
-              padding: 20px 10px 20px;
-            }
-            p{
-              font-size: 14px;
-              padding: 0px 10px ;
-              margin-bottom: 55px;
-              min-height: 87px; overflow: hidden;
-            }
-            .btnWatch{
-              bottom: 15px; left: 10px;
+            height: auto; 
+
+            .mainTick{
+              height: auto;
+
+              grid-template-areas: 'tickName tickName tickName tickName '
+              'descYoutb descYoutb descYoutb descYoutb'
+              'titleYoutb titleYoutb titleYoutb titleYoutb'
+              'star star star price'
+              'date seat time price'
+              'tickNum tickNum tickNum tickNum';
+
+              >div{
+                &.icon{
+                  display: none;
+                }
+
+                &.tickName, &.descYoutb{
+                  display: flex; justify-content: center; align-items: center;
+                }
+              }
             }
           }
         }
