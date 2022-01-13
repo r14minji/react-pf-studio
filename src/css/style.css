@@ -1051,6 +1051,8 @@ fieldset {
         margin-left: 1%; }
       .latestNews .inner .wrap article:nth-of-type(4) {
         margin-right: 1%; }
+      .latestNews .inner .wrap article .pic img {
+        transform: rotate(20deg); }
 
   /*notice - table, pagination */
   .notice .inner {
@@ -1098,7 +1100,9 @@ fieldset {
     .latestNews .inner .wrap article:nth-of-type(2n-1) {
       margin-left: 1%; }
     .latestNews .inner .wrap article:nth-of-type(2n) {
-      margin-right: 1%; } }
+      margin-right: 1%; }
+    .latestNews .inner .wrap article .pic img {
+      transform: rotate(5deg); } }
 /* mobile */
 @media screen and (max-width: 539px) {
   /*magazine - img, content, connect */
