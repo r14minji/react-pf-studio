@@ -34,10 +34,12 @@ function Gallery(){
       count: 30
     });
 
-    // html.style.backgroundColor = "#303030";
-    // return()=>{
-    //   html.style.backgroundColor = "#e6e2dd";
-    // }
+    body.classList.add("white");
+    html.style.backgroundColor = "#303030";
+    return()=>{
+      body.classList.remove("white");
+      html.style.backgroundColor = "#e6e2dd";
+    }
   },[])
 
   return(
