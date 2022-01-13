@@ -1329,8 +1329,29 @@ fieldset {
   .gallery .item {
     width: 100% !important; } }
 .youtube .inner {
+  /* title */
   /* youtube vid list*/
   /* popup */ }
+  .youtube .inner .title_wrap {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0; }
+    .youtube .inner .title_wrap p {
+      background: #C1554E;
+      color: #e6e2dd;
+      padding: 20px 0px;
+      font: 600 18px/1 'Oswald';
+      text-align: center;
+      text-transform: uppercase; }
+    .youtube .inner .title_wrap h1 {
+      padding: 40px 0;
+      text-align: center;
+      font: 700 160px/1 'Oswald';
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border: 2px solid #C1554E;
+      color: #C1554E;
+      cursor: pointer; }
   .youtube .inner .list {
     width: 100%; }
     .youtube .inner .list article {

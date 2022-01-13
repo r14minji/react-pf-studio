@@ -30,7 +30,12 @@ function Youtube(){
   return(
     <section className="content youtube">
       <div className="inner">
-        <h1>&#8547;. Youtube</h1>
+        {/* title */}
+        <div className="title_wrap">
+          <p>Want to see a movie with me? </p>
+          <h1>&#8547;. Youtube</h1>
+        </div>
+
 
         {/* youtube vid list */}
         <div className="list">

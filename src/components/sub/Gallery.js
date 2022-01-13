@@ -43,22 +43,18 @@ function Gallery(){
   return(
     <section className="content gallery">
       <div className="inner">
-        {/* title */}
-        <div className="title_wrap">
-          <p>Should I take a photo?</p>
-          <h1 onClick={()=>{
-            if(enableClick && !interest){
-              setEnableClick(false);
-              setLoading(true);
-              list.current.classList.remove("on");
-              search.current.classList.remove("on");
-              getFlickr({
-                type: "interest",
-                count: 30
-              });
-            }
-          }}>&#8546;. GALLERY</h1>
-        </div>
+      <h1 onClick={()=>{
+        if(enableClick && !interest){
+          setEnableClick(false);
+          setLoading(true);
+          list.current.classList.remove("on");
+          search.current.classList.remove("on");
+          getFlickr({
+            type: "interest",
+            count: 30
+          });
+        }
+      }}>&#8546;. GALLERY</h1>
 
         {/* Search - input, button */}
         <article className="searchBox" ref={search}>
