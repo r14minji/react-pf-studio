@@ -12,6 +12,7 @@ function Contact(){
   const {kakao} = window;
   const container = useRef(null);
   const [map, setMap] = useState(null);
+  const [index, setIndex] = useState(0);
   const info =[
     {
       title : "본점", 
@@ -30,11 +31,12 @@ function Contact(){
     {
       title : "지점2", 
       latlng : new kakao.maps.LatLng(35.17422705914147,129.10766665201712),
-      imgSrc : path + "img/marker3.png", 
+      imgSrc : path + "/img/marker3.png", 
       imgSize : new kakao.maps.Size(232, 99),
       imgPos : {offset: new kakao.maps.Point(116, 99)},
     }
   ];
+  const [mapInfo, setMapInfo] = useState(info);
 
   useEffect(()=>{
     html.style.backgroundColor = "#FFFFEB";
@@ -45,14 +47,21 @@ function Contact(){
     };
     
     const map = new kakao.maps.Map(container.current, options); 
-    setMap(map);
     
+    setMap(map);
 
+    new kakao.maps.Marker({
+      map: map, 
+      position: mapInfo[index].latlng, 
+      title : mapInfo[index].title,  
+      image : new kakao.maps.MarkerImage(mapInfo[index].imgSrc, mapInfo[index].imgSize, mapInfo[index].imgPos)   
+    });
 
+    map.setCenter(mapInfo[index].latlng)
     return ()=>{
       html.style.backgroundColor = "#e6e2dd"
     }
-  },[])
+  },[index])
 
   return(
     <>
@@ -117,9 +126,15 @@ function Contact(){
         </div>
         {/* button */}
         <ul className="btn_branch">
-          <li className="on"><button>Gangnam Headquarters</button></li>
-          <li><button >JeJu Branch Office</button></li>
-          <li><button>Busan Branch Office</button></li>
+          <li onClick={()=>{
+            setIndex(0);
+          }}><button>Gangnam Headquarters</button></li>
+          <li onClick={()=>{
+            setIndex(1);
+          }}><button >JeJu Branch Office</button></li>
+          <li onClick={()=>{
+            setIndex(2);
+          }}><button>Busan Branch Office</button></li>
           <li onClick={()=>{
             map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
           }}><span>교통정보보기</span></li>
