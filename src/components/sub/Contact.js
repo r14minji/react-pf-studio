@@ -17,23 +17,23 @@ function Contact(){
   const [toggle, setToggle] = useState(false);
   const info =[
     {
-      title : "본점", 
-      latlng : new kakao.maps.LatLng(37.5132313,127.0594368),
-      imgSrc : path + "/img/marker1.png", 
+      title : "Gangnam", 
+      latlng : new kakao.maps.LatLng(37.4984952,127.0277657),
+      imgSrc : path + "/img/marker.png", 
       imgSize : new kakao.maps.Size(232, 99),
       imgPos : {offset: new kakao.maps.Point(116, 99)},
     },
     {
-      title : "지점1", 
-      latlng : new kakao.maps.LatLng(37.507099899564444,126.75639338893572),
-      imgSrc : path + "/img/marker2.png", 
+      title : "JeJu", 
+      latlng : new kakao.maps.LatLng(33.5419923,126.6344465),
+      imgSrc : path + "/img/marker.png", 
       imgSize : new kakao.maps.Size(232, 99),
       imgPos : {offset: new kakao.maps.Point(116, 99)},
     },
     {
-      title : "지점2", 
-      latlng : new kakao.maps.LatLng(35.17422705914147,129.10766665201712),
-      imgSrc : path + "/img/marker3.png", 
+      title : "Busan", 
+      latlng : new kakao.maps.LatLng(35.1614101,129.1758802),
+      imgSrc : path + "/img/marker.png", 
       imgSize : new kakao.maps.Size(232, 99),
       imgPos : {offset: new kakao.maps.Point(116, 99)},
     }

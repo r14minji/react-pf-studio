@@ -1771,7 +1771,7 @@ fieldset {
     position: absolute;
     top: 330px;
     left: 0px;
-    z-index: 2; }
+    z-index: 1; }
     .location .inner .btn_branch li {
       text-align: center;
       margin-bottom: 15px; }
@@ -1938,7 +1938,8 @@ fieldset {
       width: 100%;
       height: 500px; }
     .location .inner .btn_branch {
-      display: none; }
+      top: 42%;
+      left: 30px; }
 
   /* recruit, support ,get in touch */
   .message .inner {
@@ -2008,10 +2009,10 @@ fieldset {
         margin-bottom: 20px; }
     .location .inner .wrap_map #map {
       width: 100%;
-      height: 500px;
-      border: 1px solid #000; }
+      height: 500px; }
     .location .inner .btn_branch {
-      display: none; }
+      top: 62%;
+      left: 30px; }
 
   /* recruit, support ,get in touch */
   .message .inner .wrap article {
