@@ -1765,7 +1765,8 @@ fieldset {
     border-bottom: 3px solid #000; }
     .location .inner .wrap_map #map {
       width: 100%;
-      height: 500px; }
+      height: 500px;
+      filter: grayscale(50%); }
   .location .inner .btn_branch {
     display: block;
     position: absolute;
