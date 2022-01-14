@@ -1768,10 +1768,11 @@ fieldset {
       height: 500px;
       border: 1px solid #000; }
   .location .inner .btn_branch {
-    display: none;
+    display: block;
     position: absolute;
     top: 330px;
-    left: 0px; }
+    left: 0px;
+    z-index: 2; }
     .location .inner .btn_branch li {
       width: 300px;
       padding: 20px 50px;

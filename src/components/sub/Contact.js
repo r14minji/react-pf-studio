@@ -9,12 +9,33 @@ const html = document.querySelector("html");
 const path = process.env.PUBLIC_URL;
 
 function Contact(){
-  //윈도우 전역에 등록되어 있는 kakao 객체를 불러옴
   const {kakao} = window;
-  //useRef로 #map 참조
   const container = useRef(null);
+  const [map, setMap] = useState(null);
+  const info =[
+    {
+      title : "본점", 
+      latlng : new kakao.maps.LatLng(37.5132313,127.0594368),
+      imgSrc : path + "/img/marker1.png", 
+      imgSize : new kakao.maps.Size(232, 99),
+      imgPos : {offset: new kakao.maps.Point(116, 99)},
+    },
+    {
+      title : "지점1", 
+      latlng : new kakao.maps.LatLng(37.507099899564444,126.75639338893572),
+      imgSrc : path + "/img/marker2.png", 
+      imgSize : new kakao.maps.Size(232, 99),
+      imgPos : {offset: new kakao.maps.Point(116, 99)},
+    },
+    {
+      title : "지점2", 
+      latlng : new kakao.maps.LatLng(35.17422705914147,129.10766665201712),
+      imgSrc : path + "img/marker3.png", 
+      imgSize : new kakao.maps.Size(232, 99),
+      imgPos : {offset: new kakao.maps.Point(116, 99)},
+    }
+  ];
 
-  //컴포넌트 생성시
   useEffect(()=>{
     html.style.backgroundColor = "#FFFFEB";
     
@@ -23,8 +44,9 @@ function Contact(){
       level: 3
     };
     
-    //카카오맵 생성자로부터 인스턴스 복사해서 맵 실행
     const map = new kakao.maps.Map(container.current, options); 
+    setMap(map);
+    
 
 
     return ()=>{
@@ -95,9 +117,15 @@ function Contact(){
         </div>
         {/* button */}
         <ul className="btn_branch">
-          <li className="on" data-index="0"><button>Gangnam Headquarters</button></li>
-          <li data-index="1"><button >JeJu Branch Office</button></li>
-          <li data-index="2"><button>Busan Branch Office</button></li>
+          <li className="on"><button>Gangnam Headquarters</button></li>
+          <li><button >JeJu Branch Office</button></li>
+          <li><button>Busan Branch Office</button></li>
+          <li onClick={()=>{
+            map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+          }}><span>교통정보보기</span></li>
+          <li onClick={()=>{
+            map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+          }}><span>교통정보끄기</span></li>
         </ul>
       </div>
     </section>
