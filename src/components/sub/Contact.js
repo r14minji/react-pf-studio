@@ -12,7 +12,9 @@ function Contact(){
   const {kakao} = window;
   const container = useRef(null);
   const [map, setMap] = useState(null);
+  const btnBranch = useRef(null);
   const [index, setIndex] = useState(0);
+  const [toggle, setToggle] = useState(false);
   const info =[
     {
       title : "본점", 
@@ -36,13 +38,13 @@ function Contact(){
       imgPos : {offset: new kakao.maps.Point(116, 99)},
     }
   ];
-  const [mapInfo, setMapInfo] = useState(info);
+  const [mapInfo] = useState(info);
 
   useEffect(()=>{
     html.style.backgroundColor = "#FFFFEB";
     
     const options = { 
-      center: new kakao.maps.LatLng(37.5132313,127.0594368), 
+      center: mapInfo[index].latlng, 
       level: 3
     };
     
@@ -57,9 +59,24 @@ function Contact(){
       image : new kakao.maps.MarkerImage(mapInfo[index].imgSrc, mapInfo[index].imgSize, mapInfo[index].imgPos)   
     });
 
-    map.setCenter(mapInfo[index].latlng)
+    map.setCenter(mapInfo[index].latlng);
+    const mapSet = () => map.setCenter(mapInfo[index].latlng);
+  
+    const mapTypeControl = new kakao.maps.MapTypeControl();
+    map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+    map.setDraggable(true); 
+    const zoomControl = new kakao.maps.ZoomControl();
+    map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT)
+    map.setZoomable(false);  
+
+    for(const btn of btnBranch.current.children) btn.classList.remove("on");
+    btnBranch.current.children[index+1].classList.add("on");
+
+    window.addEventListener('resize', mapSet)
+
     return ()=>{
-      html.style.backgroundColor = "#e6e2dd"
+      html.style.backgroundColor = "#e6e2dd";
+      window.removeEventListener('resize', mapSet)
     }
   },[index])
 
@@ -125,22 +142,30 @@ function Contact(){
           <div id="map" ref={container}></div>
         </div>
         {/* button */}
-        <ul className="btn_branch">
-          <li onClick={()=>{
-            setIndex(0);
-          }}><button>Gangnam Headquarters</button></li>
-          <li onClick={()=>{
-            setIndex(1);
-          }}><button >JeJu Branch Office</button></li>
-          <li onClick={()=>{
-            setIndex(2);
-          }}><button>Busan Branch Office</button></li>
-          <li onClick={()=>{
-            map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
-          }}><span>교통정보보기</span></li>
+        <ul className="btn_branch" ref={btnBranch}>
+        {
+          toggle ?
           <li onClick={()=>{
             map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
-          }}><span>교통정보끄기</span></li>
+            setToggle(!toggle);
+          }}>
+            <button>Traffic <strong className="off">OFF</strong></button></li>
+          :
+          <li onClick={()=>{
+            map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+            setToggle(!toggle);
+          }}>
+            <button>Traffic <strong className="on">ON</strong></button></li>
+        }
+          <li onClick={()=>{
+            setIndex(0);
+          }}><button>Gangnam</button></li>
+          <li onClick={()=>{
+            setIndex(1);
+          }}><button >JeJu</button></li>
+          <li onClick={()=>{
+            setIndex(2);
+          }}><button>Busan</button></li>
         </ul>
       </div>
     </section>
