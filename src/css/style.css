@@ -461,7 +461,10 @@ fieldset {
     .about > .inner .btnMenu li {
       width: 31.33%;
       margin-right: 2%;
-      cursor: pointer; }
+      cursor: pointer;
+      padding: 0 10px 20px;
+      background: rgba(0, 0, 0, 0.1);
+      box-shadow: 2px 6px rgba(0, 0, 0, 0.5); }
       .about > .inner .btnMenu li:nth-of-type(3) {
         margin-right: 2%; }
       .about > .inner .btnMenu li p {
@@ -473,11 +476,14 @@ fieldset {
         display: block;
         font: 400 16px/1 'Oswald';
         padding: 10px 0px 0px; }
-      .about > .inner .btnMenu li.on p {
-        color: #ECECEC;
-        border-bottom: 1px solid #ECECEC; }
-      .about > .inner .btnMenu li.on span, .about > .inner .btnMenu li.on strong {
-        color: #ECECEC; }
+      .about > .inner .btnMenu li.on {
+        box-shadow: 1px 4px rgba(0, 0, 0, 0.5);
+        top: 2px; }
+        .about > .inner .btnMenu li.on p {
+          color: #ECECEC;
+          border-bottom: 1px solid #ECECEC; }
+        .about > .inner .btnMenu li.on span, .about > .inner .btnMenu li.on strong {
+          color: #ECECEC; }
       .about > .inner .btnMenu li:nth-of-type(1) h2 {
         background-image: url(/public/img/mask1.png);
         background-repeat: no-repeat;
@@ -1218,7 +1224,7 @@ fieldset {
       .gallery .inner .list .wrap li figure {
         width: 100%;
         padding: 10px 0px;
-        border-top: 2px solid #e6e2dd;
+        border-top: 4px solid #e6e2dd;
         position: relative; }
         .gallery .inner .list .wrap li figure .pic {
           overflow: hidden;
@@ -1230,7 +1236,7 @@ fieldset {
             transition: 0.5s; }
     .gallery .inner .list .wrap figcaption {
       width: 100%;
-      border-bottom: 2px solid #e6e2dd; }
+      border-bottom: 4px solid #e6e2dd; }
       .gallery .inner .list .wrap figcaption p {
         font: 400 18px/1 'Oswald';
         margin-bottom: 10px;
@@ -1249,12 +1255,12 @@ fieldset {
         padding: 5px 10px;
         border: 1px solid #e6e2dd;
         margin-bottom: 10px;
-        color: #e6e2dd;
+        background: rgba(230, 226, 221, 0.3);
+        color: #303030;
         cursor: pointer;
         transition: 0.5s; }
         .gallery .inner .list .wrap figcaption .btnMore:hover {
-          background: #e6e2dd;
-          color: #303030; }
+          background: #e6e2dd; }
 .gallery .pop {
   width: 100%;
   height: 100vh;

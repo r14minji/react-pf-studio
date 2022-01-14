@@ -74,7 +74,7 @@ function Gallery(){
 
               getFlickr({
                 type : "search",
-                count: 30,
+                count: 15,
                 tags: tags 
               })
             }

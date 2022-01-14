@@ -17,6 +17,7 @@ function Header_sub(){
             <li><NavLink activeStyle={active}  to='/gallery'>GALLERY</NavLink></li>
             <li><NavLink activeStyle={active}  to='/youtube'>YOUTUBE</NavLink></li>
             <li><NavLink activeStyle={active}  to='/contact'>CONTACT</NavLink></li>
+            <li><NavLink activeStyle={active}  to='/join'>JOIN</NavLink></li>
           </ul>
         </div>
 
