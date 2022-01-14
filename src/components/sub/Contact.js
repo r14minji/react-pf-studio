@@ -1,5 +1,5 @@
 //이슈: article의 정보를 json파일로 받아오고 싶은데, useEffect에서 카카오api와 json파일 각각 axios하면 되는건지?? 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { faEnvelopeSquare, faFilm, faStreetView  } from "@fortawesome/free-solid-svg-icons";
 import { faFileVideo } from "@fortawesome/free-regular-svg-icons";
@@ -9,8 +9,23 @@ const html = document.querySelector("html");
 const path = process.env.PUBLIC_URL;
 
 function Contact(){
+  //윈도우 전역에 등록되어 있는 kakao 객체를 불러옴
+  const {kakao} = window;
+  //useRef로 #map 참조
+  const container = useRef(null);
+
+  //컴포넌트 생성시
   useEffect(()=>{
     html.style.backgroundColor = "#FFFFEB";
+    
+    const options = { 
+      center: new kakao.maps.LatLng(37.5132313,127.0594368), 
+      level: 3
+    };
+    
+    //카카오맵 생성자로부터 인스턴스 복사해서 맵 실행
+    const map = new kakao.maps.Map(container.current, options); 
+
 
     return ()=>{
       html.style.backgroundColor = "#e6e2dd"
@@ -76,7 +91,7 @@ function Contact(){
         </div>
         {/* kakao-map */}
         <div className="wrap_map">
-          <div id="map"></div>
+          <div id="map" ref={container}></div>
         </div>
         {/* button */}
         <ul className="btn_branch">
