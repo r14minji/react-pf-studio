@@ -215,7 +215,7 @@ fieldset {
       border-bottom: 4px solid #000; }
       #header .inner .menu_web h1 {
         padding: 20px 0px;
-        font-size: 40px;
+        font-size: 40px !important;
         letter-spacing: 4px; }
         #header .inner .menu_web h1::before {
           content: "";
@@ -569,6 +569,11 @@ fieldset {
       height: 600px;
       object-fit: cover; }
 
+/* tablet */
+@media screen and (max-width: 1179px) {
+  .inner {
+    width: 100%; } }
+/* mobile */
 .newsM {
   padding: 40px 0px 0px; }
   .newsM .inner {

@@ -10,3 +10,17 @@
   }
 }
 
+/* tablet */
+@media screen and (max-width:$tablet){
+  .inner{
+    width: 100%;
+
+  }
+}
+
+/* mobile */
+@media screen and (max-width:$mobile){
+  .inner{
+    //작성
+  }
+}
