@@ -435,84 +435,178 @@ fieldset {
     font-size: 14vw;
     margin-bottom: 20px; } }
 .visualM {
-  padding: 40px 0px; }
+  padding: 40px 0px;
+  border: 1px solid #000; }
   .visualM .inner img {
     width: 100%;
     object-fit: cover; }
 
 .newsM {
-  padding: 40px 0px; }
-  .newsM .inner .wrap article {
-    width: 280px;
-    margin-right: 20px;
-    float: left;
-    transition: 0.5s; }
-    .newsM .inner .wrap article:nth-of-type(1) {
-      position: relative;
-      z-index: -1; }
-      .newsM .inner .wrap article:nth-of-type(1) h1 {
-        padding: 40px 0;
-        text-align: center;
-        font: 700 155px/1.1 'Oswald';
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        margin-bottom: 40px; }
-      .newsM .inner .wrap article:nth-of-type(1) strong {
-        font: 700 155px/1 'Oswald';
-        letter-spacing: 0.5px; }
-    .newsM .inner .wrap article:nth-of-type(4) {
-      margin-right: 0px; }
-    .newsM .inner .wrap article .content {
-      width: 100%;
-      padding-bottom: 30px;
-      position: relative; }
-      .newsM .inner .wrap article .content strong {
-        font: 600 12px/1 'Oswald'; }
-        .newsM .inner .wrap article .content strong::after {
-          content: "";
-          display: block;
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          background: #555;
-          position: absolute;
-          top: 10px;
-          right: 0px; }
-      .newsM .inner .wrap article .content h2 {
-        font: 600 28px/1 'Oswald';
-        margin-bottom: 10px; }
-      .newsM .inner .wrap article .content p {
-        font: 400 16px/1.2 'Oswald';
-        color: #555;
-        margin-bottom: 10px; }
-      .newsM .inner .wrap article .content span {
-        font: 400 16px/1 'IM Fell English SC';
-        color: #555;
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        padding: 5px 5px 3px;
-        cursor: pointer;
-        transition: 0.3s; }
-        .newsM .inner .wrap article .content span:hover {
-          background: #FFEDCB; }
-    .newsM .inner .wrap article .pic {
-      width: 100%;
-      height: 200px;
-      margin-bottom: 20px;
-      overflow: hidden; }
-      .newsM .inner .wrap article .pic img {
+  padding: 40px 0px;
+  border: 1px solid #000; }
+  .newsM .inner {
+    min-height: 0px; }
+    .newsM .inner .wrap article {
+      width: 280px;
+      margin-right: 20px;
+      float: left;
+      transition: 0.5s; }
+      .newsM .inner .wrap article:nth-of-type(1) {
+        position: relative;
+        z-index: -1; }
+        .newsM .inner .wrap article:nth-of-type(1) h1 {
+          padding: 40px 0;
+          text-align: center;
+          font: 700 155px/1.1 'Oswald';
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          margin-bottom: 40px; }
+        .newsM .inner .wrap article:nth-of-type(1) strong {
+          font: 700 155px/1 'Oswald';
+          letter-spacing: 0.5px; }
+      .newsM .inner .wrap article:nth-of-type(4) {
+        margin-right: 0px; }
+      .newsM .inner .wrap article .content {
         width: 100%;
-        height: 100%;
-        object-fit: cover; }
-    .newsM .inner .wrap article:hover .content strong::after {
-      background: #FFEDCB; }
-    .newsM .inner .wrap article:hover .content h2 {
-      color: #FFEDCB; }
-    .newsM .inner .wrap article:hover .content p, .newsM .inner .wrap article:hover .content span {
-      color: #000; }
-    .newsM .inner .wrap article:hover .content span {
-      background: #FFEDCB; }
+        padding-bottom: 30px;
+        position: relative; }
+        .newsM .inner .wrap article .content strong {
+          font: 600 12px/1 'Oswald'; }
+          .newsM .inner .wrap article .content strong::after {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #555;
+            position: absolute;
+            top: 10px;
+            right: 0px; }
+        .newsM .inner .wrap article .content h2 {
+          font: 600 28px/1 'Oswald';
+          margin-bottom: 10px; }
+        .newsM .inner .wrap article .content p {
+          font: 400 16px/1.2 'Oswald';
+          color: #555;
+          margin-bottom: 10px; }
+        .newsM .inner .wrap article .content span {
+          font: 400 16px/1 'IM Fell English SC';
+          color: #555;
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+          padding: 5px 5px 3px;
+          cursor: pointer;
+          transition: 0.3s; }
+          .newsM .inner .wrap article .content span:hover {
+            background: #FFEDCB; }
+      .newsM .inner .wrap article .pic {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+        overflow: hidden; }
+        .newsM .inner .wrap article .pic img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      .newsM .inner .wrap article:hover .content strong::after {
+        background: #FFEDCB; }
+      .newsM .inner .wrap article:hover .content h2 {
+        color: #FFEDCB; }
+      .newsM .inner .wrap article:hover .content p, .newsM .inner .wrap article:hover .content span {
+        color: #000; }
+      .newsM .inner .wrap article:hover .content span {
+        background: #FFEDCB; }
+
+.offerM {
+  padding: 40px 0px;
+  border: 1px solid #000; }
+  .offerM .inner {
+    min-height: 0px; }
+    .offerM .inner h1 {
+      padding: 10px;
+      text-align: center;
+      font: 700 40px/1 'Oswald';
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px; }
+    .offerM .inner .wrap {
+      display: flex;
+      justify-content: center; }
+      .offerM .inner .wrap article {
+        width: 30%;
+        margin-right: 3%; }
+        .offerM .inner .wrap article:nth-of-type(3) {
+          margin-right: 0%; }
+        .offerM .inner .wrap article .pic {
+          width: 150px;
+          height: 150px;
+          margin: 0 auto;
+          margin-bottom: 10px; }
+          .offerM .inner .wrap article .pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
+        .offerM .inner .wrap article .txt {
+          font-family: 'Oswald';
+          text-align: center; }
+          .offerM .inner .wrap article .txt h2 {
+            font-size: 24px;
+            font-weight: 600;
+            text-transform: uppercase; }
+          .offerM .inner .wrap article .txt p {
+            font-size: 16px;
+            font-weight: 400; }
+
+.festivalM {
+  padding: 40px 0px;
+  border: 1px solid #000; }
+  .festivalM .inner {
+    min-height: 0px; }
+    .festivalM .inner .wrap article {
+      float: left;
+      width: 380px;
+      margin-left: 20px; }
+      .festivalM .inner .wrap article:nth-of-type(1) {
+        display: flex;
+        flex-wrap: wrap; }
+        .festivalM .inner .wrap article:nth-of-type(1) figure {
+          width: 48%;
+          margin-right: 2%;
+          margin-bottom: 2%; }
+          .festivalM .inner .wrap article:nth-of-type(1) figure:nth-of-type(2n) {
+            margin-right: 0%; }
+          .festivalM .inner .wrap article:nth-of-type(1) figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; }
+      .festivalM .inner .wrap article:nth-of-type(2) .pic {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+        border: 1px solid #000; }
+        .festivalM .inner .wrap article:nth-of-type(2) .pic img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      .festivalM .inner .wrap article:nth-of-type(2) .content h2 {
+        font: 600 18px/1 'Oswald'; }
+      .festivalM .inner .wrap article:nth-of-type(3) {
+        margin-left: 0px; }
+        .festivalM .inner .wrap article:nth-of-type(3) > h1 {
+          font: 700 20px/1 'Oswald';
+          margin-bottom: 20px;
+          padding: 0; }
+        .festivalM .inner .wrap article:nth-of-type(3) p {
+          font: 400 16px/1.2 'Oswald'; }
+        .festivalM .inner .wrap article:nth-of-type(3) span {
+          font: 400 16px/1 'IM Fell English SC';
+          color: #555;
+          padding: 5px 5px 3px;
+          cursor: pointer;
+          transition: 0.3s; }
+          .festivalM .inner .wrap article:nth-of-type(3) span:hover {
+            background: #FFEDCB; }
 
 /* title, btnMenu, story-txt,vid  */
 .about > .inner {

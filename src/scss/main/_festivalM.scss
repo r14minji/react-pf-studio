@@ -1,0 +1,57 @@
+.festivalM{
+  padding: 40px 0px;
+  border: 1px solid #000;
+  
+  .inner{
+    min-height: 0px;
+    .wrap{
+      
+      article{
+        float: left;
+        width: 380px; margin-left: 20px;
+
+        &:nth-of-type(1){
+          display: flex; flex-wrap: wrap;
+
+          figure{
+            width: 48%; margin-right: 2%; margin-bottom: 2%;
+            &:nth-of-type(2n){margin-right: 0%;}
+            img{
+              width: 100%; height: 100%; 
+              object-fit: cover;
+            }
+          }
+        }
+        &:nth-of-type(2){
+          .pic{
+            width: 100%; height: 200px; margin-bottom: 20px;
+            border: 1px solid #000;//임시
+            img{width: 100%; height: 100%; object-fit: cover;}
+          }
+          .content{
+            h2{
+              font: 600 18px/1 'Oswald';
+            }
+          }
+        }
+        &:nth-of-type(3){
+          margin-left: 0px;
+          >h1{
+            font: 700 20px/1 'Oswald';
+            margin-bottom: 20px; padding: 0;
+          }
+          p{
+            font: 400 16px/1.2 'Oswald';
+          }
+          span{
+            font: 400 16px/1 'IM Fell English SC';  color: #555;
+            padding: 5px 5px 3px;
+            cursor: pointer; transition: 0.3s;
+            &:hover{background: $lightyellow;}
+          }
+        }
+      }
+      
+    }
+  }
+}

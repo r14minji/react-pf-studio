@@ -1,6 +1,6 @@
 const path = process.env.PUBLIC_URL;
 
-function Visual(){
+function News(){
   return(
     <section className="content newsM">
       <div className="inner"> 
@@ -28,7 +28,7 @@ function Visual(){
             <span>Read More</span>
           </div>
           <div className="pic">
-            <img src={path+ "/img/news1.jpg"} />
+            <img src={path+ "/img/news2.jpg"} />
           </div>
         </article>
         <article >
@@ -39,7 +39,7 @@ function Visual(){
             <span>Read More</span>
           </div>
           <div className="pic">
-            <img src={path+ "/img/news1.jpg"} />
+            <img src={path+ "/img/news3.jpg"} />
           </div>
         </article>
 
@@ -49,4 +49,4 @@ function Visual(){
   )
 }
 
-export default Visual;
+export default News;

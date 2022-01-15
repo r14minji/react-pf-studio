@@ -1,6 +1,8 @@
 .newsM{
   padding: 40px 0px;
+  border: 1px solid #000;
   .inner{
+    min-height: 0px;
     .wrap{
       article{
         &:nth-of-type(1){
