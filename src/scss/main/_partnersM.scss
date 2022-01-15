@@ -28,3 +28,25 @@
     }
   }
 }
+
+/* tablet */
+@media screen and (max-width:$tablet){
+  .partnersM{
+    padding: 0px;
+    .inner{
+      width: 100%;
+      h1{
+        font-size: 4vw!important;
+      }
+    }
+  }
+}
+
+/* mobile */
+@media screen and (max-width:$mobile){
+  .partnersM{
+    .inner{
+      //작성
+    }
+  }
+}

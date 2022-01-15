@@ -914,6 +914,15 @@ fieldset {
           height: 100%;
           object-fit: cover; }
 
+/* tablet */
+@media screen and (max-width: 1179px) {
+  .partnersM {
+    padding: 0px; }
+    .partnersM .inner {
+      width: 100%; }
+      .partnersM .inner h1 {
+        font-size: 4vw !important; } }
+/* mobile */
 /* title, btnMenu, story-txt,vid  */
 .about > .inner {
   width: 1180px;
