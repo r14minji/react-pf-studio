@@ -1,7 +1,9 @@
+import { useRef } from "react";
 import { NavLink } from "react-router-dom";
 
 function Header(){
   const active = {textDecoration: "line-through"};
+  const menuMo = useRef(null);
   return(
     <header id="header">
       <div className="inner">
@@ -30,12 +32,18 @@ function Header(){
         </nav>
 
         {/* 반응형 메뉴 호출 */}
-        <div className="btnCall">
-          <span>메뉴호출</span>
+        <div className="bg">
+          <div className="btnCall" onClick={e=>{
+            e.currentTarget.classList.toggle("on");
+            menuMo.current.classList.toggle("on");
+          }}>
+            <span>메뉴호출</span>
+          </div>
         </div>
 
+
         {/* 반응형 메뉴 */}
-        <nav className="menu_Mo">
+        <nav className="menu_Mo" ref={menuMo}>
           <h1><NavLink exact to='/'>STUDIOALICE</NavLink></h1>
           <p>THE CHRONICLES OF A CREATIVE STUDIO</p>
 
