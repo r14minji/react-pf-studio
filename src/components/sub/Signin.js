@@ -1,11 +1,11 @@
+import { NavLink } from "react-router-dom";
+
 function Signin(){
   return(
     <>
     {/* title, signin */}
     <section className="content Signin">
       <div className="inner">
-
-
 
       <article className="access">
         <h1> Signin</h1>
@@ -25,7 +25,7 @@ function Signin(){
 
           <div className="joinyet">
             <p>not a member yet?</p>
-            <button>join us</button>
+            <span><NavLink to='/join'> join us</NavLink> </span>
           </div>
         </div>
       </article>

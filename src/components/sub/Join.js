@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function Join(){
   const initVal={
@@ -70,7 +71,7 @@ function Join(){
       errs.sns='Please select your sns'
     }
     if( !val.comments || val.comments.length <10 ){
-      errs.comments='Please enter 5 or more characters';
+      errs.comments='Please enter 10 or more characters';
     }
     return errs;
   }
@@ -93,8 +94,18 @@ function Join(){
     <div className="inner">
       <h1>join</h1>
 
-      {success ? <div>Congratulations on becoming a member!</div> : null }
+      {success ? 
+      <>
+      <div className="success">Congratulations on becoming a member!</div> 
+      <span className="home"><NavLink to='/'>go home</NavLink></span>
+      </>
+      : 
+      null 
+      }
 
+    {success ? 
+      null 
+      : 
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend className='hidden'>회원가입 입력 폼 양식</legend>
@@ -276,6 +287,7 @@ function Join(){
           </table>
         </fieldset>
       </form>
+      }
     </div>
   </section>
 
