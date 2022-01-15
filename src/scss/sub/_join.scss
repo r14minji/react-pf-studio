@@ -97,14 +97,10 @@
         text-transform: lowercase;
       }
     }
-
-
-
-
   }
 }
 
-
+/* tablet */
 @media screen and (max-width: $tablet){
   .join{
     .inner{
@@ -124,6 +120,7 @@
   }
 }
 
+/* mobile*/
 @media screen and (max-width: $mobile){
   .join .inner form table th {
     position: absolute; top: -99999px; opacity: 0;
