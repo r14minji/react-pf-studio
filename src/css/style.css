@@ -247,10 +247,7 @@ fieldset {
       #header .inner .menu_web h1 a {
         margin-right: 70px; }
       #header .inner .menu_web h1::before {
-        display: none; }
-  #header .inner .bg {
-    width: 70px;
-    height: 70px; } }
+        display: none; } }
 #header_sub {
   width: 100%; }
   #header_sub .inner {
