@@ -1936,22 +1936,26 @@ fieldset {
       color: #C1554E;
       cursor: pointer; }
   .youtube .inner .list {
-    width: 100%; }
+    width: 708px;
+    margin: 0 auto; }
     .youtube .inner .list article {
       width: 100%;
       display: flex;
-      justify-content: space-around;
-      align-items: center;
+      justify-content: center;
+      align-items: flex-end;
+      flex-wrap: wrap;
       margin-bottom: 80px;
       /* pic - youtube image */
+      /* icon*/
       /* ticket box - main ticket, side ticket */ }
       .youtube .inner .list article:nth-of-type(2n) {
         flex-direction: row-reverse; }
       .youtube .inner .list article .pic {
-        width: 35%;
+        width: 413px;
         height: 250px;
         background: url(/src/img/Film2.jpg) no-repeat center/cover;
-        cursor: pointer; }
+        cursor: pointer;
+        margin-bottom: 20px; }
         .youtube .inner .list article .pic img {
           width: 100%;
           height: 100%;
@@ -1959,8 +1963,27 @@ fieldset {
           padding: 35px 0px;
           opacity: 0.6;
           transition: 0.5s; }
+      .youtube .inner .list article .movieIcon {
+        width: 256px;
+        padding: 0px 10px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .youtube .inner .list article .movieIcon .popcon {
+          width: 30%;
+          height: 40%;
+          background: url(/public/img/youtube1.png) center/cover; }
+        .youtube .inner .list article .movieIcon .screen {
+          width: 30%;
+          height: 40%;
+          background: url(/public/img/youtube2.png) center/cover; }
+        .youtube .inner .list article .movieIcon .camera {
+          width: 30%;
+          height: 40%;
+          background: url(/public/img/youtube5.png) center/cover; }
       .youtube .inner .list article .txt {
-        width: 60%;
+        width: 100%;
         height: 250px;
         position: relative;
         background: #F9EDC5;
@@ -2181,29 +2204,24 @@ fieldset {
 @media screen and (max-width: 1179px) {
   .youtube .inner {
     /* youtube vid list*/ }
-    .youtube .inner .list article {
-      width: 100%;
-      padding: 0 40px;
-      flex-wrap: wrap;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-bottom: 60px; }
-      .youtube .inner .list article:nth-of-type(2n) {
-        flex-direction: column;
-        align-items: flex-end; }
-      .youtube .inner .list article .pic {
-        width: 415px;
-        height: 250px;
-        margin-bottom: 20px; }
-      .youtube .inner .list article .txt {
-        width: 710px;
-        height: 250px; } }
+    .youtube .inner .title_wrap h1 {
+      font-size: 12vw !important; }
+    .youtube .inner .list {
+      width: 708px;
+      margin: 0 auto; }
+      .youtube .inner .list article {
+        width: 100%;
+        margin-bottom: 60px; } }
 @media screen and (max-width: 780px) {
+  .youtube .inner .list {
+    width: 100%; }
+
   .youtube .inner .list article {
-    align-items: center; }
-    .youtube .inner .list article:nth-of-type(2n) {
-      flex-direction: column;
-      align-items: center; }
+    width: 100%;
+    align-items: center;
+    /* icon*/ }
+    .youtube .inner .list article .movieIcon {
+      display: none; }
     .youtube .inner .list article .txt {
       width: 100%; }
       .youtube .inner .list article .txt .mainTick {
@@ -2217,7 +2235,10 @@ fieldset {
 /* mobile */
 @media screen and (max-width: 539px) {
   .youtube .inner {
+    /* title */
     /* youtube vid list*/ }
+    .youtube .inner .title_wrap h1 {
+      font-size: 10vw !important; }
     .youtube .inner .list article {
       width: 100%;
       padding: 0px 10px;
@@ -2898,18 +2919,18 @@ html {
 body {
   background: url(../img/paper-texture-narrow.png) no-repeat center/cover; }
 
-body.white #header .inner h1 {
+body.white #header .inner .menu_web h1 {
   color: #e6e2dd; }
-body.white #header .inner h1 a {
+body.white #header .inner .menu_web h1 a {
   color: #e6e2dd; }
-body.white #header .inner p {
+body.white #header .inner .menu_web p {
   color: #e6e2dd;
   border-bottom: 4px solid #e6e2dd; }
-  body.white #header .inner p::after {
+  body.white #header .inner .menu_web p::after {
     background: #e6e2dd; }
-body.white #header #gnb {
+body.white #header .inner #gnb_web {
   border-bottom: 2px solid #e6e2dd; }
-  body.white #header #gnb ul li a {
+  body.white #header .inner #gnb_web ul li a {
     color: #e6e2dd; }
 
 /*# sourceMappingURL=style.css.map */

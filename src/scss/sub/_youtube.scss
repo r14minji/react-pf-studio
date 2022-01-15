@@ -28,21 +28,22 @@
 
     /* youtube vid list*/
     .list{
-      width: 100%;
+      width: 708px; margin: 0 auto;
+      //float: right;
 
       article{
         width: 100%;
-        display: flex; justify-content: space-around; align-items: center;
+        display: flex; justify-content: center; align-items: flex-end; flex-wrap: wrap;
         margin-bottom: 80px;
 
         &:nth-of-type(2n) {flex-direction: row-reverse;}
 
         /* pic - youtube image */
         .pic{
-          width: 35%;
+          width:413px;
           height: 250px;
           background: url(/src/img/Film2.jpg) no-repeat center/cover;
-          cursor: pointer;
+          cursor: pointer; margin-bottom: 20px;
 
           img{
             width: 100%; height: 100%; object-fit: cover; 
@@ -51,9 +52,30 @@
           }
         }
 
+        /* icon*/
+        .movieIcon{
+          width: 256px; padding: 0px 10px;
+          height: 250px;
+          
+          display: flex; justify-content: center; align-items: center;
+          .popcon{
+            width: 30%; height: 40%;
+            background: url(/public/img/youtube1.png) center/cover;
+          }
+          .screen{
+            width: 30%; height: 40%;
+            background: url(/public/img/youtube2.png) center/cover;
+          }
+          .camera{
+            width: 30%; height: 40%;
+            background: url(/public/img/youtube5.png) center/cover;
+          }
+        }
+
+
         /* ticket box - main ticket, side ticket */
         .txt{
-          width: 60%;
+          width: 100%;
           height: 250px;
           position: relative;
           background: #F9EDC5;
@@ -320,24 +342,14 @@
 @media screen and (max-width: $tablet){
   .youtube{
     .inner{
+      .title_wrap h1{  font-size: 12vw!important; }
+
       /* youtube vid list*/
       .list{
+        width: 708px; margin: 0 auto;
         article{
-          width: 100%; padding: 0 40px;
-          flex-wrap: wrap; flex-direction: column; align-items: flex-start;
+          width: 100%;
           margin-bottom: 60px;
-  
-          &:nth-of-type(2n) {flex-direction: column; align-items: flex-end;}
-  
-          .pic{
-            width: 415px; 
-            height: 250px;
-            margin-bottom: 20px;
-          }
-
-          .txt{  
-            width: 710px;  height: 250px; 
-          }
         }
       }
     }
@@ -345,13 +357,16 @@
 }
 
 @media screen and (max-width: 780px) {
+  .youtube .inner .list{width: 100%;}
   .youtube .inner .list article{
+    width: 100%;
     align-items: center;
-    &:nth-of-type(2n) {flex-direction: column; align-items: center;}
+    
+    /* icon*/
+    .movieIcon{  display: none;}
   
     .txt{
       width: 100%;
-
 
       .mainTick{
         width: 100%;
@@ -374,6 +389,9 @@
 @media screen and (max-width: $mobile){
   .youtube{
     .inner{
+      /* title */
+      .title_wrap h1{  font-size: 10vw!important; }
+
       /* youtube vid list*/
       .list{
         article{

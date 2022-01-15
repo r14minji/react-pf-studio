@@ -36,47 +36,84 @@ function Youtube(){
           <h1>&#8547;. Youtube</h1>
         </div>
 
-
         {/* youtube vid list */}
         <div className="list">
-            {
-              data.map((item, index)=>{
-                let tit = item.snippet.title;
-                let tit_len = tit.length;
-                let desc = item.snippet.description;
-                let desc_len = desc.length;
-                let date = item.snippet.publishedAt;
+          {
+            data.map((item, index)=>{
+              let tit = item.snippet.title;
+              let tit_len = tit.length;
+              let desc = item.snippet.description;
+              let desc_len = desc.length;
+              let date = item.snippet.publishedAt;
 
-                return(
-                  <article key={index}>
-                    {/* pic - youtube image */}
-                    <div className="pic" onClick={()=>{
-                      setIsPop(true);
-                      setIndex(index);
-                    }}>
-                      <img src ={item.snippet.thumbnails.medium.url} />
+              return(
+                <article key={index}>
+                  {/* pic - youtube image */}
+                  <div className="pic" onClick={()=>{
+                    setIsPop(true);
+                    setIndex(index);
+                  }}>
+                    <img src ={item.snippet.thumbnails.medium.url} />
+                  </div>
+
+                  {/* icon */}
+                  <div className="movieIcon">
+                    <div className="popcon"></div>
+                    <div className="screen"></div>
+                    <div className="camera"></div>
+                  </div>
+
+                  {/* ticket box - main ticket, side ticket */}
+                  <div className="txt">
+                    {/* mainTick - youtube api data */}
+                    <div className="mainTick container">
+                      <div className="icon">
+                        <img src={path + "/img/movieIcon2.png"} />
+                      </div>
+                      <div className="tickName">
+                        <p>alice Film Festival</p>
+                      </div>
+                      <div className="descYoutb">
+                        <p>{(desc_len > 120) ? desc = desc.substr(0, 120)+"..." : desc}</p>
+                      </div>
+                      <div className="titleYoutb">
+                        <h2>{(tit_len > 40) ? tit = tit.substr(0,40)+"..." : tit}</h2>
+                      </div>
+                      <div className="star">
+                        <span><FontAwesomeIcon icon={faStar}/></span>
+                        <span><FontAwesomeIcon icon={faStar}/></span>
+                        <span><FontAwesomeIcon icon={faStar}/></span>
+                      </div>
+                      <div className="date">
+                        <p>Date</p>
+                        <span>{date.split("T")[0]}</span>
+                      </div>
+                      <div className="seat">
+                        <p>Seat</p>
+                        <span>A-0{index+1}</span>
+                      </div>
+                      <div className="time">
+                        <p>Time</p>
+                        <span>03:16 PM</span>
+                      </div>
+                      <div className="price">
+                        <span>Price</span>
+                        <strong>$14.99</strong>
+                        <p>ADMIT ONE</p>
+                      </div>
+                      <div className="tickNum">
+                        <p>Ticket No. ABC-20728-405-00{index}</p>
+                      </div>
                     </div>
 
-                    {/* ticket box - main ticket, side ticket */}
-                    <div className="txt">
-                      {/* mainTick - youtube api data */}
-                      <div className="mainTick container">
-                        <div className="icon">
-                          <img src={path + "/img/movieIcon2.png"} />
+                    {/* sideTick */}
+                    <div className="sideTick">
+                      <div className="wrap container">
+                        <div className="admit">
+                          <p>ADMIT ONE</p>
                         </div>
-                        <div className="tickName">
-                          <p>alice Film Festival</p>
-                        </div>
-                        <div className="descYoutb">
-                          <p>{(desc_len > 120) ? desc = desc.substr(0, 120)+"..." : desc}</p>
-                        </div>
-                        <div className="titleYoutb">
-                          <h2>{(tit_len > 40) ? tit = tit.substr(0,40)+"..." : tit}</h2>
-                        </div>
-                        <div className="star">
-                          <span><FontAwesomeIcon icon={faStar}/></span>
-                          <span><FontAwesomeIcon icon={faStar}/></span>
-                          <span><FontAwesomeIcon icon={faStar}/></span>
+                        <div className="greatest">
+                          <p>The greatest Days of our lives</p>
                         </div>
                         <div className="date">
                           <p>Date</p>
@@ -90,51 +127,20 @@ function Youtube(){
                           <p>Time</p>
                           <span>03:16 PM</span>
                         </div>
-                        <div className="price">
-                          <span>Price</span>
-                          <strong>$14.99</strong>
-                          <p>ADMIT ONE</p>
-                        </div>
                         <div className="tickNum">
                           <p>Ticket No. ABC-20728-405-00{index}</p>
                         </div>
                       </div>
-
-                      {/* sideTick */}
-                      <div className="sideTick">
-                        <div className="wrap container">
-                          <div className="admit">
-                            <p>ADMIT ONE</p>
-                          </div>
-                          <div className="greatest">
-                            <p>The greatest Days of our lives</p>
-                          </div>
-                          <div className="date">
-                            <p>Date</p>
-                            <span>{date.split("T")[0]}</span>
-                          </div>
-                          <div className="seat">
-                            <p>Seat</p>
-                            <span>A-0{index+1}</span>
-                          </div>
-                          <div className="time">
-                            <p>Time</p>
-                            <span>03:16 PM</span>
-                          </div>
-                          <div className="tickNum">
-                            <p>Ticket No. ABC-20728-405-00{index}</p>
-                          </div>
-                        </div>
-                      </div>
                     </div>
-                  </article>
-                )
-              })
-            }
-          </div>
-
-          {isPop ? <Pop  /> : null}
+                  </div>
+                </article>
+              )
+            })
+          }
+        </div>
       </div>
+
+        {isPop ? <Pop  /> : null}
     </section>
   )
 

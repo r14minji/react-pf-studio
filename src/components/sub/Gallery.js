@@ -4,13 +4,9 @@ import Masonry from "react-masonry-component";
 import { faWindowClose } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
-
 const html = document.querySelector("html");
 const body = document.querySelector("body");
 const path = process.env.PUBLIC_URL;
-
-
 const masonryOptions ={
   fitWidth: false,
   gutter: 0,
@@ -31,7 +27,7 @@ function Gallery(){
   useEffect(()=>{
     getFlickr({
       type: "interest",
-      count: 30
+      count: 15
     });
 
     body.classList.add("white");
@@ -93,7 +89,7 @@ function Gallery(){
               input.current.value = "";
               getFlickr({
                 type : "search",
-                count: 30,
+                count: 15,
                 tags: tags 
               });
             }

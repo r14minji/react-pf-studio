@@ -51,19 +51,19 @@ body{
 body.white{
   #header {
     .inner{
-      h1{color: $backgroundColor;}
-      h1 a {color: $backgroundColor;}
-      p {
-        color: $backgroundColor;
-        border-bottom: 4px solid $backgroundColor;
-        &::after { background: $backgroundColor;}
+      .menu_web{
+        h1{color: $backgroundColor;}
+        h1 a {color: $backgroundColor;}
+        p {
+          color: $backgroundColor;
+          border-bottom: 4px solid $backgroundColor;
+          &::after { background: $backgroundColor;}
+        }
+      }
+      #gnb_web{ 
+        border-bottom: 2px solid $backgroundColor;
+        ul li a {color: $backgroundColor}
       }
     }
-    #gnb{ 
-      border-bottom: 2px solid $backgroundColor;
-      ul li a {color: $backgroundColor}
-    }
-    //.util ul li a {color: $backgroundColor}
   }
-
 }
