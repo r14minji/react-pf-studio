@@ -247,7 +247,12 @@ fieldset {
       #header .inner .menu_web h1 a {
         margin-right: 70px; }
       #header .inner .menu_web h1::before {
-        display: none; } }
+        display: none; }
+  #header .inner .menu_Mo h1 a {
+    padding-top: 40px;
+    font-size: 60px; }
+  #header .inner .menu_Mo #gnb_mo > li > a {
+    font-size: 40px; } }
 #header_sub {
   width: 100%; }
   #header_sub .inner {

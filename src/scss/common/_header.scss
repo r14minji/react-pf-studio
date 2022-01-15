@@ -221,6 +221,18 @@
           &::before{ display: none;}
         }
       }
+
+      .menu_Mo{
+        h1 a {
+          padding-top: 40px;
+          font-size: 60px;
+        }
+        #gnb_mo>li{
+          >a{
+            font-size: 40px;
+          }
+        }
+      }
     }
   }
 }
