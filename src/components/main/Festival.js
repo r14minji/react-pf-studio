@@ -32,7 +32,7 @@ function Festival(){
             </div>
           </article>
           <article>
-            <h1>MOVIE<br/>FESTIVAL</h1>
+            <h1>MOVIE<strong>FESTIVAL</strong></h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique ratione, est libero consectetur corporis, non fuga quae delectus distinctio nostrum, quos ea soluta facere? Iusto similique facilis cum atque expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis et molestiae labore perferendis placeat non tempora deleniti vero ut amet! Unde libero atque consequuntur sapiente nesciunt doloremque. Aperiam repellat officia placeat eum impedit assumenda excepturi doloribus facilis, provident numquam consectetur. At, cum nulla!</p>
             <span>Read More</span>
           </article>
