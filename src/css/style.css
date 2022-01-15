@@ -488,7 +488,8 @@ fieldset {
         .newsM .inner .wrap article .content p {
           font: 400 16px/1.2 'Oswald';
           color: #555;
-          margin-bottom: 10px; }
+          margin-bottom: 10px;
+          word-break: break-all; }
         .newsM .inner .wrap article .content span {
           font: 400 16px/1 'IM Fell English SC';
           color: #555;
@@ -566,7 +567,7 @@ fieldset {
     .festivalM .inner .wrap article {
       float: left;
       width: 380px;
-      margin-left: 20px; }
+      margin-right: 20px; }
       .festivalM .inner .wrap article:nth-of-type(1) {
         display: flex;
         flex-wrap: wrap; }
@@ -590,19 +591,38 @@ fieldset {
           height: 100%;
           object-fit: cover; }
       .festivalM .inner .wrap article:nth-of-type(2) .content h2 {
-        font: 600 18px/1 'Oswald'; }
+        font: 600 18px/1 'Oswald';
+        margin-bottom: 20px; }
+      .festivalM .inner .wrap article:nth-of-type(2) .content p {
+        font: 400 16px/1 'Oswald';
+        margin-bottom: 10px; }
+      .festivalM .inner .wrap article:nth-of-type(2) .content strong {
+        display: block;
+        font: 400 16px/1 'Oswald';
+        margin-bottom: 20px; }
+      .festivalM .inner .wrap article:nth-of-type(2) .content span {
+        font: 400 16px/1 'IM Fell English SC';
+        color: #555;
+        padding: 5px 0px;
+        cursor: pointer;
+        transition: 0.3s; }
+        .festivalM .inner .wrap article:nth-of-type(2) .content span:hover {
+          background: #FFEDCB; }
       .festivalM .inner .wrap article:nth-of-type(3) {
-        margin-left: 0px; }
+        margin-right: 0px; }
         .festivalM .inner .wrap article:nth-of-type(3) > h1 {
-          font: 700 20px/1 'Oswald';
+          font: 700 60px/1 'Oswald';
+          text-align: left;
           margin-bottom: 20px;
           padding: 0; }
         .festivalM .inner .wrap article:nth-of-type(3) p {
-          font: 400 16px/1.2 'Oswald'; }
+          font: 400 16px/1.2 'Oswald';
+          margin-bottom: 20px;
+          word-break: break-all; }
         .festivalM .inner .wrap article:nth-of-type(3) span {
           font: 400 16px/1 'IM Fell English SC';
           color: #555;
-          padding: 5px 5px 3px;
+          padding: 5px 0px;
           cursor: pointer;
           transition: 0.3s; }
           .festivalM .inner .wrap article:nth-of-type(3) span:hover {

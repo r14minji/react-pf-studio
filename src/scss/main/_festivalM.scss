@@ -8,7 +8,7 @@
       
       article{
         float: left;
-        width: 380px; margin-left: 20px;
+        width: 380px; margin-right: 20px;
 
         &:nth-of-type(1){
           display: flex; flex-wrap: wrap;
@@ -31,21 +31,39 @@
           .content{
             h2{
               font: 600 18px/1 'Oswald';
+              margin-bottom: 20px;
+            }
+            p{
+              font: 400 16px/1 'Oswald';
+              margin-bottom: 10px;
+            }
+            strong{
+              display: block;
+              font: 400 16px/1 'Oswald';
+              margin-bottom: 20px;
+            }
+            span{
+              font: 400 16px/1 'IM Fell English SC';  color: #555;
+              padding: 5px 0px;
+              cursor: pointer; transition: 0.3s;
+              &:hover{background: $lightyellow;}
             }
           }
         }
         &:nth-of-type(3){
-          margin-left: 0px;
+          margin-right: 0px;
           >h1{
-            font: 700 20px/1 'Oswald';
+            font: 700 60px/1 'Oswald'; text-align: left;
             margin-bottom: 20px; padding: 0;
           }
           p{
             font: 400 16px/1.2 'Oswald';
+            margin-bottom: 20px;
+            word-break: break-all;
           }
           span{
             font: 400 16px/1 'IM Fell English SC';  color: #555;
-            padding: 5px 5px 3px;
+            padding: 5px 0px;
             cursor: pointer; transition: 0.3s;
             &:hover{background: $lightyellow;}
           }
