@@ -8,6 +8,7 @@ import Footer from './components/common/Footer.js';
 
 //import main component
 import Visual from './components/main/Visual.js';
+import News from './components/main/News.js';
 
 //import sub component
 import About from './components/sub/About.js';
@@ -26,6 +27,7 @@ function App() {
 
       <Route exact path="/">
         <Visual/>
+        <News/>
       </Route>
 
 

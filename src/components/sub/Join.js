@@ -80,10 +80,10 @@ function Join(){
     //console.log(err);
     const len =  Object.keys(err).length;
     if(len === 0 && isSubmit){
-      console.log('인증 성공');
+      //console.log('인증 성공');
       setSuccess(true);     
     }else{
-      console.log('인증 실패');
+      //console.log('인증 실패');
       setSuccess(false);
     }
   },[err]);
