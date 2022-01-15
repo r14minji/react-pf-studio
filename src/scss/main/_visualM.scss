@@ -12,15 +12,20 @@
 
 /* tablet */
 @media screen and (max-width:$tablet){
-  .inner{
-    width: 100%;
-
+  .visualM{
+    padding: 0px;
+    .inner{
+      width: 100%;
+  
+    }
   }
 }
 
 /* mobile */
 @media screen and (max-width:$mobile){
-  .inner{
-    //작성
+  .visualM{
+    .inner{
+      //작성
+    }
   }
 }
