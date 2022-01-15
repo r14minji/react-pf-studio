@@ -744,6 +744,23 @@ fieldset {
             font-size: 16px;
             font-weight: 400; }
 
+/* tablet */
+@media screen and (max-width: 1179px) {
+  .offerM {
+    padding: 20px 20px; }
+    .offerM .inner {
+      width: 100%; }
+      .offerM .inner h1 {
+        font-size: 8vw !important; } }
+/* mobile */
+@media screen and (max-width: 539px) {
+  .offerM .inner h1 {
+    font-size: 9vw !important; }
+  .offerM .inner .wrap {
+    flex-wrap: wrap; }
+    .offerM .inner .wrap article {
+      width: 100%;
+      margin-bottom: 20px; } }
 .festivalM {
   padding: 40px 0px; }
   .festivalM .inner {
