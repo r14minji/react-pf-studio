@@ -74,7 +74,7 @@
 
     /* 반응형 메뉴 호출*/
     .bg{
-      display: block; //none
+      display: none;
       width: 80px; height: 80px;
       background: #000;
       position: absolute; top: 0px; right: 0px; z-index: 6;
@@ -202,6 +202,8 @@
         #gnb_web{ display: none;}
         .util_web{ display: none;}
       }
+
+      .bg{display: block;}
     }
   }
 }

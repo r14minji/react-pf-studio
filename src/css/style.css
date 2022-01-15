@@ -90,7 +90,7 @@ fieldset {
           #header .inner .menu_web .util_web ul li a {
             color: #303030; }
     #header .inner .bg {
-      display: block;
+      display: none;
       width: 80px;
       height: 80px;
       background: #000;
@@ -234,7 +234,9 @@ fieldset {
       #header .inner .menu_web #gnb_web {
         display: none; }
       #header .inner .menu_web .util_web {
-        display: none; } }
+        display: none; }
+    #header .inner .bg {
+      display: block; } }
 /* moblie */
 @media screen and (max-width: 539px) {
   #header .inner .menu_web {
@@ -653,7 +655,7 @@ fieldset {
     .offerM .inner h1 {
       padding: 10px;
       text-align: center;
-      font: 700 40px/1 'Oswald';
+      font: 700 70px/1 'Oswald';
       letter-spacing: 2px;
       text-transform: uppercase;
       margin-bottom: 20px; }
