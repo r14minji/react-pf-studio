@@ -6,10 +6,10 @@ function Join(){
     pwd1 : '',
     pwd2 : '',
     email: '',
-    comments: '',
     gender: '',
     interests: '',
-    edu: ''
+    sns: '',
+    comments: '',
   }
   const [val, setVal] = useState(initVal);
   const [err, setErr] = useState({});
@@ -17,6 +17,7 @@ function Join(){
   const [success, setSuccess] = useState(false);
 
   const handleChange = e => {   
+    //console.log(e.target)
     const {name, value} = e.target;     
     setVal({...val, [name]: value});     
   }
@@ -34,15 +35,13 @@ function Join(){
     setVal({...val, [name]: isSelected});
   }
 
-  //submit이벤트 발생하면 실행되는 함수
   const handleSubmit = e =>{ 
     e.preventDefault();   
     setIsSubmit(true);
     setErr(check(val));  
-    console.log(val);
+    //console.log(val);
   }
 
-  //에러 객체를 반환하는 함수
   const check = val=>{
     let errs = {};  
     let eng = /[a-zA-Z]/;
@@ -50,34 +49,34 @@ function Join(){
     let spc = /[!@#$%^&*]/;
 
     if( !val.userid || val.userid.length <5 ){
-      errs.userid='아이디 5글자 이상입력';
+      errs.userid='Please enter 5 or more characters';
     } 
     if( !val.pwd1 || val.pwd1.length<5 || !eng.test(val.pwd1) || !num.test(val.pwd1) || !spc.test(val.pwd1)){
-      errs.pwd1='비밀번호는 5글자 이상, 문자,숫자,특수문자를 모두 포함';
+      errs.pwd1='Please enter 5 or more characters, with at least 1 number and special characters';
     }
-    if( !val.email || val.email.length <8 || !/@/.test(val.email) ){
-      errs.email='이메일주소를 8글자 이상입력';
+    if( !val.email || !/@/.test(val.email) ){
+      errs.email='Please enter a valid email address.';
     }
     if( !val.pwd2 || val.pwd1 !== val.pwd2 ){
-      errs.pwd2='두개의 비밀번호를 동일하게 입력';
-    }
-    if( !val.comments || val.comments.length <10 ){
-      errs.comments='남기는말을 10글자 이상입력';
+      errs.pwd2='Please enter same password';
     }
     if( !val.gender ){
-      errs.gender='성별을 선택하세요';
+      errs.gender='Please select gender';
     }
     if( !val.interests ){
-      errs.interests='관심사를 하나이상 선택하세요.';
+      errs.interests='Please choose your intersets';
     }
-    if( !val.edu ){
-      errs.edu='학력을 선택해주세요.'
+    if( !val.sns ){
+      errs.sns='Please select your sns'
+    }
+    if( !val.comments || val.comments.length <10 ){
+      errs.comments='Please enter 5 or more characters';
     }
     return errs;
   }
  
   useEffect(()=>{        
-    console.log(err);
+    //console.log(err);
     const len =  Object.keys(err).length;
     if(len === 0 && isSubmit){
       console.log('인증 성공');
@@ -94,14 +93,14 @@ function Join(){
     <div className="inner">
       <h1>join</h1>
 
-      {success ? <div>회원가입을 축하합니다.</div> : null }
+      {success ? <div>Congratulations on becoming a member!</div> : null }
 
       <form onSubmit={handleSubmit}>
         <fieldset>
-          <legend className='h'>회원가입 입력 폼 양식</legend>
-
+          <legend className='hidden'>회원가입 입력 폼 양식</legend>
+          
           <table>
-            <caption className='h'>회원가입 입력</caption>
+            <caption className='hidden'>회원가입 입력</caption>
             <tbody>
               {/* userid */}
               <tr>
@@ -113,7 +112,7 @@ function Join(){
                     type="text" 
                     id='userid'
                     name='userid'
-                    placeholder='아이디를 입력하세요'                    
+                    placeholder='Enter your ID'                    
                     onChange={handleChange}
                   />
                   <span className='err'>{err.userid}</span>
@@ -130,7 +129,7 @@ function Join(){
                     type="password" 
                     id='pwd1'
                     name='pwd1'
-                    placeholder='비밀번호를 입력하세요'                  
+                    placeholder='Enter your password'                  
                     onChange={handleChange}
                   />
                   <span className='err'>{err.pwd1}</span>
@@ -147,7 +146,7 @@ function Join(){
                     type="password" 
                     id='pwd2'
                     name='pwd2'
-                    placeholder='비밀번호를 재입력하세요'                  
+                    placeholder='Re-password'                  
                     onChange={handleChange}
                   />
                   <span className='err'>{err.pwd2}</span>
@@ -164,10 +163,87 @@ function Join(){
                     type="text" 
                     id='email'
                     name='email'
-                    placeholder='이메일 주소를 입력하세요'         
+                    placeholder='Enter your  Email address'         
                     onChange={handleChange}
                   />
                   <span className='err'>{err.email}</span>
+                </td>
+              </tr>
+
+              {/* gender */}
+              <tr>
+                <th scope='row'>
+                  GENDER
+                </th>
+                <td>
+                  <input 
+                    type="radio" 
+                    id='male' 
+                    name='gender' 
+                    onChange = {handleCheck}
+                  />
+                  <label htmlFor='male'>Male</label>
+                  
+                  <input 
+                    type="radio" 
+                    id='female' 
+                    name='gender' 
+                    onChange = {handleCheck} 
+                  />
+                  <label htmlFor='femal'>Female</label>
+                  
+                  <span className='err'>{err.gender}</span>
+                </td>
+              </tr>
+
+              {/* interests */}
+              <tr>
+                <th scope='row'>
+                  INTERESTS
+                </th>
+                <td>
+                  <input 
+                    type="checkbox" 
+                    id='table' 
+                    name='interests' 
+                    onChange = {handleCheck}
+                  />
+                  <label htmlFor='table'>Table</label>
+                  
+                  <input 
+                    type="checkbox" 
+                    id='sofa' 
+                    name='interests' 
+                    onChange = {handleCheck} 
+                  />
+                  <label htmlFor='sofa'>Sofa</label>
+                  
+                  <input 
+                    type="checkbox" 
+                    id='chair' 
+                    name='interests' 
+                    onChange = {handleCheck} 
+                  />
+                  <label htmlFor='chair'>Chair</label>
+                  
+                  <span className='err'>{err.interests}</span>
+                </td>
+              </tr>
+
+              {/* sns */}
+              <tr>
+                <th scope='row'>
+                <label htmlFor='sns'>SNS</label>
+                </th>
+                <td>                    
+                  <select name="sns" id="sns" onChange={handleSelect}>
+                    <option value="">Select</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="twitter">Twitter</option>
+                    <option value="tiktalk">Tiktalk</option>
+                  </select>
+                  <span className='err'>{err.sns}</span>
                 </td>
               </tr>
 
@@ -182,86 +258,10 @@ function Join(){
                     row='10'
                     id='comments'
                     name='comments'
-                    placeholder='남기는 말을 적어주세요2'                  
+                    placeholder='Send me your opinion'                  
                     onChange={handleChange}
                   ></textarea>
                   <span className='err'>{err.comments}</span>
-                </td>
-              </tr>
-
-              {/* gender */}
-              <tr>
-                <th scope='row'>
-                  GENDER
-                </th>
-                <td>
-                  <label htmlFor='male'>Male</label>
-                  <input 
-                    type="radio" 
-                    id='male' 
-                    name='gender' 
-                    onChange = {handleCheck}
-                  />
-
-                  <label htmlFor='femal'>Female</label>
-                  <input 
-                    type="radio" 
-                    id='female' 
-                    name='gender' 
-                    onChange = {handleCheck} 
-                  />
-                  <span className='err'>{err.gender}</span>
-                </td>
-              </tr>
-
-              {/* interests */}
-              <tr>
-                <th scope='row'>
-                  INTERESTS
-                </th>
-                <td>
-                  <label htmlFor='sport'>Sports</label>
-                  <input 
-                    type="checkbox" 
-                    id='sports' 
-                    name='interests' 
-                    onChange = {handleCheck}
-                  />
-
-                  <label htmlFor='music'>Music</label>
-                  <input 
-                    type="checkbox" 
-                    id='music' 
-                    name='interests' 
-                    onChange = {handleCheck} 
-                  />
-
-                  <label htmlFor='game'>Game</label>
-                  <input 
-                    type="checkbox" 
-                    id='game' 
-                    name='interests' 
-                    onChange = {handleCheck} 
-                  />
-
-                  <span className='err'>{err.interests}</span>
-                </td>
-              </tr>
-
-              {/* education */}
-              <tr>
-                <th scope='row'>
-                <label htmlFor='edu'>EDUCATION</label>
-                </th>
-                <td>                    
-                  <select name="edu" id="edu" onChange={handleSelect}>
-                    <option value="">학력을 선택하세요</option>
-                    <option value="elementary-school">초등학교 졸업</option>
-                    <option value="middle-school">중학교 졸업</option>
-                    <option value="high-school">고등학교 졸업</option>
-                    <option value="college">대학교 졸업</option>
-                  </select>
-                  <span className='err'>{err.edu}</span>
                 </td>
               </tr>
 

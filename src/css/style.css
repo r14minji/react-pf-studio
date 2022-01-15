@@ -2112,12 +2112,86 @@ fieldset {
 
 .join .inner h1 {
   font: 50px/1 'IM Fell English SC'; }
-.join .inner .wrap {
+.join .inner form {
   margin: 0 auto;
-  width: 800px;
-  min-height: 500px;
-  border: 1px solid #000; }
+  width: 560px; }
+  .join .inner form table {
+    margin: 0 auto;
+    width: 560px;
+    margin-bottom: 80px; }
+    .join .inner form table th, .join .inner form table td {
+      padding: 6px 20px; }
+    .join .inner form table th {
+      width: 30%;
+      text-align: left;
+      font: 24px/1 'IM Fell English SC';
+      text-transform: lowercase; }
+      .join .inner form table th.btnSet {
+        text-align: center;
+        border-right: none; }
+        .join .inner form table th.btnSet input[type=reset], .join .inner form table th.btnSet input[type=submit] {
+          width: 150px;
+          height: 32px;
+          text-align: center;
+          margin: 20px 20px 10px;
+          transition: 0.5s;
+          background: rgba(185, 188, 186, 0.3);
+          border: 1px solid #b9bcba;
+          position: relative;
+          cursor: pointer;
+          box-shadow: 0 6px #9BA4A1;
+          font-family: "IM Fell English SC"; }
+          .join .inner form table th.btnSet input[type=reset]:hover, .join .inner form table th.btnSet input[type=submit]:hover {
+            box-shadow: 0 4px #9BA4A1;
+            top: 2px; }
+    .join .inner form table td input[type=text], .join .inner form table td input[type=password], .join .inner form table td select {
+      width: 100%;
+      padding: 10px 15px;
+      border: 2px solid #848785;
+      background: rgba(185, 188, 186, 0.5); }
+    .join .inner form table td textarea {
+      width: 100%;
+      height: 150px;
+      padding: 10px 20px;
+      border: 2px solid #848785;
+      background: rgba(185, 188, 186, 0.5);
+      resize: none; }
+    .join .inner form table td label {
+      font: 14px/1 'IM Fell English SC';
+      color: #777;
+      margin-right: 5px;
+      text-transform: uppercase;
+      margin-right: 20px; }
+    .join .inner form table td input[type=radio], .join .inner form table td input[type=checkbox] {
+      margin-right: 20px;
+      position: relative;
+      top: 2px; }
+  .join .inner form .err {
+    display: block;
+    margin-top: 5px;
+    font: 14px/1 'arial';
+    color: #C1554E;
+    text-transform: lowercase; }
 
+@media screen and (max-width: 1199px) {
+  .join .inner table td input[type=text], .join .inner table td input[type=password], .join .inner table td select {
+    width: 90%; }
+  .join .inner table td textarea {
+    width: 90%; } }
+@media screen and (max-width: 1179px) {
+  .join .inner table th {
+    position: absolute;
+    top: -99999px;
+    opacity: 0; }
+    .join .inner table th.btnSet {
+      position: relative;
+      top: 0px;
+      opacity: 1; }
+
+  .join .inner table td input[type=text], .join .inner table td input[type=password], .join .inner table td select {
+    width: 100%; }
+  .join .inner table td textarea {
+    width: 100%; } }
 html {
   background-color: #e6e2dd;
   color: #303030; }
