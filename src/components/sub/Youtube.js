@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import { faWindowClose } from "@fortawesome/free-regular-svg-icons";
 import { faStar  } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -28,7 +28,7 @@ function Youtube(){
 
 
   return(
-    <section className="content youtube">
+    <main className="content youtube">
       <div className="inner">
         {/* title */}
         <div className="title_wrap">
@@ -37,7 +37,7 @@ function Youtube(){
         </div>
 
         {/* youtube vid list */}
-        <div className="list">
+        <section className="list">
           {
             data.map((item, index)=>{
               let tit = item.snippet.title;
@@ -137,11 +137,11 @@ function Youtube(){
               )
             })
           }
-        </div>
-      </div>
+        </section>
 
         {isPop ? <Pop  /> : null}
-    </section>
+      </div>
+    </main>
   )
 
   function Pop(){
@@ -160,7 +160,8 @@ function Youtube(){
         <iframe src={"https://www.youtube.com/embed/" +  data[index].snippet.resourceId.videoId }  width='100%' height='100%'></iframe>
         <span className="btnClose" onClick={()=>{
           setIsPop(false);
-        }}>close</span>
+        }}><FontAwesomeIcon icon={faWindowClose} /></span>
+        <p>Loading...</p>
       </aside>
     )
   }

@@ -66,4 +66,16 @@ body.white{
       }
     }
   }
+
+  #footer{
+    color: $backgroundColor;
+    border-color:  $backgroundColor;
+    .inner{
+      border-top: 2px solid $backgroundColor;
+
+      .newsletter .input_wrap #newsletterInput {border-color:  $backgroundColor;}
+      .newsletter .input_wrap #newsletterSubmit {color: $backgroundColor; border-color:  $backgroundColor;}
+      >p{border-top: 1px solid  $backgroundColor;}
+    }
+  }
 }

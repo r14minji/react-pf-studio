@@ -92,6 +92,7 @@ function Join(){
 
     <section className="content join">
     <div className="inner">
+      <div className="bgPic">
       <h1>join</h1>
 
       {success ? 
@@ -103,7 +104,7 @@ function Join(){
       null 
       }
 
-    {success ? 
+      {success ? 
       null 
       : 
       <form onSubmit={handleSubmit}>
@@ -288,6 +289,9 @@ function Join(){
         </fieldset>
       </form>
       }
+
+      </div>
+
     </div>
   </section>
 
