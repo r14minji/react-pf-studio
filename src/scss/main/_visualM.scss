@@ -64,21 +64,24 @@
       .wrap{
         padding-bottom: 20px;
         .banner{
-          width: 100%; border: none; padding: 0;
+          width: 100%; border: none; padding: 0; float:none;
         }
+
         .stayConnect{
+          float:none;
           width: 100%; padding: 0;
-          display: flex; justify-content: flex-start; align-content: center;
+          
           h3{
+            display: inline-block;
             font-size: 3vw;
             padding: 10px 0;
             margin-bottom: 0; width: 35%; 
           }
 
           ul{
-            display: flex; align-items: center;
+            display: none; //옆으로 배치하면 스크롤이 생기는 문제가 발생함
             li{
-              float: auto; width: auto; padding: 10px;
+              width: auto; padding: 10px;
               border: none;
               margin: 0px;
               span{

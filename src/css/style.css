@@ -683,23 +683,21 @@ fieldset {
         .visualM .inner .wrap .banner {
           width: 100%;
           border: none;
-          padding: 0; }
-        .visualM .inner .wrap .stayConnect {
-          width: 100%;
           padding: 0;
-          display: flex;
-          justify-content: flex-start;
-          align-content: center; }
+          float: none; }
+        .visualM .inner .wrap .stayConnect {
+          float: none;
+          width: 100%;
+          padding: 0; }
           .visualM .inner .wrap .stayConnect h3 {
+            display: inline-block;
             font-size: 3vw;
             padding: 10px 0;
             margin-bottom: 0;
             width: 35%; }
           .visualM .inner .wrap .stayConnect ul {
-            display: flex;
-            align-items: center; }
+            display: none; }
             .visualM .inner .wrap .stayConnect ul li {
-              float: auto;
               width: auto;
               padding: 10px;
               border: none;
@@ -1514,7 +1512,8 @@ fieldset {
   .latestNews .inner h1 {
     font: 600 36px/1 'Oswald';
     padding: 10px 0px;
-    border-bottom: 4px solid #000; }
+    border-bottom: 4px solid #000;
+    margin-bottom: 30px; }
   .latestNews .inner .wrap {
     width: 100%;
     margin-bottom: 30px; }
