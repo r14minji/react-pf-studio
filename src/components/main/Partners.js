@@ -8,22 +8,19 @@ function Partners(){
 
         <div className="wrap">
           <div className="logo">
-            <img src={path + "/img/partner1.png"} alt="" />
+            <img src={path + "/img/partner1.png"} alt="pixar 로고" />
           </div>
           <div className="logo">
-            <img src={path + "/img/partner2.png"} alt="" />
+            <img src={path + "/img/partner2.png"} alt="netflx 로고" />
           </div>
           <div className="logo">
-            <img src={path + "/img/partner3.png"} alt="" />
+            <img src={path + "/img/partner3.png"} alt="channel 로고" />
           </div>
           <div className="logo">
-            <img src={path + "/img/partner4.png"} alt="" />
+            <img src={path + "/img/partner4.png"} alt="apple tv 로고" />
           </div>
           <div className="logo">
-            <img src={path + "/img/partner5.png"} alt="" />
-          </div>
-          <div className="logo">
-            <img src={path + "/img/partner6.png"} alt="" />
+            <img src={path + "/img/partner5.png"} alt="universal 로고" />
           </div>
         </div>
       </div>

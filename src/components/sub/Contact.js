@@ -19,22 +19,22 @@ function Contact(){
       title : "Gangnam", 
       latlng : new kakao.maps.LatLng(37.4984952,127.0277657),
       imgSrc : path + "/img/marker.png", 
-      imgSize : new kakao.maps.Size(232, 99),
-      imgPos : {offset: new kakao.maps.Point(116, 99)},
+      imgSize : new kakao.maps.Size(80, 90),
+      imgPos : {offset: new kakao.maps.Point(40, 90)},
     },
     {
       title : "JeJu", 
       latlng : new kakao.maps.LatLng(33.5419923,126.6344465),
       imgSrc : path + "/img/marker.png", 
-      imgSize : new kakao.maps.Size(232, 99),
-      imgPos : {offset: new kakao.maps.Point(116, 99)},
+      imgSize : new kakao.maps.Size(80, 90),
+      imgPos : {offset: new kakao.maps.Point(40, 90)},
     },
     {
       title : "Busan", 
       latlng : new kakao.maps.LatLng(35.1614101,129.1758802),
       imgSrc : path + "/img/marker.png", 
-      imgSize : new kakao.maps.Size(232, 99),
-      imgPos : {offset: new kakao.maps.Point(116, 99)},
+      imgSize : new kakao.maps.Size(80, 90),
+      imgPos : {offset: new kakao.maps.Point(40, 90)},
     }
   ];
   const [mapInfo] = useState(info);
@@ -159,7 +159,7 @@ function Contact(){
         }
           {
             mapInfo.map((data, index)=>{
-              return <li key={index} onClick={()=>setIndex(index)}>{data.title}</li>
+              return <li key={index} onClick={()=>setIndex(index)}><button>{data.title}  </button></li>
             })
           }
         </ul>
