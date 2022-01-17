@@ -275,47 +275,42 @@ fieldset {
 /* tablet */
 @media screen and (max-width: 1179px) {
   #header .inner {
-    width: 100%; }
-    #header .inner .menu_web {
-      border-bottom: 4px solid #000; }
-      #header .inner .menu_web h1 {
-        padding: 20px 0px;
-        font-size: 40px !important;
-        letter-spacing: 4px; }
-        #header .inner .menu_web h1::before {
-          content: "";
-          display: block;
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 80px;
-          height: 80px;
-          border-right: 4px solid #000;
-          background: url(/public/img/logo4.png) center/cover; }
-      #header .inner .menu_web p {
-        display: none; }
-        #header .inner .menu_web p::after {
-          display: none; }
-      #header .inner .menu_web #gnb_web {
-        display: none; }
-      #header .inner .menu_web .util_web {
-        display: none; }
+    width: 100%;
+    /* 반응형 메뉴 호출*/ }
+    #header .inner .menu_web .util_web {
+      display: none; }
     #header .inner .bg {
-      display: block; } }
+      display: block; }
+
+  #header.main .inner .menu_web .menu_web_main h1 {
+    height: 80px;
+    padding: 20px 0px;
+    font: 700 40px/1 'Oswald';
+    border-bottom: 4px solid #000; }
+  #header.main .inner .menu_web .menu_web_main .intro {
+    display: none; }
+  #header.main .inner .menu_web #gnb_web {
+    display: none; }
+
+  #header.sub .inner .menu_web .menu_web_sub {
+    display: block;
+    border: none; }
+    #header.sub .inner .menu_web .menu_web_sub::after, #header.sub .inner .menu_web .menu_web_sub span, #header.sub .inner .menu_web .menu_web_sub span::after, #header.sub .inner .menu_web .menu_web_sub p {
+      display: none; }
+    #header.sub .inner .menu_web .menu_web_sub h1 {
+      height: 80px;
+      padding: 20px 0px;
+      font: 400 40px/1 'Oswald';
+      text-align: center;
+      border-bottom: 4px solid #000; }
+  #header.sub .inner .menu_web #gnb_web {
+    display: none;
+    border: none; } }
 /* moblie */
 @media screen and (max-width: 539px) {
-  #header .inner .menu_web {
-    border-bottom: 4px solid #000; }
-    #header .inner .menu_web h1 {
-      font-size: 30px;
-      padding: 20px 0px; }
-      #header .inner .menu_web h1 a {
-        margin-right: 70px; }
-      #header .inner .menu_web h1::before {
-        display: none; }
   #header .inner .menu_Mo h1 a {
     padding-top: 40px;
-    font-size: 60px; }
+    font-size: 12vw; }
   #header .inner .menu_Mo #gnb_mo > li > a {
     font-size: 40px; } }
 #header_sub {
@@ -3009,19 +3004,14 @@ html {
 body {
   background: url(../img/paper-texture-narrow.png) no-repeat center/cover; }
 
-body.white #header .inner .menu_web h1 {
-  color: #e6e2dd; }
-body.white #header .inner .menu_web h1 a {
-  color: #e6e2dd; }
-body.white #header .inner .menu_web p {
-  color: #e6e2dd;
-  border-bottom: 4px solid #e6e2dd; }
-  body.white #header .inner .menu_web p::after {
-    background: #e6e2dd; }
-body.white #header .inner #gnb_web {
-  border-bottom: 2px solid #e6e2dd; }
-  body.white #header .inner #gnb_web ul li a {
-    color: #e6e2dd; }
+body.white #header {
+  color: #e6e2dd !important; }
+  body.white #header a {
+    color: #e6e2dd !important; }
+  body.white #header span, body.white #header span::after {
+    color: #e6e2dd !important; }
+  body.white #header .util_web ul li a {
+    color: #303030 !important; }
 body.white #footer {
   color: #e6e2dd;
   border-color: #e6e2dd; }

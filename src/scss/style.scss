@@ -50,21 +50,10 @@ body{
 
 body.white{
   #header {
-    .inner{
-      .menu_web{
-        h1{color: $backgroundColor;}
-        h1 a {color: $backgroundColor;}
-        p {
-          color: $backgroundColor;
-          border-bottom: 4px solid $backgroundColor;
-          &::after { background: $backgroundColor;}
-        }
-      }
-      #gnb_web{ 
-        border-bottom: 2px solid $backgroundColor;
-        ul li a {color: $backgroundColor}
-      }
-    }
+    color: $backgroundColor!important;
+    a {color: $backgroundColor!important;}
+    span, span::after{color: $backgroundColor!important;}
+    .util_web ul li a { color: #303030!important;}
   }
 
   #footer{

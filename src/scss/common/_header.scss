@@ -253,34 +253,38 @@
   
     .inner{
       width: 100%;
+      .menu_web .util_web{display: none;}
 
-      .menu_web{
-        border-bottom: 4px solid #000;
-        h1{
-          padding: 20px 0px;
-          font-size: 40px!important;
-          letter-spacing: 4px;
-
-          &::before{
-            content: ""; display: block;
-            position: absolute; left: 0; top: 0; 
-            width: 80px; height: 80px;
-            border-right: 4px solid #000;
-            background: url(/public/img/logo4.png) center/cover;
-          }
-        }
-  
-        p{
-          display: none;
-          &::after{display: none;}
-        }
-    
-        #gnb_web{ display: none;}
-        .util_web{ display: none;}
-      }
-
+      /* 반응형 메뉴 호출*/
       .bg{display: block;}
     }
+  }
+
+  #header.main .inner .menu_web{
+    .menu_web_main{
+      h1{
+        height: 80px;
+        padding: 20px 0px;
+        font: 700 40px/1 'Oswald'; 
+        border-bottom: 4px solid #000;
+      }
+      .intro{display: none;}
+    }
+    #gnb_web{ display: none;}
+  }
+
+  #header.sub .inner .menu_web{
+    .menu_web_sub{
+      display: block; border:none;
+      &::after, span, span::after, p {display: none;}
+      h1{
+        height: 80px;
+        padding: 20px 0px;
+        font: 400 40px/1 'Oswald'; text-align: center;
+        border-bottom: 4px solid #000;
+      }
+    }
+    #gnb_web{ display: none; border:none;}
   }
 }
 
@@ -288,20 +292,11 @@
 @media screen and (max-width: $mobile){
   #header{
     .inner{
-      .menu_web{
-        border-bottom: 4px solid #000;
-        h1{
-          font-size: 30px;
-          padding: 20px 0px;
-          a{margin-right: 70px;}
-          &::before{ display: none;}
-        }
-      }
 
       .menu_Mo{
         h1 a {
           padding-top: 40px;
-          font-size: 60px;
+          font-size: 12vw;
         }
         #gnb_mo>li{
           >a{

@@ -12,7 +12,7 @@ function Header(props){
         {/* 웹 메뉴 */}
         <nav className="menu_web">
           <div className="menu_web_main">
-            <h1><NavLink exact to='/'>STUDIA</NavLink></h1>
+            <h1><NavLink exact to='/'>STUDIOALICE</NavLink></h1>
             <div className="intro">
               <span>No 41 - UI/UX DEVELPOER 2020</span>
               <p>WEBSITE</p>
@@ -22,7 +22,7 @@ function Header(props){
 
           <div className="menu_web_sub">
             <span><FontAwesomeIcon icon={faBarcode} /></span>
-            <h1><NavLink exact to='/'>STUDIA</NavLink></h1>
+            <h1><NavLink exact to='/'>STUDIOALICE</NavLink></h1>
             <p>ISSUE NO.03 14/ 12 14</p>
           </div>
 
