@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-pf-studio/static/css/main.e39667c9.css",
-    "main.js": "/react-pf-studio/static/js/main.79f26890.js",
+    "main.css": "/react-pf-studio/static/css/main.d0f819b5.css",
+    "main.js": "/react-pf-studio/static/js/main.6a5e7d1a.js",
     "static/media/mask4.png": "/react-pf-studio/static/media/mask4.9c5854a2dc8d84720d67.png",
     "static/media/mask3.png": "/react-pf-studio/static/media/mask3.b1e0d027bd2274b2bbb3.png",
     "static/media/mask2.png": "/react-pf-studio/static/media/mask2.a08ba9820e063c42eafd.png",
@@ -14,11 +14,11 @@
     "static/media/youtube5.png": "/react-pf-studio/static/media/youtube5.52bc589e4361c552d3e5.png",
     "static/media/mask1.png": "/react-pf-studio/static/media/mask1.89b7cd94dc9ad6cd1ebf.png",
     "index.html": "/react-pf-studio/index.html",
-    "main.e39667c9.css.map": "/react-pf-studio/static/css/main.e39667c9.css.map",
-    "main.79f26890.js.map": "/react-pf-studio/static/js/main.79f26890.js.map"
+    "main.d0f819b5.css.map": "/react-pf-studio/static/css/main.d0f819b5.css.map",
+    "main.6a5e7d1a.js.map": "/react-pf-studio/static/js/main.6a5e7d1a.js.map"
   },
   "entrypoints": [
-    "static/css/main.e39667c9.css",
-    "static/js/main.79f26890.js"
+    "static/css/main.d0f819b5.css",
+    "static/js/main.6a5e7d1a.js"
   ]
 }
