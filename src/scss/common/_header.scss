@@ -8,52 +8,13 @@
     
     /* 웹 메뉴 */
     .menu_web{
-      h1{
-        width: 100%;
-        padding: 40px 0 10px;
-        font: 700 60px/1 'Oswald'; letter-spacing: 5px;
-        text-align: center;
-        a{
-          color: #303030;
-        }
-      }
+      //main과 sub 구분
+
+      //#gnb_web : mian 과 sub 구분
   
-      p{
-        width: 100%; 
-        font: 600 20px/1 'Oswald'; 
-        letter-spacing: 5px;
-        text-align: center;
-        padding-bottom: 40px;
-        border-bottom: 4px solid #000;
-        position: relative;
-  
-        &::after{
-          content: ''; display: block; 
-          width: 100%; height: 2px; background: #000;
-          position: absolute; bottom: -10px; left: 0;
-        }
-      }
-  
-      #gnb_web{
-        width: 100%;
-        padding: 15px 80px 10px;
-        border-bottom: 2px solid #000;
-  
-        ul{
-          display: flex; justify-content: space-around; 
-  
-          li{
-            font: 400 14px/ 1 'Oswald';
-  
-            a{
-              color: #303030;
-            }
-          }
-        }
-      }
   
       .util_web{
-        position: absolute; top: 140px; right: 0;
+        //위치값 main과 sub 구분
         ul{
           display: flex; justify-content: flex-end; 
   
@@ -63,14 +24,11 @@
             padding: 2px 5px;
             background: rgb(255, 187, 0);
   
-            a{
-              color: #303030;
-            }
+            a{  color: #303030;}
           }
         }
       }
     }
-
 
     /* 반응형 메뉴 호출*/
     .bg{
@@ -78,6 +36,7 @@
       width: 80px; height: 80px;
       background: #000;
       position: absolute; top: 0px; right: 0px; z-index: 6;
+      cursor: pointer;
       .btnCall{
         width: 30px; height: 30px; border: $lightbrown;
         position: absolute; top: 50%; left: 50%; 
@@ -167,6 +126,123 @@
           text-transform: uppercase;
         }
       }
+    }
+  }
+}
+
+#header.main{
+  .inner .menu_web{
+    .menu_web_main{
+      h1{
+        width: 100%;
+        padding: 40px 0px;
+        font: 700 140px/1 'Oswald'; 
+        text-align: center;
+        border-bottom: 1px solid #000;
+        a{  color: #303030;}
+      }
+      .intro{
+        display: flex; justify-content: space-between; align-items: center;
+        border-bottom: 4px solid #000;
+        position: relative;
+        span{
+          font: 12px/1 'IM Fell English SC'; 
+          padding: 5px 0;
+        }
+        p{ 
+          font: 300 14px/1  'Oswald'; letter-spacing: 5px;
+          padding:5px 0;
+        }
+        strong{
+          font: 12px/1 'IM Fell English SC'; 
+          padding: 5px 0;
+        }
+      }
+    }
+
+    .menu_web_sub{ display: none;}
+
+    #gnb_web{
+      width: 100%;
+      padding: 10px 0px;
+      border-bottom: 2px solid #000;
+
+      ul{
+        width: 100%;
+        display: flex; justify-content: space-between; 
+
+        li{
+          width: 100%; border-right: 1px solid #000;
+          font: 400 16px/ 1 'Oswald'; position: relative;
+          text-align: center;
+          padding: 0px 22px 0px;
+          &:last-child{border-right: none;}
+          a{ color: #303030;}
+        }
+      }
+    }
+
+    .util_web{
+      position: absolute; top: 200px; right: 0;
+    }
+  }
+}
+
+#header.sub{
+  .inner .menu_web{
+    .menu_web_main{ display: none;}
+
+    .menu_web_sub{
+      display: flex;
+      justify-content: space-between; align-items: flex-end;
+      border-bottom: 4px solid #000;
+      position: relative;
+
+      &::after{
+        content: ''; display: block; 
+        width: 100%; height: 2px; background: #000;
+        position: absolute; bottom: -10px; left: 0;
+      }
+      span{
+        font-size: 80px; color: #000;
+        padding: 0px 0px 0px 30px;
+        &::after{
+          display: block; content: '16 - 30412100';
+          font-size: 12px;
+          position: absolute; bottom: 2px; left: 30px;
+        }
+      }
+      >h1{
+        font: 400 50px/1 'Oswald';
+        padding: 30px 100px;
+        a{color: $txt;} 
+      }
+      p{
+        font: 400 14px/1 'Oswald';
+        position: relative; bottom: 5px; right: 110px;
+      }
+    }
+
+    #gnb_web{
+      width: 100%;
+      padding: 15px 80px 10px;
+      border-bottom: 2px solid #000;
+
+      ul{
+        display: flex; justify-content: space-around; 
+
+        li{
+          font: 400 14px/ 1 'Oswald';
+
+          a{
+            color: #303030;
+          }
+        }
+      }
+    }
+
+    .util_web{
+      position: absolute; top: 88px; right: 0;
     }
   }
 }

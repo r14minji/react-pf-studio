@@ -41,6 +41,7 @@ function Contact(){
 
   useEffect(()=>{
     html.style.backgroundColor = "#FFFFEB";
+    container.current.innerHTML="";
     
     const options = { 
       center: mapInfo[index].latlng, 
@@ -76,7 +77,6 @@ function Contact(){
     return ()=>{
       html.style.backgroundColor = "#e6e2dd";
       window.removeEventListener('resize', mapSet);
-      container.current.innerHTML="";
     }
   },[index])
 

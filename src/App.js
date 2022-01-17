@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './css/style.css';
 
 //import common component
@@ -26,17 +26,22 @@ import Join from './components/sub/Join.js';
 function App() {
   return (
     <div className="App">
-      <Header />
 
-      <Route exact path="/">
-        <Visual/>
-        <News/>
-        <Offer/>
-        <Festival />
-        <Partners />
-      </Route>
+      <Switch>
+        <Route exact path="/">
+          <Header type={'main'} />
+          <Visual/>
+          <News/>
+          <Offer/>
+          <Festival />
+          <Partners />
+        </Route>
 
-
+        <Route path="/">
+          <Header type={'sub'}/>
+        </Route>
+      </Switch>
+      
       <Route  path="/about" component={About}></Route>
       <Route  path="/board" component={Board}></Route>
       <Route  path="/gallery" component={Gallery}></Route>

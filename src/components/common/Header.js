@@ -1,16 +1,30 @@
 import { useRef } from "react";
 import { NavLink } from "react-router-dom";
+import { faBarcode } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Header(){
+function Header(props){
   const active = {textDecoration: "line-through"};
   const menuMo = useRef(null);
   return(
-    <header id="header">
+    <header id="header" className={props.type}>
       <div className="inner">
         {/* 웹 메뉴 */}
         <nav className="menu_web">
-          <h1><NavLink exact to='/'>STUDIOALICE</NavLink></h1>
-          <p>THE CHRONICLES OF A CREATIVE STUDIO</p>
+          <div className="menu_web_main">
+            <h1><NavLink exact to='/'>STUDIA</NavLink></h1>
+            <div className="intro">
+              <span>No 41 - UI/UX DEVELPOER 2020</span>
+              <p>WEBSITE</p>
+              <strong>The NEWSPAPER edition</strong>
+            </div>
+          </div>
+
+          <div className="menu_web_sub">
+            <span><FontAwesomeIcon icon={faBarcode} /></span>
+            <h1><NavLink exact to='/'>STUDIA</NavLink></h1>
+            <p>ISSUE NO.03 14/ 12 14</p>
+          </div>
 
           <div id="gnb_web">
             <ul>
