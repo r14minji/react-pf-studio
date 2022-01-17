@@ -92,9 +92,7 @@ function Join(){
 
     <section className="content join">
     <div className="inner">
-      <div className="bgPic">
       <h1>join</h1>
-
       {success ? 
       <>
       <div className="success">Congratulations on becoming a member!</div> 
@@ -289,17 +287,8 @@ function Join(){
         </fieldset>
       </form>
       }
-
-      </div>
-
     </div>
   </section>
-
-
-
-
-
-
   )
 }
 
