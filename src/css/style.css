@@ -2388,7 +2388,7 @@ fieldset {
     .location .inner .wrap_map #map {
       width: 100%;
       height: 500px;
-      filter: grayscale(50%); }
+      filter: grayscale(100%); }
   .location .inner .btn_branch {
     display: block;
     position: absolute;
@@ -2397,28 +2397,17 @@ fieldset {
     z-index: 1; }
     .location .inner .btn_branch li {
       text-align: center;
-      margin-bottom: 15px; }
+      margin-bottom: 5px; }
       .location .inner .btn_branch li.on button {
-        color: #111; }
-      .location .inner .btn_branch li:nth-of-type(1) button {
-        background: rgba(216, 189, 210, 0.6);
-        box-shadow: 0px 6px #d8bdd2; }
-      .location .inner .btn_branch li:nth-of-type(2) button {
-        background: rgba(164, 205, 198, 0.6);
-        box-shadow: 0px 6px #a4cdc6; }
-      .location .inner .btn_branch li:nth-of-type(3) button {
-        background: rgba(132, 184, 193, 0.6);
-        box-shadow: 0px 6px #84b8c1; }
-      .location .inner .btn_branch li:nth-of-type(4) button {
-        background: rgba(112, 161, 187, 0.6);
-        box-shadow: 0px 6px #70a1bb; }
+        color: #fff;
+        background: #000; }
       .location .inner .btn_branch li button {
         font: 600 18px/1 'Oswald';
         border: none;
         width: 150px;
         padding: 20px 30px;
-        border-radius: 50px;
-        color: #555;
+        background: #555;
+        color: #fff;
         cursor: pointer; }
         .location .inner .btn_branch li button .off {
           color: rgba(255, 0, 0, 0.8); }
