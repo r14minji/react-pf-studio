@@ -1,4 +1,3 @@
-//이슈: article의 정보를 json파일로 받아오고 싶은데, useEffect에서 카카오api와 json파일 각각 axios하면 되는건지?? 
 import { useEffect, useRef, useState } from "react";
 
 import { faEnvelopeSquare, faFilm, faStreetView  } from "@fortawesome/free-solid-svg-icons";
@@ -76,7 +75,8 @@ function Contact(){
 
     return ()=>{
       html.style.backgroundColor = "#e6e2dd";
-      window.removeEventListener('resize', mapSet)
+      window.removeEventListener('resize', mapSet);
+      container.current.innerHTML="";
     }
   },[index])
 
@@ -157,15 +157,11 @@ function Contact(){
           }}>
             <button>Traffic <strong className="on">ON</strong></button></li>
         }
-          <li onClick={()=>{
-            setIndex(0);
-          }}><button>Gangnam</button></li>
-          <li onClick={()=>{
-            setIndex(1);
-          }}><button >JeJu</button></li>
-          <li onClick={()=>{
-            setIndex(2);
-          }}><button>Busan</button></li>
+          {
+            mapInfo.map((data, index)=>{
+              return <li key={index} onClick={()=>setIndex(index)}>{data.title}</li>
+            })
+          }
         </ul>
       </div>
     </section>
