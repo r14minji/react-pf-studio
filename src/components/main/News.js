@@ -2,7 +2,7 @@ const path = process.env.PUBLIC_URL;
 
 function News(){
   return(
-    <section className="content newsM">
+    <section className="content newsM myScroll">
       <div className="inner"> 
       <div className="wrap">
         <article>

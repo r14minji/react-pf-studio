@@ -7,7 +7,7 @@ function Header(props){
   const active = {textDecoration: "line-through"};
   const menuMo = useRef(null);
   return(
-    <header id="header" className={props.type}>
+    <header id="header" className={props.type + ' myScroll'}>
       <div className="inner">
         {/* 웹 메뉴 */}
         <nav className="menu_web">

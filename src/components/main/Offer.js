@@ -2,7 +2,7 @@ const path = process.env.PUBLIC_URL;
 
 function Offer(){
   return(
-    <section className="content offerM">
+    <section className="content offerM myScroll">
       <div className="inner"> 
         <h1>what we offer</h1>
 

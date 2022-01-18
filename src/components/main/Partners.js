@@ -2,7 +2,7 @@ const path = process.env.PUBLIC_URL;
 
 function Partners(){
   return(
-    <section className="content partnersM">
+    <section className="content partnersM myScroll">
       <div className="inner"> 
         <h1>GLOBAL PARTNERS</h1>
 

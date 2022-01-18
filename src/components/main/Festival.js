@@ -2,7 +2,7 @@ const path = process.env.PUBLIC_URL;
 
 function Festival(){
   return(
-    <section className="content festivalM">
+    <section className="content festivalM myScroll">
       <div className="inner"> 
         <div className="wrap">
           <article>

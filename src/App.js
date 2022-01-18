@@ -3,15 +3,10 @@ import './css/style.css';
 
 //import common component
 import Header from './components/common/Header.js';
-import Header_sub from './components/common/Header_sub.js';
 import Footer from './components/common/Footer.js';
 
 //import main component
-import Visual from './components/main/Visual.js';
-import News from './components/main/News.js';
-import Offer from './components/main/Offer.js';
-import Festival from './components/main/Festival.js';
-import Partners from './components/main/Partners.js';
+import Main from './components/main/Main';
 
 //import sub component
 import About from './components/sub/About.js';
@@ -29,12 +24,7 @@ function App() {
 
       <Switch>
         <Route exact path="/">
-          <Header type={'main'} />
-          <Visual/>
-          <News/>
-          <Offer/>
-          <Festival />
-          <Partners />
+          <Main />
         </Route>
 
         <Route path="/">
