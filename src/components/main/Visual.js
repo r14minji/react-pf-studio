@@ -10,33 +10,72 @@ function Visual(){
       <div className="inner"> 
         <div className="wrap">
           <div className="banner">
-            <img src={path +"/img/recordplayer.jpg"} alt="" />
+            <ul className="slideshow">
+              <li>
+                <img src={path + "/img/visual1.jpg"} alt="" />
+                <div className="txt">
+                  <h1>text</h1>
+                </div>
+                </li>
+                <li>
+                <img src={path + "/img/visual1.jpg"} alt="" />
+                <div className="txt">
+                  <h1>text2</h1>
+                </div>
+                </li>
+                <li>
+                <img src={path + "/img/visual1.jpg"} alt="" />
+                <div className="txt">
+                  <h1>text</h1>
+                </div>
+                </li>
+                <li>
+                <img src={path + "/img/visual1.jpg"} alt="" />
+                <div className="txt">
+                  <h1>text3</h1>
+                </div>
+                </li>
+                <li>
+                <img src={path + "/img/visual1.jpg"} alt="" />
+                <div className="txt">
+                  <h1>text4</h1>
+                </div>
+                </li>
+                <li>
+                <img src={path + "/img/visual1.jpg"} alt="" />
+                <div className="txt">
+                  <h1>text5</h1>
+                </div>
+                </li>
+                <li>
+                <img src={path + "/img/visual1.jpg"} alt="" />
+                <div className="txt">
+                  <h1>text6</h1>
+                </div>
+                </li>
+              </ul>
           </div>
+
           <div className="stayConnect">
             <h3>STAY CONNECTED</h3>
             <ul>
               <li>
-                <span>Fan S&A on facebook</span>
-                <strong><FontAwesomeIcon icon={faFacebookSquare} /></strong>
+                <span>01</span>
                 </li>
               <li>
-                <span>Follow S&A on Twitter</span>
-                <strong><FontAwesomeIcon icon={faTwitterSquare} /></strong>
+                <span>02</span>
               </li>
               <li>
-                <span>Like S&A on instagram</span>
-                <strong><FontAwesomeIcon icon={faInstagram} /></strong>
+                <span>03</span>
               </li>
               <li>
-                <span>Subscribe S&A to RSS fee-ds</span>
-                <strong><FontAwesomeIcon icon={faRssSquare} /></strong>
+                <span>04</span>
               </li>
               <li>
-                <span>Sign up for newsletter</span>
-                <strong><FontAwesomeIcon icon={faEnvelopeSquare} /></strong>
+                <span>05</span>
               </li>
             </ul>
-          </div>
+            </div>
         </div>
       </div>
     </section>
