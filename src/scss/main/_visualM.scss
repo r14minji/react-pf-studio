@@ -5,96 +5,63 @@
     min-height: 0px;
 
     .wrap{
-      padding-bottom: 40px;
+      padding-bottom: 40px; position: relative;
       border-bottom: 4px solid #000;
 
       .banner{
-        width: 80%; float: left; position: relative;
-        padding-right: 20px;
-        border-right: 1px solid #000;
+        width: 100%;
+        height: 520px;   
+        position: relative; overflow: hidden;
 
-        .slideshow{
-          width: 100%; height: 480px; background: #000; position: relative;
-          // position: absolute;
-          // width: 100%;
-          // height: 100%;
-          // top: 0px;
-          // left: 0px;
-          // z-index: 0; 
+        ul{
+          &::after{content: ''; display: block; clear: both;}
+          width: 600%;
+          height: 100%; margin-left: 0;
 
           li{
-            position: absolute; top: 0; left: 0;
-            img{
-              width: 100%;height: 100%;
-              color: transparent;
-              background-size: cover;
-              background-position: 50% 50%;
-              background-repeat: none;
-              opacity: 1;
-              z-index: 0;
+            width: calc(100%/6);
+            height: 100%; 
+            float:left; 
+            position: relative;
+            
+            .pic{
+              width: 100%; height: 520px;
+              position: relative;
+
+              &::after{
+                content: ''; position: absolute; top: 0;left: 0; height: 520px; width: 100%;
+                background: url(/public/img/pattern.png) repeat top left; z-index: 2;
+              }
+              img{ width: 100%; height: 100%; object-fit: cover; filter: grayscale(50%);}
             }
 
             .txt{
-              z-index: 10;
-              position: absolute; bottom: 5vw; left: 0px;
-              width: 100%;
-              text-align: center;
-              opacity: 0;
-              color: #fff;
-
-              h1{
-                font: 40px/1 'arial';
+              position: absolute; bottom: 0px; left: 5vw;
+              >h1{
+                padding: 20px; margin-bottom: 0;
+                text-transform: capitalize;
+                font: 50px/1 'Abril Fatface';
+                color: rgba(0,0,0,0.4);
               }
             }
           }
-
-          // &::after{
-          //   position: fixed;
-          //   width: 100%;
-          //   height: 100%;
-          //   top: 0px;
-          //   left: 0px;
-          //   z-index: 0; 
-          //   content:""; background: url(/public/img/pattern.png) repeat top left;
-          // }
         }
 
-
-      }
-      .stayConnect{
-        float: left; width: 20%; height: 100%; padding: 10px 0px 10px 20px; 
-
-        h3{
-          font: 700 30px/1 'Oswald';
-          letter-spacing: 1px;
-          margin-bottom: 20px;
+        .prev{
+          position:absolute; top:50%; margin-top:-50px; left:50px;  z-index: 3;
+          font-size: 30px; color: #ddd;
+          padding: 10px;
+          cursor: pointer;
         }
-  
-        ul{
-          width: 100%;
-          &::after{content: ""; display: block; clear: both;}
-  
-          li{
-            float: left; width: 100%;
-            font: 400 18px/1 "Oswald";
-            padding: 10px 0px 30px; border-top: 1px solid #999; cursor: pointer;
-  
-            span{
-              display: inline-block;
-              width: 80%;
-            }
-            strong{
-              display: inline-block;
-              width: 20%;
-              font-size:18px; text-align: right; 
-            }
-  
-            &:hover{
-              color: $lightyellow;
-            }
-          }
+        .next{
+          position:absolute; top:50%; margin-top:-50px; right:50px; z-index: 3;
+          font-size: 30px; color: #eee;
+          padding: 10px;
+          cursor: pointer;
         }
       }
+
+
     }
   }
 }
