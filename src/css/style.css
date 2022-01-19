@@ -539,16 +539,36 @@ fieldset {
     font-size: 14vw;
     margin-bottom: 20px; } }
 .visualM {
-  padding: 40px 0px 0px; }
+  padding: 0px 0px 0px; }
   .visualM .inner {
     min-height: 0px; }
     .visualM .inner .wrap {
       padding-bottom: 40px;
       position: relative;
       border-bottom: 4px solid #000; }
+      .visualM .inner .wrap .saying {
+        padding: 40px 0px; }
+        .visualM .inner .wrap .saying h1 {
+          width: 50%;
+          margin: 0 auto;
+          font: 16px/1.5 'Abril Fatface';
+          padding: 0; }
+          .visualM .inner .wrap .saying h1 strong {
+            display: inline-block;
+            font-size: 10px;
+            padding: 0px 10px;
+            position: relative;
+            bottom: 6px;
+            left: 0; }
+        .visualM .inner .wrap .saying span {
+          display: block;
+          width: 50%;
+          margin: 0 auto;
+          font: 14px "Abril Fatface";
+          text-align: center; }
       .visualM .inner .wrap .banner {
         width: 100%;
-        height: 520px;
+        height: 620px;
         position: relative;
         overflow: hidden; }
         .visualM .inner .wrap .banner ul {
@@ -566,14 +586,14 @@ fieldset {
             position: relative; }
             .visualM .inner .wrap .banner ul li .pic {
               width: 100%;
-              height: 520px;
+              height: 100%;
               position: relative; }
               .visualM .inner .wrap .banner ul li .pic::after {
                 content: '';
                 position: absolute;
                 top: 0;
                 left: 0;
-                height: 520px;
+                height: 100%;
                 width: 100%;
                 background: url(/public/img/pattern.png) repeat top left;
                 z-index: 2; }
@@ -596,17 +616,17 @@ fieldset {
           position: absolute;
           top: 50%;
           margin-top: -50px;
-          left: 50px;
+          left: 30px;
           z-index: 3;
           font-size: 30px;
-          color: #ddd;
+          color: #eee;
           padding: 10px;
           cursor: pointer; }
         .visualM .inner .wrap .banner .next {
           position: absolute;
           top: 50%;
           margin-top: -50px;
-          right: 50px;
+          right: 30px;
           z-index: 3;
           font-size: 30px;
           color: #eee;
@@ -623,36 +643,8 @@ fieldset {
       .visualM .inner .wrap {
         padding-bottom: 20px; }
         .visualM .inner .wrap .banner {
-          width: 100%;
-          border: none;
-          padding: 0;
-          float: none; }
-        .visualM .inner .wrap .stayConnect {
-          float: none;
-          width: 100%;
-          padding: 0; }
-          .visualM .inner .wrap .stayConnect h3 {
-            display: inline-block;
-            font-size: 3vw;
-            padding: 10px 0;
-            margin-bottom: 0;
-            width: 35%; }
-          .visualM .inner .wrap .stayConnect ul {
-            display: none; }
-            .visualM .inner .wrap .stayConnect ul li {
-              width: auto;
-              padding: 10px;
-              border: none;
-              margin: 0px; }
-              .visualM .inner .wrap .stayConnect ul li span {
-                position: absolute;
-                top: -99999px;
-                opacity: 0; } }
+          width: 100%; } }
 /* mobile */
-@media screen and (max-width: 539px) {
-  .visualM .inner .wrap .stayConnect h3 {
-    font-size: 20px;
-    width: 50%; } }
 .newsM {
   padding: 40px 0px 0px; }
   .newsM .inner {
@@ -1012,7 +1004,7 @@ fieldset {
         .festivalM .inner .wrap article:nth-of-type(3) span:hover {
           background: #FFEDCB; } }
 .partnersM {
-  padding: 20px 0px; }
+  padding: 0px 0px 20px; }
   .partnersM .inner {
     min-height: 0px;
     border-top: 2px solid #000; }

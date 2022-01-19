@@ -1,4 +1,4 @@
-import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight, faChevronLeft, faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef, useState } from "react";
 import Anime from "../../class/anime";
@@ -35,6 +35,14 @@ function Visual(){
     <section className="content visualM">
       <div className="inner"> 
         <div className="wrap">
+          <div className="saying">
+            <h1>
+              <strong><FontAwesomeIcon icon={faQuoteLeft} /></strong>
+              Trust your own instinct. <br/> Your mistakes might as well be your own, <br/> instead of someone else's.
+              <strong><FontAwesomeIcon icon={faQuoteRight} /></strong>
+            </h1>
+            <span>Billy Wilder</span>
+          </div>
           <div className="banner">
             <ul ref={ul}>
               <li>
@@ -87,10 +95,9 @@ function Visual(){
               </li>
             </ul>
 
-            <span className="prev" onClick={prevSlide}>prev</span>
-            <span className="next" onClick={nextSlide}>next</span>
+            <span className="prev" onClick={prevSlide}><FontAwesomeIcon icon={faChevronLeft} /></span>
+            <span className="next" onClick={nextSlide}><FontAwesomeIcon icon={faChevronRight} /></span>
           </div>
-
         </div>
       </div>
     </section>
