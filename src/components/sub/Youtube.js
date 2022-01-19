@@ -50,28 +50,28 @@ function Youtube(){
         <section>
           <dl id="tab">
             <dt class="on">
-              <a href="#box1">
+              <span>
                 <strong> 01</strong>
                 <p>Youtube</p>
                 <ul>
                   <li>필름모양 이미지를 클릭하시면, 유튜브 영상으로 연결됩니다.</li>
                   <li>제목, 설명글, 날짜는 Youtube API를 통해 동영상 정보를 담고 있습니다.</li>
                 </ul>
-              </a>
+              </span>
             </dt>
             <dd class="on">
               <VidList />
             </dd>
 
             <dt>
-              <a href="#box2">
+              <span>
                 <strong> 02</strong>
                   <p>Review Note</p>
                   <ul>
                     <li>영화리뷰를 작성하고 기록하는 페이지 입니다.</li>
                     <li>CRUD 기능을 구현한 게시판 입니다.</li>
                 </ul>
-              </a>
+              </span>
             </dt>
             <dd>
               <Note />

@@ -2013,23 +2013,26 @@ fieldset {
           left: calc((100% / 2) * 0); }
         .youtube .inner section #tab dt:nth-of-type(2) {
           left: calc((100% / 2) * 1); }
-        .youtube .inner section #tab dt a {
+        .youtube .inner section #tab dt > span {
           display: block;
           width: 100%;
-          padding: 0px 20px 20px;
-          position: relative; }
-          .youtube .inner section #tab dt a strong {
+          padding: 0px 20px 0px;
+          position: relative;
+          cursor: pointer; }
+          .youtube .inner section #tab dt > span strong {
             display: block;
             font: 700 20px/1 'Oswald';
             padding: 10px 30px;
             border-bottom: 1px solid #000; }
-          .youtube .inner section #tab dt a p {
+          .youtube .inner section #tab dt > span p {
             font: 700 24px/1 'Oswald';
             padding: 10px 30px; }
-          .youtube .inner section #tab dt a ul li {
+          .youtube .inner section #tab dt > span ul li {
             font-size: 14px;
             padding: 5px 30px; }
-        .youtube .inner section #tab dt.on a p, .youtube .inner section #tab dt.on a strong {
+        .youtube .inner section #tab dt:hover {
+          background: #c9c3b7; }
+        .youtube .inner section #tab dt.on span p, .youtube .inner section #tab dt.on span strong {
           color: #C1554E;
           border-color: #C1554E; }
       .youtube .inner section #tab dd {
@@ -2041,284 +2044,305 @@ fieldset {
         .youtube .inner section #tab dd.on {
           display: block; }
 
-.vidList .inner {
-  /* youtube vid list*/
-  /* popup */ }
-  .vidList .inner h1 {
-    font: 400 70px/1 'Oswald'; }
-  .vidList .inner .list {
-    width: 708px;
-    margin: 0 auto; }
-    .vidList .inner .list article {
-      width: 100%;
+.vidList {
+  padding-bottom: 20px; }
+  .vidList .inner {
+    /* title */
+    /* popup */ }
+    .vidList .inner figure {
+      padding: 60px 0;
+      filter: grayscale(100%);
+      position: relative;
+      z-index: -1;
+      background: url(/public/img/vidLIst_bg.jpg) no-repeat center/cover;
+      margin-bottom: 40px; }
+      .vidList .inner figure h1 {
+        font: 400 120px/1 'Oswald';
+        color: #222;
+        text-align: center; }
+    .vidList .inner .wrap {
       display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      flex-wrap: wrap;
-      margin-bottom: 80px;
-      /* pic - youtube image */
-      /* icon*/
-      /* ticket box - main ticket, side ticket */ }
-      .vidList .inner .list article:nth-of-type(2n) {
-        flex-direction: row-reverse; }
-      .vidList .inner .list article .pic {
-        width: 413px;
-        height: 250px;
-        background: url(/src/img/Film2.jpg) no-repeat center/cover;
-        cursor: pointer;
-        margin-bottom: 20px; }
-        .vidList .inner .list article .pic img {
+      justify-content: space-between;
+      /* section - youtube API vid list */
+      /* section - posters */ }
+      .vidList .inner .wrap .list {
+        width: 708px;
+        margin: 0 auto;
+        margin: 0 20px; }
+        .vidList .inner .wrap .list article {
           width: 100%;
-          height: 100%;
-          object-fit: cover;
-          padding: 35px 0px;
-          opacity: 0.6;
-          transition: 0.5s; }
-      .vidList .inner .list article .movieIcon {
-        width: 256px;
-        padding: 0px 10px;
-        height: 250px;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-        .vidList .inner .list article .movieIcon .popcon {
-          width: 30%;
-          height: 40%;
-          background: url(/public/img/youtube1.png) center/cover; }
-        .vidList .inner .list article .movieIcon .screen {
-          width: 30%;
-          height: 40%;
-          background: url(/public/img/youtube2.png) center/cover; }
-        .vidList .inner .list article .movieIcon .camera {
-          width: 30%;
-          height: 40%;
-          background: url(/public/img/youtube5.png) center/cover; }
-      .vidList .inner .list article .txt {
-        width: 100%;
-        height: 250px;
-        position: relative;
-        background: #F9EDC5;
-        opacity: 0.8;
-        /* mainTick - youtube api data */
-        /* sideTick */ }
-        .vidList .inner .list article .txt .mainTick {
-          display: grid;
-          grid-template-rows: 2fr 4fr 2fr 2fr 4fr 1fr;
-          grid-template-columns: 1fr 1fr 1fr  2.5fr;
-          width: calc(100% - 250px);
-          height: 250px;
-          padding: 10px 5px 10px 10px;
-          border-right: 2px dashed #34445C;
-          grid-template-areas: 'icon tickName tickName tickName ' 'icon descYoutb descYoutb descYoutb' 'titleYoutb titleYoutb titleYoutb titleYoutb' 'star star star price' 'date seat time price' 'tickNum tickNum tickNum tickNum'; }
-          .vidList .inner .list article .txt .mainTick > div {
-            border: 1px solid #34445C;
-            padding: 5px; }
-            .vidList .inner .list article .txt .mainTick > div.icon {
-              grid-area: icon; }
-              .vidList .inner .list article .txt .mainTick > div.icon img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover; }
-            .vidList .inner .list article .txt .mainTick > div.tickName {
-              grid-area: tickName; }
-              .vidList .inner .list article .txt .mainTick > div.tickName p {
-                text-transform: uppercase;
-                font: 18px "Abril Fatface";
-                letter-spacing: 1px;
-                text-align: center; }
-            .vidList .inner .list article .txt .mainTick > div.descYoutb {
-              grid-area: descYoutb; }
-              .vidList .inner .list article .txt .mainTick > div.descYoutb p {
-                font: 400 14px/1.1 'Oswald';
-                overflow: hidden;
-                text-align: center;
-                overflow: hidden; }
-            .vidList .inner .list article .txt .mainTick > div.titleYoutb {
-              grid-area: titleYoutb; }
-              .vidList .inner .list article .txt .mainTick > div.titleYoutb h2 {
-                font: 20px/1 'Abril Fatface';
-                text-align: center;
-                color: #7C2617; }
-            .vidList .inner .list article .txt .mainTick > div.star {
-              grid-area: star;
-              background: #34445C;
-              text-align: center; }
-              .vidList .inner .list article .txt .mainTick > div.star span {
-                display: inline-block;
-                margin-right: 20px;
-                color: #F9EDC5; }
-                .vidList .inner .list article .txt .mainTick > div.star span:nth-of-type(3) {
-                  margin-right: 0; }
-            .vidList .inner .list article .txt .mainTick > div.date {
-              grid-area: date; }
-              .vidList .inner .list article .txt .mainTick > div.date p {
-                font: 400 14px/1 'Oswald';
-                margin-bottom: 10px;
-                text-transform: uppercase;
-                color: #555; }
-              .vidList .inner .list article .txt .mainTick > div.date span {
-                display: block;
-                font: 700 13px/1 'Oswald';
-                text-align: center;
-                color: #34445C; }
-            .vidList .inner .list article .txt .mainTick > div.seat {
-              grid-area: seat; }
-              .vidList .inner .list article .txt .mainTick > div.seat p {
-                font: 400 14px/1 'Oswald';
-                text-transform: uppercase;
-                color: #555; }
-              .vidList .inner .list article .txt .mainTick > div.seat span {
-                display: block;
-                padding: 5px 0;
-                font: 700 17px/1 'Oswald';
-                text-align: center;
-                color: #34445C; }
-            .vidList .inner .list article .txt .mainTick > div.time {
-              grid-area: time; }
-              .vidList .inner .list article .txt .mainTick > div.time p {
-                font: 400 14px/1 'Oswald';
-                text-transform: uppercase;
-                color: #555; }
-              .vidList .inner .list article .txt .mainTick > div.time span {
-                display: block;
-                padding: 5px 0;
-                font: 700 17px/1 'Oswald';
-                text-align: center;
-                color: #34445C; }
-            .vidList .inner .list article .txt .mainTick > div.price {
-              grid-area: price;
-              display: flex;
-              flex-wrap: wrap; }
-              .vidList .inner .list article .txt .mainTick > div.price span {
-                font: 400 14px/1 'Oswald';
-                text-transform: uppercase;
-                color: #555;
-                margin-right: 20px; }
-              .vidList .inner .list article .txt .mainTick > div.price strong {
-                font: 36px/1 'Abril Fatface';
-                color: #7C2617;
-                margin-bottom: 10px; }
-              .vidList .inner .list article .txt .mainTick > div.price p {
-                width: 100%;
-                font: 22px/1 'arial';
-                text-align: center; }
-            .vidList .inner .list article .txt .mainTick > div.tickNum {
-              grid-area: tickNum; }
-              .vidList .inner .list article .txt .mainTick > div.tickNum p {
-                font: 10px/1 'arial';
-                color: #555;
-                text-align: center; }
-        .vidList .inner .list article .txt .sideTick {
-          width: 100%; }
-          .vidList .inner .list article .txt .sideTick .wrap {
-            float: right;
-            width: 250px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          flex-wrap: wrap;
+          margin-bottom: 80px;
+          /* pic - youtube image */
+          /* icon*/
+          /* ticket box - main ticket, side ticket */ }
+          .vidList .inner .wrap .list article:nth-of-type(2n) {
+            flex-direction: row-reverse; }
+          .vidList .inner .wrap .list article .pic {
+            width: 413px;
             height: 250px;
-            padding: 10px 10px 30px;
-            transform: rotate(-90deg);
-            transform-origin: left top;
-            display: grid;
-            grid-template-rows: 2fr 2fr 2fr 1fr;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-areas: 'admit admit admit' 'greatest greatest greatest' 'date seat time' 'tickNum tickNum tickNum'; }
-            .vidList .inner .list article .txt .sideTick .wrap > div {
+            background: url(/src/img/Film2.jpg) no-repeat center/cover;
+            cursor: pointer;
+            margin-bottom: 20px; }
+            .vidList .inner .wrap .list article .pic img {
               width: 100%;
               height: 100%;
-              border: 1px solid #34445C;
-              padding: 5px; }
-              .vidList .inner .list article .txt .sideTick .wrap > div.admit {
-                grid-area: admit; }
-                .vidList .inner .list article .txt .sideTick .wrap > div.admit P {
-                  font: 34px/1 'arial';
-                  padding: 10px 0 0;
-                  letter-spacing: 2px;
-                  color: #34445C;
+              object-fit: cover;
+              padding: 35px 0px;
+              opacity: 0.6;
+              transition: 0.5s; }
+          .vidList .inner .wrap .list article .movieIcon {
+            width: 256px;
+            padding: 0px 10px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .vidList .inner .wrap .list article .movieIcon .popcon {
+              width: 30%;
+              height: 40%;
+              background: url(/public/img/youtube1.png) center/cover; }
+            .vidList .inner .wrap .list article .movieIcon .screen {
+              width: 30%;
+              height: 40%;
+              background: url(/public/img/youtube2.png) center/cover; }
+            .vidList .inner .wrap .list article .movieIcon .camera {
+              width: 30%;
+              height: 40%;
+              background: url(/public/img/youtube5.png) center/cover; }
+          .vidList .inner .wrap .list article .txt {
+            width: 100%;
+            height: 250px;
+            position: relative;
+            background: #F9EDC5;
+            opacity: 0.8;
+            /* mainTick - youtube api data */
+            /* sideTick */ }
+            .vidList .inner .wrap .list article .txt .mainTick {
+              display: grid;
+              grid-template-rows: 2fr 4fr 2fr 2fr 4fr 1fr;
+              grid-template-columns: 1fr 1fr 1fr  2.5fr;
+              width: calc(100% - 250px);
+              height: 250px;
+              padding: 10px 5px 10px 10px;
+              border-right: 2px dashed #34445C;
+              grid-template-areas: 'icon tickName tickName tickName ' 'icon descYoutb descYoutb descYoutb' 'titleYoutb titleYoutb titleYoutb titleYoutb' 'star star star price' 'date seat time price' 'tickNum tickNum tickNum tickNum'; }
+              .vidList .inner .wrap .list article .txt .mainTick > div {
+                border: 1px solid #34445C;
+                padding: 5px; }
+                .vidList .inner .wrap .list article .txt .mainTick > div.icon {
+                  grid-area: icon; }
+                  .vidList .inner .wrap .list article .txt .mainTick > div.icon img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover; }
+                .vidList .inner .wrap .list article .txt .mainTick > div.tickName {
+                  grid-area: tickName; }
+                  .vidList .inner .wrap .list article .txt .mainTick > div.tickName p {
+                    text-transform: uppercase;
+                    font: 18px "Abril Fatface";
+                    letter-spacing: 1px;
+                    text-align: center; }
+                .vidList .inner .wrap .list article .txt .mainTick > div.descYoutb {
+                  grid-area: descYoutb; }
+                  .vidList .inner .wrap .list article .txt .mainTick > div.descYoutb p {
+                    font: 400 14px/1.1 'Oswald';
+                    overflow: hidden;
+                    text-align: center;
+                    overflow: hidden; }
+                .vidList .inner .wrap .list article .txt .mainTick > div.titleYoutb {
+                  grid-area: titleYoutb; }
+                  .vidList .inner .wrap .list article .txt .mainTick > div.titleYoutb h2 {
+                    font: 20px/1 'Abril Fatface';
+                    text-align: center;
+                    color: #7C2617; }
+                .vidList .inner .wrap .list article .txt .mainTick > div.star {
+                  grid-area: star;
+                  background: #34445C;
                   text-align: center; }
-              .vidList .inner .list article .txt .sideTick .wrap > div.greatest {
-                grid-area: greatest; }
-                .vidList .inner .list article .txt .sideTick .wrap > div.greatest p {
-                  text-transform: uppercase;
-                  letter-spacing: 2px;
-                  font: 14px "Abril Fatface";
-                  letter-spacing: 1px;
-                  padding: 5px 0;
-                  text-align: center;
-                  color: #7C2617; }
-              .vidList .inner .list article .txt .sideTick .wrap > div.date {
-                grid-area: date; }
-                .vidList .inner .list article .txt .sideTick .wrap > div.date p {
-                  font: 400 14px/1 'Oswald';
-                  margin-bottom: 10px;
-                  text-transform: uppercase;
-                  color: #555; }
-                .vidList .inner .list article .txt .sideTick .wrap > div.date span {
-                  display: block;
-                  font: 700 13px/1 'Oswald';
-                  text-align: center;
-                  color: #34445C; }
-              .vidList .inner .list article .txt .sideTick .wrap > div.seat {
-                grid-area: seat; }
-                .vidList .inner .list article .txt .sideTick .wrap > div.seat p {
-                  font: 400 14px/1 'Oswald';
-                  text-transform: uppercase;
-                  color: #555; }
-                .vidList .inner .list article .txt .sideTick .wrap > div.seat span {
-                  display: block;
-                  padding: 5px 0;
-                  font: 700 17px/1 'Oswald';
-                  text-align: center;
-                  color: #34445C; }
-              .vidList .inner .list article .txt .sideTick .wrap > div.time {
-                grid-area: time; }
-                .vidList .inner .list article .txt .sideTick .wrap > div.time p {
-                  font: 400 14px/1 'Oswald';
-                  text-transform: uppercase;
-                  color: #555; }
-                .vidList .inner .list article .txt .sideTick .wrap > div.time span {
-                  display: block;
-                  padding: 5px 0;
-                  font: 700 17px/1 'Oswald';
-                  text-align: center;
-                  color: #34445C; }
-              .vidList .inner .list article .txt .sideTick .wrap > div.tickNum {
-                grid-area: tickNum; }
-                .vidList .inner .list article .txt .sideTick .wrap > div.tickNum p {
-                  font: 12px/1 'arial';
-                  padding: 5px 0 0px;
-                  color: #555;
-                  text-align: center; }
-      .vidList .inner .list article:hover .pic img {
-        opacity: 1; }
-      .vidList .inner .list article:hover .txt {
-        opacity: 1; }
-  .vidList .inner .pop {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 5vw; }
-    .vidList .inner .pop iframe {
-      border: none;
+                  .vidList .inner .wrap .list article .txt .mainTick > div.star span {
+                    display: inline-block;
+                    margin-right: 20px;
+                    color: #F9EDC5; }
+                    .vidList .inner .wrap .list article .txt .mainTick > div.star span:nth-of-type(3) {
+                      margin-right: 0; }
+                .vidList .inner .wrap .list article .txt .mainTick > div.date {
+                  grid-area: date; }
+                  .vidList .inner .wrap .list article .txt .mainTick > div.date p {
+                    font: 400 14px/1 'Oswald';
+                    margin-bottom: 10px;
+                    text-transform: uppercase;
+                    color: #555; }
+                  .vidList .inner .wrap .list article .txt .mainTick > div.date span {
+                    display: block;
+                    font: 700 13px/1 'Oswald';
+                    text-align: center;
+                    color: #34445C; }
+                .vidList .inner .wrap .list article .txt .mainTick > div.seat {
+                  grid-area: seat; }
+                  .vidList .inner .wrap .list article .txt .mainTick > div.seat p {
+                    font: 400 14px/1 'Oswald';
+                    text-transform: uppercase;
+                    color: #555; }
+                  .vidList .inner .wrap .list article .txt .mainTick > div.seat span {
+                    display: block;
+                    padding: 5px 0;
+                    font: 700 17px/1 'Oswald';
+                    text-align: center;
+                    color: #34445C; }
+                .vidList .inner .wrap .list article .txt .mainTick > div.time {
+                  grid-area: time; }
+                  .vidList .inner .wrap .list article .txt .mainTick > div.time p {
+                    font: 400 14px/1 'Oswald';
+                    text-transform: uppercase;
+                    color: #555; }
+                  .vidList .inner .wrap .list article .txt .mainTick > div.time span {
+                    display: block;
+                    padding: 5px 0;
+                    font: 700 17px/1 'Oswald';
+                    text-align: center;
+                    color: #34445C; }
+                .vidList .inner .wrap .list article .txt .mainTick > div.price {
+                  grid-area: price;
+                  display: flex;
+                  flex-wrap: wrap; }
+                  .vidList .inner .wrap .list article .txt .mainTick > div.price span {
+                    font: 400 14px/1 'Oswald';
+                    text-transform: uppercase;
+                    color: #555;
+                    margin-right: 20px; }
+                  .vidList .inner .wrap .list article .txt .mainTick > div.price strong {
+                    font: 36px/1 'Abril Fatface';
+                    color: #7C2617;
+                    margin-bottom: 10px; }
+                  .vidList .inner .wrap .list article .txt .mainTick > div.price p {
+                    width: 100%;
+                    font: 22px/1 'arial';
+                    text-align: center; }
+                .vidList .inner .wrap .list article .txt .mainTick > div.tickNum {
+                  grid-area: tickNum; }
+                  .vidList .inner .wrap .list article .txt .mainTick > div.tickNum p {
+                    font: 10px/1 'arial';
+                    color: #555;
+                    text-align: center; }
+            .vidList .inner .wrap .list article .txt .sideTick {
+              width: 100%; }
+              .vidList .inner .wrap .list article .txt .sideTick .wrap {
+                float: right;
+                width: 250px;
+                height: 250px;
+                padding: 10px 10px 30px;
+                transform: rotate(-90deg);
+                transform-origin: left top;
+                display: grid;
+                grid-template-rows: 2fr 2fr 2fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas: 'admit admit admit' 'greatest greatest greatest' 'date seat time' 'tickNum tickNum tickNum'; }
+                .vidList .inner .wrap .list article .txt .sideTick .wrap > div {
+                  width: 100%;
+                  height: 100%;
+                  border: 1px solid #34445C;
+                  padding: 5px; }
+                  .vidList .inner .wrap .list article .txt .sideTick .wrap > div.admit {
+                    grid-area: admit; }
+                    .vidList .inner .wrap .list article .txt .sideTick .wrap > div.admit P {
+                      font: 34px/1 'arial';
+                      padding: 10px 0 0;
+                      letter-spacing: 2px;
+                      color: #34445C;
+                      text-align: center; }
+                  .vidList .inner .wrap .list article .txt .sideTick .wrap > div.greatest {
+                    grid-area: greatest; }
+                    .vidList .inner .wrap .list article .txt .sideTick .wrap > div.greatest p {
+                      text-transform: uppercase;
+                      letter-spacing: 2px;
+                      font: 14px "Abril Fatface";
+                      letter-spacing: 1px;
+                      padding: 5px 0;
+                      text-align: center;
+                      color: #7C2617; }
+                  .vidList .inner .wrap .list article .txt .sideTick .wrap > div.date {
+                    grid-area: date; }
+                    .vidList .inner .wrap .list article .txt .sideTick .wrap > div.date p {
+                      font: 400 14px/1 'Oswald';
+                      margin-bottom: 10px;
+                      text-transform: uppercase;
+                      color: #555; }
+                    .vidList .inner .wrap .list article .txt .sideTick .wrap > div.date span {
+                      display: block;
+                      font: 700 13px/1 'Oswald';
+                      text-align: center;
+                      color: #34445C; }
+                  .vidList .inner .wrap .list article .txt .sideTick .wrap > div.seat {
+                    grid-area: seat; }
+                    .vidList .inner .wrap .list article .txt .sideTick .wrap > div.seat p {
+                      font: 400 14px/1 'Oswald';
+                      text-transform: uppercase;
+                      color: #555; }
+                    .vidList .inner .wrap .list article .txt .sideTick .wrap > div.seat span {
+                      display: block;
+                      padding: 5px 0;
+                      font: 700 17px/1 'Oswald';
+                      text-align: center;
+                      color: #34445C; }
+                  .vidList .inner .wrap .list article .txt .sideTick .wrap > div.time {
+                    grid-area: time; }
+                    .vidList .inner .wrap .list article .txt .sideTick .wrap > div.time p {
+                      font: 400 14px/1 'Oswald';
+                      text-transform: uppercase;
+                      color: #555; }
+                    .vidList .inner .wrap .list article .txt .sideTick .wrap > div.time span {
+                      display: block;
+                      padding: 5px 0;
+                      font: 700 17px/1 'Oswald';
+                      text-align: center;
+                      color: #34445C; }
+                  .vidList .inner .wrap .list article .txt .sideTick .wrap > div.tickNum {
+                    grid-area: tickNum; }
+                    .vidList .inner .wrap .list article .txt .sideTick .wrap > div.tickNum p {
+                      font: 12px/1 'arial';
+                      padding: 5px 0 0px;
+                      color: #555;
+                      text-align: center; }
+          .vidList .inner .wrap .list article:hover .pic img {
+            opacity: 1; }
+          .vidList .inner .wrap .list article:hover .txt {
+            opacity: 1; }
+      .vidList .inner .wrap .posters {
+        width: 400px;
+        padding: 0 20px;
+        border-left: 1px solid #000; }
+    .vidList .inner .pop {
       width: 100%;
-      height: 100%; }
-    .vidList .inner .pop span {
-      position: absolute;
-      top: 3vw;
-      right: 5vw;
-      font-size: 20px;
-      color: #fff;
-      cursor: pointer; }
-    .vidList .inner .pop p {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      z-index: -1;
-      transform: translate(-50%, -50%);
-      font: 30px/1 'Abril Fatface';
-      color: #fff; }
+      height: 100vh;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 5vw; }
+      .vidList .inner .pop iframe {
+        border: none;
+        width: 100%;
+        height: 100%; }
+      .vidList .inner .pop span {
+        position: absolute;
+        top: 3vw;
+        right: 5vw;
+        font-size: 20px;
+        color: #fff;
+        cursor: pointer; }
+      .vidList .inner .pop p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        font: 30px/1 'Abril Fatface';
+        color: #fff; }
 
 /* tablet*/
 @media screen and (max-width: 1179px) {
