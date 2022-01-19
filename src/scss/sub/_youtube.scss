@@ -4,13 +4,88 @@
     /* title */
     >.title_wrap{
       width: 100%;
-      background: $dark;
+
+      >ul{
+        display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; 
+        >li{
+          width: 14%; position: relative;
+          strong{
+            display: block;  font: 600 14px/1 'Oswald'; color: #777;
+            padding: 10px 0px; text-transform: uppercase;
+            border-bottom: 1px solid #000; 
+          }
+          >p{
+            font: 400 12px/1 'arial'; word-break: break-all;
+            padding: 10px 0;
+
+            &::after{
+              content: ""; display: block;
+              position: absolute; bottom: -5px; left: 0px; 
+              width: 8px; height: 8px; border-radius: 50%;
+              background: #777;
+            }
+          }
+        }
+      }
 
       h1{
         font: 400 70px/1 'Oswald';
         padding: 10px 20px; text-align: right;
-        color: $backgroundColor;
+        color: $backgroundColor;   background: $dark;
         text-transform: uppercase;
+      }
+    }
+
+    /* tab */
+    section{
+      width: 100%;
+      #tab {
+        width: 100%;
+        position: relative; padding-top: 180px;
+      
+        dt {
+          width: 50%;
+          position: absolute;
+          top: 0;      
+          &:nth-of-type(1){left: calc((100% / 2) * 0);}
+          &:nth-of-type(2){left: calc((100% / 2) * 1);}
+          //border-bottom: 2px solid #000;
+      
+          a {
+            display: block; width: 100%; 
+            padding: 0px 20px 20px; position: relative;
+
+            strong{
+              display: block;
+              font: 700 20px/1 'Oswald';
+              padding: 10px 30px; 
+              border-bottom: 1px solid #000;
+            }
+            p{
+              font: 700 24px/1 'Oswald';
+              padding: 10px 30px; 
+            }
+            ul li{
+              font-size: 14px;
+              padding: 5px 30px;
+            }
+          }
+
+          &.on a {
+            p, strong{ color: $pink; border-color: $pink;}
+          }
+        }
+      
+        dd{
+          width: 100%;
+          display: none;
+      
+          a{
+            font-size: 50px; line-height: 200px;
+          }
+      
+          &.on {display: block;}
+        }
       }
     }
   }
