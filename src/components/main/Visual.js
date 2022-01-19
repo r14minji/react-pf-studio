@@ -9,7 +9,7 @@ function Visual(){
   const ul = useRef(null);
   const txt = useRef(null);
   let [index, setIndex] = useState(0);
-  console.log(index)
+  //console.log(index)
 
   const prevSlide = ()=>{
     if(index === 0) return;
