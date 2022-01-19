@@ -611,7 +611,9 @@ fieldset {
                 margin-bottom: 0;
                 text-transform: capitalize;
                 font: 50px/1 'Abril Fatface';
-                color: rgba(0, 0, 0, 0.4); }
+                color: #e6e2dd; }
+            .visualM .inner .wrap .banner ul li:nth-of-type(2) .txt h1, .visualM .inner .wrap .banner ul li:nth-of-type(6) .txt h1 {
+              color: rgba(0, 0, 0, 0.6); }
         .visualM .inner .wrap .banner .prev {
           position: absolute;
           top: 50%;

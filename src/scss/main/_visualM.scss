@@ -56,12 +56,17 @@
 
             .txt{
               position: absolute; bottom: 0px; left: 5vw;
+
               >h1{
-                padding: 20px; margin-bottom: 0;
+                padding: 20px; margin-bottom: 0; 
                 text-transform: capitalize;
                 font: 50px/1 'Abril Fatface';
-                color: rgba(0,0,0,0.4);
+                color: $backgroundColor;
               }
+            }
+
+            &:nth-of-type(2) .txt h1, &:nth-of-type(6) .txt h1{
+              color: rgba(0,0,0,0.6);
             }
           }
         }

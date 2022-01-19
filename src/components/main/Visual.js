@@ -7,6 +7,7 @@ const path = process.env.PUBLIC_URL;
 
 function Visual(){
   const ul = useRef(null);
+  const txt = useRef(null);
   let [index, setIndex] = useState(0);
   console.log(index)
 
@@ -47,50 +48,50 @@ function Visual(){
             <ul ref={ul}>
               <li>
                 <div className="pic">
-                  <img src={path + "/img/visual1.jpg"} alt="" />
+                  <img src={path + "/img/visual6.jpg"} alt="" />
                 </div>
-                <div className="txt">
-                  <h1>Attila Marcel _2013</h1>
-                </div>
-              </li>
-              <li>
-                <div className="pic">
-                  <img src={path + "/img/visual2.jpg"} alt="" />
-                </div>
-                <div className="txt">
-                  <h1>Mommy_2014</h1>
-                </div>
-              </li>
-              <li>
-                <div className="pic">
-                  <img src={path + "/img/visual3.jpg"} alt="" />
-                </div>
-                <div className="txt">
-                  <h1>Moonrise Kingdom_2012</h1>
-                </div>
-              </li>
-              <li>
-                <div className="pic">
-                  <img src={path + "/img/visual4.jpg"} alt="" />
-                </div>
-                <div className="txt">
-                  <h1>Paterson_ 2016</h1>
+                <div className="txt"  ref={txt}>
+                  <h1>The Grand Budapest Hotel_2014</h1>
                 </div>
               </li>
               <li>
                 <div className="pic">
                   <img src={path + "/img/visual5.jpg"} alt="" />
                 </div>
-                <div className="txt">
+                <div className="txt"  ref={txt}>
                   <h1>The Florida Project_2017</h1>
                 </div>
               </li>
               <li>
                 <div className="pic">
-                  <img src={path + "/img/visual6.jpg"} alt="" />
+                  <img src={path + "/img/visual4.jpg"} alt="" />
                 </div>
-                <div className="txt">
-                  <h1>The Grand Budapest Hotel_2014</h1>
+                <div className="txt"  ref={txt}>
+                  <h1>Paterson_ 2016</h1>
+                </div>
+              </li>
+              <li>
+                <div className="pic">
+                  <img src={path + "/img/visual3.jpg"} alt="" />
+                </div>
+                <div className="txt"  ref={txt}>
+                  <h1>Moonrise Kingdom_2012</h1>
+                </div>
+              </li>
+              <li>
+                <div className="pic">
+                  <img src={path + "/img/visual2.jpg"} alt="" />
+                </div>
+                <div className="txt"  ref={txt}>
+                  <h1>Mommy_2014</h1>
+                </div>
+              </li>
+              <li>
+                <div className="pic">
+                  <img src={path + "/img/visual1.jpg"} alt="" />
+                </div>
+                <div className="txt" ref={txt}>
+                  <h1>Attila Marcel _2013</h1>
                 </div>
               </li>
             </ul>
