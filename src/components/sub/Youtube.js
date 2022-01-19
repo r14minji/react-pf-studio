@@ -8,6 +8,7 @@ function Youtube(){
   const tab = useRef(null);
 
   useEffect(()=>{
+    //포커스인 이벤트 적용하는 방법?
 
   },[])
 
@@ -57,7 +58,7 @@ function Youtube(){
 
         {/* tab */}
         <section>
-          <dl id="tab" ref={tab} >
+          <dl id="tab" ref={tab}>
             <dt className="on" >
               <span className="btn_tab" onClick={activation}>
                 <strong> 01</strong>
