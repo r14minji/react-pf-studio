@@ -12,7 +12,7 @@
         padding: 40px 0px;
 
         h1{
-          width: 50%; margin: 0 auto;
+          width: 50%; margin: 0 auto; text-align: center;
           font: 16px/1.5 'Abril Fatface'; padding: 0;
 
           strong{
@@ -60,7 +60,7 @@
               >h1{
                 padding: 20px; margin-bottom: 0; 
                 text-transform: capitalize;
-                font: 50px/1 'Abril Fatface';
+                font: 80px/1 'Abril Fatface';
                 color: $backgroundColor;
               }
             }
@@ -97,11 +97,13 @@
       width: 100%; padding: 20px;
       .wrap{
         padding-bottom: 20px;
-        .banner{
-          width: 100%; 
-        }
 
+        .saying h1{ font-size: 16px!important;}
+        
 
+        .banner ul li .txt >h1 { font-size: 60px;}
+        .banner ul li .pic img{filter: grayscale(70%);}
+        .banner ul li .pic::after{display: none;}
       }
     }
   }
@@ -112,7 +114,8 @@
   .visualM{
     .inner{
       .wrap{
-
+        .saying, .saying h1{width: 100%;}
+        .banner ul li .txt >h1 { font-size: 10vw;}
 
       }
     }

@@ -307,14 +307,15 @@
     }
   }
 
-  #header.sub .inner .menu_web{
-    .menu_web_sub{
-
-      h1{
+  #header.main .inner .menu_web .menu_web_main h1{
+    height: 60px; padding: 10px 0px;
+    font: 700 32px/1 'Oswald';
+  }
+  #header.sub .inner .menu_web .menu_web_sub h1{
         height: 60px;
         padding: 10px 0px; margin-right: 40px;
         font: 400 32px/1 'Oswald'; text-align: center;
       }
-    }
-  }
+    
+  
 }
