@@ -1,15 +1,24 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 
 import VidList from "./VidList";
 import Note from "./Note";
+import { useRef } from "react/cjs/react.development";
 
 function Youtube(){
-
+  const tab = useRef(null);
 
   useEffect(()=>{
 
   },[])
+
+  const activation = e=>{
+    const btn = e.currentTarget;
+    //console.log(btn)
+    const btns_arr = tab.current.children;
+    for( let btns of btns_arr) btns.classList.remove("on")
+    btn.closest("dt").classList.add("on");
+    btn.closest("dt").nextSibling.classList.add("on");
+  }
 
 
   return(
@@ -48,9 +57,9 @@ function Youtube(){
 
         {/* tab */}
         <section>
-          <dl id="tab">
-            <dt class="on">
-              <span>
+          <dl id="tab" ref={tab} >
+            <dt className="on" >
+              <span className="btn_tab" onClick={activation}>
                 <strong> 01</strong>
                 <p>Youtube</p>
                 <ul>
@@ -59,12 +68,12 @@ function Youtube(){
                 </ul>
               </span>
             </dt>
-            <dd class="on">
+            <dd className="on">
               <VidList />
             </dd>
 
             <dt>
-              <span>
+              <span  className="btn_tab" onClick={activation}>
                 <strong> 02</strong>
                   <p>Review Note</p>
                   <ul>

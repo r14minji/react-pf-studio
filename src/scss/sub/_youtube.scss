@@ -16,7 +16,7 @@
           }
           >p{
             font: 400 12px/1 'arial'; word-break: break-all;
-            padding: 10px 0;
+            padding: 10px 0; color: #777;
 
             &::after{
               content: ""; display: block;
@@ -51,7 +51,7 @@
           &:nth-of-type(2){left: calc((100% / 2) * 1);}
           
       
-          >span {
+          .btn_tab {
             display: block; width: 100%;
             padding: 0px 20px 0px; position: relative;
             cursor: pointer;
