@@ -1,13 +1,15 @@
 .partnersM{
-  padding: 40px 0px;
+  padding: 20px 0px;
+
 
   .inner{
     min-height: 0px;
+    border-top: 2px solid #000;
 
     h1{
-      padding: 20px 0;
+      padding: 20px 0 0px;
       text-align: center;
-      font: 700 50px/1.1 'Oswald';
+      font: 700 24px/1.1 'Oswald';
       letter-spacing: 2px;
       text-transform: uppercase;
       margin-bottom: 10px;
@@ -17,8 +19,8 @@
       display: flex; justify-content: space-around;
       overflow: hidden;
       .logo{
-        width: 180px;
-        height: 150px;
+        width: 100px;
+        height:  80px;
         filter: grayscale(100%);
 
         img{
@@ -37,7 +39,7 @@
     .inner{
       width: 100%;
       h1{
-        font-size: 4vw!important;
+        font-size: 20px!important;
       }
     }
   }
