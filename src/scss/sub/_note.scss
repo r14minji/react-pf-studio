@@ -1,4 +1,4 @@
-$red: #5D0000; //#BD8F4D; //#6C1611;
+$red: #5D0000;
 
 .note{
   .inner{
@@ -83,7 +83,7 @@ $red: #5D0000; //#BD8F4D; //#6C1611;
 
     /* showBox */
     .showBox{
-      width: 35%; 
+      width: 45%; 
       padding: 60px 20px; height: 1000px; overflow: auto;
       
       //스크롤바
@@ -135,20 +135,8 @@ $red: #5D0000; //#BD8F4D; //#6C1611;
                 width: 50%; 
                 strong{display: block; margin: 5px 10px 5px 0px; }
               }
-              &:nth-of-type(5){
-                height: 160px; overflow: auto;
-                strong{display: block; margin: 5px 10px 5px 0px;}
-                //스크롤바
-                &::-webkit-scrollbar {
-                  width: 10px;
-                }
-                &::-webkit-scrollbar-thumb {
-                  background-color: rgba(0,0,0,0.3);
-                }
-                &::-webkit-scrollbar-track {
-                  background-color: rgba(0,0,0,0.2);
-                }
-              }
+              &:nth-of-type(5) strong{display: block; margin: 5px 10px 5px 0px;}
+              
 
               font: 18px/1 'Nanum Pen Script';
               padding: 10px 10px;
@@ -179,30 +167,41 @@ $red: #5D0000; //#BD8F4D; //#6C1611;
         }
       }
     }
+  }
+}
 
-    /* bookmark */
-    .bookmark{
-      width: 10%; padding: 0 20px;
-
-      p{
-        font: 400 20px/1 'Oswald'; padding: 10px 0; text-align: center;
-        background: $red; color: $bgLight;
-        height: 100px;  position: relative;
-
-        .svg_triangle{
-          position: absolute;bottom: 0;left: 0;
-          width: 100%;overflow: hidden;
-          line-height: 0; transform: rotate(180deg);
-  
-          svg {
-            position: relative;display: block;
-            width: calc(100% + 1.3px); height: 20px;
-          }
-          .shape-fill {
-            fill: $bgLight;
-        }
-        }
+/* tablet*/
+@media screen and (max-width: $tablet){
+  .note .inner{
+    flex-wrap: wrap;
+    .noteTitle{
+      width: 100%;
+      .title{ padding: 0px 20px 20px;}
+      .year strong{
+        font-size: 40px;
+        transform: none; transform-origin: center center; position: absolute; top:auto; bottom: 10px; right: 20px;
       }
     }
+    .inputBox{width: 50%;}
+    .showBox{width: 50%;}
+  }
+}
+
+@media screen and (max-width: 768px){
+  .note .inner{
+    .noteTitle .title {padding-bottom: 30px;}
+    .inputBox{width: 100%; padding-bottom: 40px;}
+    .inputBox h1 {font-size: 38px;}
+    .showBox{width: 100%;}
+  }
+}
+
+/* mobile */
+@media screen and (max-width: $mobile){
+  .note .inner{
+    .noteTitle .title {padding-bottom: 50px;}
+    .inputBox {padding: 0px 0px 40px;}
+    .inputBox h1 {font-size: 28px;}
+    .showBox {padding: 60px 0px;}
   }
 }

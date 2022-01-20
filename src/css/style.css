@@ -2433,8 +2433,7 @@ fieldset {
   justify-content: space-between;
   /* section - noteTile */
   /* inputBox */
-  /* showBox */
-  /* bookmark */ }
+  /* showBox */ }
   .note .inner .noteTitle {
     width: 20%;
     position: relative;
@@ -2517,7 +2516,7 @@ fieldset {
           background: #333;
           color: #c9c3b7; }
   .note .inner .showBox {
-    width: 35%;
+    width: 45%;
     padding: 60px 20px;
     height: 1000px;
     overflow: auto; }
@@ -2578,18 +2577,9 @@ fieldset {
               .note .inner .showBox article .post .written li:nth-of-type(3) strong, .note .inner .showBox article .post .written li:nth-of-type(4) strong {
                 display: block;
                 margin: 5px 10px 5px 0px; }
-            .note .inner .showBox article .post .written li:nth-of-type(5) {
-              height: 160px;
-              overflow: auto; }
-              .note .inner .showBox article .post .written li:nth-of-type(5) strong {
-                display: block;
-                margin: 5px 10px 5px 0px; }
-              .note .inner .showBox article .post .written li:nth-of-type(5)::-webkit-scrollbar {
-                width: 10px; }
-              .note .inner .showBox article .post .written li:nth-of-type(5)::-webkit-scrollbar-thumb {
-                background-color: rgba(0, 0, 0, 0.3); }
-              .note .inner .showBox article .post .written li:nth-of-type(5)::-webkit-scrollbar-track {
-                background-color: rgba(0, 0, 0, 0.2); }
+            .note .inner .showBox article .post .written li:nth-of-type(5) strong {
+              display: block;
+              margin: 5px 10px 5px 0px; }
             .note .inner .showBox article .post .written li strong {
               font: 12px/1 'arial';
               margin-right: 10px;
@@ -2611,33 +2601,47 @@ fieldset {
           .note .inner .showBox article .btns li:hover {
             background: #333;
             color: #c9c3b7; }
-  .note .inner .bookmark {
-    width: 10%;
-    padding: 0 20px; }
-    .note .inner .bookmark p {
-      font: 400 20px/1 'Oswald';
-      padding: 10px 0;
-      text-align: center;
-      background: #5D0000;
-      color: #e6e2dd;
-      height: 100px;
-      position: relative; }
-      .note .inner .bookmark p .svg_triangle {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        transform: rotate(180deg); }
-        .note .inner .bookmark p .svg_triangle svg {
-          position: relative;
-          display: block;
-          width: calc(100% + 1.3px);
-          height: 20px; }
-        .note .inner .bookmark p .svg_triangle .shape-fill {
-          fill: #e6e2dd; }
 
+/* tablet*/
+@media screen and (max-width: 1179px) {
+  .note .inner {
+    flex-wrap: wrap; }
+    .note .inner .noteTitle {
+      width: 100%; }
+      .note .inner .noteTitle .title {
+        padding: 0px 20px 20px; }
+      .note .inner .noteTitle .year strong {
+        font-size: 40px;
+        transform: none;
+        transform-origin: center center;
+        position: absolute;
+        top: auto;
+        bottom: 10px;
+        right: 20px; }
+    .note .inner .inputBox {
+      width: 50%; }
+    .note .inner .showBox {
+      width: 50%; } }
+@media screen and (max-width: 768px) {
+  .note .inner .noteTitle .title {
+    padding-bottom: 30px; }
+  .note .inner .inputBox {
+    width: 100%;
+    padding-bottom: 40px; }
+  .note .inner .inputBox h1 {
+    font-size: 38px; }
+  .note .inner .showBox {
+    width: 100%; } }
+/* mobile */
+@media screen and (max-width: 539px) {
+  .note .inner .noteTitle .title {
+    padding-bottom: 50px; }
+  .note .inner .inputBox {
+    padding: 0px 0px 40px; }
+  .note .inner .inputBox h1 {
+    font-size: 28px; }
+  .note .inner .showBox {
+    padding: 60px 0px; } }
 /*title - web만 적용*/
 .contact {
   width: 100%; }
