@@ -1,17 +1,20 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
-import Mask from "../../class/mask.js";
+import { useEffect, useState,useRef} from "react";
 
 import {  faFacebookF, faInstagram, faTwitter  } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const html = document.querySelector("html");
 const path = process.env.PUBLIC_URL;
 const url = `${path}/dbs/about.json`;
 
+
 function About(){
   let [members, setMembers] = useState([]);
   let [storys, setStorys] = useState([]);
+  const wrap = useRef(null);
+const vid = useRef(null);
 
   useEffect(()=>{
     axios
@@ -28,6 +31,15 @@ function About(){
     }
   },[])
 
+  const createMask = e=>{
+    console.log(e.currentTarget)
+    const target = e.currentTarget;
+    target.classList.add("on");
+    vid.current.classList.add("on");
+    target.classList.add("mask");
+  }
+
+
   return(
     <>
     {/* title, btnMenu, story-txt,vid  */}
@@ -35,39 +47,15 @@ function About(){
       <div className="inner">
         <h1>&#8544;. ABOUT</h1>
         <ul className="btnMenu">
-          <li className="on" onClick={()=>{
-            new Mask({
-              frame: ".about",
-              btns: ".btnMenu li",
-              panels: "figure .wrap .vid",
-              loading : "aside",
-              className_name: {on: "on", lower: "lower", mask: "mask"},
-            });
-          }}>
+          <li className="on" onClick={createMask}>
             <p>What makes a great Films?</p>
             <span>It's all about the experience. People love films that are fun and simple to feel. We make those films</span>
             </li>
-            <li onClick={()=>{
-              new Mask({
-                frame: ".about",
-                btns: ".btnMenu li",
-                panels: "figure .wrap .vid",
-                loading : "aside",
-                className_name: {on: "on", lower: "lower", mask: "mask"},
-              });
-            }}>
+            <li onClick={()=>{ }}>
             <p>The way we work</p>
             <span>Our creative approach involves rigorous design and usablity testing to create superior films for everyone</span>
             </li>
-            <li onClick={()=>{
-              new Mask({
-                frame: ".about",
-                btns: ".btnMenu li",
-                panels: "figure .wrap .vid",
-                loading : "aside",
-                className_name: {on: "on", lower: "lower", mask: "mask"},
-              });
-            }}>
+            <li onClick={()=>{ }}>
             <p>Meet the makers</p>
             <span>Our team combine form and function to create visually appealing, easy to watch films people want to use.</span>
             </li>
@@ -81,19 +69,11 @@ function About(){
 
           <figure>
             <aside>LOADING...</aside>
-              <div className="wrap" onLoad={()=>{
-                new Mask({
-                  frame: ".about",
-                  btns: ".btnMenu li",
-                  panels: "figure .wrap .vid",
-                  loading : "aside",
-                  className_name: {on: "on", lower: "lower", mask: "mask"},
-                });
-              }}>
+              <div className="wrap" ref={wrap}>
                 {
                   storys.map((story, index)=>{
                     return(
-                      <div key={index} className="vid mask">
+                      <div key={index} className="vid mask" ref={vid}>
                         <video src= {path + story.src} autoPlay muted loop ></video>
                         <div className="slogan">
                           <h3>
