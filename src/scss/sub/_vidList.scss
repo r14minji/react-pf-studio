@@ -1,7 +1,7 @@
 .vidList{
   padding-bottom: 20px;
   .inner{
-
+    padding-top: 40px;
     /* title */
     figure{
       padding: 60px 0; filter: saturate(0.5); position: relative; z-index: -1;
@@ -350,7 +350,7 @@
   }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 768px) {
   .vidList .inner .list{width: 100%;}
   .vidList .inner .list article{
     width: 100%;

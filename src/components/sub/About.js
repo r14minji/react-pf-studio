@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Mask from "./function/mask.js";
+import Mask from "../../class/mask.js";
 
 import {  faFacebookF, faInstagram, faTwitter  } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

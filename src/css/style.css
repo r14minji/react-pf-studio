@@ -978,7 +978,7 @@ fieldset {
               transition: 0.3s; }
               .festivalM .inner .wrap article:nth-of-type(3) span:hover {
                 background: #FFEDCB; } }
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 768px) {
   .festivalM .inner .wrap article {
     width: 100%;
     margin-right: 0%;
@@ -1398,6 +1398,64 @@ fieldset {
           transform: rotateX(90deg) translateY(130px);
           transition: box-shadow 350ms; }
 
+/* tablet*/
+@media screen and (max-width: 1179px) {
+  /* title, btnMenu, story-txt,vid  */
+  .about .inner {
+    width: 100%;
+    padding: 0 20px; }
+
+  /* team */
+  .team .inner {
+    width: 100%;
+    padding: 0 20px; } }
+@media screen and (max-width: 768px) {
+  /* title, btnMenu, story-txt,vid  */
+  .about .inner .btnMenu {
+    height: 120px; }
+  .about .inner .btnMenu li {
+    height: 100%; }
+  .about .inner .btnMenu li span {
+    display: none; }
+  .about .inner .btnMenu li p {
+    font-size: 22px;
+    border: none;
+    text-align: center; }
+  .about .inner .btnMenu li.on p {
+    border: none; }
+  .about .inner .story {
+    display: block; }
+    .about .inner .story .txt {
+      width: 100%; }
+    .about .inner .story .txt h2 {
+      font-size: 30px;
+      padding: 0;
+      margin-bottom: 10px; }
+    .about .inner .story .txt h2::after {
+      display: none; }
+    .about .inner .story figure {
+      width: 100%;
+      height: 300px;
+      margin: 0px; }
+
+  /* team */
+  .team .inner .wrap {
+    justify-content: space-around; } }
+/* mobile */
+@media screen and (max-width: 539px) {
+  /* title, btnMenu, story-txt,vid  */
+  .about .inner .btnMenu {
+    height: 90px; }
+  .about .inner .btnMenu li p {
+    font-size: 4vw;
+    padding: 10px 0;
+    text-align: center; }
+  .about .inner .story .txt span {
+    line-height: 1; }
+
+  /* team */
+  .team .inner .wrap article {
+    margin: 0px 0px 40px; } }
 .board {
   margin-bottom: 20px; }
   .board .inner {
@@ -2079,10 +2137,13 @@ fieldset {
   .youtube .inner section #tab dt .btn_tab {
     height: auto; }
   .youtube .inner section #tab dt .btn_tab ul {
-    display: none; } }
+    display: none; }
+  .youtube .inner section #tab dt .btn_tab p {
+    font-size: 20px; } }
 .vidList {
   padding-bottom: 20px; }
   .vidList .inner {
+    padding-top: 40px;
     /* title */
     /* section - youtube API vid list */
     /* popup */ }
@@ -2383,7 +2444,7 @@ fieldset {
       .vidList .inner .list article {
         width: 100%;
         margin-bottom: 60px; } }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 768px) {
   .vidList .inner .list {
     width: 100%; }
 

@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Header(props){
   const active = {textDecoration: "line-through"};
   const menuMo = useRef(null);
+
   return(
     <header id="header" className={props.type + ' myScroll'}>
       <div className="inner">
@@ -69,11 +70,8 @@ function Header(props){
             <li><NavLink activeStyle={active}  to='/contact'>CONTACT</NavLink></li>
             <li><NavLink activeStyle={active}  to='/join'>JOIN</NavLink></li>
             <li><NavLink activeStyle={active}  to='/signin'>Sign In</NavLink></li>
-            <li><NavLink activeStyle={active}  to='/join'>Join</NavLink></li>
           </ul>
         </nav>
-
-
       </div>
     </header>
   )

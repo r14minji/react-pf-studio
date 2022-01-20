@@ -31,9 +31,9 @@ function VidList(){
     <main className="content vidList">
       <div className="inner">
         {/* title */}
-        <figure>
+        {/* <figure>
           <h1>Youtube</h1>
-        </figure>
+        </figure> */}
 
         {/* section - youtube API vid list */}
         <section className="list">
