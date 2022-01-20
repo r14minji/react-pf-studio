@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState , useRef} from "react";
 
 import VidList from "./VidList";
 import Note from "./Note";
-import { useRef } from "react/cjs/react.development";
 
 function Youtube(){
   const tab = useRef(null);

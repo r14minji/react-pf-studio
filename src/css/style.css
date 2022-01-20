@@ -2008,18 +2008,20 @@ fieldset {
       padding-top: 180px; }
       .youtube .inner section #tab dt {
         width: 50%;
+        margin-top: 10px;
         position: absolute;
         top: 0; }
         .youtube .inner section #tab dt:nth-of-type(1) {
           left: calc((100% / 2) * 0); }
         .youtube .inner section #tab dt:nth-of-type(2) {
-          left: calc((100% / 2) * 1); }
+          left: calc((100% / 2) * 1 ); }
         .youtube .inner section #tab dt .btn_tab {
           display: block;
           width: 100%;
-          padding: 0px 20px 0px;
+          padding: 0px 20px;
           position: relative;
-          cursor: pointer; }
+          cursor: pointer;
+          border: 10px dashed #c9c3b7; }
           .youtube .inner section #tab dt .btn_tab strong {
             display: block;
             font: 700 20px/1 'Oswald';
@@ -2031,11 +2033,11 @@ fieldset {
           .youtube .inner section #tab dt .btn_tab ul li {
             font-size: 14px;
             padding: 5px 30px; }
-        .youtube .inner section #tab dt:hover {
+        .youtube .inner section #tab dt.on span {
           background: #c9c3b7; }
-        .youtube .inner section #tab dt.on span p, .youtube .inner section #tab dt.on span strong {
-          color: #C1554E;
-          border-color: #C1554E; }
+          .youtube .inner section #tab dt.on span p, .youtube .inner section #tab dt.on span strong {
+            color: #C1554E;
+            border-color: #C1554E; }
       .youtube .inner section #tab dd {
         width: 100%;
         display: none; }
@@ -2402,6 +2404,52 @@ fieldset {
             display: flex;
             justify-content: center;
             align-items: center; } }
+.note .inner {
+  display: flex;
+  justify-content: space-between;
+  /* section - noteTile */
+  /* inputBox */
+  /* showBox */
+  /* bookmark */ }
+  .note .inner .noteTitle {
+    width: 20%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .note .inner .noteTitle .title {
+      width: 100%;
+      border-top: 4px solid #6C1611;
+      border-bottom: 10px solid #6C1611;
+      padding-bottom: 20px; }
+      .note .inner .noteTitle .title h1 {
+        font: 700 34px/1 'Oswald';
+        padding: 10px 20px;
+        margin-bottom: 20px; }
+      .note .inner .noteTitle .title ul li {
+        font-size: 16px;
+        padding: 2px 20px; }
+    .note .inner .noteTitle .year {
+      width: 100%;
+      position: relative; }
+      .note .inner .noteTitle .year strong {
+        font: 700 8vw/1 'Oswald';
+        white-space: nowrap;
+        transform: rotate(270deg);
+        transform-origin: left top;
+        position: absolute;
+        bottom: -100px;
+        left: 120px; }
+  .note .inner .inputBox {
+    width: 35%;
+    background: #6C1611; }
+  .note .inner .showBox {
+    width: 35%;
+    background: rgba(0, 0, 0, 0.1); }
+  .note .inner .bookmark {
+    width: 10%;
+    border: 1px solid #000; }
+
 /*title - web만 적용*/
 .contact {
   width: 100%; }

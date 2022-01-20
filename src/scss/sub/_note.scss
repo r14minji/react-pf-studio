@@ -1,5 +1,55 @@
+$red: #6C1611;
+
 .note{
   .inner{
+    display: flex; justify-content: space-between;
+
+    /* section - noteTile */
+    .noteTitle{
+      width: 20%; 
+      position: relative;
+      display: flex; flex-direction: column; justify-content: space-between;
+
+      .title{
+        width: 100%;
+        border-top: 4px solid $red;
+        border-bottom: 10px solid $red; padding-bottom: 20px;
+        h1{
+          font: 700 34px/1 'Oswald';
+          padding: 10px 20px;
+          margin-bottom: 20px;
+        }
+        ul li{
+          font-size: 16px;
+          padding: 2px 20px;
+        }
+      }
+      .year{
+        width: 100%;
+        position: relative; 
+        strong{
+          font: 700 8vw/1 'Oswald'; white-space: nowrap;
+          transform: rotate(270deg) ; transform-origin: left top;
+          position: absolute; bottom: -100px; left: 120px;
+        }
+      }
+    }
+
+    /* inputBox */
+    .inputBox{
+      width: 35%; background: $red;
+
+    }
+
+    /* showBox */
+    .showBox{
+      width: 35%; background: rgba(0,0,0,0.1);
+    }
+
+    /* bookmark */
+    .bookmark{
+      width: 10%; border: 1px solid #000;
+    }
     
   }
 }

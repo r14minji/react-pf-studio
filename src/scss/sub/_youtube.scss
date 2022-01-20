@@ -44,17 +44,20 @@
         position: relative; padding-top: 180px;
       
         dt {
-          width: 50%;
+          width: 50%; 
+          margin-top: 10px;
           position: absolute;
           top: 0;      
           &:nth-of-type(1){left: calc((100% / 2) * 0);}
-          &:nth-of-type(2){left: calc((100% / 2) * 1);}
+          &:nth-of-type(2){left: calc((100% / 2) * 1 );}
           
       
           .btn_tab {
             display: block; width: 100%;
-            padding: 0px 20px 0px; position: relative;
-            cursor: pointer;
+            padding: 0px 20px;
+            position: relative;
+            cursor: pointer; 
+            border: 10px dashed  $lightbrown;
 
             strong{
               display: block;
@@ -72,8 +75,8 @@
             }
           }
 
-          &:hover{background: $lightbrown;}
           &.on span {
+            background: $lightbrown;
             p, strong{ color: $pink; border-color: $pink;}
           }
         }

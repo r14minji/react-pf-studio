@@ -10,7 +10,7 @@ const path = process.env.PUBLIC_URL;
 function VidList(){
   const key = "AIzaSyCpNKtPx5E3mMI60UE3hwHpAnBKEKiueuc";
   const playListId = "PL5jd_nA7BbYubv925xZLUtapVQjGoV8Ly";
-  const num = 7;
+  const num = 4;
   const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playListId}&maxResult=${num}`;
 
   let [data, setData] = useState([]);
