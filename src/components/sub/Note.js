@@ -1,5 +1,5 @@
-import { useRef, useState } from 'react';
-import { useEffect } from 'react/cjs/react.development';
+import { useRef, useState, useEffect } from 'react';
+
 
 function Note() {
   const date = useRef(null);
