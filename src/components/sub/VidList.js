@@ -8,10 +8,16 @@ const body = document.querySelector("body");
 const path = process.env.PUBLIC_URL;
 
 function VidList(){
-  const key = "AIzaSyCpNKtPx5E3mMI60UE3hwHpAnBKEKiueuc";
+  const api_key = "AIzaSyCpNKtPx5E3mMI60UE3hwHpAnBKEKiueuc";
   const playListId = "PL5jd_nA7BbYubv925xZLUtapVQjGoV8Ly";
   const num = 4;
-  const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playListId}&maxResult=${num}`;
+  const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${api_key}&playlistId=${playListId}&maxResults=${num}`;
+
+
+  // const api_key = "AIzaSyB7VIAECTixPlj0sr-goHwkmNRFIwxZntA";
+  // const playListId = "PLYOPkdUKSFgX5CgKf68RJzJHec0XEdBNd";
+  // const num = 4;
+  // const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${api_key}&playlistId=${playListId}&maxResults=${num}`; 
 
   let [data, setData] = useState([]);
   let [isPop, setIsPop] = useState(false);

@@ -1,7 +1,7 @@
 .gallery{
   position: relative;
   .inner{
-    h1{color: $backgroundColor;}
+    h1{color: $bgLight;}
 
     /* Search - input, button*/
     .searchBox{
@@ -63,7 +63,7 @@
           figure{
             width: 100%;
             padding: 10px 0px;
-            border-top: 4px solid $backgroundColor;
+            border-top: 4px solid $bgLight;
             position: relative;
   
             .pic{
@@ -81,19 +81,19 @@
   
         figcaption{
           width: 100%;
-          border-bottom: 4px solid $backgroundColor;
+          border-bottom: 4px solid $bgLight;
   
           p{
             font: 400 18px/1 'Oswald';
             margin-bottom: 10px; 
-            color: $backgroundColor;
+            color: $bgLight;
           }
           span{
             display: block;
             font: 400 14px/1 'Oswald';
             margin-bottom: 10px;
             text-align: right;
-            color: $backgroundColor;
+            color: $bgLight;
             
             &:before{
               content: 'by ';
@@ -103,7 +103,7 @@
             text-align: center;
             font: 600 16px/1 'Oswald';
             padding: 5px 10px;
-            border: 1px solid $backgroundColor;
+            border: 1px solid $bgLight;
             margin-bottom: 10px;
             background: rgba(230, 226, 221, 0.3);
             color: $txt;

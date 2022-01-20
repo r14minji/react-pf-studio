@@ -31,7 +31,7 @@
       h1{
         font: 400 70px/1 'Oswald';
         padding: 10px 20px; text-align: right;
-        color: $backgroundColor;   background: $dark;
+        color: $bgLight;   background: $dark;
         text-transform: uppercase;
       }
     }
@@ -82,7 +82,7 @@
         }
       
         dd{
-          width: 100%;
+          width: 100%; margin-bottom: 10px;
           display: none;
       
           a{

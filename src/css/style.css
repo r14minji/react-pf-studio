@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Oswald:wght@400;600;700&family=IM+Fell+English+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Oswald:wght@400;600;700&family=Nanum+Pen+Script&family=IM+Fell+English+SC&display=swap");
 /*색상*/
 /*반응형*/
 * {
@@ -2040,6 +2040,7 @@ fieldset {
             border-color: #C1554E; }
       .youtube .inner section #tab dd {
         width: 100%;
+        margin-bottom: 10px;
         display: none; }
         .youtube .inner section #tab dd a {
           font-size: 50px;
@@ -2419,36 +2420,200 @@ fieldset {
     justify-content: space-between; }
     .note .inner .noteTitle .title {
       width: 100%;
-      border-top: 4px solid #6C1611;
-      border-bottom: 10px solid #6C1611;
+      border-top: 10px solid #5D0000;
+      border-bottom: 10px solid #5D0000;
       padding-bottom: 20px; }
       .note .inner .noteTitle .title h1 {
         font: 700 34px/1 'Oswald';
         padding: 10px 20px;
         margin-bottom: 20px; }
       .note .inner .noteTitle .title ul li {
-        font-size: 16px;
-        padding: 2px 20px; }
+        font-size: 14px;
+        padding: 2px 20px 2px 0px;
+        margin-left: 20px;
+        list-style-type: square; }
     .note .inner .noteTitle .year {
-      width: 100%;
-      position: relative; }
+      width: 100%; }
       .note .inner .noteTitle .year strong {
-        font: 700 8vw/1 'Oswald';
+        font: 700 12vh/1 'Oswald';
         white-space: nowrap;
         transform: rotate(270deg);
-        transform-origin: left top;
+        transform-origin: right bottom;
         position: absolute;
-        bottom: -100px;
-        left: 120px; }
+        top: 25%;
+        right: 0px;
+        color: #5D0000; }
   .note .inner .inputBox {
     width: 35%;
-    background: #6C1611; }
+    background: #5D0000;
+    padding: 0 20px; }
+    .note .inner .inputBox h1 {
+      font: 700 50px/1.1 'Oswald';
+      color: #e6e2dd;
+      padding: 20px 10px;
+      margin-bottom: 40px;
+      border-bottom: 4px solid #e6e2dd; }
+    .note .inner .inputBox .wrap {
+      width: 300px;
+      padding: 20px 30px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      background: #c9c3b7; }
+      .note .inner .inputBox .wrap h2 {
+        font: 600 38px/1.1 'Nanum Pen Script';
+        padding: 10px 0; }
+      .note .inner .inputBox .wrap input {
+        width: 100%;
+        height: 40px;
+        padding: 10px 10px;
+        background: #c9c3b7;
+        border: none;
+        border-top: 1px solid #777; }
+        .note .inner .inputBox .wrap input:nth-of-type(3), .note .inner .inputBox .wrap input:nth-of-type(4) {
+          width: 50%; }
+      .note .inner .inputBox .wrap textarea {
+        width: 100%;
+        height: 160px;
+        padding: 5px 10px;
+        resize: none;
+        background: #c9c3b7;
+        border: none;
+        border-top: 1px solid #777;
+        border-bottom: 1px solid #777;
+        margin-bottom: 20px; }
+      .note .inner .inputBox .wrap button {
+        width: 50%;
+        height: 30px;
+        background: #c9c3b7;
+        border: 1px solid #555;
+        font: 400 14px/1 'Oswald';
+        cursor: pointer;
+        transition: 0.3s; }
+        .note .inner .inputBox .wrap button:hover {
+          background: #333;
+          color: #c9c3b7; }
   .note .inner .showBox {
     width: 35%;
-    background: rgba(0, 0, 0, 0.1); }
+    padding: 60px 20px;
+    height: 1000px;
+    overflow: auto; }
+    .note .inner .showBox::-webkit-scrollbar {
+      width: 10px; }
+    .note .inner .showBox::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2); }
+    .note .inner .showBox::-webkit-scrollbar-track {
+      background-color: rgba(0, 0, 0, 0.1); }
+    .note .inner .showBox article {
+      width: 300px;
+      margin: 0 auto;
+      padding: 10px 0;
+      margin-bottom: 40px;
+      background: #c9c3b7;
+      /*버튼*/ }
+      .note .inner .showBox article .post {
+        width: 300px;
+        padding: 10px 30px 20px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        /*수정모드*/
+        /*출력모드*/ }
+        .note .inner .showBox article .post h2 {
+          font: 600 38px/1.1 'Nanum Pen Script';
+          padding: 10px 0; }
+        .note .inner .showBox article .post input {
+          width: 100%;
+          height: 40px;
+          padding: 10px 10px;
+          background: #c9c3b7;
+          border: none;
+          border-top: 1px solid #777; }
+          .note .inner .showBox article .post input:nth-of-type(3), .note .inner .showBox article .post input:nth-of-type(4) {
+            width: 50%; }
+        .note .inner .showBox article .post textarea {
+          width: 100%;
+          height: 160px;
+          padding: 5px 10px;
+          resize: none;
+          background: #c9c3b7;
+          border: none;
+          border-top: 1px solid #777;
+          border-bottom: 1px solid #777; }
+        .note .inner .showBox article .post .written {
+          display: flex;
+          flex-wrap: wrap; }
+          .note .inner .showBox article .post .written li {
+            width: 100%;
+            font: 18px/1 'Nanum Pen Script';
+            padding: 10px 10px;
+            background: #c9c3b7;
+            border: none;
+            border-top: 1px solid #777; }
+            .note .inner .showBox article .post .written li:nth-of-type(3), .note .inner .showBox article .post .written li:nth-of-type(4) {
+              width: 50%; }
+              .note .inner .showBox article .post .written li:nth-of-type(3) strong, .note .inner .showBox article .post .written li:nth-of-type(4) strong {
+                display: block;
+                margin: 5px 10px 5px 0px; }
+            .note .inner .showBox article .post .written li:nth-of-type(5) {
+              height: 160px;
+              overflow: auto; }
+              .note .inner .showBox article .post .written li:nth-of-type(5) strong {
+                display: block;
+                margin: 5px 10px 5px 0px; }
+              .note .inner .showBox article .post .written li:nth-of-type(5)::-webkit-scrollbar {
+                width: 10px; }
+              .note .inner .showBox article .post .written li:nth-of-type(5)::-webkit-scrollbar-thumb {
+                background-color: rgba(0, 0, 0, 0.3); }
+              .note .inner .showBox article .post .written li:nth-of-type(5)::-webkit-scrollbar-track {
+                background-color: rgba(0, 0, 0, 0.2); }
+            .note .inner .showBox article .post .written li strong {
+              font: 12px/1 'arial';
+              margin-right: 10px;
+              color: #777; }
+      .note .inner .showBox article .btns {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+        padding: 0 30px; }
+        .note .inner .showBox article .btns li {
+          width: 50%;
+          height: 30px;
+          text-align: center;
+          font: 400 14px/30px 'Oswald';
+          cursor: pointer;
+          transition: 0.3s;
+          border-top: 1px solid #555;
+          border-bottom: 1px solid #555; }
+          .note .inner .showBox article .btns li:hover {
+            background: #333;
+            color: #c9c3b7; }
   .note .inner .bookmark {
     width: 10%;
-    border: 1px solid #000; }
+    padding: 0 20px; }
+    .note .inner .bookmark p {
+      font: 400 20px/1 'Oswald';
+      padding: 10px 0;
+      text-align: center;
+      background: #5D0000;
+      color: #e6e2dd;
+      height: 100px;
+      position: relative; }
+      .note .inner .bookmark p .svg_triangle {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg); }
+        .note .inner .bookmark p .svg_triangle svg {
+          position: relative;
+          display: block;
+          width: calc(100% + 1.3px);
+          height: 20px; }
+        .note .inner .bookmark p .svg_triangle .shape-fill {
+          fill: #e6e2dd; }
 
 /*title - web만 적용*/
 .contact {

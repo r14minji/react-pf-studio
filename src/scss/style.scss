@@ -1,10 +1,10 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Oswald:wght@400;600;700&family=IM+Fell+English+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Oswald:wght@400;600;700&family=Nanum+Pen+Script&family=IM+Fell+English+SC&display=swap');
 
 /*색상*/
-$backgroundColor: #e6e2dd;
-$dark : #2F2C28;
-$txt: #303030;
+$bgLight: #e6e2dd;
+$dark : #2F2C28; //bgDark 로 수정
+$txt: #303030; 
 $lightpink: #FFC1B4; // #FAD7BE; //F2BEBE; //E9B5B5
 $pink: #C1554E;
 $yellow: #ffbb00;
@@ -52,21 +52,21 @@ body{
 
 body.white{
   #header {
-    color: $backgroundColor!important;
-    a {color: $backgroundColor!important;}
-    span, span::after{color: $backgroundColor!important;}
+    color: $bgLight!important;
+    a {color: $bgLight!important;}
+    span, span::after{color: $bgLight!important;}
     .util_web ul li a { color: #303030!important;}
   }
 
   #footer{
-    color: $backgroundColor;
-    border-color:  $backgroundColor;
+    color: $bgLight;
+    border-color:  $bgLight;
     .inner{
-      border-top: 2px solid $backgroundColor;
+      border-top: 2px solid $bgLight;
 
-      .newsletter .input_wrap #newsletterInput {border-color:  $backgroundColor;}
-      .newsletter .input_wrap #newsletterSubmit {color: $backgroundColor; border-color:  $backgroundColor;}
-      >p{border-top: 1px solid  $backgroundColor;}
+      .newsletter .input_wrap #newsletterInput {border-color:  $bgLight;}
+      .newsletter .input_wrap #newsletterSubmit {color: $bgLight; border-color:  $bgLight;}
+      >p{border-top: 1px solid  $bgLight;}
     }
   }
 }
