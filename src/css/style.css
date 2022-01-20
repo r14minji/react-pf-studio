@@ -2048,6 +2048,38 @@ fieldset {
         .youtube .inner section #tab dd.on {
           display: block; }
 
+/* tablet*/
+@media screen and (max-width: 1179px) {
+  .youtube .inner .title_wrap h1 {
+    font-size: 70px; }
+  .youtube .inner section #tab {
+    padding-top: 220px; }
+  .youtube .inner section #tab dt .btn_tab {
+    height: 200px; } }
+@media screen and (max-width: 768px) {
+  .youtube .inner .title_wrap h1 {
+    font-size: 50px; }
+  .youtube .inner .title_wrap > ul {
+    display: none; }
+  .youtube .inner section #tab dt .btn_tab {
+    padding: 0 10px;
+    border: 5px dashed #c9c3b7; }
+    .youtube .inner section #tab dt .btn_tab strong {
+      padding: 10px; }
+    .youtube .inner section #tab dt .btn_tab P {
+      padding: 10px; }
+    .youtube .inner section #tab dt .btn_tab ul li {
+      padding: 0px 10px; } }
+/* mobile */
+@media screen and (max-width: 539px) {
+  .youtube .inner .title_wrap h1 {
+    font-size: 6vw; }
+  .youtube .inner section #tab {
+    padding-top: 120px; }
+  .youtube .inner section #tab dt .btn_tab {
+    height: auto; }
+  .youtube .inner section #tab dt .btn_tab ul {
+    display: none; } }
 .vidList {
   padding-bottom: 20px; }
   .vidList .inner {
@@ -2056,14 +2088,14 @@ fieldset {
     /* popup */ }
     .vidList .inner figure {
       padding: 60px 0;
-      filter: grayscale(100%);
+      filter: saturate(0.5);
       position: relative;
       z-index: -1;
       background: url(/public/img/vidLIst_bg.jpg) no-repeat center/cover;
       margin-bottom: 40px; }
       .vidList .inner figure h1 {
         font: 400 120px/1 'Oswald';
-        color: #222;
+        color: #eee;
         text-align: center; }
     .vidList .inner .list {
       width: 708px;
@@ -2341,58 +2373,58 @@ fieldset {
 
 /* tablet*/
 @media screen and (max-width: 1179px) {
-  .youtube .inner {
+  .vidList .inner {
     /* youtube vid list*/ }
-    .youtube .inner .title_wrap h1 {
+    .vidList .inner .title_wrap h1 {
       font-size: 12vw !important; }
-    .youtube .inner .list {
+    .vidList .inner .list {
       width: 708px;
       margin: 0 auto; }
-      .youtube .inner .list article {
+      .vidList .inner .list article {
         width: 100%;
         margin-bottom: 60px; } }
 @media screen and (max-width: 780px) {
-  .youtube .inner .list {
+  .vidList .inner .list {
     width: 100%; }
 
-  .youtube .inner .list article {
+  .vidList .inner .list article {
     width: 100%;
     align-items: center;
     /* icon*/ }
-    .youtube .inner .list article .movieIcon {
+    .vidList .inner .list article .movieIcon {
       display: none; }
-    .youtube .inner .list article .txt {
+    .vidList .inner .list article .txt {
       width: 100%; }
-      .youtube .inner .list article .txt .mainTick {
+      .vidList .inner .list article .txt .mainTick {
         width: 100%;
         padding: 10px 20px;
         border-right: none; }
-        .youtube .inner .list article .txt .mainTick > div.date span, .youtube .inner .list article .txt .mainTick > div.seat span, .youtube .inner .list article .txt .mainTick > div.time span {
+        .vidList .inner .list article .txt .mainTick > div.date span, .vidList .inner .list article .txt .mainTick > div.seat span, .vidList .inner .list article .txt .mainTick > div.time span {
           font-size: 12px; }
-      .youtube .inner .list article .txt .sideTick {
+      .vidList .inner .list article .txt .sideTick {
         display: none; } }
 /* mobile */
 @media screen and (max-width: 539px) {
-  .youtube .inner {
+  .vidList .inner {
     /* title */
     /* youtube vid list*/ }
-    .youtube .inner .title_wrap h1 {
+    .vidList .inner .title_wrap h1 {
       font-size: 10vw !important; }
-    .youtube .inner .list article {
+    .vidList .inner .list article {
       width: 100%;
       padding: 0px 10px;
       margin-bottom: 40px; }
-      .youtube .inner .list article .pic {
+      .vidList .inner .list article .pic {
         max-width: 415px;
         width: 100%; }
-      .youtube .inner .list article .txt {
+      .vidList .inner .list article .txt {
         height: auto; }
-        .youtube .inner .list article .txt .mainTick {
+        .vidList .inner .list article .txt .mainTick {
           height: auto;
           grid-template-areas: 'tickName tickName tickName tickName ' 'descYoutb descYoutb descYoutb descYoutb' 'titleYoutb titleYoutb titleYoutb titleYoutb' 'star star star price' 'date seat time price' 'tickNum tickNum tickNum tickNum'; }
-          .youtube .inner .list article .txt .mainTick > div.icon {
+          .vidList .inner .list article .txt .mainTick > div.icon {
             display: none; }
-          .youtube .inner .list article .txt .mainTick > div.tickName, .youtube .inner .list article .txt .mainTick > div.descYoutb {
+          .vidList .inner .list article .txt .mainTick > div.tickName, .vidList .inner .list article .txt .mainTick > div.descYoutb {
             display: flex;
             justify-content: center;
             align-items: center; } }
