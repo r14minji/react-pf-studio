@@ -1,4 +1,4 @@
-import { useEffect, useState , useRef} from "react";
+import { useEffect, useState, useRef } from 'react';
 
 import VidList from "./VidList";
 import Note from "./Note";
