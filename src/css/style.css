@@ -887,7 +887,7 @@ fieldset {
         width: 100%;
         height: 200px;
         margin-bottom: 20px;
-        background: url(/src/img/Film2.jpg) no-repeat center/cover; }
+        background: url(/public/img/Film2.jpg) no-repeat center/cover; }
         .festivalM .inner .wrap article:nth-of-type(2) .pic img {
           width: 100%;
           height: 100%;
@@ -2246,7 +2246,7 @@ fieldset {
         .vidList .inner .list article .pic {
           width: 413px;
           height: 250px;
-          background: url(/src/img/Film2.jpg) no-repeat center/cover;
+          background: url(/public/img/Film2.jpg) no-repeat center/cover;
           cursor: pointer;
           margin-bottom: 20px; }
           .vidList .inner .list article .pic img {
@@ -2274,7 +2274,7 @@ fieldset {
           .vidList .inner .list article .movieIcon .camera {
             width: 30%;
             height: 40%;
-            background: url(/public/img/youtube5.png) center/cover; }
+            background: url(/public/img/youtube3.png) center/cover; }
         .vidList .inner .list article .txt {
           width: 100%;
           height: 250px;
@@ -3442,7 +3442,7 @@ html {
   color: #303030; }
 
 body {
-  background: url(../img/paper-texture-narrow.png) no-repeat center/cover; }
+  background: url(/public/img/paper-texture-narrow.png) no-repeat center/cover; }
 
 body.white #header {
   color: #e6e2dd !important; }

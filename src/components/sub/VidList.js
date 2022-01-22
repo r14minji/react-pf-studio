@@ -49,7 +49,7 @@ function VidList(){
                     {/* mainTick - youtube api data */}
                     <div className="mainTick container">
                       <div className="icon">
-                        <img src={path + "/img/movieIcon2.png"} />
+                        <img src={path + "/img/movieIcon.png"} />
                       </div>
                       <div className="tickName">
                         <p>alice Film Festival</p>
