@@ -36,7 +36,7 @@ function Festival(){
     },[]);
 
   return(
-    <section className="content festivalM myScroll">
+    <section className="content festivalM">
       <div className="inner"> 
         <div className="wrap">
           {/* article1 - posters img */}
@@ -65,7 +65,7 @@ function Festival(){
                   let date = item.snippet.publishedAt;
 
                   return(
-                    <article>
+                    <article key={index}>
                       <div className="pic" onClick={()=>{
                         setIsPop(true);
                         setIndex(index);

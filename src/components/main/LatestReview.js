@@ -25,9 +25,10 @@ function LatestReview(){
   },[])
 
   return(
-    <section className="content latestReviewM">
+    <section className="content latestReviewM myScroll">
       <div className="inner"> 
         <h1>Movie Review</h1>
+        <div className="wrap">
         {
           notes.map((note, index)=>{
             if(index < 3){
@@ -46,6 +47,7 @@ function LatestReview(){
             }
           })
         }
+        </div>
       </div>
     </section>
   )
