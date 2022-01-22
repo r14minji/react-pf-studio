@@ -856,12 +856,16 @@ fieldset {
 .festivalM {
   padding: 40px 0px 0px; }
   .festivalM .inner {
-    min-height: 0px; }
+    min-height: 0px;
+    /* popup */ }
     .festivalM .inner .wrap article {
       width: 380px;
       margin-right: 20px;
       margin-bottom: 40px;
-      float: left; }
+      float: left;
+      /* article1 - posters img */
+      /* article2 - youtube redux */
+      /* article3 - Movie Festival txt */ }
       .festivalM .inner .wrap article:nth-of-type(1) {
         display: flex;
         flex-wrap: wrap; }
@@ -883,11 +887,13 @@ fieldset {
         width: 100%;
         height: 200px;
         margin-bottom: 20px;
-        border: 1px solid #000; }
+        background: url(/src/img/Film2.jpg) no-repeat center/cover; }
         .festivalM .inner .wrap article:nth-of-type(2) .pic img {
           width: 100%;
           height: 100%;
-          object-fit: cover; }
+          object-fit: cover;
+          opacity: 0.6;
+          padding: 15px 0px; }
       .festivalM .inner .wrap article:nth-of-type(2) .content h2 {
         font: 600 18px/1 'Oswald';
         margin-bottom: 20px; }
@@ -929,6 +935,34 @@ fieldset {
           transition: 0.3s; }
           .festivalM .inner .wrap article:nth-of-type(3) span:hover {
             background: #FFEDCB; }
+    .festivalM .inner .pop {
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 5vw; }
+      .festivalM .inner .pop iframe {
+        border: none;
+        width: 100%;
+        height: 100%; }
+      .festivalM .inner .pop span {
+        position: absolute;
+        top: 3vw;
+        right: 5vw;
+        font-size: 20px;
+        color: #fff;
+        cursor: pointer; }
+      .festivalM .inner .pop p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        font: 30px/1 'Abril Fatface';
+        color: #fff; }
 
 /* tablet */
 @media screen and (max-width: 1179px) {
@@ -2147,17 +2181,10 @@ fieldset {
     /* title */
     /* section - youtube API vid list */
     /* popup */ }
-    .vidList .inner figure {
-      padding: 60px 0;
-      filter: saturate(0.5);
-      position: relative;
-      z-index: -1;
-      background: url(/public/img/vidLIst_bg.jpg) no-repeat center/cover;
+    .vidList .inner > p {
+      font: 400 24px/1 'Abril Fatface';
+      text-align: center;
       margin-bottom: 40px; }
-      .vidList .inner figure h1 {
-        font: 400 120px/1 'Oswald';
-        color: #eee;
-        text-align: center; }
     .vidList .inner .list {
       width: 708px;
       margin: 0 auto; }

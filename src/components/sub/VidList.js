@@ -1,49 +1,27 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
+import {useSelector} from 'react-redux';
 import { faWindowClose } from "@fortawesome/free-regular-svg-icons";
 import { faStar  } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-
 
 const body = document.querySelector("body");
 const path = process.env.PUBLIC_URL;
 
 function VidList(){
-  const api_key = "AIzaSyCpNKtPx5E3mMI60UE3hwHpAnBKEKiueuc";
-  const playListId = "PL5jd_nA7BbYubv925xZLUtapVQjGoV8Ly";
-  const num = 4;
-  const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${api_key}&playlistId=${playListId}&maxResults=${num}`; 
+  const youtube = useSelector(state=>state);
+  const vidData = youtube.youtubeReducer.youtube;
 
-  let [data, setData] = useState([]);
   let [isPop, setIsPop] = useState(false);
   let [index, setIndex] = useState(0);
-
-
-
-
-  useEffect(()=>{
-    axios
-    .get(url)
-    .then(json=>{
-      //console.log(json.data.items);
-      setData(json.data.items);
-    })
-  },[])
-
 
   return(
     <main className="content vidList">
       <div className="inner">
-        {/* title */}
-        {/* <figure>
-          <h1>Youtube</h1>
-        </figure> */}
-
+        <p>It's time to watch a movie.</p>
         {/* section - youtube API vid list */}
         <section className="list">
           {
-            data.map((item, index)=>{
+            vidData.map((item, index)=>{
               let tit = item.snippet.title;
               let tit_len = tit.length;
               let desc = item.snippet.description;
@@ -161,7 +139,7 @@ function VidList(){
 
     return(
       <aside className="pop">
-        <iframe src={"https://www.youtube.com/embed/" +  data[index].snippet.resourceId.videoId }  width='100%' height='100%'></iframe>
+        <iframe src={"https://www.youtube.com/embed/" +  vidData[index].snippet.resourceId.videoId }  width='100%' height='100%'></iframe>
         <span className="btnClose" onClick={()=>{
           setIsPop(false);
         }}><FontAwesomeIcon icon={faWindowClose} /></span>

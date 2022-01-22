@@ -3,15 +3,10 @@
   .inner{
     padding-top: 40px;
     /* title */
-    figure{
-      padding: 60px 0; filter: saturate(0.5); position: relative; z-index: -1;
-      background: url(/public/img/vidLIst_bg.jpg) no-repeat center/cover;
+    >p{
+      font: 400 24px/1 'Abril Fatface';
+      text-align: center;
       margin-bottom: 40px;
- 
-      h1{
-        font: 400 120px/1 'Oswald'; color: #eee;
-        text-align: center; 
-      }  
     }
 
     /* section - youtube API vid list */
