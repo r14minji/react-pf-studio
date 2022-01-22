@@ -24,35 +24,45 @@ function About(){
 
   useEffect(()=>{
     html.style.backgroundColor = "#E9B5B5";
-
     const btns = btnMenus.current.children;
     const vids = wrap.current.children;
+    const play = wrap.current.querySelectorAll("video");
     btns[0].classList.add("on");
     vids[0].classList.add("on");
+    play[index].load();
+    play[index].play();
 
-    for(let i=0; i<btns.length; i++){
-      btns[i].classList.remove("on");
-      if(vids[i].classList.contains("on")){
-        vids[i].classList.add("mask");
-      }
-    }
-    btns[index].classList.add("on");
-    vids[index].classList.add("lower");
+    for(let vid of vids) vid.classList.remove("mask");
 
-    setTimeout(()=>{
-      for(let i=0; i<vids.length; i++){
+
+    activation()
+    function activation(){
+      for(let i=0; i<btns.length; i++){
+        btns[i].classList.remove("on");
         if(vids[i].classList.contains("on")){
-          vids[i].classList.remove("on");
-          vids[i].classList.remove("mask");
+          vids[i].classList.add("mask");
         }
       }
-
-      vids[index].classList.remove("lower");
-      vids[index].classList.add("on");
-    },1400)
+      btns[index].classList.add("on");
+      vids[index].classList.add("lower");
+  
+      setTimeout(()=>{
+        for(let i=0; i<vids.length; i++){
+          if(vids[i].classList.contains("on")){
+            vids[i].classList.remove("on");
+            vids[i].classList.remove("mask");
+          }
+        }
+  
+        vids[index].classList.remove("lower");
+        vids[index].classList.add("on");
+      },1400)
+    }
 
     return()=>{
       html.style.backgroundColor = "#e6e2dd";
+      btns[0].classList.remove("on");
+      vids[0].classList.remove("on");
     }
   },[index])
 
@@ -88,7 +98,7 @@ function About(){
                 {
                   storyData.map((story, index)=>{
                     return(
-                      <div key={index} className="vid mask">
+                      <div key={index} className="vid">
                         <video src= {path + story.src} autoPlay muted loop ></video>
                         <div className="slogan">
                           <h3>
