@@ -2124,8 +2124,7 @@ fieldset {
   .youtube .inner .title_wrap > ul {
     display: none; }
   .youtube .inner section #tab dt .btn_tab {
-    padding: 0 10px;
-    border: 5px dashed #c9c3b7; }
+    padding: 0 10px; }
     .youtube .inner section #tab dt .btn_tab strong {
       padding: 10px; }
     .youtube .inner section #tab dt .btn_tab P {
@@ -2137,7 +2136,7 @@ fieldset {
   .youtube .inner .title_wrap h1 {
     font-size: 6vw; }
   .youtube .inner section #tab {
-    padding-top: 120px; }
+    padding-top: 100px; }
   .youtube .inner section #tab dt .btn_tab {
     height: auto; }
   .youtube .inner section #tab dt .btn_tab ul {
@@ -2148,13 +2147,8 @@ fieldset {
   padding-bottom: 20px; }
   .vidList .inner {
     padding-top: 40px;
-    /* title */
     /* section - youtube API vid list */
     /* popup */ }
-    .vidList .inner > p {
-      font: 400 24px/1 'Abril Fatface';
-      text-align: center;
-      margin-bottom: 40px; }
     .vidList .inner .list {
       width: 708px;
       margin: 0 auto; }
@@ -2489,19 +2483,21 @@ fieldset {
 .note .inner {
   display: flex;
   justify-content: space-between;
+  min-height: auto;
   /* section - noteTile */
   /* inputBox */
   /* showBox */ }
   .note .inner .noteTitle {
     width: 20%;
+    height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
     .note .inner .noteTitle .title {
       width: 100%;
-      border-top: 10px solid #5D0000;
-      border-bottom: 10px solid #5D0000;
+      border-top: 6px solid #2F2C28;
+      border-bottom: 6px solid #2F2C28;
       padding-bottom: 20px; }
       .note .inner .noteTitle .title h1 {
         font: 700 34px/1 'Oswald';
@@ -2515,17 +2511,18 @@ fieldset {
     .note .inner .noteTitle .year {
       width: 100%; }
       .note .inner .noteTitle .year strong {
-        font: 700 12vh/1 'Oswald';
+        font: 700 8vh/1 'Oswald';
         white-space: nowrap;
         transform: rotate(270deg);
         transform-origin: right bottom;
         position: absolute;
-        top: 25%;
+        top: 35%;
         right: 0px;
-        color: #5D0000; }
+        color: #2F2C28; }
   .note .inner .inputBox {
     width: 35%;
-    background: #5D0000;
+    background: #2F2C28;
+    height: 100vh;
     padding: 0 20px; }
     .note .inner .inputBox h1 {
       font: 700 50px/1.1 'Oswald';
@@ -2575,8 +2572,8 @@ fieldset {
           color: #c9c3b7; }
   .note .inner .showBox {
     width: 45%;
+    height: 100vh;
     padding: 60px 20px;
-    height: 1000px;
     overflow: auto; }
     .note .inner .showBox::-webkit-scrollbar {
       width: 10px; }
@@ -2665,7 +2662,8 @@ fieldset {
   .note .inner {
     flex-wrap: wrap; }
     .note .inner .noteTitle {
-      width: 100%; }
+      width: 100%;
+      height: auto; }
       .note .inner .noteTitle .title {
         padding: 0px 20px 20px; }
       .note .inner .noteTitle .year strong {
@@ -2677,9 +2675,11 @@ fieldset {
         bottom: 10px;
         right: 20px; }
     .note .inner .inputBox {
-      width: 50%; }
+      width: 50%;
+      height: 700px; }
     .note .inner .showBox {
-      width: 50%; } }
+      width: 50%;
+      height: 700px; } }
 @media screen and (max-width: 768px) {
   .note .inner .noteTitle .title {
     padding-bottom: 30px; }

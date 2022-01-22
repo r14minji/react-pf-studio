@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {useSelector} from 'react-redux';
 import { faWindowClose } from "@fortawesome/free-regular-svg-icons";
-import { faStar  } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const body = document.querySelector("body");
@@ -13,11 +13,10 @@ function VidList(){
 
   let [isPop, setIsPop] = useState(false);
   let [index, setIndex] = useState(0);
-
+  
   return(
     <main className="content vidList">
       <div className="inner">
-        <p>It's time to watch a movie.</p>
         {/* section - youtube API vid list */}
         <section className="list">
           {

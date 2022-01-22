@@ -66,7 +66,7 @@
             font-size: 50px; line-height: 200px;
           }
       
-          &.on {display: block;}
+          &.on {display: block;}         
         }
       }
     }
@@ -91,7 +91,6 @@
       .title_wrap > ul {display: none;}
       section #tab dt .btn_tab {
         padding: 0 10px;
-        border: 5px dashed #c9c3b7;
         strong{padding: 10px;}
         P{padding: 10px;}
         ul li{padding: 0px 10px;}
@@ -105,7 +104,7 @@
   .youtube{
     .inner{
       .title_wrap h1 {font-size: 6vw;}
-        section #tab {padding-top: 120px;}
+        section #tab {padding-top: 100px;}
         section #tab dt .btn_tab{ height: auto;}
         section #tab dt .btn_tab{
           ul{display: none;}
