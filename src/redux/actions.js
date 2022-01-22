@@ -18,3 +18,10 @@ export const setNews = data =>{
     playload : data
   }
 }
+
+export const setNotice = data =>{
+  return{
+    type: 'SET_NOTICE',
+    playload : data
+  }
+}

@@ -12,9 +12,9 @@ const url= `${path}/dbs/notice.json`;
 function Board(){
   const news = useSelector(state=>state);
   const newsData = news.newsReducer.news;
-
-  let [posts, setPosts] = useState([]);
-  let len = posts.length;
+  const notice = useSelector(state=>state);
+  const noticeData = notice.noticeReducer.notice;
+  let len = noticeData.length;
 
 
   return(
@@ -114,7 +114,7 @@ function Board(){
           </thead>
           <tbody>
             {
-              posts.slice(0).reverse().map((data, index)=>{
+              noticeData.slice(0).reverse().map((data, index)=>{
                 return(
                   <tr key={index}>
                     <td>{len - index}</td>

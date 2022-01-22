@@ -38,8 +38,17 @@ const newsReducer = (state={news:notice.news}, action)=>{
   }
 }
 
+const noticeReducer = (state={notice:notice.data}, action)=>{
+  switch (action.type){
+    case 'SET_NOTICE' :
+      return {...state, notice: action.playload}
+    default:
+      return state;
+  }
+}
+
 const reducers = combineReducers({
-  youtubeReducer, newsReducer
+  youtubeReducer, newsReducer, noticeReducer
 })
 
 export default reducers;
