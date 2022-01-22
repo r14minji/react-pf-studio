@@ -7,6 +7,7 @@ import News from './News.js';
 import Offer from './Offer.js';
 import Partners from './Partners.js';
 import Visual from './Visual.js';
+import LatestReview from './LatestReview.js';
 import Btns from './Btns.js';
 
 function Main() {
@@ -63,6 +64,7 @@ function Main() {
       <News/>
       <Offer/>
       <Festival />
+      <LatestReview />
       <Partners />
       <Btns getIndex={getIndex} />
     </div>
