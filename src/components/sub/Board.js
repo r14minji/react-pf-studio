@@ -1,28 +1,21 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import {  useState } from "react";
 import { faAngleDoubleRight, faAngleDoubleLeft, faRssSquare, faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import {faFacebookSquare, faTwitterSquare, faInstagram} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+
 const path = process.env.PUBLIC_URL;
 const url= `${path}/dbs/notice.json`;
 
 function Board(){
+  const news = useSelector(state=>state);
+  const newsData = news.newsReducer.news;
+
   let [posts, setPosts] = useState([]);
-  let [news, setNews] = useState([]);
   let len = posts.length;
 
-  useEffect(()=>{
-    axios
-    .get(url)
-    .then(json =>{
-      //console.log(json.data.data);
-      //console.log(json.data.news);
-      setPosts(json.data.data);
-      setNews(json.data.news);
-    })
-  },[])
 
   return(
     <>
@@ -82,7 +75,7 @@ function Board(){
         <div className="wrap">
 
           {
-            news.map((data, index)=>{
+            newsData.map((data, index)=>{
               return(
               <article key={index}>
                 <div className="content">

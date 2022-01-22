@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
+import notice from '../dbs/notice.json';
 
 //초기상태로 들어갈 값
 // const initMember = {
@@ -28,11 +29,17 @@ const youtubeReducer = (state={youtube:[]}, action) => {
   }
 }
 
-
-
+const newsReducer = (state={news:notice.news}, action)=>{
+  switch (action.type){
+    case 'SET_NEWS' :
+      return {...state, news: action.playload}
+    default :
+    return state;
+  }
+}
 
 const reducers = combineReducers({
-  youtubeReducer
+  youtubeReducer, newsReducer
 })
 
 export default reducers;

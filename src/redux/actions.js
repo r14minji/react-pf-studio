@@ -11,3 +11,10 @@ export const setYoutube = data =>{
     playload: data
   }
 }
+
+export const setNews = data =>{
+  return{
+    type: 'SET_NEWS',
+    playload : data
+  }
+}

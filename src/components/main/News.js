@@ -1,48 +1,41 @@
+import { useSelector } from "react-redux";
+
 const path = process.env.PUBLIC_URL;
 
 function News(){
+  const news = useSelector(state => state.newsReducer.news);
+  //console.log(news.newsReducer.news)
+
+
   return(
     <section className="content newsM myScroll">
       <div className="inner"> 
       <div className="wrap">
+        {/* article1 - txt */}
         <article>
           <h1>LATEST<br/><strong>NEWS</strong></h1>
         </article>
-
-        <article >
-          <div className="content">
-            <strong>01/06</strong>
-            <h2>The Republicans</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet id placeat eius omnis vero nisi reiciendis molestias quaerat explicabo impedit.</p>
-            <span>Read More</span>
-          </div>
-          <div className="pic">
-            <img src={path+ "/img/news1.jpg"} />
-          </div>
-        </article>
-        <article >
-          <div className="content">
-            <strong>01/06</strong>
-            <h2>The Republicans</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet id placeat eius omnis vero nisi reiciendis molestias quaerat explicabo impedit.</p>
-            <span>Read More</span>
-          </div>
-          <div className="pic">
-            <img src={path+ "/img/news2.jpg"} />
-          </div>
-        </article>
-        <article >
-          <div className="content">
-            <strong>01/06</strong>
-            <h2>The Republicans</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet id placeat eius omnis vero nisi reiciendis molestias quaerat explicabo impedit.</p>
-            <span>Read More</span>
-          </div>
-          <div className="pic">
-            <img src={path+ "/img/news3.jpg"} />
-          </div>
-        </article>
-
+        
+        {/* article2 - board 데이터 redux */}
+        {
+          news.map((data, index)=>{
+            if(index < 3){
+              return(
+                <article key={index}>
+                  <div className="content">
+                    <strong>{data.date}</strong>
+                    <h2>{data.title}</h2>
+                    <p>{data.contents}</p>
+                    <span>Read More</span>
+                  </div>
+                  <div className="pic">
+                    <img src={path + data.url} />
+                  </div>
+                </article>
+              )
+            }
+          })
+        }
       </div>
       </div>
     </section>
