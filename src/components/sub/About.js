@@ -1,30 +1,22 @@
-import axios from "axios";
+import { useSelector } from "react-redux";
 import { useEffect, useState,useRef} from "react";
-
 import {  faFacebookF, faInstagram, faTwitter  } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
 const html = document.querySelector("html");
 const path = process.env.PUBLIC_URL;
-const url = `${path}/dbs/about.json`;
 
 
 function About(){
-  let [members, setMembers] = useState([]);
-  let [storys, setStorys] = useState([]);
+  const member = useSelector(state=>state);
+  const memberData = member.memberReducer.member;
+  const story = useSelector(state=>state);
+  const storyData = story.storyReducer.story;
   const wrap = useRef(null);
-const vid = useRef(null);
+  const vid = useRef(null);
+
 
   useEffect(()=>{
-    axios
-    .get(url)
-    .then(json=>{
-      //console.log(json.data.member);
-      setMembers(json.data.member);
-      setStorys(json.data.story);
-    })
-
     html.style.backgroundColor = "#E9B5B5";
     return()=>{
       html.style.backgroundColor = "#e6e2dd";
@@ -71,7 +63,7 @@ const vid = useRef(null);
             <aside>LOADING...</aside>
               <div className="wrap" ref={wrap}>
                 {
-                  storys.map((story, index)=>{
+                  storyData.map((story, index)=>{
                     return(
                       <div key={index} className="vid mask" ref={vid}>
                         <video src= {path + story.src} autoPlay muted loop ></video>
@@ -99,7 +91,7 @@ const vid = useRef(null);
         <h1>TEAM</h1>
         <div className="wrap">
           {
-            members.map((member, index)=>{
+            memberData.map((member, index)=>{
               return(
                 <article key={index}>
                   <div className="member">
@@ -126,7 +118,6 @@ const vid = useRef(null);
               )
             })
           }
-
         </div>
       </div>
     </section>

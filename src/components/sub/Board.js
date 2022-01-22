@@ -1,13 +1,11 @@
 import { useSelector } from "react-redux";
-import {  useState } from "react";
 import { faAngleDoubleRight, faAngleDoubleLeft, faRssSquare, faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import {faFacebookSquare, faTwitterSquare, faInstagram} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
 const path = process.env.PUBLIC_URL;
-const url= `${path}/dbs/notice.json`;
+
 
 function Board(){
   const news = useSelector(state=>state);
@@ -15,7 +13,6 @@ function Board(){
   const notice = useSelector(state=>state);
   const noticeData = notice.noticeReducer.notice;
   let len = noticeData.length;
-
 
   return(
     <>
