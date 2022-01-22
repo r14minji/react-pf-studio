@@ -1414,6 +1414,11 @@ fieldset {
             -webkit-mask-size: 7100% 100%;
             animation: mask-play 1.4s steps(70) forwards; }
 
+@keyframes mask-play {
+  0% {
+    -webkit-mask-position: 0% 0%; }
+  100% {
+    -webkit-mask-position: 100% 0%; } }
 /* team */
 .team .inner {
   width: 1180px;

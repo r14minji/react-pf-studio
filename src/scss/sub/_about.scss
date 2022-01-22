@@ -196,6 +196,15 @@
   }
 }
 
+@keyframes mask-play {
+	0% {
+		-webkit-mask-position: 0% 0%;
+	}
+	100% {
+		-webkit-mask-position: 100% 0%;
+	}
+}
+
 /* team */
 .team{
   .inner{

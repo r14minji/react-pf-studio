@@ -12,25 +12,49 @@ function About(){
   const memberData = member.memberReducer.member;
   const story = useSelector(state=>state);
   const storyData = story.storyReducer.story;
+  const [index, setIndex] = useState(0);
+  const btnMenus = useRef(null);
   const wrap = useRef(null);
-  const vid = useRef(null);
+  const storyBtns = [
+    {title: 'What makes a great Films?', contents: "It's all about the experience. People love films that are fun and simple to feel. We make those films"},
+    {title:'The way we work', contents: 'Our creative approach involves rigorous design and usablity testing to create superior films for everyone'},
+    {title: 'Meet the makers', contents: 'Our team combine form and function to create visually appealing, easy to watch films people want to use.'}
+  ]
 
 
   useEffect(()=>{
     html.style.backgroundColor = "#E9B5B5";
+
+    const btns = btnMenus.current.children;
+    const vids = wrap.current.children;
+    btns[0].classList.add("on");
+    vids[0].classList.add("on");
+
+    for(let i=0; i<btns.length; i++){
+      btns[i].classList.remove("on");
+      if(vids[i].classList.contains("on")){
+        vids[i].classList.add("mask");
+      }
+    }
+    btns[index].classList.add("on");
+    vids[index].classList.add("lower");
+
+    setTimeout(()=>{
+      for(let i=0; i<vids.length; i++){
+        if(vids[i].classList.contains("on")){
+          vids[i].classList.remove("on");
+          vids[i].classList.remove("mask");
+        }
+      }
+
+      vids[index].classList.remove("lower");
+      vids[index].classList.add("on");
+    },1400)
+
     return()=>{
       html.style.backgroundColor = "#e6e2dd";
     }
-  },[])
-
-  const createMask = e=>{
-    console.log(e.currentTarget)
-    const target = e.currentTarget;
-    target.classList.add("on");
-    vid.current.classList.add("on");
-    target.classList.add("mask");
-  }
-
+  },[index])
 
   return(
     <>
@@ -38,19 +62,18 @@ function About(){
     <section className="about">
       <div className="inner">
         <h1>&#8544;. ABOUT</h1>
-        <ul className="btnMenu">
-          <li className="on" onClick={createMask}>
-            <p>What makes a great Films?</p>
-            <span>It's all about the experience. People love films that are fun and simple to feel. We make those films</span>
-            </li>
-            <li onClick={()=>{ }}>
-            <p>The way we work</p>
-            <span>Our creative approach involves rigorous design and usablity testing to create superior films for everyone</span>
-            </li>
-            <li onClick={()=>{ }}>
-            <p>Meet the makers</p>
-            <span>Our team combine form and function to create visually appealing, easy to watch films people want to use.</span>
-            </li>
+        <ul className="btnMenu" ref={btnMenus}>
+            {
+              storyBtns.map((btn, index)=>{
+                return(
+                <li key={index} onClick={()=>setIndex(index)}>
+                  <p>{btn.title}</p>
+                  <span>{btn.contents}</span>
+                </li>
+                )
+              })
+            }
+
         </ul>
         <div className="story">
           <div className="txt">
@@ -65,7 +88,7 @@ function About(){
                 {
                   storyData.map((story, index)=>{
                     return(
-                      <div key={index} className="vid mask" ref={vid}>
+                      <div key={index} className="vid mask">
                         <video src= {path + story.src} autoPlay muted loop ></video>
                         <div className="slogan">
                           <h3>
