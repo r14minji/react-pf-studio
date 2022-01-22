@@ -1,6 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
 
-
 function Note() {
   const date = useRef(null);
   const title = useRef(null);
@@ -19,15 +18,11 @@ function Note() {
     if(data) {
       return JSON.parse(data);
     }else{
-      return [
-        {date: "2022-01-10", title: "Roman Holiday / 1953", director: "William Wyler", genre:"Romantic Comedy, Drama", comments: "With Roman Holiday, Dalton Trumbo urges us to commit to life's simple pleasures, whether an afternoon glass of champagne or dancing to a live band beneath the stars. An enduring populist truth emerges: that money and status alone cannot create meaning and happiness."},
-        {date: "2022-01-18", title: "Breakfast at Tiffany's / 1961", director: "Bleak Edwards", genre:"Comedy, Romance", comments: "Breakfast at Tiffany's – the 1961 film based on Truman Capote's 1958 novella – has become more famous for its visual shorthands, its signifiers of New York chic and fashionable femininity, than its actual story or characters."},
-        {date: "2022-01-20", title: "The Shawshank Redemption / 1994", director: "Frank Darabont", genre:"Drama, Crime", comments: "The Shawshank Redemption is powerful, as the core spirit of the of the story lies in the fact that it's only during the darkest times of one's life that one realizes the importance of thinking out of the box. And it also teaches some very important life lessons."},
-      ];
+      return [];
     }
   }
 
-  const [posts, setPosts] = useState(getLocalItems)
+  const [notes, setNotes] = useState(getLocalItems)
 
   /*
   const [posts, setPosts] = useState([
@@ -36,12 +31,12 @@ function Note() {
   */
 
 
-  const createPost = () =>{
+  const createNote = () =>{
     if(!date.current.value || !title.current.value || !director.current.value || !genre.current.value || !comments.current.value){
       alert('날짜, 제목, 감독, 장르, 리뷰 내용을 모두 입력하세요.')
       return;
     }
-    setPosts([
+    setNotes([
       {
         date: date.current.value,
         title: title.current.value,
@@ -49,7 +44,7 @@ function Note() {
         genre: genre.current.value,
         comments: comments.current.value
       }
-      ,...posts
+      ,...notes
     ])
 
     date.current.value = '';
@@ -59,26 +54,26 @@ function Note() {
     comments.current.value = '';
   }
 
-  const deletePost = index=>{
-    setPosts(posts.filter(
-      (_ ,postIndex) => postIndex !== index )
+  const deleteNote = index=>{
+    setNotes(notes.filter(
+      (_ ,noteIndex) => noteIndex !== index )
       )
   }
 
   const enableUpdate = index=>{
-    setPosts(
-      posts.map((post, postIndex)=>{
-        if(postIndex === index) post.enableUpdate = true;
-        return post;
+    setNotes(
+      notes.map((note, noteIndex)=>{
+        if(noteIndex === index) note.enableUpdate = true;
+        return note;
       })
     )
   }
 
   const disableUpdate = index =>{
-    setPosts(
-      posts.map((post, postIndex)=>{
-        if(postIndex === index) post.enableUpdate = false;
-        return post;
+    setNotes(
+      notes.map((note, noteIndex)=>{
+        if(noteIndex === index) note.enableUpdate = false;
+        return note;
       })
     )
   }
@@ -88,24 +83,24 @@ function Note() {
       alert("수정할 제목과 본문을 모두 입력하세요");
       return;
     }
-    setPosts(
-      posts.map((post, postIndex)=>{
-        if(postIndex === index){
-          post.date = updateDate.current.value;
-          post.title = updateTitle.current.value;
-          post.director = updateDirector.current.value;
-          post.genre = updateGenre.current.value;
-          post.comments = updateComments.current.value;
-          post.enableUpdate = false;
+    setNotes(
+      notes.map((note, noteIndex)=>{
+        if(noteIndex === index){
+          note.date = updateDate.current.value;
+          note.title = updateTitle.current.value;
+          note.director = updateDirector.current.value;
+          note.genre = updateGenre.current.value;
+          note.comments = updateComments.current.value;
+          note.enableUpdate = false;
         }
-        return post;
+        return note;
       })
     )
   }
 
   useEffect(()=>{
-    localStorage.setItem('movieNotes', JSON.stringify(posts))
-  },[posts])
+    localStorage.setItem('movieNotes', JSON.stringify(notes))
+  },[notes])
 
 
   return (
@@ -145,28 +140,28 @@ function Note() {
               genre.current.value = '';
               comments.current.value = '';
             }}>Delete</button><br/>
-            <button onClick={createPost}>Save</button>
+            <button onClick={createNote}>Save</button>
           </div>
         </section>
 
         {/* showBox */}
         <section className="showBox">
           {
-            posts.map((post, index)=>{
+            notes.map((note, index)=>{
               return(
                 <article key={index}>
                   {
-                    post.enableUpdate
+                    note.enableUpdate
                     ?
                     //수정모드
                     <>
                       <div className="post">
                         <h2>Review</h2>
-                        <input type="text" defaultValue={post.date} ref={updateDate} /><br/>
-                        <input type="text" defaultValue={post.title} ref={updateTitle} /> <br/>
-                        <input type="text" defaultValue={post.director} ref={updateDirector} /><br/>
-                        <input type="text" defaultValue={post.genre} ref={updateGenre} />
-                        <textarea defaultValue={post.comments} ref={updateComments}></textarea>
+                        <input type="text" defaultValue={note.date} ref={updateDate} /><br/>
+                        <input type="text" defaultValue={note.title} ref={updateTitle} /> <br/>
+                        <input type="text" defaultValue={note.director} ref={updateDirector} /><br/>
+                        <input type="text" defaultValue={note.genre} ref={updateGenre} />
+                        <textarea defaultValue={note.comments} ref={updateComments}></textarea>
                       </div>
 
                       <ul className="btns">
@@ -180,16 +175,16 @@ function Note() {
                       <div className="post">
                         <h2>Review</h2>
                         <ul className='written'>
-                          <li><strong>Date</strong>{post.date}</li>
-                          <li><strong>Title</strong>{post.title}</li>
-                          <li><strong>Director</strong>{post.director}</li>
-                          <li><strong>Genre</strong>{post.genre}</li>
-                          <li><strong>Comments</strong>{post.comments}</li>
+                          <li><strong>Date</strong>{note.date}</li>
+                          <li><strong>Title</strong>{note.title}</li>
+                          <li><strong>Director</strong>{note.director}</li>
+                          <li><strong>Genre</strong>{note.genre}</li>
+                          <li><strong>Comments</strong>{note.comments}</li>
                         </ul>
                       </div>
 
                       <ul className="btns">
-                        <li onClick={()=>deletePost(index)}>Delete</li>
+                        <li onClick={()=>deleteNote(index)}>Delete</li>
                         <li onClick={()=>enableUpdate(index)} >Edit</li>
                       </ul>
                     </>

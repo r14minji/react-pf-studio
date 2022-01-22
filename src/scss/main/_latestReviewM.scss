@@ -1,0 +1,55 @@
+.latestReviewM{
+  .inner{
+    h1{
+      font: 700 28px/1 'Oswald'; text-align: center;
+      margin-bottom: 20px;
+    }
+    .post{
+      width: 300px; padding: 10px 30px 20px; margin: 0 auto;
+      display: flex; flex-wrap: wrap;
+      
+
+      h2{
+        font: 600 38px/1.1 'Nanum Pen Script';
+        padding: 10px 0;
+      }
+      /*수정모드*/
+      input{
+        width: 100%; 
+        &:nth-of-type(3), &:nth-of-type(4){ width: 50%;}
+        height: 40px; padding: 10px 10px;
+        background: $lightbrown; border:none;
+        border-top: 1px solid #777;
+      }
+      textarea{
+        width: 100%; height: 160px; padding: 5px 10px; resize: none;
+        background: $lightbrown; border:none;
+        border-top: 1px solid #777;
+        border-bottom: 1px solid #777;
+      }
+      /*출력모드*/
+      .written{
+        display: flex; flex-wrap: wrap;
+        li{
+          width: 100%; 
+          &:nth-of-type(3), &:nth-of-type(4){ 
+            width: 50%; 
+            strong{display: block; margin: 5px 10px 5px 0px; }
+          }
+          &:nth-of-type(5) strong{display: block; margin: 5px 10px 5px 0px;}
+          
+
+          font: 18px/1 'Nanum Pen Script';
+          padding: 10px 10px;
+          background: $lightbrown; border:none;
+          border-top: 1px solid #777;
+          
+          strong{
+            font: 12px/1 'arial'; margin-right: 10px; color: #777;
+          }
+        }
+      }
+    }
+
+  }
+}
