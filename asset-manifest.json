@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/react-pf-studio/static/css/main.5e684383.css",
-    "main.js": "/react-pf-studio/static/js/main.69f38027.js",
+    "main.css": "/react-pf-studio/static/css/main.0b2e3a0b.css",
+    "main.js": "/react-pf-studio/static/js/main.9dee199b.js",
     "static/media/mask4.png": "/react-pf-studio/static/media/mask4.9c5854a2dc8d84720d67.png",
     "static/media/mask3.png": "/react-pf-studio/static/media/mask3.b1e0d027bd2274b2bbb3.png",
     "static/media/mask2.png": "/react-pf-studio/static/media/mask2.a08ba9820e063c42eafd.png",
     "static/media/youtube1.png": "/react-pf-studio/static/media/youtube1.943d6b9678c0a6b8075c.png",
     "static/media/paper-texture-narrow.png": "/react-pf-studio/static/media/paper-texture-narrow.a439dbb3416c097db327.png",
-    "static/media/vidLIst_bg.jpg": "/react-pf-studio/static/media/vidLIst_bg.439b466e33b0af9c9da7.jpg",
     "static/media/youtube2.png": "/react-pf-studio/static/media/youtube2.e306d578115c9ec3396f.png",
     "static/media/Film2.jpg": "/react-pf-studio/static/media/Film2.b0a3cb803b23f56d4c96.jpg",
-    "static/media/youtube5.png": "/react-pf-studio/static/media/youtube5.52bc589e4361c552d3e5.png",
+    "static/media/youtube3.png": "/react-pf-studio/static/media/youtube3.52bc589e4361c552d3e5.png",
     "static/media/mask1.png": "/react-pf-studio/static/media/mask1.89b7cd94dc9ad6cd1ebf.png",
     "index.html": "/react-pf-studio/index.html",
-    "main.5e684383.css.map": "/react-pf-studio/static/css/main.5e684383.css.map",
-    "main.69f38027.js.map": "/react-pf-studio/static/js/main.69f38027.js.map"
+    "main.0b2e3a0b.css.map": "/react-pf-studio/static/css/main.0b2e3a0b.css.map",
+    "main.9dee199b.js.map": "/react-pf-studio/static/js/main.9dee199b.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e684383.css",
-    "static/js/main.69f38027.js"
+    "static/css/main.0b2e3a0b.css",
+    "static/js/main.9dee199b.js"
   ]
 }
