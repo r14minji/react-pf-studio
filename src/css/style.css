@@ -2055,36 +2055,6 @@ fieldset {
   /* tab */ }
   .youtube .inner > .title_wrap {
     width: 100%; }
-    .youtube .inner > .title_wrap > ul {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px; }
-      .youtube .inner > .title_wrap > ul > li {
-        width: 14%;
-        position: relative; }
-        .youtube .inner > .title_wrap > ul > li strong {
-          display: block;
-          font: 600 14px/1 'Oswald';
-          color: #777;
-          padding: 10px 0px;
-          text-transform: uppercase;
-          border-bottom: 1px solid #000; }
-        .youtube .inner > .title_wrap > ul > li > p {
-          font: 400 12px/1 'arial';
-          word-break: break-all;
-          padding: 10px 0;
-          color: #777; }
-          .youtube .inner > .title_wrap > ul > li > p::after {
-            content: "";
-            display: block;
-            position: absolute;
-            bottom: -5px;
-            left: 0px;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #777; }
     .youtube .inner > .title_wrap h1 {
       font: 400 70px/1 'Oswald';
       padding: 10px 20px;
@@ -2097,7 +2067,7 @@ fieldset {
     .youtube .inner section #tab {
       width: 100%;
       position: relative;
-      padding-top: 180px; }
+      padding-top: 165px; }
       .youtube .inner section #tab dt {
         width: 50%;
         margin-top: 10px;
@@ -2112,8 +2082,7 @@ fieldset {
           width: 100%;
           padding: 0px 20px;
           position: relative;
-          cursor: pointer;
-          border: 10px dashed #c9c3b7; }
+          cursor: pointer; }
           .youtube .inner section #tab dt .btn_tab strong {
             display: block;
             font: 700 20px/1 'Oswald';
@@ -2126,14 +2095,15 @@ fieldset {
             font-size: 14px;
             padding: 5px 30px; }
         .youtube .inner section #tab dt.on span {
-          background: #c9c3b7; }
+          background: rgba(0, 0, 0, 0.1); }
           .youtube .inner section #tab dt.on span p, .youtube .inner section #tab dt.on span strong {
             color: #C1554E;
             border-color: #C1554E; }
       .youtube .inner section #tab dd {
         width: 100%;
         margin-bottom: 10px;
-        display: none; }
+        display: none;
+        border-top: 2px solid #000; }
         .youtube .inner section #tab dd a {
           font-size: 50px;
           line-height: 200px; }

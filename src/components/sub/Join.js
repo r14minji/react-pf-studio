@@ -89,206 +89,207 @@ function Join(){
   },[err]);
 
   return (
+    <main className="content join">
+      <div className="inner">
+        <h1>join</h1>
+        {success ? 
+        <>
+        <div className="success">Congratulations on becoming a member!</div> 
+        <span className="home"><NavLink to='/'>go home</NavLink></span>
+        </>
+        : 
+        null 
+        }
 
-    <section className="content join">
-    <div className="inner">
-      <h1>join</h1>
-      {success ? 
-      <>
-      <div className="success">Congratulations on becoming a member!</div> 
-      <span className="home"><NavLink to='/'>go home</NavLink></span>
-      </>
-      : 
-      null 
-      }
+        {success ? 
+        null 
+        : 
+        <form onSubmit={handleSubmit}>
+          <fieldset>
+            <legend className='hidden'>회원가입 입력 폼 양식</legend>
+            
+            <table>
+              <caption className='hidden'>회원가입 입력</caption>
+              <tbody>
+                {/* userid */}
+                <tr>
+                  <th scope='row'>
+                    <label htmlFor="userid">USER ID</label>
+                  </th>
+                  <td>
+                    <input 
+                      type="text" 
+                      id='userid'
+                      name='userid'
+                      placeholder='Enter your ID'                    
+                      onChange={handleChange}
+                    />
+                    <span className='err'>{err.userid}</span>
+                  </td>
+                </tr> 
 
-      {success ? 
-      null 
-      : 
-      <form onSubmit={handleSubmit}>
-        <fieldset>
-          <legend className='hidden'>회원가입 입력 폼 양식</legend>
-          
-          <table>
-            <caption className='hidden'>회원가입 입력</caption>
-            <tbody>
-              {/* userid */}
-              <tr>
-                <th scope='row'>
-                  <label htmlFor="userid">USER ID</label>
-                </th>
-                <td>
-                  <input 
-                    type="text" 
-                    id='userid'
-                    name='userid'
-                    placeholder='Enter your ID'                    
-                    onChange={handleChange}
-                  />
-                  <span className='err'>{err.userid}</span>
-                </td>
-              </tr> 
+                {/* password */}
+                <tr>
+                  <th scope='row'>
+                    <label htmlFor="pwd1">PASSWORD</label>
+                  </th>
+                  <td>
+                    <input 
+                      type="password" 
+                      id='pwd1'
+                      name='pwd1'
+                      placeholder='Enter your password'                  
+                      onChange={handleChange}
+                    />
+                    <span className='err'>{err.pwd1}</span>
+                  </td>
+                </tr>
 
-              {/* password */}
-              <tr>
-                <th scope='row'>
-                  <label htmlFor="pwd1">PASSWORD</label>
-                </th>
-                <td>
-                  <input 
-                    type="password" 
-                    id='pwd1'
-                    name='pwd1'
-                    placeholder='Enter your password'                  
-                    onChange={handleChange}
-                  />
-                  <span className='err'>{err.pwd1}</span>
-                </td>
-              </tr>
+                {/* re password */}
+                <tr>
+                  <th scope='row'>
+                    <label htmlFor="pwd2">RE-PASSWORD</label>
+                  </th>
+                  <td>
+                    <input 
+                      type="password" 
+                      id='pwd2'
+                      name='pwd2'
+                      placeholder='Re-password'                  
+                      onChange={handleChange}
+                    />
+                    <span className='err'>{err.pwd2}</span>
+                  </td>
+                </tr>
 
-              {/* re password */}
-              <tr>
-                <th scope='row'>
-                  <label htmlFor="pwd2">RE-PASSWORD</label>
-                </th>
-                <td>
-                  <input 
-                    type="password" 
-                    id='pwd2'
-                    name='pwd2'
-                    placeholder='Re-password'                  
-                    onChange={handleChange}
-                  />
-                  <span className='err'>{err.pwd2}</span>
-                </td>
-              </tr>
+                {/* email */}
+                <tr>
+                  <th scope='row'>
+                    <label htmlFor="email">E-MAIL</label>
+                  </th>
+                  <td>
+                    <input 
+                      type="text" 
+                      id='email'
+                      name='email'
+                      placeholder='Enter your  Email address'         
+                      onChange={handleChange}
+                    />
+                    <span className='err'>{err.email}</span>
+                  </td>
+                </tr>
 
-              {/* email */}
-              <tr>
-                <th scope='row'>
-                  <label htmlFor="email">E-MAIL</label>
-                </th>
-                <td>
-                  <input 
-                    type="text" 
-                    id='email'
-                    name='email'
-                    placeholder='Enter your  Email address'         
-                    onChange={handleChange}
-                  />
-                  <span className='err'>{err.email}</span>
-                </td>
-              </tr>
+                {/* gender */}
+                <tr>
+                  <th scope='row'>
+                    GENDER
+                  </th>
+                  <td>
+                    <input 
+                      type="radio" 
+                      id='male' 
+                      name='gender' 
+                      onChange = {handleCheck}
+                    />
+                    <label htmlFor='male'>Male</label>
+                    
+                    <input 
+                      type="radio" 
+                      id='female' 
+                      name='gender' 
+                      onChange = {handleCheck} 
+                    />
+                    <label htmlFor='femal'>Female</label>
+                    
+                    <span className='err'>{err.gender}</span>
+                  </td>
+                </tr>
 
-              {/* gender */}
-              <tr>
-                <th scope='row'>
-                  GENDER
-                </th>
-                <td>
-                  <input 
-                    type="radio" 
-                    id='male' 
-                    name='gender' 
-                    onChange = {handleCheck}
-                  />
-                  <label htmlFor='male'>Male</label>
-                  
-                  <input 
-                    type="radio" 
-                    id='female' 
-                    name='gender' 
-                    onChange = {handleCheck} 
-                  />
-                  <label htmlFor='femal'>Female</label>
-                  
-                  <span className='err'>{err.gender}</span>
-                </td>
-              </tr>
+                {/* interests */}
+                <tr>
+                  <th scope='row'>
+                    INTERESTS
+                  </th>
+                  <td>
+                    <input 
+                      type="checkbox" 
+                      id='table' 
+                      name='interests' 
+                      onChange = {handleCheck}
+                    />
+                    <label htmlFor='table'>Table</label>
+                    
+                    <input 
+                      type="checkbox" 
+                      id='sofa' 
+                      name='interests' 
+                      onChange = {handleCheck} 
+                    />
+                    <label htmlFor='sofa'>Sofa</label>
+                    
+                    <input 
+                      type="checkbox" 
+                      id='chair' 
+                      name='interests' 
+                      onChange = {handleCheck} 
+                    />
+                    <label htmlFor='chair'>Chair</label>
+                    
+                    <span className='err'>{err.interests}</span>
+                  </td>
+                </tr>
 
-              {/* interests */}
-              <tr>
-                <th scope='row'>
-                  INTERESTS
-                </th>
-                <td>
-                  <input 
-                    type="checkbox" 
-                    id='table' 
-                    name='interests' 
-                    onChange = {handleCheck}
-                  />
-                  <label htmlFor='table'>Table</label>
-                  
-                  <input 
-                    type="checkbox" 
-                    id='sofa' 
-                    name='interests' 
-                    onChange = {handleCheck} 
-                  />
-                  <label htmlFor='sofa'>Sofa</label>
-                  
-                  <input 
-                    type="checkbox" 
-                    id='chair' 
-                    name='interests' 
-                    onChange = {handleCheck} 
-                  />
-                  <label htmlFor='chair'>Chair</label>
-                  
-                  <span className='err'>{err.interests}</span>
-                </td>
-              </tr>
+                {/* sns */}
+                <tr>
+                  <th scope='row'>
+                  <label htmlFor='sns'>SNS</label>
+                  </th>
+                  <td>                    
+                    <select name="sns" id="sns" onChange={handleSelect}>
+                      <option value="">Select</option>
+                      <option value="facebook">Facebook</option>
+                      <option value="instagram">Instagram</option>
+                      <option value="twitter">Twitter</option>
+                      <option value="tiktalk">Tiktalk</option>
+                    </select>
+                    <span className='err'>{err.sns}</span>
+                  </td>
+                </tr>
 
-              {/* sns */}
-              <tr>
-                <th scope='row'>
-                <label htmlFor='sns'>SNS</label>
-                </th>
-                <td>                    
-                  <select name="sns" id="sns" onChange={handleSelect}>
-                    <option value="">Select</option>
-                    <option value="facebook">Facebook</option>
-                    <option value="instagram">Instagram</option>
-                    <option value="twitter">Twitter</option>
-                    <option value="tiktalk">Tiktalk</option>
-                  </select>
-                  <span className='err'>{err.sns}</span>
-                </td>
-              </tr>
+                {/* comments */}
+                <tr>
+                  <th scope='row'>
+                    <label htmlFor="comments">COMMENTS</label>
+                  </th>
+                  <td>
+                    <textarea
+                      col='30'
+                      row='10'
+                      id='comments'
+                      name='comments'
+                      placeholder='Send me your opinion'                  
+                      onChange={handleChange}
+                    ></textarea>
+                    <span className='err'>{err.comments}</span>
+                  </td>
+                </tr>
 
-              {/* comments */}
-              <tr>
-                <th scope='row'>
-                  <label htmlFor="comments">COMMENTS</label>
-                </th>
-                <td>
-                  <textarea
-                    col='30'
-                    row='10'
-                    id='comments'
-                    name='comments'
-                    placeholder='Send me your opinion'                  
-                    onChange={handleChange}
-                  ></textarea>
-                  <span className='err'>{err.comments}</span>
-                </td>
-              </tr>
+                {/* btn set */}
+                <tr>
+                  <th colSpan='2' className="btnSet">
+                    <input type="reset" value='CANCEL' />
+                    <input type="submit" value='SEND' />
+                  </th>
+                </tr> 
+              </tbody>       
+            </table>
+          </fieldset>
+        </form>
+        }
 
-              {/* btn set */}
-              <tr>
-                <th colSpan='2' className="btnSet">
-                  <input type="reset" value='CANCEL' />
-                  <input type="submit" value='SEND' />
-                </th>
-              </tr> 
-            </tbody>       
-          </table>
-        </fieldset>
-      </form>
-      }
-    </div>
-  </section>
+
+      </div>
+    </main>
   )
 }
 

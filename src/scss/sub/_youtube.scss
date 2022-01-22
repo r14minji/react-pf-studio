@@ -5,29 +5,6 @@
     >.title_wrap{
       width: 100%;
 
-      >ul{
-        display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; 
-        >li{
-          width: 14%; position: relative;
-          strong{
-            display: block;  font: 600 14px/1 'Oswald'; color: #777;
-            padding: 10px 0px; text-transform: uppercase;
-            border-bottom: 1px solid #000; 
-          }
-          >p{
-            font: 400 12px/1 'arial'; word-break: break-all;
-            padding: 10px 0; color: #777;
-
-            &::after{
-              content: ""; display: block;
-              position: absolute; bottom: -5px; left: 0px; 
-              width: 8px; height: 8px; border-radius: 50%;
-              background: #777;
-            }
-          }
-        }
-      }
-
       h1{
         font: 400 70px/1 'Oswald';
         padding: 10px 20px; text-align: right;
@@ -41,7 +18,7 @@
       width: 100%;
       #tab {
         width: 100%;
-        position: relative; padding-top: 180px;
+        position: relative; padding-top: 165px;
       
         dt {
           width: 50%; 
@@ -57,7 +34,6 @@
             padding: 0px 20px;
             position: relative;
             cursor: pointer; 
-            border: 10px dashed  $lightbrown;
 
             strong{
               display: block;
@@ -76,7 +52,7 @@
           }
 
           &.on span {
-            background: $lightbrown;
+            background: rgba(0,0,0,0.1);
             p, strong{ color: $pink; border-color: $pink;}
           }
         }
@@ -84,6 +60,7 @@
         dd{
           width: 100%; margin-bottom: 10px;
           display: none;
+          border-top: 2px solid #000;
       
           a{
             font-size: 50px; line-height: 200px;
