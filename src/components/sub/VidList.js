@@ -4,8 +4,6 @@ import { faWindowClose } from "@fortawesome/free-regular-svg-icons";
 import { faStar  } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { useSelector, useDispatch } from "react-redux";
-import { setMembers } from '../../redux/actions';
 
 
 const body = document.querySelector("body");
@@ -22,14 +20,6 @@ function VidList(){
   let [index, setIndex] = useState(0);
 
 
-  const members = useSelector(state => state.memberReducer.members);
-  const dispatch = useDispatch();
-  const newMembers = [
-    {name:'Tom', position:'CEO'},
-    {name:'Emma', position:'Designer'},
-    {name:'Michael', position:'Developer'}
-  ]
-
 
 
   useEffect(()=>{
@@ -44,10 +34,6 @@ function VidList(){
 
   return(
     <main className="content vidList">
-
-
-      
-
       <div className="inner">
         {/* title */}
         {/* <figure>
@@ -156,11 +142,6 @@ function VidList(){
             })
           }
         </section>
-
-              {/* 삭제 예정 */}
-      <button onClick={()=>{
-        dispatch(setMembers(newMembers))
-      }}>클릭하세요</button>
 
         {isPop ? <Pop  /> : null}
       </div>

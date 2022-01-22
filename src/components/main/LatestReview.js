@@ -1,7 +1,7 @@
 import {useSelector} from 'react-redux';
 
 function LatestReview(){
-  const members = useSelector(state => state.memberReducer.members);
+  //const members = useSelector(state => state.memberReducer.members);
   //console.log(members)
 
   return(
@@ -9,7 +9,7 @@ function LatestReview(){
       <div className="inner"> 
         <h1>Movie Review</h1>
 
-        <h2>Movie Review</h2>
+        {/* <h2>Movie Review</h2>
         {
           members.map((member, index)=>{
             return(
@@ -19,7 +19,7 @@ function LatestReview(){
               </article>
             )
           })
-        }
+        } */}
 
   
 

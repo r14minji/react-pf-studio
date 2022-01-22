@@ -1,27 +1,38 @@
 import { combineReducers } from "redux";
 
 //초기상태로 들어갈 값
-const initMember = {
-  members: [
-    {name:'David', position:'CEO'},
-    {name:'Emma', position:'Designer'},
-    {name:'Michael', position:'Developer'}
-  ]
-}
+// const initMember = {
+//   members: [
+//     {name:'David', position:'CEO'},
+//     {name:'Emma', position:'Designer'},
+//     {name:'Michael', position:'Developer'}
+//   ]
+// }
 
+// const memberReducer=(state=initMember, action)=>{
+//   switch (action.type){
+//     case 'SET_MEMBERS' :
+//       return {...state, members: action.payload}
 
-const memberReducer=(state=initMember, action)=>{
+//     default:
+//       return state;
+//   }
+// }
+
+const youtubeReducer = (state={youtube:[]}, action) => {
   switch (action.type){
-    case 'SET_MEMBERS' :
-      return {...state, members: action.payload}
-
+    case 'SET_YOUTUBE' :
+      return {...state, youtube: action.playload}
     default:
       return state;
   }
 }
 
+
+
+
 const reducers = combineReducers({
-  memberReducer
+  youtubeReducer
 })
 
 export default reducers;
