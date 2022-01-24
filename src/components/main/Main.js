@@ -15,7 +15,7 @@ function Main() {
   const main = useRef(null);
   let pos = useRef([]);
   const [index, setIndex] = useState(0);
-  let [isPop, setIsPop] = useState(true);
+  let [isPop, setIsPop] = useState(false);
 
   const getIsPop = val => {
     setIsPop(val);
@@ -54,6 +54,16 @@ function Main() {
       value: pos.current[index],
       duration: 500,
     })
+
+    const isCookie = document.cookie.indexOf("welcomePop=done");
+    //console.log(document.cookie);
+    if(isCookie == -1){
+      //console.log("쿠키 없음");
+      getIsPop(true);
+    } else {
+      //console.log("쿠키 있음");
+      getIsPop(false);
+    }
 
     return()=>{
       window.removeEventListener('resize', handleResize);
