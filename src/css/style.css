@@ -1186,6 +1186,43 @@ fieldset {
       height: 20px;
       background: #555; }
 
+#welcomePop {
+  width: 360px;
+  background: #333;
+  padding: 40px;
+  color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  #welcomePop .content {
+    width: 100%;
+    min-height: 320px; }
+    #welcomePop .content h1 {
+      font: 600 30px/1 'Oswald';
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px; }
+    #welcomePop .content ul li {
+      padding: 5px 0px;
+      list-style: square;
+      margin-left: 10px;
+      font-size: 15px;
+      line-height: 1.6; }
+  #welcomePop .wrap {
+    float: left;
+    position: relative;
+    bottom: 7px;
+    border: 1px solid #ddd; }
+    #welcomePop .wrap label {
+      font: bold 12px/1 "맑은 고딕";
+      color: #fff;
+      margin-left: 4px; }
+  #welcomePop .close {
+    float: right;
+    font: 14px/1 'arial';
+    color: #fff; }
+
 /* title, btnMenu, story-txt,vid  */
 .about > .inner {
   width: 1180px;

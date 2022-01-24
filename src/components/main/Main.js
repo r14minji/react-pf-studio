@@ -9,6 +9,7 @@ import Partners from './Partners.js';
 import Visual from './Visual.js';
 import LatestReview from './LatestReview.js';
 import Btns from './Btns.js';
+import Popup from './Popup.js';
 
 function Main() {
   const main = useRef(null);
@@ -67,6 +68,7 @@ function Main() {
       <LatestReview />
       <Partners />
       <Btns getIndex={getIndex} />
+      <Popup />
     </div>
   )
 }
