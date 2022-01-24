@@ -1,6 +1,17 @@
-function Popup(){
+import { useRef, useState } from "react";
+
+function Popup(props){
+  const popup = useRef(null);
+  let [val, setVal] = useState('');
+
+  const handleCheck = e =>{
+    const isCheck = e.target.checked;
+    setVal(isCheck);
+  }
+
+
   return(
-    <aside id="welcomePop">
+    <aside id="welcomePop" ref={popup}>
       <div className="content">
         <h1>Welcome</h1>
         <ul>
@@ -11,12 +22,25 @@ function Popup(){
         </ul>
       </div>
       <div className="wrap">
-        <input type="checkbox" name="ck" id="ck" />
-        <label for="ck">오늘 하루 그만보기</label>
+        <input type="checkbox" name="ck" id="ck" onChange={handleCheck} />
+        <label htmlFor="ck">오늘 하루 그만보기</label>
       </div>
-      <a href="#" class="close">CLOSE</a>
+      <a href="#" className="close" onClick={e=>{
+        e.preventDefault();
+        if(val) setCookie("welcomePop", "done", 1);
+        props.getIsPop(false);
+      }}>CLOSE</a>
     </aside>
   )
+
+  function setCookie(cookieName, cookieValue, time){
+    const today = new Date();
+    const date = today.getDate();
+    today.setDate(date + time);
+    const duedate = today.toGMTString(); 
+  
+    document.cookie = `${cookieName} = ${cookieValue}; path ="/"; expires=${duedate}`;
+  }
 }
 
 export default Popup;

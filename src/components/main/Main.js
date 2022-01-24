@@ -15,6 +15,11 @@ function Main() {
   const main = useRef(null);
   let pos = useRef([]);
   const [index, setIndex] = useState(0);
+  let [isPop, setIsPop] = useState(true);
+
+  const getIsPop = val => {
+    setIsPop(val);
+  }
 
   const getIndex = index => {
     setIndex(index);
@@ -41,7 +46,6 @@ function Main() {
 
   useEffect(()=>{
     handleResize();
-
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
 
@@ -68,7 +72,7 @@ function Main() {
       <LatestReview />
       <Partners />
       <Btns getIndex={getIndex} />
-      <Popup />
+      {isPop ? <Popup getIsPop={getIsPop} /> : ""}
     </div>
   )
 }
