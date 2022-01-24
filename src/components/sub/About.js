@@ -21,7 +21,6 @@ function About(){
     {title: 'Meet the makers', contents: 'Our team combine form and function to create visually appealing, easy to watch films people want to use.'}
   ]
 
-
   useEffect(()=>{
     html.style.backgroundColor = "#E9B5B5";
     const btns = btnMenus.current.children;

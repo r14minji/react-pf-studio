@@ -165,6 +165,7 @@ function Gallery(){
 
     setTimeout(()=>{
       setLoading(false);
+      if(list.current == null) return
       list.current.classList.add("on");    
       search.current.classList.add("on");    
       setTimeout(()=>{

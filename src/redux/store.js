@@ -4,13 +4,12 @@ import {persistStore, persistReducer} from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
 const persistConfig = {
-  key: 'main-root',
+  key: 'main-studio',
   storage
 }
 
 const persistedReducer = persistReducer(persistConfig, reducers);
 
-//store를 생성할때 reducer로 전달된 값을 적용
 const store = createStore(persistedReducer, applyMiddleware());
 const Persistor = persistStore(store);
 
