@@ -19,6 +19,7 @@ function VidList(){
       <div className="inner">
         {/* section - youtube API vid list */}
         <section className="list">
+          
           {
             vidData.map((item, index)=>{
               let tit = item.snippet.title;
