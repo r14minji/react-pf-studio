@@ -3,6 +3,12 @@ import {useSelector} from 'react-redux';
 import { faWindowClose } from "@fortawesome/free-regular-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Pagination, Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const body = document.querySelector("body");
 const path = process.env.PUBLIC_URL;
@@ -19,7 +25,18 @@ function VidList(){
       <div className="inner">
         {/* section - youtube API vid list */}
         <section className="list">
-          
+          <Swiper 
+            modules={[Pagination, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={'auto'}       
+            loop ={true}
+            autoplay={{
+              "delay": 2500,
+              "disableOnInteraction": false
+            }} 
+            grabCursor={true}
+            pagination={{clickable: true}}
+          >
           {
             vidData.map((item, index)=>{
               let tit = item.snippet.title;
@@ -29,6 +46,7 @@ function VidList(){
               let date = item.snippet.publishedAt;
 
               return(
+                <SwiperSlide>
                 <article key={index}>
                   {/* pic - youtube image */}
                   <div className="pic" onClick={()=>{
@@ -116,9 +134,11 @@ function VidList(){
                     </div>
                   </div>
                 </article>
+                </SwiperSlide>
               )
             })
           }
+          </Swiper>
         </section>
 
         {isPop ? <Pop  /> : null}
