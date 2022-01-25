@@ -673,7 +673,9 @@ fieldset {
       width: 280px;
       margin-right: 20px;
       float: left;
-      transition: 0.5s; }
+      transition: 0.5s;
+      /* article2 - board 데이터 redux */
+      /* article1 - txt */ }
       .newsM .inner .wrap article:nth-of-type(4) {
         margin-right: 0px; }
       .newsM .inner .wrap article .content {
@@ -735,7 +737,8 @@ fieldset {
           font: 700 155px/1.1 'Oswald';
           letter-spacing: 2px;
           text-transform: uppercase;
-          margin-bottom: 40px; }
+          margin-bottom: 40px;
+          opacity: 0.6; }
         .newsM .inner .wrap article:nth-of-type(1) strong {
           font: 700 155px/1 'Oswald';
           letter-spacing: 0.5px; }
@@ -2703,6 +2706,8 @@ fieldset {
         .note .inner .inputBox .wrap button:hover {
           background: #333;
           color: #c9c3b7; }
+      .note .inner .inputBox .wrap input[type=date] {
+        ime-mode: inactive; }
   .note .inner .showBox {
     width: 45%;
     height: 100vh;

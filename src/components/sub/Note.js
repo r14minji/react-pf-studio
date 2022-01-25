@@ -128,7 +128,7 @@ function Note() {
           <h1>What is your favorite quotes in the movie?</h1>
           <div className="wrap">
             <h2>Review</h2>
-            <input type="text" placeholder="Date" ref={date} /><br/>
+            <input type="date" placeholder="Date" ref={date} /><br/>
             <input type="text" placeholder='Title/Year' ref={title} /><br/>
             <input type="text" placeholder='Director' ref={director} /><br/>
             <input type="text" placeholder='Genre' ref={genre} /><br/>
