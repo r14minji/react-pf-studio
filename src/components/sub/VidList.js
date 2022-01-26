@@ -46,8 +46,8 @@ function VidList(){
               let date = item.snippet.publishedAt;
 
               return(
-                <SwiperSlide>
-                <article key={index}>
+                <SwiperSlide key={index}>
+                <article>
                   {/* pic - youtube image */}
                   <div className="pic" onClick={()=>{
                     setIsPop(true);

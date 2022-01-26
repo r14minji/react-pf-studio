@@ -18,17 +18,3 @@ export const setNotice = data =>{
     playload : data
   }
 }
-
-export const setMember = data =>{
-  return{
-    type: 'SET_MEMBER',
-    playload: data
-  }
-}
-
-export const setStory = data =>{
-  return{
-    type: 'SET_STORY',
-    playload: data
-  }
-}
