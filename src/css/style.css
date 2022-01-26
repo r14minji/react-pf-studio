@@ -1070,7 +1070,8 @@ fieldset {
   .latestReviewM .inner .wrap {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; }
+    align-items: flex-start;
+    padding-bottom: 3vh; }
     .latestReviewM .inner .wrap .post {
       width: 300px;
       margin: 0 auto;
@@ -1139,12 +1140,12 @@ fieldset {
     .latestReviewM .inner .wrap .post:nth-of-type(2) {
       display: none; } }
 .partnersM {
-  padding: 0px 0px 20px; }
+  padding: 0px 0px 6vh; }
   .partnersM .inner {
     min-height: 0px;
     border-top: 2px solid #000; }
     .partnersM .inner h1 {
-      padding: 20px 0 0px;
+      padding: 6vh 0 0px;
       text-align: center;
       font: 700 24px/1.1 'Oswald';
       letter-spacing: 2px;
@@ -3260,9 +3261,6 @@ fieldset {
         position: relative;
         top: -7px;
         left: 0px; }
-        .Signin .inner .access .wrap label[for=loggedin] span {
-          font: 16px/1 'IM Fell English SC';
-          color: #C1554E; }
       .Signin .inner .access .wrap > button {
         font: 16px/1 'IM Fell English SC';
         display: block;
