@@ -19,7 +19,7 @@ function Signin(){
 
           <input type="checkbox" name="" id="loggedin" />
           <label htmlFor="loggedin">
-          keep me signed in. <span>details</span> </label>
+          keep me signed in.</label>
 
           <button>Sign in</button>
 
