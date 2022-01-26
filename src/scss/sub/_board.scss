@@ -65,7 +65,7 @@
           li{
             float: left; width: 100%;
             font: 400 18px/1 "Oswald";
-            padding: 10px 0px 30px; border-top: 1px solid #999; cursor: pointer;
+            padding: 10px 0px 30px; border-top: 1px solid #999; 
 
             span{
               display: inline-block;
@@ -130,13 +130,6 @@
           p{
             font: 400 16px/1.2 'Oswald';  color: #555;
             margin-bottom: 10px;          
-          }
-          span{
-            font: 400 16px/1 'IM Fell English SC';  color: #555;
-            position: absolute; bottom: 10px; right: 10px;
-            padding: 5px 5px 3px;
-            cursor: pointer; transition: 0.3s;
-            &:hover{background: $lightyellow;}
           }
         }
 

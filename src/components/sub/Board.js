@@ -82,7 +82,6 @@ function Board(){
                   <strong>{data.date}</strong>
                   <h2>{data.title}</h2>
                   <p>{data.contents}</p>
-                  <span>Read More</span>
                 </div>
                 <div className="pic">
                   <img src={path + data.url} />
