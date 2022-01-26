@@ -1,5 +1,5 @@
 .partnersM{
-  padding: 0px 0px 4vh;
+  padding: 0px 0px 6vh;
 
 
   .inner{
@@ -15,24 +15,17 @@
       margin-bottom: 10px;
     }
     .wrap{
-      .swiper{
-        padding: 10px 0 40px;
-        .swiper-pagination{
-          bottom: 5px;
-        }
-        .swiper-wrapper{
-          .swiper-slide{
-            .logo{
-              width: 100px;
-              height:  80px;
-              filter: grayscale(100%);
-      
-              img{
-                width: 100%;height: 100%;
-                object-fit: contain;
-              }
-            }
-          }
+      //임시. 스크롤 스와이퍼 연결예정
+      display: flex; justify-content: space-around; align-items: center;
+      overflow: hidden;
+      .logo{
+        width: 120px;
+        height:  80px;
+        filter: grayscale(100%);
+
+        img{
+          width: 100%;height: 100%;
+          object-fit: contain;
         }
       }
     }
@@ -42,7 +35,7 @@
 /* tablet */
 @media screen and (max-width:$tablet){
   .partnersM{
-    padding: 0px;
+    padding: 0px 0px 2vh;
     .inner{
       width: 100%;
       h1{
@@ -56,7 +49,8 @@
 @media screen and (max-width:$mobile){
   .partnersM{
     .inner{
-      //작성
+      .wrap {flex-wrap: wrap;}
+      .wrap .logo {width: 50%; padding: 10px 20px;}
     }
   }
 }
