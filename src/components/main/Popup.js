@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 function Popup(props){
   const popup = useRef(null);
@@ -28,7 +28,7 @@ function Popup(props){
         e.preventDefault();
         if(val) setCookie("welcomePop", "done", 1);
         props.getIsPop(false);
-        console.log(document.cookie.indexOf("welcomePop=done"))
+        //console.log(document.cookie.indexOf("welcomePop=done"))
       }}>CLOSE</a>
     </aside>
   )
