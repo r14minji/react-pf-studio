@@ -1774,8 +1774,7 @@ fieldset {
   width: 1180px;
   margin: 0 auto;
   position: relative;
-  /*table*/
-  /*pagination*/ }
+  /*table*/ }
   .notice .inner h1 {
     font: 600 36px/1 'Oswald';
     padding: 10px 0px;
@@ -1813,53 +1812,6 @@ fieldset {
           line-height: 1.4; }
     .notice .inner table tr:hover td {
       background: rgba(201, 195, 183, 0.801); }
-  .notice .inner .paignation {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 40px;
-    font-family: 'Oswald'; }
-    .notice .inner .paignation::after {
-      content: '';
-      display: block;
-      clear: both; }
-    .notice .inner .paignation .prev {
-      float: left;
-      display: block;
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
-      text-align: center;
-      font-size: 20px; }
-    .notice .inner .paignation .next {
-      float: right;
-      display: block;
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
-      text-align: center;
-      font-size: 20px; }
-    .notice .inner .paignation .prev:hover, .notice .inner .paignation .next:hover {
-      color: #FFEDCB;
-      background: #303030;
-      border-radius: 50%; }
-    .notice .inner .paignation .numbers {
-      display: inline-block;
-      text-align: center;
-      font-size: 0; }
-      .notice .inner .paignation .numbers a {
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        margin: 0px 5px;
-        font-size: 16px;
-        line-height: 30px;
-        text-align: center;
-        transition: 0.3s; }
-        .notice .inner .paignation .numbers a:hover {
-          border-radius: 50%;
-          color: #FFEDCB;
-          background: #303030; }
 
 /* tablet */
 @media screen and (max-width: 1179px) {

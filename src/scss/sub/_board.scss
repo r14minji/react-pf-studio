@@ -214,62 +214,6 @@
         }
       }
     }
-  
-    /*pagination*/
-    .paignation{
-      width: 100%;
-      text-align: center;
-      margin-bottom: 40px;
-      font-family: 'Oswald';
-  
-      &::after{
-        content: ''; display: block; clear: both;
-      }
-  
-      .prev{
-        float:left; 
-        display:block; 
-        width:30px; height:30px; line-height:30px; 
-        text-align:center; 
-        font-size:20px;
-      }
-  
-      .next{
-        float:right; 
-        display:block; 
-        width:30px; height:30px;  line-height:30px; 
-        text-align:center; 
-        font-size:20px; 
-      }
-  
-      .prev:hover, .next:hover{
-        color: #FFEDCB;
-        background: $txt;
-        border-radius: 50%;
-      }
-  
-      .numbers{
-        display: inline-block;
-        text-align: center;
-        font-size: 0;
-        
-        a{
-          display: inline-block; 
-          width: 30px; height:30px;
-          border-radius: 50%;
-          margin: 0px 5px;
-          font-size: 16px; line-height: 30px;
-          text-align: center;
-          transition: 0.3s;
-  
-          &:hover{
-            border-radius: 50%;
-            color:#FFEDCB; 
-            background: $txt;
-          }
-        }
-      }
-    }
   }
 }
 

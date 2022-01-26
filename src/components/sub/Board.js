@@ -127,30 +127,6 @@ function Board(){
             }
           </tbody>
         </table>        
-
-        {/* paignation */}
-        <div className="paignation">
-          <a href="#" className="prev">
-          <FontAwesomeIcon icon={faAngleDoubleLeft} />
-          </a>
-
-          <p className="numbers">
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-            <a href="#">6</a>
-            <a href="#">7</a>
-            <a href="#">8</a>
-            <a href="#">9</a>
-            <a href="#">10</a>
-          </p>
-
-          <a href="#" className="next">
-          <FontAwesomeIcon icon={faAngleDoubleRight} />
-          </a>
-        </div>
       </div>
     </section>
     </>
