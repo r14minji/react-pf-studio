@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 import { faWindowClose } from "@fortawesome/free-regular-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Pagination, Autoplay } from 'swiper';
+import { Pagination, Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -26,15 +26,11 @@ function VidList(){
         {/* section - youtube API vid list */}
         <section className="list">
           <Swiper 
-            modules={[Pagination, Autoplay]}
+            modules={[Pagination, Navigation]}
             spaceBetween={30}
             slidesPerView={'auto'}       
             loop ={true}
-            autoplay={{
-              "delay": 2500,
-              "disableOnInteraction": false
-            }} 
-            grabCursor={true}
+            navigation = {true}
             pagination={{clickable: true}}
           >
           {

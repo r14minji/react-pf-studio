@@ -15,11 +15,10 @@ function Festival(){
   let [isPop, setIsPop] = useState(false);
   let [index, setIndex] = useState(0);
 
-
   //youtube api호출시 url옵션값
   const api_key = "AIzaSyCpNKtPx5E3mMI60UE3hwHpAnBKEKiueuc";
   const playListId = "PL5jd_nA7BbYubv925xZLUtapVQjGoV8Ly";
-  const num = 4;
+  const num = 9;
   const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${api_key}&playlistId=${playListId}&maxResults=${num}`; 
 
   //youtube데이터를 axio로 호출해서 dispatch를 통해 reducer에 전달하는 함수 정의

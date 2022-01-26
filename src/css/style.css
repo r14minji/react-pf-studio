@@ -2226,7 +2226,7 @@ fieldset {
 .vidList {
   padding-bottom: 20px; }
   .vidList .inner {
-    padding-top: 40px;
+    padding-top: 80px;
     /* section - youtube API vid list */
     /* popup */ }
     .vidList .inner .list {
@@ -2234,6 +2234,13 @@ fieldset {
       margin: 0 auto; }
       .vidList .inner .list .swiper {
         width: 100%; }
+        .vidList .inner .list .swiper .swiper-button-prev, .vidList .inner .list .swiper .swiper-button-next {
+          top: auto;
+          bottom: 10px;
+          transform: scale(0.7);
+          filter: brightness(0%); }
+        .vidList .inner .list .swiper .swiper-pagination {
+          filter: brightness(0%); }
         .vidList .inner .list .swiper .swiper-slide {
           width: 100%; }
           .vidList .inner .list .swiper .swiper-slide article {

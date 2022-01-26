@@ -1,13 +1,20 @@
 .vidList{
   padding-bottom: 20px;
   .inner{
-    padding-top: 40px;
+    padding-top: 80px;
 
     /* section - youtube API vid list */
     .list{
        width: 708px; margin: 0 auto; //width: 708px; 
       .swiper{
         width: 100%;
+
+        .swiper-button-prev, .swiper-button-next{
+          top: auto; bottom: 10px; transform: scale(0.7);
+          filter: brightness(0%);
+        }
+
+        .swiper-pagination{ filter: brightness(0%);}
 
         .swiper-slide{
           width: 100%; 
