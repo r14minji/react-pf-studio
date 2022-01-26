@@ -43,22 +43,5 @@
       "url" : "/img/team6.jpg",
       "url_pic": "/img/team006.jpg"
     }
-  ],
-  "story":[
-    {
-      "src" : "/img/vid1.mp4",
-      "tit" : "PASSTION",
-      "p1" : "Voluptatibus, sunt!"
-    },
-    {
-      "src" : "/img/vid2.mp4",
-      "tit" : "SINCERITY",
-      "p1" : "Voluptatibus, sunt!"
-    },
-    {
-      "src" : "/img/vid3.mp4",
-      "tit" : "ENTERTAIN",
-      "p1" : "Voluptatibus, sunt!"
-    }
   ]
 }

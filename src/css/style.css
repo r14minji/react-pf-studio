@@ -1256,10 +1256,7 @@ fieldset {
     .about > .inner .btnMenu li {
       width: 31.33%;
       margin-right: 2%;
-      cursor: pointer;
-      padding: 0 10px 20px;
-      background: rgba(0, 0, 0, 0.1);
-      box-shadow: 2px 6px rgba(0, 0, 0, 0.5); }
+      padding: 0 10px 20px; }
       .about > .inner .btnMenu li:nth-of-type(3) {
         margin-right: 2%; }
       .about > .inner .btnMenu li p {
@@ -1271,30 +1268,6 @@ fieldset {
         display: block;
         font: 400 16px/1 'Oswald';
         padding: 10px 0px 0px; }
-      .about > .inner .btnMenu li.on {
-        box-shadow: 1px 4px rgba(0, 0, 0, 0.5);
-        top: 2px; }
-        .about > .inner .btnMenu li.on p {
-          color: #ECECEC;
-          border-bottom: 1px solid #ECECEC; }
-        .about > .inner .btnMenu li.on span, .about > .inner .btnMenu li.on strong {
-          color: #ECECEC; }
-      .about > .inner .btnMenu li:nth-of-type(1) h2 {
-        background-image: url(/public/img/mask1.png);
-        background-repeat: no-repeat;
-        background-position: -9999px -9999px; }
-      .about > .inner .btnMenu li:nth-of-type(2) h2 {
-        background-image: url(/public/img/mask2.png);
-        background-repeat: no-repeat;
-        background-position: -9999px -9999px; }
-      .about > .inner .btnMenu li:nth-of-type(3) h2 {
-        background-image: url(/public/img/mask3.png);
-        background-repeat: no-repeat;
-        background-position: -9999px -9999px; }
-      .about > .inner .btnMenu li:nth-of-type(4) h2 {
-        background-image: url(/public/img/mask4.png);
-        background-repeat: no-repeat;
-        background-position: -9999px -9999px; }
   .about > .inner .story {
     width: 100%;
     padding: 40px 0px 0px;
@@ -1406,8 +1379,7 @@ fieldset {
                 font: 400 100px/1 "Oswald";
                 color: #fff;
                 position: relative;
-                transform: scaleY(1.25);
-                opacity: 0;
+                opacity: 1;
                 transition: opacity 0.2s 0.5s;
                 text-transform: uppercase; }
               .about > .inner .story figure .wrap .vid .slogan h3::after {
@@ -1419,18 +1391,18 @@ fieldset {
                 position: absolute;
                 top: 0px;
                 right: -100%;
-                transition: right ease-in-out 1s; }
+                transition: right ease-in-out 0.5s; }
             .about > .inner .story figure .wrap .vid .slogan .p1 {
               display: inline-block;
               overflow: hidden;
               position: relative;
               margin-right: 14px;
-              transform: rotateY(40deg); }
+              transform: rotateY(0deg); }
               .about > .inner .story figure .wrap .vid .slogan .p1 > .inner {
                 font: 20px/1 "Oswald";
                 color: #fff;
                 position: relative;
-                opacity: 0;
+                opacity: 1;
                 transition: opacity 0.2s 0.8s; }
               .about > .inner .story figure .wrap .vid .slogan .p1::after {
                 content: "";
@@ -1441,36 +1413,17 @@ fieldset {
                 position: absolute;
                 top: 0px;
                 right: -100%;
-                transition: right ease-in-out 1s 0.3s; }
-          .about > .inner .story figure .wrap .vid.lower {
-            z-index: 2; }
-          .about > .inner .story figure .wrap .vid.on {
+                transition: right ease-in-out 0.5s 0.3s; }
+          .about > .inner .story figure .wrap .vid:hover {
             z-index: 3; }
-            .about > .inner .story figure .wrap .vid.on .slogan::before {
+            .about > .inner .story figure .wrap .vid:hover .slogan::before {
               opacity: 1;
               transform: rotateY(220deg); }
-            .about > .inner .story figure .wrap .vid.on .slogan h3 .inner, .about > .inner .story figure .wrap .vid.on .slogan .p1 .inner {
-              opacity: 1; }
-            .about > .inner .story figure .wrap .vid.on .slogan h3::after, .about > .inner .story figure .wrap .vid.on .slogan .p1::after {
+            .about > .inner .story figure .wrap .vid:hover .slogan h3::after, .about > .inner .story figure .wrap .vid:hover .slogan .p1::after {
               right: 100%; }
-          .about > .inner .story figure .wrap .vid:nth-of-type(1).mask {
-            -webkit-mask: url(/public/img/mask1.png);
-            -webkit-mask-size: 2300% 100%;
-            animation: mask-play 1.4s steps(22) forwards; }
-          .about > .inner .story figure .wrap .vid:nth-of-type(2).mask {
-            -webkit-mask: url(/public/img/mask2.png);
-            -webkit-mask-size: 3000% 100%;
-            animation: mask-play 1.4s steps(29) forwards; }
-          .about > .inner .story figure .wrap .vid:nth-of-type(3).mask {
-            -webkit-mask: url(/public/img/mask3.png);
-            -webkit-mask-size: 7100% 100%;
-            animation: mask-play 1.4s steps(70) forwards; }
+            .about > .inner .story figure .wrap .vid:hover .slogan .p1 {
+              transform: rotateY(40deg); }
 
-@keyframes mask-play {
-  0% {
-    -webkit-mask-position: 0% 0%; }
-  100% {
-    -webkit-mask-position: 100% 0%; } }
 /* team */
 .team .inner {
   width: 1180px;
@@ -1626,6 +1579,10 @@ fieldset {
     text-align: center; }
   .about .inner .story .txt span {
     line-height: 1; }
+  .about .inner .story figure .wrap .vid .slogan h3 .inner {
+    font-size: 14vw; }
+  .about .inner .story figure .wrap .vid .slogan::before {
+    display: none; }
 
   /* team */
   .team .inner .wrap article {

@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useEffect, useState,useRef} from "react";
-import {  faFacebookF, faInstagram, faTwitter  } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const html = document.querySelector("html");
 const path = process.env.PUBLIC_URL;
@@ -9,10 +10,7 @@ const url = `${path}/dbs/about.json`;
 
 function About(){
   let [members, setMembers] = useState([]);
-  let [storys, setStorys] = useState([]);
-  const [index, setIndex] = useState(0);
   const btnMenus = useRef(null);
-  const wrap = useRef(null);
   const vid = useRef(null);
   const storyBtns = [
     {title: 'What makes a great Films?', contents: "It's all about the experience. People love films that are fun and simple to feel. We make those films"},
@@ -26,52 +24,14 @@ function About(){
     .then(json=>{
       //console.log(json.data.member);
       setMembers(json.data.member);
-      setStorys(json.data.story);
     })
 
     html.style.backgroundColor = "#E9B5B5";
 
-    // const btns = btnMenus.current.children;
-    // const vids = wrap.current.children;
-    // const play = wrap.current.querySelectorAll("video");
-    // btns[0].classList.add("on");
-    // vids[0].classList.add("on");
-    // play[index].load();
-    // play[index].play();
-
-    // for(let vid of vids) vid.classList.remove("mask");
-
-
-    // activation()
-    // function activation(){
-    //   for(let i=0; i<btns.length; i++){
-    //     btns[i].classList.remove("on");
-    //     if(vids[i].classList.contains("on")){
-    //       vids[i].classList.add("mask");
-    //     }
-    //   }
-    //   btns[index].classList.add("on");
-    //   vids[index].classList.add("lower");
-  
-    //   setTimeout(()=>{
-    //     for(let i=0; i<vids.length; i++){
-    //       if(vids[i].classList.contains("on")){
-    //         vids[i].classList.remove("on");
-    //         vids[i].classList.remove("mask");
-    //       }
-    //     }
-  
-    //     vids[index].classList.remove("lower");
-    //     vids[index].classList.add("on");
-    //   },1400)
-    // }
-
     return()=>{
       html.style.backgroundColor = "#e6e2dd";
-      // btns[0].classList.remove("on");
-      // vids[0].classList.remove("on");
     }
-  },[index])
+  },[])
 
   return(
     <>
@@ -83,7 +43,7 @@ function About(){
             {
               storyBtns.map((btn, index)=>{
                 return(
-                <li key={index} onClick={()=>setIndex(index)}>
+                <li key={index}>
                   <p>{btn.title}</p>
                   <span>{btn.contents}</span>
                 </li>
@@ -100,25 +60,18 @@ function About(){
           </div>
 
           <figure>
-            <aside>LOADING...</aside>
-              <div className="wrap" ref={wrap}>
-                {
-                  storys.map((story, index)=>{
-                    return(
-                      <div key={index} className="vid"  ref={vid}>
-                        <video src= {path + story.src} autoPlay muted loop ></video>
-                        <div className="slogan">
-                          <h3>
-                            <div className="inner">{story.tit}</div>
-                          </h3>
-                          <div className="p1">
-                            <div className="inner">{story.p1}</div>
-                          </div>
-                        </div>
-                      </div>
-                    )
-                  })
-                }
+              <div className="wrap" >
+                <div className="vid" ref={vid}>
+                  <video src= {path+"/img/vid1.mp4"} autoPlay muted loop ></video>
+                  <div className="slogan">
+                    <h3>
+                      <div className="inner">PASSTION</div>
+                    </h3>
+                    <div className="p1">
+                      <div className="inner">Voluptatibus, sunt!</div>
+                    </div>
+                  </div>
+                </div>
             </div>
           </figure>
         </div>
