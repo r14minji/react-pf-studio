@@ -1,6 +1,5 @@
-import { useSelector, useDispatch } from "react-redux";
-import { setNews } from '../../redux/actions';
-import { faAngleDoubleRight, faAngleDoubleLeft, faRssSquare, faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
+import { useSelector } from "react-redux";
+import { faRssSquare, faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import {faFacebookSquare, faTwitterSquare, faInstagram} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,8 +13,6 @@ function Board(){
   const notice = useSelector(state=>state);
   const noticeData = notice.noticeReducer.notice;
   let len = noticeData.length;
-  const dispatch = useDispatch();
-
 
   return(
     <>
