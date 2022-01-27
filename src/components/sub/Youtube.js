@@ -1,15 +1,10 @@
-import { useEffect, useState, useRef } from 'react';
+import { useRef } from 'react';
 
 import VidList from "./VidList";
 import Note from "./Note";
 
 function Youtube(){
   const tab = useRef(null);
-
-  useEffect(()=>{
-    //포커스인 이벤트 적용하는 방법?
-
-  },[])
 
   const activation = e=>{
     const btn = e.currentTarget;
@@ -33,7 +28,7 @@ function Youtube(){
         <section>
           <dl id="tab" ref={tab}>
             <dt className="on" >
-              <span className="btn_tab" onClick={activation}>
+              <span className="btn_tab" onClick={activation} onFocusin={activation}>
                 <strong> 01</strong>
                 <p>Youtube</p>
                 <ul>
@@ -47,7 +42,7 @@ function Youtube(){
             </dd>
 
             <dt>
-              <span  className="btn_tab" onClick={activation}>
+              <span  className="btn_tab" onClick={activation} onFocusin={activation}>
                 <strong> 02</strong>
                   <p>Review Note</p>
                   <ul>
