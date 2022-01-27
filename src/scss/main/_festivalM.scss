@@ -30,6 +30,7 @@
 
         /* article2 - youtube redux */
         &:nth-of-type(2){
+          display: flex; flex-direction: column; justify-content: space-between;
           .pic{
             width: 100%; height: 200px; margin-bottom: 20px;
             background: url(/public/img/Film2.jpg) no-repeat center/cover;
@@ -50,17 +51,12 @@
               font: 400 16px/1 'Oswald';
               margin-bottom: 20px;
             }
-            span{
-              font: 400 16px/1 'IM Fell English SC';  color: #555;
-              padding: 5px 0px;
-              cursor: pointer; transition: 0.3s;
-              &:hover{background: $lightyellow;}
-            }
           }
         }
 
         /* article3 - Movie Festival txt */
         &:nth-of-type(3){
+          display: flex; flex-direction: column; justify-content: space-between;
           margin-right: 0px;
           >h1{
             font: 700 60px/1 'Oswald'; text-align: left;
@@ -74,12 +70,6 @@
             font: 400 16px/1.2 'Oswald';
             margin-bottom: 20px;
             word-break: break-all;
-          }
-          span{
-            font: 400 16px/1 'IM Fell English SC';  color: #555;
-            padding: 5px 0px;
-            cursor: pointer; transition: 0.3s;
-            &:hover{background: $lightyellow;}
           }
         }
       }
@@ -149,12 +139,6 @@
               }
             }
             p{margin-bottom: 10px;}
-            span{
-              display: block; width: 100px; margin: 0 auto; text-align: center;
-              padding: 5px 0px;
-              cursor: pointer; transition: 0.3s;
-              &:hover{background: $lightyellow;}
-            }
           }
         }
       }
@@ -200,12 +184,6 @@
               }
             }
             p{margin-bottom: 10px;}
-            span{
-              display: block; width: 100px; margin: 0 auto; text-align: center;
-              padding: 5px 0px;
-              cursor: pointer; transition: 0.3s;
-              &:hover{background: $lightyellow;}
-            }
           }
         }
       }

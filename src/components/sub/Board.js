@@ -101,11 +101,11 @@ function Board(){
           <caption className="hidden">notice, news</caption>
           <thead>
             <tr>
-              <th>No.</th>
-              <th>Title</th>
-              <th>Writer</th>
-              <th>Date</th>
-              <th><FontAwesomeIcon icon={faThumbsUp}/></th>
+              <th scope="col">No.</th>
+              <th scope="col">Title</th>
+              <th scope="col">Writer</th>
+              <th scope="col">Date</th>
+              <th scope="col"><FontAwesomeIcon icon={faThumbsUp}/></th>
             </tr>
           </thead>
           <tbody>

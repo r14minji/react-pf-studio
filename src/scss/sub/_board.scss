@@ -14,7 +14,7 @@
 
     h1{
       font: 600 36px/1 'Oswald';
-      padding: 10px 0px; border-bottom:4px solid #303030;
+      padding: 10px 0px; border-bottom:4px solid $txt;
       margin-bottom: 30px;
     }
 
@@ -50,7 +50,7 @@
 
       .stayConnect{
         float: left; width: 30%; height: 100%; padding: 10px;
-        border-left: 3px solid #303030;
+        border-left: 3px solid $txt;
 
         h3{
           font: 700 30px/1 'Oswald';
@@ -145,7 +145,7 @@
           .content {
             strong::after{ background: $lightyellow; }
             h2, {color: $lightyellow;}
-            p, span { color:#303030; }
+            p, span { color:$txt; }
             span{ background: $lightyellow;}
           }
           .pic img{
@@ -181,7 +181,7 @@
         th{
           font: 600 20px/1 'Oswald';
           padding: 15px;
-          background:  rgba(255, 237, 203, 0.5); //#C0C1B8;
+          background:  rgba(255, 237, 203, 0.5); 
           color: $txt;
   
           &:nth-of-type(1){ width: 5%;}
@@ -239,7 +239,7 @@
 
         .txt{
           float: left; width: 50%; 
-          border-right: 3px solid #303030;
+          border-right: 3px solid $txt;
           h2{
             font-size: 36px;
           }

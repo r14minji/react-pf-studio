@@ -75,7 +75,6 @@ function Festival(){
                         <h2>{(tit_len > 40) ? tit = tit.substr(0,40)+"..." : tit}</h2>
                         <p>{(desc_len > 120) ? desc = desc.substr(0, 120)+"..." : desc}</p>
                         <strong>{date.split("T")[0]}</strong>
-                        <span>Read More</span>
                       </div>
                     </article>
                   )
@@ -86,7 +85,6 @@ function Festival(){
           <article>
             <h1>MOVIE<strong>FESTIVAL</strong></h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique ratione, est libero consectetur corporis, non fuga quae delectus distinctio nostrum, quos ea soluta facere? Iusto similique facilis cum atque expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis et molestiae labore perferendis placeat non tempora deleniti vero ut amet! Unde libero atque consequuntur sapiente nesciunt doloremque. Aperiam repellat officia placeat eum impedit assumenda excepturi doloribus facilis, provident numquam consectetur. At, cum nulla!</p>
-            <span>Read More</span>
           </article>
         </div>
 
