@@ -14,6 +14,14 @@ function Youtube(){
     btn.classList.add("on");
     btn.nextSibling.classList.add("on");
   }
+  const activationFocus = e=>{
+    const btn = e.currentTarget;
+    //console.log(btn)
+    const btns_arr = tab.current.children;
+    for( let btns of btns_arr) btns.classList.remove("on")
+    btn.closest("dt").classList.add("on");
+    btn.closest("dt").nextSibling.classList.add("on");
+  }
 
 
   return(
@@ -28,7 +36,7 @@ function Youtube(){
         <section>
           <dl id="tab" ref={tab}>
             <dt className="on" onClick={activation}>
-              <button className="btn_tab" >
+              <button className="btn_tab" onFocus={activationFocus}>
                 <strong> 01</strong>
                 <p>Youtube</p>
                 <ul>
@@ -42,7 +50,7 @@ function Youtube(){
             </dd>
 
             <dt onClick={activation}>
-              <button  className="btn_tab" >
+              <button  className="btn_tab" onFocus={activationFocus}>
                 <strong> 02</strong>
                   <p>Review Note</p>
                   <ul>
