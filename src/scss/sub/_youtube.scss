@@ -31,6 +31,7 @@
       
           .btn_tab {
             display: block; width: 100%;
+            border: none; background: transparent;
             padding: 0px 20px;
             position: relative;
             cursor: pointer; 
@@ -51,9 +52,9 @@
             }
           }
 
-          &.on span {
+          &.on .btn_tab {
             background: rgba(0,0,0,0.1);
-            p, strong{ color: $pink; border-color: $pink;}
+            strong{ color: $pink; border-color: $pink;}
           }
         }
       

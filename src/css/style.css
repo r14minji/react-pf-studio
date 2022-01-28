@@ -2090,6 +2090,8 @@ fieldset {
         .youtube .inner section #tab dt .btn_tab {
           display: block;
           width: 100%;
+          border: none;
+          background: transparent;
           padding: 0px 20px;
           position: relative;
           cursor: pointer; }
@@ -2104,9 +2106,9 @@ fieldset {
           .youtube .inner section #tab dt .btn_tab ul li {
             font-size: 14px;
             padding: 5px 30px; }
-        .youtube .inner section #tab dt.on span {
+        .youtube .inner section #tab dt.on .btn_tab {
           background: rgba(0, 0, 0, 0.1); }
-          .youtube .inner section #tab dt.on span p, .youtube .inner section #tab dt.on span strong {
+          .youtube .inner section #tab dt.on .btn_tab strong {
             color: #C1554E;
             border-color: #C1554E; }
       .youtube .inner section #tab dd {
