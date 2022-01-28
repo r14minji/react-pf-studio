@@ -11,8 +11,8 @@ function Youtube(){
     //console.log(btn)
     const btns_arr = tab.current.children;
     for( let btns of btns_arr) btns.classList.remove("on")
-    btn.closest("dt").classList.add("on");
-    btn.closest("dt").nextSibling.classList.add("on");
+    btn.classList.add("on");
+    btn.nextSibling.classList.add("on");
   }
 
 
@@ -27,39 +27,31 @@ function Youtube(){
         {/* tab */}
         <section>
           <dl id="tab" ref={tab}>
-            <dt className="on" 
-              role="tab" id="tab1" aria-controls="tabpanel1" aria-selected="true" tabIndex="0"
-            >
-              <span className="btn_tab" onClick={activation}>
+            <dt className="on" onClick={activation}>
+              <button className="btn_tab" >
                 <strong> 01</strong>
                 <p>Youtube</p>
                 <ul>
                   <li>필름모양 이미지를 클릭하시면, 유튜브 영상으로 연결됩니다.</li>
                   <li>제목, 설명글, 날짜는 해당 동영상 정보를 담고 있습니다.</li>
                 </ul>
-              </span>
+              </button>
             </dt>
-            <dd 
-            role="tabpanel" id="tabpanel1" className="on" aria-labelledby="tab1"
-            >
+            <dd className='on'>
               <VidList />
             </dd>
 
-            <dt
-              role="tab" id="tab2" aria-controls="tabpanel2" aria-selected="false" tabIndex="0"
-            >
-              <span  className="btn_tab" onClick={activation}>
+            <dt onClick={activation}>
+              <button  className="btn_tab" >
                 <strong> 02</strong>
                   <p>Review Note</p>
                   <ul>
                     <li>영화리뷰를 작성하고 기록하는 페이지 입니다.</li>
                     <li>CRUD 기능을 구현한 게시판 입니다.</li>
                 </ul>
-              </span>
+              </button>
             </dt>
-            <dd
-              role="tabpanel" id="tabpanel2" aria-labelledby="tab2"
-            >
+            <dd>
               <Note />
             </dd>
         </dl>
