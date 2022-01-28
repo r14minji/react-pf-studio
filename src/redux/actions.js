@@ -18,10 +18,3 @@ export const setNotice = data =>{
     playload : data
   }
 }
-
-export const setReview = data =>{
-  return{
-    type: 'SET_REVIEW',
-    playload: data
-  }
-}

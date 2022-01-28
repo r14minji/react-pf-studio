@@ -1,6 +1,4 @@
 import { useRef, useState, useEffect } from 'react';
-import { useSelector, useDispatch } from "react-redux";
-import { setReview} from '../../redux/actions';
 
 function Note() {
   const date = useRef(null);
@@ -16,10 +14,16 @@ function Note() {
 
 
 
-  const review = useSelector(state => state);
-  const dispatch = useDispatch();
-  const reviewData = review.reviewReducer.review;
-  const [notes, setNotes] = useState(reviewData)
+  const getLocalItems = ()=>{
+    let data = localStorage.getItem('movieNotes');
+    if(data) {
+      return JSON.parse(data);
+    }else{
+      return [];
+    }
+  }
+
+  const [notes, setNotes] = useState(getLocalItems)
 
 
   const createNote = () =>{
@@ -88,6 +92,10 @@ function Note() {
       })
     )
   }
+
+  useEffect(()=>{
+    localStorage.setItem('movieNotes', JSON.stringify(notes))
+  },[notes])
 
   return (
     <main className="content note">
