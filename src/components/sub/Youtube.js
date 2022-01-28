@@ -20,15 +20,17 @@ function Youtube(){
     <main className="content youtube">
       <div className="inner">
         {/* title */}
-        <div className="title_wrap">
+        <section className="title_wrap">
           <h1>&#8547;. Youtube | Note</h1>
-        </div>
+        </section>
 
         {/* tab */}
         <section>
           <dl id="tab" ref={tab}>
-            <dt className="on" >
-              <span className="btn_tab" onClick={activation} onFocusin={activation}>
+            <dt className="on" 
+              role="tab" id="tab1" aria-controls="tabpanel1" aria-selected="true" tabIndex="0"
+            >
+              <span className="btn_tab" onClick={activation}>
                 <strong> 01</strong>
                 <p>Youtube</p>
                 <ul>
@@ -37,12 +39,16 @@ function Youtube(){
                 </ul>
               </span>
             </dt>
-            <dd className="on">
+            <dd 
+            role="tabpanel" id="tabpanel1" className="on" aria-labelledby="tab1"
+            >
               <VidList />
             </dd>
 
-            <dt>
-              <span  className="btn_tab" onClick={activation} onFocusin={activation}>
+            <dt
+              role="tab" id="tab2" aria-controls="tabpanel2" aria-selected="false" tabIndex="0"
+            >
+              <span  className="btn_tab" onClick={activation}>
                 <strong> 02</strong>
                   <p>Review Note</p>
                   <ul>
@@ -51,7 +57,9 @@ function Youtube(){
                 </ul>
               </span>
             </dt>
-            <dd>
+            <dd
+              role="tabpanel" id="tabpanel2" aria-labelledby="tab2"
+            >
               <Note />
             </dd>
         </dl>
