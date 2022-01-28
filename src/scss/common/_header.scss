@@ -89,6 +89,7 @@
 
     /* 반응형 메뉴 */
     .menu_Mo{
+      display: none;
       position: fixed;
       top: -120%;
       left: 0px; 
@@ -99,7 +100,7 @@
       padding: 25px 30px;
       z-index: 5;
 
-      &.on{ top: 0%;}
+      &.on{ display: block; top: 0%;}
 
       h1{
         padding: 20px 0px;
