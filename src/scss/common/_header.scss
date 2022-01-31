@@ -37,7 +37,7 @@
       background: #000;
       position: absolute; top: 0px; right: 0px; z-index: 6;
       cursor: pointer;
-      .btnCall{
+      #btnCall{
         width: 30px; height: 30px; border: $lightbrown;
         position: absolute; top: 50%; left: 50%; 
         transform: translate(-50%, -50%); 
@@ -88,19 +88,19 @@
     }
 
     /* 반응형 메뉴 */
-    .menu_Mo{
-      display: none;
+    #menu_Mo{
+      visibility: hidden;
       position: fixed;
       top: -120%;
       left: 0px; 
       width: 100%;
       height: 100vh;
       background: $bgDark; 
-      transition: 0.5s 0.8s;
+      transition: 0.5s 0.8s; 
       padding: 25px 30px;
       z-index: 5;
 
-      &.on{ display: block; top: 0%;}
+      &.on{visibility: visible; top: 0%; transition: 0.5s 0.8s;}
 
       h1{
         padding: 20px 0px;
