@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-pf-studio/static/css/main.8e653cdc.css",
+    "main.css": "/react-pf-studio/static/css/main.ea2c1f8d.css",
     "main.js": "/react-pf-studio/static/js/main.4552403c.js",
     "static/media/youtube1.png": "/react-pf-studio/static/media/youtube1.943d6b9678c0a6b8075c.png",
     "static/media/paper-texture-narrow.png": "/react-pf-studio/static/media/paper-texture-narrow.a439dbb3416c097db327.png",
@@ -8,11 +8,11 @@
     "static/media/Film2.jpg": "/react-pf-studio/static/media/Film2.b0a3cb803b23f56d4c96.jpg",
     "static/media/youtube3.png": "/react-pf-studio/static/media/youtube3.52bc589e4361c552d3e5.png",
     "index.html": "/react-pf-studio/index.html",
-    "main.8e653cdc.css.map": "/react-pf-studio/static/css/main.8e653cdc.css.map",
+    "main.ea2c1f8d.css.map": "/react-pf-studio/static/css/main.ea2c1f8d.css.map",
     "main.4552403c.js.map": "/react-pf-studio/static/js/main.4552403c.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e653cdc.css",
+    "static/css/main.ea2c1f8d.css",
     "static/js/main.4552403c.js"
   ]
 }
