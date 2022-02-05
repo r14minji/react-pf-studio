@@ -10,13 +10,8 @@ const url = `${path}/dbs/about.json`;
 
 function About(){
   let [members, setMembers] = useState([]);
-  const btnMenus = useRef(null);
   const vid = useRef(null);
-  const storyBtns = [
-    {title: 'What makes a great Films?', contents: "It's all about the experience. People love films that are fun and simple to feel. We make those films"},
-    {title:'The way we work', contents: 'Our creative approach involves rigorous design and usablity testing to create superior films for everyone'},
-    {title: 'Meet the makers', contents: 'Our team combine form and function to create visually appealing, easy to watch films people want to use.'}
-  ]
+
 
   useEffect(()=>{
     axios
@@ -39,19 +34,33 @@ function About(){
     <section className="about">
       <div className="inner">
         <h1>&#8544;. ABOUT</h1>
-        <ul className="btnMenu" ref={btnMenus}>
-            {
-              storyBtns.map((btn, index)=>{
-                return(
-                <li key={index}>
-                  <p>{btn.title}</p>
-                  <span>{btn.contents}</span>
-                </li>
-                )
-              })
-            }
-
-        </ul>
+        <ul>
+            <li>
+              <strong>movie</strong>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non totam debitis velit perspiciatis? Eos sequi placeat repellat culpa reprehenderit, blanditiis architecto sapiente. Nam alias inventore aperiam, voluptas sunt quas voluptatum</p>
+            </li>
+            <li>
+              <strong>best scene</strong>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non totam debitis velit perspiciatis? Eos sequi placeat repellat culpa reprehenderit, blanditiis architecto sapiente. Nam alias inventore aperiam, voluptas sunt quas voluptatum</p>
+            </li>
+            <li>
+              <strong>director</strong>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non totam debitis velit perspiciatis? Eos sequi placeat repellat culpa reprehenderit, blanditiis architecto sapiente. Nam alias inventore aperiam, voluptas sunt quas voluptatum</p>
+            </li>
+            <li>
+              <strong>Oscar</strong>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non totam debitis velit perspiciatis? Eos sequi placeat repellat culpa reprehenderit, blanditiis architecto sapiente. Nam alias inventore aperiam, voluptas sunt quas voluptatum</p>
+            </li>
+            <li>
+              <strong>award</strong>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non totam debitis velit perspiciatis? Eos sequi placeat repellat culpa reprehenderit, blanditiis architecto sapiente. Nam alias inventore aperiam, voluptas sunt quas voluptatum</p>
+            </li>
+            <li>
+              <strong>movie</strong>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non totam debitis velit perspiciatis? Eos sequi placeat repellat culpa reprehenderit, blanditiis architecto sapiente. Nam alias inventore aperiam, voluptas sunt quas voluptatum</p>
+            </li>
+          </ul>
+          
         <div className="story">
           <div className="txt">
             <h2>OUR STORY</h2>

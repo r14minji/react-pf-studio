@@ -11,33 +11,25 @@
       color: $txt; //#ECECEC;
     }
     /* ul - btnMenu */
-    .btnMenu{
-      width: 100%;
-      display: flex; justify-content: space-between; align-items: center; 
-      padding-bottom: 30px;
-      border-bottom: 3px solid #000;
-      li{
-        width: 31.33%; margin-right: 2%; 
-        &:nth-of-type(3){margin-right: 2%;}
-        padding: 0 10px 20px;
-
-        p{
-          font: 400 28px/1 'Oswald';
-          padding: 20px 0px;
-          border-bottom: 1px solid $txt;
-          color: $txt;
+    >ul{
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; 
+      >li{
+        width: 14%; position: relative;
+        strong{
+          display: block;  font: 600 14px/1 'Oswald'; color: #333;
+          padding: 10px 0px; text-transform: uppercase;
+          border-bottom: 1px solid #000; 
         }
-        span{
-          display: block;
-          font: 400 16px/1 'Oswald';
-          padding: 10px 0px 0px;
+        >p{
+          font: 400 12px/1 'arial'; word-break: break-all;
+          padding: 10px 0;
         }
       }
     }
     /* story - txt, vid */
     .story{
       width: 100%;
-      padding: 40px 0px 0px;
+      padding: 20px 0px 0px;
       display: flex; justify-content: space-between; 
       
       .txt{
@@ -293,14 +285,10 @@
 @media screen and (max-width: 768px){
    /* title, btnMenu, story-txt,vid  */
   .about .inner {
-    .btnMenu {height: 120px}
-    .btnMenu li {height: 100%;}
-    .btnMenu li span {display: none;}
-    .btnMenu li p{
-      font-size: 22px;
-      border: none; text-align: center;
+    >ul {
+      flex-wrap: wrap;
+      li{ width: 30%;}
     }
-    .btnMenu li.on p{border: none;}
     .story {
       display: block;
       .txt{width: 100%;}
@@ -321,15 +309,20 @@
 @media screen and (max-width: $mobile){
    /* title, btnMenu, story-txt,vid  */
   .about .inner {
-    .btnMenu {height: 90px}
-    .btnMenu li p{
-      font-size: 4vw;
-      padding: 10px 0; text-align: center;
-    }
+    >ul >li {width: 48%;}
     .story .txt span{line-height: 1;}
     .story figure .wrap .vid .slogan h3 .inner {font-size: 14vw;}
     .story figure .wrap .vid .slogan::before {display: none;}
   } 
   /* team */
-  .team .inner .wrap article {margin: 0px 0px 40px ;}
+  .team .inner .wrap article {
+    width: 230px; height: 350px;
+    margin: 20px 0px 60px ;
+
+    .member .info {width: 115%;}
+    .member .info .profile {padding: 20px;}
+    .member::after{
+      width: 230px; height: 230px;
+    }
+  }
 }
