@@ -5,7 +5,6 @@
 
 
 📍 [홈페이지 바로가기](https://r14minji.github.io/react-pf-studio/)
-<br>
 📝 [작업설명서 바로가기](https://drive.google.com/file/d/1n8N-XB3jE4FmKFGnirRLu3nKX_FdAUZD/view?usp=sharing)
 
 🛠 Tech Stack 🛠
