@@ -29,7 +29,7 @@
             .pic{
               width:413px;
               height: 250px;
-              background: url(/public/img/Film2.jpg) no-repeat center/cover;
+              background: url(../../../public/img/Film2.jpg) no-repeat center/cover;
               cursor: pointer; margin-bottom: 20px;
     
               img{
@@ -47,15 +47,15 @@
               display: flex; justify-content: center; align-items: center;
               .popcon{
                 width: 30%; height: 40%;
-                background: url(/public/img/youtube1.png) center/cover;
+                background: url(../../../public/img/youtube1.png) center/cover;
               }
               .screen{
                 width: 30%; height: 40%;
-                background: url(/public/img/youtube2.png) center/cover;
+                background: url(../../../public/img/youtube2.png) center/cover;
               }
               .camera{
                 width: 30%; height: 40%;
-                background: url(/public/img/youtube3.png) center/cover;
+                background: url(../../../public/img/youtube3.png) center/cover;
               }
             }
     
