@@ -8,7 +8,7 @@ function Signin(){
       <div className="inner">
 
       <article className="access">
-        <h1> Signin</h1>
+        <h1> signin</h1>
         <p>welcome to the official website of the alicestudio. by signing in, you can access to the various services provided by alicestudio</p>
 
         <div className="wrap">
