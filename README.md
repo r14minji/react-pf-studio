@@ -22,14 +22,14 @@
 
 ## 요약
 1. 메인페이지
-- <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/> common, main, sub 컴포넌트로 구성
-- <img src="https://img.shields.io/badge/Sass-CC6699?style=flat-square&logo=Sass&logoColor=white"/> 반응형 사이즈 및 색상선택 변수로 저장 
-- <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/> Scroll Event Interactive Design
-- <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/> 메인 이미지 Slide 효과 적용
-- <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/> CRUD - READ : 리뷰게시판에서 작성한 글을 볼 수 있음
-- <img src="https://img.shields.io/badge/React Router-CA4245?style=flat-square&logo=React Router&logoColor=white"/> Swith를 활용하여 Main Header와 Sub Header 변경
-- <img src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"/> 공통데이터 관리 및 Axios로 Youtube API 호출
-- <img src="https://img.shields.io/badge/YouTube API-FF0000?style=flat-square&logo=YouTube&logoColor=white"/> Youtube 재생목록에 저장된 동영상 리스트
+- <img src="https://img.shields.io/badge/React-dddddd?style=flat-square&logo=React&logoColor=white"/> common, main, sub 컴포넌트로 구성
+- <img src="https://img.shields.io/badge/Sass-dddddd?style=flat-square&logo=Sass&logoColor=white"/> 반응형 사이즈 및 색상선택 변수로 저장 
+- <img src="https://img.shields.io/badge/JavaScript-dddddd?style=flat-square&logo=JavaScript&logoColor=white"/> Scroll Event Interactive Design
+- <img src="https://img.shields.io/badge/JavaScript-dddddd?style=flat-square&logo=JavaScript&logoColor=white"/> 메인 이미지 Slide 효과 적용
+- <img src="https://img.shields.io/badge/JavaScript-dddddd?style=flat-square&logo=JavaScript&logoColor=white"/> CRUD - READ : 리뷰게시판에서 작성한 글을 볼 수 있음
+- <img src="https://img.shields.io/badge/React Router-dddddd?style=flat-square&logo=React Router&logoColor=white"/> Swith를 활용하여 Main Header와 Sub Header 변경
+- <img src="https://img.shields.io/badge/Redux-dddddd?style=flat-square&logo=Redux&logoColor=white"/> 공통데이터 관리 및 Axios로 Youtube API 호출
+- <img src="https://img.shields.io/badge/YouTube API-dddddd?style=flat-square&logo=YouTube&logoColor=white"/> Youtube 재생목록에 저장된 동영상 리스트
 
 2. 서브페이지: ABOUT
 - <img src="https://img.shields.io/badge/React Hooks-61DAFB?style=flat-square&logo=React&logoColor=white"/> useEffect를 활용하여 컴포넌트 생성시 axios로 about.json 데이터 불러오기 및 배경화면 색상 변경
