@@ -4,9 +4,8 @@
 기업형 홈페이지에서 자주 사용하는 회원가입, 게시판, 미디어(갤러리/유튜브), 지도 등을 포함하여 리액트로 만든 반응형 웹사이트입니다.
 
 
-📍 <a href="https://r14minji.github.io/react-pf-studio/" target="_blank">홈페이지 바로가기</a>
-📝 <a href="https://drive.google.com/file/d/1n8N-XB3jE4FmKFGnirRLu3nKX_FdAUZD/view?usp=sharing" target="_blank">작업설명서 바로가기</a> 
-
+📍 [홈페이지 바로가기](https://r14minji.github.io/react-pf-studio/){: target="_blank"}
+📝 [작업설명서 바로가기](https://drive.google.com/file/d/1n8N-XB3jE4FmKFGnirRLu3nKX_FdAUZD/view?usp=sharing){: target="_blank"}
 
 🛠 Tech Stack 🛠
 <br>
