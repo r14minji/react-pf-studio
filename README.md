@@ -27,7 +27,7 @@
 - <img src="https://img.shields.io/badge/JavaScript-dddddd?style=flat-square&logo=JavaScript&logoColor=white"/> Scroll Event Interactive Design
 - <img src="https://img.shields.io/badge/JavaScript-dddddd?style=flat-square&logo=JavaScript&logoColor=white"/> 메인 이미지 Slide 효과 적용
 - <img src="https://img.shields.io/badge/JavaScript-dddddd?style=flat-square&logo=JavaScript&logoColor=white"/> CRUD - READ : 리뷰게시판에서 작성한 글을 볼 수 있음
-- <img src="https://img.shields.io/badge/React Router-dddddd?style=flat-square&logo=React Router&logoColor=white"/> Switch를 활용하여 Main Header와 Sub Header 변경
+- <img src="https://img.shields.io/badge/React Router-dddddd?style=flat-square&logo=ReactRouter&logoColor=white"/> Switch를 활용하여 Main Header와 Sub Header 변경
 - <img src="https://img.shields.io/badge/Redux-dddddd?style=flat-square&logo=Redux&logoColor=white"/> 공통데이터 관리 및 Axios로 Youtube API 호출
 - <img src="https://img.shields.io/badge/YouTube API-dddddd?style=flat-square&logo=YouTube&logoColor=white"/> Youtube 재생목록에 저장된 동영상 리스트
 
