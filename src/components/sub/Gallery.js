@@ -144,7 +144,7 @@ function Gallery(){
     const baseURL = "https://www.flickr.com/services/rest/?";
     const method1 = "flickr.interestingness.getList";
     const method2 = "flickr.photos.search";
-    const key= "e7ed3b39fe112d7e93d03c19325305e0";
+    const key= "e876201effa30e353ec16d8c4b313899";
     const count =opt.count;
 
     if(opt.type === "interest"){
@@ -159,6 +159,7 @@ function Gallery(){
     await axios
     .get(url)
     .then(json =>{
+      console.log(json)
       setItems(json.data.photos.photo);
     })
     
