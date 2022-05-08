@@ -159,7 +159,6 @@ function Gallery(){
     await axios
     .get(url)
     .then(json =>{
-      console.log(json)
       setItems(json.data.photos.photo);
     })
     
